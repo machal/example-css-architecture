@@ -1,0 +1,55 @@
+/* Mapa s klikacimi oblastmi
+   =========================
+*/
+
+// @map-z-index
+// Urceni zakladniho z-indexu mapy, aby se mohlo urcit z index pro zvyraznenou oblast (area-map-point__zone).
+// A pro urceni z-indexu popisku oblasti (area-map-point__title)
+@map-z-index: 88;
+
+.area-map__wrapper {
+  position: relative;
+  display: block;
+
+  @media @large-start {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+
+.area-map {
+	position: relative;
+  display: none;
+	margin-top: 20px;
+
+  overflow: hidden;
+
+  // iPhone 5 landscape
+  @media only screen and (min-width: 568px) {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  @media @large-start {
+    width: 100%;
+  }
+}
+
+.area-map__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: @map-z-index;
+}
+
+.area-map--italy {
+  width: 80%;
+  margin: auto;
+}
+
+.area-map--hungary {
+  width: 80%;
+  margin: auto;
+}

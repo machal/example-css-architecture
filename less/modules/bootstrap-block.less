@@ -1,0 +1,30 @@
+/*
+Vylepseni Bootstrap Forms
+=========================
+*/
+
+//  TODO:
+// * co s tim? Asi po zacatku pouzivani LESS predefinovat Bootstrapu prednastavenou typosku podle nasi
+//  nebo nechat nas reset s tim, ze se tim upravi specificnost.
+// * pokud budeme pouzivat na celem webu, dat pryc prefix .bootstrap_block
+
+.bootstrap_block label,
+.bootstrap_block input,
+.bootstrap_block button,
+.bootstrap_block select,
+.bootstrap_block textarea {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+}
+
+/* Legend mame sice pritomnu jen v dumb vrsve, ale Bootstrap i tak sousedicimu .control-group
+   pridava horni margin. Mimo summary/details Davame pryc.
+*/
+legend + .control-group {
+    margin-top: 0;
+}
+
+.details_content .control-group {
+    margin-top: 18px;
+}

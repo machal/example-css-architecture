@@ -1,0 +1,51 @@
+//
+// Pine navigation trigger on small screens
+// ----------------------------
+
+// Hidden by default
+.pine-trigger {
+  display: none;
+
+  padding: @p-padding-vertical @p-padding-horizontal;
+  color: @p-color;
+  font-weight: normal;
+  .text-overflow();
+  background: @p-background;
+  text-decoration: none;
+
+  // Show the trigger only for small displays
+  @media (max-width: @p-small-display-end) {
+    .js & {
+      display: inline-block;
+    }
+  }
+}
+
+.pine-trigger .icon-bar {
+  position: relative;
+  vertical-align: middle;
+  margin-top: -2px;
+
+  &, &:before, &:after {
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background-color: black;
+    .border-radius(1px);
+    .box-shadow(0 1px 0 rgba(255,255,255,.5));
+  }
+
+  &:before, &:after {
+    position: absolute;
+    top: -4px;
+    content: '';
+  }
+
+  &:after {
+    top: 4px
+  }
+}
+
+.pine-trigger-title {
+  display: inline-block;
+}

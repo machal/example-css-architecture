@@ -1,0 +1,128 @@
+/* Modul About
+   ===========
+
+   Stránka "O nás".
+*/
+
+// Anotace - text s logem Rekrey
+// -----------------------------
+
+.about-perex {
+  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+
+  @media only screen and (min-width: 360px) and (max-width: @small-end-value) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @media @large-start {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+
+// Lidé
+// ----
+
+.about-person {
+  text-align: center;
+}
+
+.about-person-image img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: (@column-width/2 - @gutter); // 145px
+  display: block;
+  margin: 0 auto;
+}
+
+.about-person-short-text {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-person-full-text,
+.about-person-full-contact {
+  @media @large-start {
+    margin-top: @base-line-height/2;
+  }
+}
+
+// Historie
+// --------
+
+.about-history {
+  background-color: @color-light-plus;
+  background-position: center center;
+
+  @media @small-end {
+    background-image:
+      url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
+  }
+
+  @media @large-start {
+    background-image:
+      url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+    // Na mobilech bud nefunguje (iOS)
+    // nebo se trha (WinPhone).
+    background-attachment: fixed;
+  }
+}
+
+.about-history-perex {
+  background: #fff;
+  background: rgba(255,255,255,.95);
+  padding: 3em 2em 2em 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+
+  .h1 {
+    margin-bottom: 10px;
+  }
+
+  .h2 {
+    margin-bottom: 20px;
+  }
+
+  @media @large-start {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Weby
+// ----
+
+.about-web-item {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  border-bottom: 2px solid #999;
+}
+
+.about-web-item-eslovensko { border-color: #0EB10E; }
+.about-web-item-velkymeder { border-color: #06F; }
+.about-web-item-tuzemskadovolena { border-color: #F60; }
+.about-web-item-epodhajska { border-color: #c00; }
+.about-web-item-besenova { border-color: #06F; }
+
+.about-web-etc {
+  @media @large-start {
+    text-align: center;
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+
+// Identifikacni udaje
+// -------------------
+
+.about-legal {
+  @media @extra-large-start {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+

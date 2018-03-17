@@ -1,0 +1,385 @@
+/*
+  Cenova tabulka
+  ==============
+*/
+
+// Kompletni cenova tabulka, napr. v detailu kapacity.
+
+// TODO mnoho komponent v jedne, viz treba .price_calc a dalsi dole
+
+.price_table {
+  font-size: 11px;
+  line-height: 13px;
+  overflow: auto;
+}
+
+.price_table table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.price_table td, .price_table th {
+  margin: 0;
+  padding: 3px;
+  text-align: right;
+}
+
+.price_table th {
+  text-align: center;
+  font-weight: normal;
+  color: #666;
+}
+
+.price_table td.price_table_dates, .price_table th.price_table_dates {
+  text-align: left;
+
+  @media @large-start {
+    white-space: nowrap;
+  }
+}
+
+.price_table td.price_table_price {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.price_table tr:nth-child(2n+1) {
+  background: #e8e8e8;
+}
+
+.price_table tr:nth-child(2n) {
+  background: #dfdfdf;
+}
+
+.price_table tr td:first-child, .price_table tr th:first-child {
+  padding-left: 15px;
+}
+
+.price_table tr td:last-child, .price_table tr th:last-child {
+  padding-right: 15px;
+}
+
+// Varianta radku tabulky: obsahujici slevu
+
+.price_table_discount td, .price_table_discount th {
+  background: mix(#f60, #eee, 30%);
+}
+
+.price_table_discount strong {
+  font-weight: normal;
+}
+
+.price_table_discount_info {
+  font-size: 11px;
+  color: #666;
+}
+
+.price-table__title {
+  font-size: 12px;
+
+  @media @large-start {
+    font-size: 14px;
+  }
+
+  @media @extra-large-start {
+    font-size: 18px;
+  }
+}
+
+.price-table__title .calendar_icon {
+  width: 16px;
+
+  @media @extra-large-start {
+    width: 23px;
+  }
+}
+
+.price-table__title .float_right {
+  display: block;
+  float: none;
+
+  @media @large-start {
+    display: inline-block;
+    float: right;
+  }
+}
+
+
+// --- Pocitadlo ceny (Price Calculator) ---
+//     (Napr. v detailu kapacity, LM)
+
+
+.bootstrap_block .price_calc {
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bootstrap_block .price_calc .controls {
+  margin-left: 0;
+
+  @media @large-start {
+    margin-left: 160px;
+  }
+}
+
+.price_calc_for_item, .price_calc_sum {
+  display: inline-block;
+  width: 57px;
+  text-align: right;
+}
+
+.price_calc_times, .price_calc_equal {
+  font-size: 20px;
+  color: #ccc;
+  display: inline-block;
+  width: 15px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+
+
+// Cena celkem
+
+.price_calc_total {
+  clear: both;
+  margin-bottom: 18px;
+  padding-top: 9px;
+  border-top: #ccc dotted 2px;
+}
+
+.price_calc_total_text {
+  display: block;
+  text-align: center;
+}
+
+.price_calc_total_sum {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+
+
+// --- Modul odesilaci tlacitko v radku ---
+//   (napr. v detailu kapacity ve vypoctech)
+
+
+.submit_row {
+  clear: both;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.submit_row .button.submit {
+  font-weight: bold;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+// --- Modul Kompletni cenik ---
+//   (napr. v detailu kapacity otevirany Fancyboxem)
+
+
+.complete_pricelist {
+  padding: 18px 27px;
+  overflow: auto;
+}
+
+.detail_prices .complete_pricelist {
+  display: none;
+}
+
+.complete_pricelist h2 { /* TODO: az bude centralni definice pro h2, muzeme odmazat */
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #999;
+}
+
+.complete_pricelist table {
+  width: auto;
+}
+
+.complete_pricelist th {
+  font-weight: normal;
+  background-color: #eee;
+  text-align: center;
+}
+
+.complete_pricelist .price_calc_note {
+  padding-left: 0;
+}
+
+// --- Modul Obsazenost ---
+//   (napr. v detailu kapacity otevirany Fancyboxem)
+
+
+.occupancy_overview {
+  padding: 18px 27px;
+  overflow: auto;
+  max-width: 830px;
+}
+
+.detail_prices .occupancy_overview {
+  display: none;
+}
+
+.occupancy_month {
+  float: left;
+  width: 250px;
+  height: 210px;
+  margin: 0 20px 20px 0;
+}
+
+.occupancy_month table.normal.spacy td, .occupancy_month table.normal.spacy th {
+  padding: 0;
+}
+
+.occupancy_month table.normal.spacy span, .occupancy_month table.normal.spacy span {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+// --- Modul Rezervacni formular ---
+//   (napr. v detailu kapacity u cenove tabulky)
+
+
+.reservation_form {
+  margin-top: 36px;
+}
+
+.reservation_form h2 {
+  margin-bottom: 18px;
+  padding-top: 9px;
+  border-top: #ccc dotted 2px;
+}
+
+
+// --- Modul Obsah po strane nadpisu ---
+//   (napr. odkaz na kompletni cenik na strance pobytu)
+
+
+.head_aside {
+  font-size: 11px;
+  line-height: 15px;
+  color: #999;
+}
+
+.bg_box .head_aside {
+    color: #666;
+}
+
+// --- Pocet noci pobytu ---
+//     (napr. ve vypoctu cenu v detailu kapacity)
+
+
+.tab_nights_count {
+  display: block;
+
+  @media @large-start {
+    margin-left: 60px;
+  }
+
+  @media @large-start {
+    display: inline;
+    margin-left: 0;
+  }
+}
+
+// Priplatky
+
+.supplements {
+  padding-top: 9px;
+}
+
+.calc_form .supplements h2 {
+  margin-bottom: 0;
+}
+
+// --- Pocitadlo ceny (Price Calculator) ---
+// (Napr. v detailu kapacity, LM)
+
+
+// Upravy Twitter Bootstrap tady
+
+.form-horizontal.price_calc .control-label {
+  width: 100%;
+  text-align: left;
+
+  @media @large-start {
+    width: 30%;
+    text-align: right;
+  }
+
+  @media @extra-large-start {
+    width: 300px;
+    text-align: left;
+  }
+}
+
+.form-horizontal.price_calc .controls {
+  @media @extra-large-start {
+    margin-left: 305px;
+  }
+}
+
+.price_calc_total_sum {
+  display: block;
+  text-align: center;
+
+  @media @large-start {
+    display: inline-block;
+    width: 86px;
+    margin-left: 350px;
+    text-align: right;
+  }
+
+  @media @extra-large-start {
+    margin-left: 480px;
+  }
+}
+
+
+// Velke displeje (drive new_layout_desktop.less)
+// ----------------------------------------------
+
+@media @large-start {
+
+
+  // Poznamka pod pocitadlem ceny
+
+  .price_calc_note {
+    width: 50%;
+  }
+
+  .price_calc_total_text {
+    text-align: left;
+    float: left;
+    width: 300px;
+  }
+
+
+
+   // --- Modul Rezervacni formular ---
+   //   (napr. v detailu kapacity u cenove tabulky)
+
+
+  .reservation_form .control-group {
+    margin-left: 75px;
+    margin-right: 25px;
+  }
+
+
+  .page_accommodation_detail #ceny .head_with_border {
+    padding-right: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+} // @media @large-start

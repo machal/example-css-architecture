@@ -1,0 +1,77 @@
+// --- Pine: caret - triangle indicator ---
+
+// Context where we are positioning the indicator
+.pine-has-subnav > a,
+.pine-has-subnav > strong {
+  position: relative;
+}
+
+// Default: Caret pointing to the right
+// Second selector needs higher specificity to overide following horizontal variant
+.pine-has-subnav > a,
+.pine .pine-level-open .pine-has-subnav > a {
+  padding-right: 30px;
+
+  &:before {
+    .caret-base(15px);
+    .caret-right(@p-color, 4px);
+  }
+}
+
+// Horizontal variant: Caret pointing to the right on small screens and bottom on large screens
+.pine-horizontal .pine-has-subnav > a {
+  padding-right: 30px;
+
+  &:before {
+    .caret-bottom(@p-color, 4px);
+    @media (max-width: @p-small-display-end) {
+      .caret-right(@p-color, 4px);
+    }
+  }
+}
+
+
+// - Mixins -
+
+// Mixin: Caret base
+
+.caret-base(@padding-right) {
+  z-index: 100;
+  content: "";
+  position: absolute;
+  right: @padding-right;
+  top: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  // Small screen version has only first level look
+  @media (max-width: @p-small-display-end) {
+    right: @p-padding-horizontal;
+  }
+}
+
+// Mixin: Caret turned down
+
+.caret-bottom(@color, @caret-size) {
+  border-width: (@caret-size * 1.5) @caret-size 0 @caret-size;
+  margin-top: -1*@caret-size/2;
+  border-color: @color transparent transparent transparent;
+  // Small screen version has only first level look
+  @media (max-width: @p-small-display-end) {
+    border-color: @p-color  transparent transparent transparent;
+  }
+}
+
+// Mixin: Caret facing left
+
+.caret-right(@color, @caret-size) {
+  border-width: @caret-size 0 @caret-size (@caret-size * 1.5);
+  margin-top: -1*@caret-size;
+  border-color: transparent transparent transparent @color;
+  // Small screen version has only first level look
+  @media (max-width: @p-small-display-end) {
+    border-color: transparent transparent transparent  @p-color;
+  }
+}
+

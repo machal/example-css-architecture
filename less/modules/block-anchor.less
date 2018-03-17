@@ -1,0 +1,17 @@
+/*
+.block_anchor - blokove odkazy
+*/
+
+// Elementy s barvou odkazu uvnitr blokovych odkazu
+// TODO asi pryc, pouziva se jen v kombinaci se side_tabs_item
+
+.container .block_anchor .anchor {
+    color: @color-alpha;
+}
+
+.container .block_anchor:hover .anchor,
+.container .block_anchor:focus .anchor,
+.container .block_anchor:active .anchor {
+  color: darken(@color-alpha,20%);
+  text-decoration: underline;
+}

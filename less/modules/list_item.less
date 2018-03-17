@@ -1,0 +1,315 @@
+/* # Modul Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+Obrazky, nadpisy
+
+*/
+
+// Vzorove HTML
+// ---------------
+
+// <div class="list_item">
+
+//   <p class="image">
+//     <a href="/ubytovani/hotel-garni-harmonia/">
+//       <img src="http://www.ck-rekrea.cz/katalogy-data/images/mista/735/Hotel Garni Harmonia0_s.jpg" data-src="http://www.ck-rekrea.cz/katalogy-data/images/mista/735/Hotel Garni Harmonia0_s.jpg" alt="HOTEL GARNI HARMONIA foto" class="unveil" width="286" height="215" style="opacity: 1;">
+//       <noscript>
+//         <img src="http://www.ck-rekrea.cz/katalogy-data/images/mista/735/Hotel Garni Harmonia0_s.jpg" alt="HOTEL GARNI HARMONIA foto" width="286" height="215" />
+//       </noscript>
+//     </a>
+//   </p><!-- .image -->
+
+//   <div class="list_item_content">
+//     <div class="text_content">
+//       <h2>
+//         <a href="/ubytovani/hotel-garni-harmonia/">HOTEL GARNI HARMONIA</a>
+//       </h2>
+//       <p class="place">
+//         <em>
+//           Ubytování Patince
+//         </em>
+//       </p>
+//       <p class="perex">
+//         Hotel Harmonia je moderní a nový hotel, zaměřený na relax a odpočinek.
+//       </p>
+//       <div class="disappearer"></div>
+//     </div><!-- .text_content -->
+//     <p class="price price--big">
+//       <strong>1 noc od</strong>941 Kč
+//     </p>
+//   </div><!-- .list_item_content -->
+
+//   <div class="clear_zero">&nbsp;</div>
+// </div>
+
+
+.list_item {
+  position: relative;
+  padding: 9px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+
+  box-sizing: border-box;
+
+  @media @large-start {
+    float: left;
+    width:  ~"calc((100% - 42px) / 3)";   // 304
+    height: 352px;
+    padding: 18px 9px 9px;
+    margin: 0 7px 0 7px;
+  }
+
+  .image {
+    position: relative;
+    float: left;
+    width: 36%;
+    margin-right: 4%;
+
+    @media @large-start {
+      width: auto;
+      float: none;
+      height: 165px; // 4:3
+      overflow: hidden;
+      margin-bottom: 12px;
+      margin-right: 0;
+    }
+
+    @media @extra-large-start {
+      height: 215px; // 4:3
+    }
+  }
+
+  .image img {
+    max-width: 100%;
+  }
+
+  .container & h2 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  .price {
+    @media @large-start {
+      position: absolute;
+      right: 3px;
+      top: 150px;
+    }
+
+    @media @extra-large-start {
+      top: 200px;
+    }
+  }
+
+}
+
+// Textovy obsah
+
+.list_item {
+  .list_item_content {
+    float: left;
+    width: 60%;
+
+    @media @large-start {
+      float: none;
+      width: auto;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .place em {
+    color: #333;
+    font-style: normal;
+    display: block;
+    text-overflow: ellipsis;
+    height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .container & .place a {
+    color: #333;
+  }
+
+  .date strong {
+    color: #666;
+  }
+}
+
+// Varianta bez spodniho ramecku
+// Napr. na homepages verze 2014
+
+.list_item.without_border {
+  border-bottom: 0;
+}
+
+
+// Aktivni stavy
+.list_item:hover,
+.list_item:focus,
+.list_item:active {
+  background-color: #eee;
+  cursor: pointer;
+  color: #333;
+
+  h2 a {
+    color: darken(@color-alpha, 20%);
+    text-decoration: underline;
+  }
+}
+
+@media @extra-large-start {
+
+
+  // Obrazek, nadpis, cena
+
+  .list_item {
+    .image {
+      width: auto;
+      float: none;
+      height: 215px; // 4:3
+      overflow: hidden;
+      margin-bottom: 12px;
+      margin-right: 0;
+    }
+
+    // TODO: roztahujeme vice nez je fyzicka velikost 286px
+    // potrebujeme 304px a vice
+    .image img {
+      width: 100%;
+    }
+
+    .container & h2 {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    .price {
+      position: absolute;
+      top: 200px;
+      right: 3px;
+    }
+  }
+
+  // Textovy obsah, ikony
+
+  .list_item {
+    .list_item_content {
+      float: none;
+      width: auto;
+    }
+
+    .text_content {
+      position: relative;
+      height: 133px;
+      overflow: hidden;
+    }
+
+    .icon {
+      top: -15px;
+      left: -5px;
+    }
+  }
+
+  // Aktivni stavy
+
+  .list_item:hover,
+  .list_item:focus,
+  .list_item:active {
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+
+  // Varianta: Nizsi polozka seznamu
+  // napr. seznamy pobytu u kapacity
+
+  .list_item.is_lower {
+    height: 288px;
+  }
+
+  // Varianta: Bez obrazku
+
+  .list_item.without_image {
+    height: 186px;
+  }
+
+  // Varianta: Bez obrazku a textu
+  // napr. na e-slovensko.cz/slovnik
+
+  .list_item.without_image.without_text {
+    height: 113px;
+    .price {
+      top: 55px;
+      right: -6px;
+    }
+  }
+}
+
+// Modul sleva na polozce seznamu
+// -------------------------------
+
+// Napr. v seznamech ubytovani
+
+.discount_in_list_item {
+  position: absolute;
+  bottom: 17px;
+  left: 2px;
+  max-width: 30%;
+  z-index: 10;
+  font-size: @smaller-font-size;
+  line-height: @smaller-line-height;
+
+  a {
+    display: inline-block;
+    padding: 3px;
+    background: #efefef;
+    color: #444;
+  }
+}
+
+@media @large-start {
+
+  .discount_in_list_item {
+    top: 155px;
+    right: 12px;
+    left: auto;
+    max-width: 150px;
+
+    a {
+      font-size: 12px;
+      padding: 7px;
+    }
+  }
+
+} // @large-start
+
+// - Varianta: s obrazkovou ikonou -
+
+.discount_in_list_item.with_image_icon {
+  padding-left: 3px;
+  margin-top: -10px;
+
+  a {
+    padding: 0;
+    background: transparent;
+  }
+
+  img {
+    max-height: 40px;
+  }
+}
+
+@media @large-start {
+
+  .discount_in_list_item.with_image_icon {
+    img {
+      max-height: 50px;
+    }
+  }
+
+} // @large-start

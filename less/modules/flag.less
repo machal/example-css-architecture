@@ -1,0 +1,200 @@
+/*
+Flag - priznaky slev, Last Minute atd.
+=========================================
+*/
+
+.flag {
+  display: inline-block;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: @padding-y @padding-x;
+}
+
+a.flag:hover,
+a.flag:focus,
+a.flag:active {
+  color: white;
+  text-decoration: underline;
+}
+
+// Varianta: mensi (a pro malinke displeje)
+// ----------------------------------------
+
+@media-for-smaller-flag: ~"only screen and (max-width: 420px)";
+
+.mixin-flag-sm() {
+  font-size: 9px;
+  padding: 2px 3px;
+  letter-spacing: .02em;
+}
+
+.flag--sm {
+  .mixin-flag-sm;
+}
+
+@media @media-for-smaller-flag {
+  .flag {
+    .mixin-flag-sm;
+  }
+}
+
+// Varianta: vetsi (jen pro velke displeje)
+// ----------------------------------------
+
+@media @large-start {
+  .flag--lg {
+   font-size: @larger-font-size;
+   padding: @padding-lg-y @padding-lg-x;
+  }
+}
+
+// Varianty: barvy pro jednotlive typy
+// -----------------------------------
+
+// "Oblibeny ubytovatel"
+
+.flag--bestseller {
+  background: fadeout(lighten(@color-alpha, 5%),9%);
+}
+
+// "Skvele hodnoceni"
+
+.flag--ratings {
+  background: fadeout(lighten(@color-alpha, 5%),9%);
+}
+
+// "Last Minute"
+
+.flag--lastminute {
+  background: #FF9900;
+  background: fadeout(#FF9900,9%);
+}
+
+// "Horky tip"
+
+.flag--hottip {
+  background: #FFCC00;
+  background: fadeout(#FFCC00,9%);
+}
+
+// "Novinka"
+
+.flag--new {
+  background: lighten(@color-alpha, 15%);
+  background: fadeout(lighten(@color-alpha, 15%),9%);
+}
+
+// "Sleva"
+
+.flag--discount {
+  background: #FF6600;
+  background: fadeout(#FF6600, 9%);
+}
+
+
+
+// Pozicovani ikon, pokud jich je vice
+// -----------------------------------
+
+// * Vzdy uvnitr .flags.
+// * Pocita se s tim, ze jsou uvnitr relativne pozicovaneho bloku.
+// * Zatim vzdy prekryvaji obrazek (.image_item v detailu a .list_item .image v seznamu)
+
+.flags {
+
+  .flag {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+
+  // * Byva jich vice pod sebou, pricemz presne nevime, ktere tam budou. Proto :nth-child().
+  // * Zaroven je .flag--lg jen na velkych displejich.
+
+  // Vyska .flag:
+  @flag-height: 2*@padding-y + @base-line-height + 2px;
+
+  // Vyska .flag--lg:
+  @flag-large-height: 2*@padding-lg-y + @base-line-height + 2px;
+
+  // Vyska .flag--sm:
+  @flag-small-height: 2*@padding-sm-y + @base-line-height + 2px;
+
+  // TODO plus selektory kvuli podpore IE8
+  // casem nahradit pomoci .flag:nth-child(2) atd.
+
+  .flag + .flag {
+    top: (@flag-height + 2px);
+
+    &.flag--lg {
+      @media @large-start {
+        top: (@flag-large-height + 2px);
+      }
+    }
+
+    &.flag--sm {
+      top: (@flag-small-height + 2px);
+    }
+
+    @media @media-for-smaller-flag {
+      top: (@flag-small-height + 2px);
+    }
+  }
+
+  .flag + .flag + .flag {
+    top: (2*@flag-height + 2px);
+
+    &.flag--lg {
+      @media @large-start {
+        top: (2*@flag-large-height + 2px);
+      }
+    }
+
+    &.flag--sm {
+      top: (2*@flag-small-height + 2px);
+    }
+
+    @media @media-for-smaller-flag {
+      top: (2*@flag-small-height + 2px);
+    }
+  }
+
+  .flag + .flag + .flag + .flag {
+    top: (3*@flag-height + 2px);
+
+    &.flag--lg {
+      @media @large-start {
+        top: (3*@flag-large-height + 2px);
+      }
+    }
+
+    &.flag--sm {
+      top: (3*@flag-small-height + 2px);
+    }
+
+    @media @media-for-smaller-flag {
+      top: (3*@flag-small-height + 2px);
+    }
+  }
+
+  .flag + .flag + .flag + .flag + .flag {
+    top: (4*@flag-height + 2px);
+
+    &.flag--lg {
+      @media @large-start {
+        top: (4*@flag-large-height + 2px);
+      }
+    }
+
+    &.flag--sm {
+      top: (4*@flag-small-height + 2px);
+    }
+
+    @media @media-for-smaller-flag {
+      top: (4*@flag-small-height + 2px);
+    }
+  }
+
+} // .flags

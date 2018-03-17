@@ -1,0 +1,55 @@
+/* # Navigace druhé úrovně
+TODO přepsat a zdokumentovat
+*/
+
+#nav_inside {
+  clear: both;
+  font-size: 10px;
+  line-height: 14px;
+  min-height: 10px;
+  padding: 0 7px;
+  margin: 18px 0 0 0;
+  border-bottom: 1px solid #ddd;
+
+  @media print {
+    display: none;
+  }
+}
+
+#nav_inside .item {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin-bottom: -1px;
+  margin-right: 3px;
+  padding: 7px 5px;
+  background: transparent;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 5px 5px 0 0;
+}
+
+#nav_inside strong.item,
+#nav_inside strong .item {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: normal;
+  color: #666;
+}
+
+
+.map_page #nav_inside strong.item {
+  padding-bottom: 6px;
+}
+
+@media @large-start {
+
+  #nav_inside {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 30px;
+  }
+
+  #nav_inside .item {
+    padding: 7px 10px;
+  }
+
+}

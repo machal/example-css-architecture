@@ -1,0 +1,44 @@
+/*
+
+.box - Zvyrazneny boxik
+=======================
+
+*/
+
+// .box je univerzalni, ale mame jeste .bg_box pro cenove tabulky - co s tim?
+
+.box {
+    padding: 18px 18px 1px 18px;
+  background: #eee;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+// Zvyrazneny box s barvou pozadi
+// ---------------------------------
+
+// (Napr. pod formularem pro vypocet ceny u kapacity)
+
+.bg_box {
+    padding: 12px 18px 18px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+
+.bg_box.double_column {
+    width: 586px; /*  622-(2*18) */
+}
+
+.bg_box h2 {
+    color: #333;
+}
+
+/* Boxik s obsahem pro .details/.summary tady ma jiny vzhled */
+.bg_box .details_content {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  background-color: #fcfcfc;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}

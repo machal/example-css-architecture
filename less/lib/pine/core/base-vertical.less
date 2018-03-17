@@ -1,0 +1,91 @@
+//
+// BASE: Vertical variant
+// ----------------------------
+
+// TODO
+// - mixins create more code, we need to extend
+
+
+// - 1st level navigation item styling -
+
+.pine-vertical {
+  @media (min-width: @p-large-display-start) {
+
+    a,
+    strong {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
+// - 2nd, 3rd levels initial styling -
+
+.pine-vertical {
+  @media (min-width: @p-large-display-start) {
+
+    .pine-level-2,
+    .pine-level-3 {
+      top: 0;
+      position: absolute;
+    }
+
+    // 2nd, 3rd levels are hidden when JS is active
+
+    .js & .pine-level-2,
+    .js & .pine-level-3 {
+      visibility: hidden;
+    }
+  }
+}
+
+// - 2nd, 3rd levels styling without JS -
+// (All levels are open)
+
+.pine-vertical {
+  @media (min-width: @p-large-display-start) {
+
+    .pine-level-2 {
+      .mixin-large-display-vertical-2nd-level;
+    }
+
+    .pine-level-3 {
+      .mixin-large-display-vertical-3rd-level;
+    }
+
+  }
+}
+
+// - 2nd, 3rd levels styling when opened with JS -
+
+.pine-vertical {
+  @media (min-width: @p-large-display-start) {
+
+    .pine-level-open > .pine-level-2 {
+      .mixin-large-display-vertical-2nd-level;
+    }
+
+    .pine-level-open > .pine-level-3 {
+      .mixin-large-display-vertical-3rd-level;
+    }
+
+  }
+}
+
+// - Mixins -
+
+// Opened second level
+.mixin-large-display-vertical-2nd-level() {
+  z-index: 50001;
+  visibility: visible;
+  left: 100%;
+  width: 200px;
+}
+
+// Opened third level
+.mixin-large-display-vertical-3rd-level() {
+  z-index: 50002;
+  visibility: visible;
+  left: 100%;
+  width: 200px;
+}

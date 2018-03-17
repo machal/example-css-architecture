@@ -1,0 +1,88 @@
+/*
+  Soft hlavicka s podkresem - pro bocni listy
+  =============================================
+*/
+
+// Pozor, mame .soft_head a variantu .head_with_border a jeste k tomu ..head_aside
+// -- tohle je budouci .heading komponenta.
+
+// Jen copy z old_layout.less
+
+.container .soft_head {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 7px 5px 9px 7px;
+  margin-bottom: 0;
+  color: #666;
+  background: #ffffff;
+  background: linear-gradient(to bottom, #ffffff 25%,#f8f8f8 100%);
+}
+
+.container .soft_head.with_border {
+  border-bottom: 1px solid #eee;
+}
+
+
+
+// Z new_layout.less
+// -----------------
+
+.soft_head {
+    box-sizing: border-box;
+    max-width: 940px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 7px 5px 9px 7px;
+  margin-bottom: 0;
+  color: #666;
+    background: linear-gradient(to bottom, #ffffff 25%, #eee 100%);
+
+    &.with_border {
+      border-bottom: 1px solid #ccc;
+    }
+
+    &.with_margin_bottom {
+      margin-bottom: 18px;
+    }
+
+    &.standalone {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 18px;
+    }
+}
+
+
+// --- Seznam ubytovatelu na strance obce, oblasti, atrakce ---
+
+.accommodation_list .soft_head {
+ margin-bottom: 18px;
+ border-bottom: 1px solid #ccc;
+ max-width: 940px;
+}
+
+
+// Nadpis podtrzeny
+// ----------------
+
+.head_with_border {
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #ccc;
+    margin-bottom: 12px;
+}
+
+// Obsah po strane nadpisu
+// -----------------------
+
+// (napr. odkaz na kompletni cenik na strance pobytu)
+
+
+@media @large-start {
+
+  .head_aside {
+      float: right;
+      text-align: right;
+      margin-top: -52px;
+      margin-bottom: 0;
+  }
+
+}

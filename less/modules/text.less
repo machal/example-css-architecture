@@ -1,0 +1,89 @@
+/* # Modul .text
+
+Blok s textem, který má trochu posunuté horizontální okraje dovnitř oproti třeba obrázkům.
+
+## TODO
+
+* .text_larger se vyskytuje i v jinych modulech kvuli obtekani .images_column
+* .text.narrow
+
+## Ukázka
+
+```
+<div class="text">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+
+*/
+
+.text {
+  padding: 0 10px 0 5px;
+  display: inline-block;
+  // Fix kvuli problemu, kde nekde blbne display: block a
+  // nekde display: inline-block (http://www.e-slovensko.cz/atrakce/)
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/*
+## Varianta: větší text
+
+`.text.text_larger`
+
+Obteka floatovany .images_column, proto je potreba upravit UL/LI seznamy atd.
+http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
+
+```
+<div class="text text_larger">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+*/
+
+.text_larger {
+	font-size: @larger-font-size;
+	line-height: @larger-line-height;
+
+	// .text ma inline-block, protoze se zobrazuje i uvnitr komponent
+	// v tehle variante to ovsem kvuli obtekani musime zrusit
+	&.text {
+		display: block;
+	}
+
+	// Kvuli obtekani .images_column:
+
+	ul {
+		list-style-position: inside; // IE10 nezvlada outside pri obtekani floatu
+	}
+
+	ul li,
+	ol li {
+	  position: relative;
+  }
+
+	ul ul li,
+	ol ul li,
+	ol ol li,
+	ul ol li {
+	  left: 18px;
+  }
+}
+
+/*
+## Varianta: užší textový blok
+
+Platí jen pro velké displeje.
+
+`.text.text_narrow` a `.text.text_narrower`.
+
+Například text v detailu kapacity.
+
+
+```
+<div class="text text_larger text_narrower">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+*/
+

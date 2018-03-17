@@ -1,0 +1,70 @@
+/*
+  Zalozky po strane obsahu
+  ========================
+*/
+
+// U cenovych tabulek v detailu.
+
+.side_tabs {
+}
+
+.side_tabs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  border-top: 1px solid #ccc;
+}
+
+.side_tabs li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side_tabs_item {
+    position: relative; // kvuli _icon
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.side_tabs_item.active {
+    background-color: #eee;
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    padding-right: 19px;
+
+    @media @large-start {
+      margin-right: -14px;
+    }
+}
+
+.side_tabs_item h3 {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 290px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre;
+}
+
+.container .side_tabs_item.active h3 {
+    color: #333;
+    text-decoration: none;
+}
+
+
+// Element: flags uvnitr zalozek (LM, sleva… - pouzivame .flag)
+
+.side_tabs_item_flag {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+
+.side_tabs_item.active .side_tabs_item_flag  {
+  right: 15px;
+}

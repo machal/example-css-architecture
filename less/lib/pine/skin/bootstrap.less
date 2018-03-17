@@ -1,0 +1,57 @@
+//
+// BOOTSTRAP PINE: Pine.JS Bootstrap 3 skin
+// ----------------------------------------
+
+
+// Pine takes styling from Bootstrap through variables
+// ---------------------------------------------------
+
+// Look, feel and typography
+
+@p-base-font-size                 : @font-size-base;
+@p-base-line-height               : @line-height-base;
+@p-color                          : @navbar-default-color;
+@p-background                     : @navbar-default-bg;
+@p-active-background              : @navbar-default-link-active-bg;
+@p-hover-background               : @navbar-default-link-active-bg;
+@p-border                         : none;
+@p-border-color                   : @navbar-default-border;
+@p-border-radius                  : 0;
+@p-padding-vertical               : @font-size-base*.75;
+@p-padding-horizontal             : @grid-gutter-width/2;
+@p-margin-bottom                  : @navbar-margin-bottom;
+@p-small-screen-top               : @navbar-height+1;
+@p-z-index                        : @zindex-navbar;
+
+// RWD breakpoint
+
+@p-large-display-start            : @grid-float-breakpoint;
+
+
+// Extra Bootstrap skin styles
+// ---------------------------
+
+// Padding for large screens
+@media (min-width: @p-large-display-start) {
+
+  .pine li > a,
+  .pine li > strong {
+      padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  }
+
+  // Because of .navbar border-bottom, we need push 2nd level down
+  .pine-horizontal .pine-level-2 {
+    margin-top: 1px;
+  }
+
+}
+
+// Pine in static of fixed navbar has no margin and border
+.navbar-static-top .pine,
+.navbar-fixed-top .pine {
+  @media (min-width: @p-large-display-start) {
+    margin: 0;
+    border: 0;
+  }
+}
+

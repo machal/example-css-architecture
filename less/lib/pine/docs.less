@@ -1,0 +1,75 @@
+/* --- Pine.JS Docs styles --- */
+
+/*  Pine.JS Simple Example */
+
+.pdocs-simple {
+  margin: 1em;
+}
+
+@media (max-width: 599px) {
+  // Small screens top position
+  .js .pdocs-simple .pine {
+    top: 58px;
+  }
+}
+
+/*  PineJS - Vertical Example */
+
+.pdocs-vertical {
+  margin: 1em;
+}
+
+.pdocs-vertical .nav-box {
+  width: 15em;
+  float: left;
+  margin-right: 2em;
+}
+
+.pdocs-vertical .content-box {
+  width: 40em;
+  float: left;
+}
+
+@media (max-width: 599px) {
+  .pdocs-vertical .nav-box,
+  .pdocs-vertical .content-box {
+    width: auto;
+    float: none;
+  }
+
+  // Small screens top position
+  .js .pdocs-vertical .pine {
+    top: 58px;
+  }
+}
+
+/*  Pine.JS Horizontal Example */
+
+.pdocs-horizontal {
+  margin: 1em;
+}
+
+@media (max-width: 599px) {
+  // Small screens top position
+  .js .pdocs-horizontal .pine {
+    top: 58px;
+  }
+}
+
+
+
+/*  Common helpers */
+
+// Only display content to screen readers
+// See: http://a11yproject.com/posts/how-to-hide-content/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+

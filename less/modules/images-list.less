@@ -1,0 +1,188 @@
+/*
+.images_list - Strucny obrazkovy seznam
+=======================================
+*/
+
+// Vyuziva napr. seznam atrakci v okoli, seznam podobnych kapacit.
+//
+// HTML:
+// <div class="images_list">
+// <h3 class="soft_head">Nej atrakce v okolí</h3>
+// <ul>
+//      <li class="item">
+//       <span class="image">
+//           <img src="IMG.jpg" alt="Vodní nádrž Luhačovice foto" height="36">
+//       </span>
+//          <span class="text">
+//              <strong><a class="atrakcelink" href="#LINK">Vodní nádrž Luhačovice</a></strong>
+//              <small class="distance">(2 km)</small>
+//              - Přehrada v blízkých Pozlovicích byla původně p...
+//          </span>
+//      </li>
+//  </ul>
+// </div>
+
+// - Seznam -
+.images_list {
+  margin-bottom: 18px;
+
+    ul {
+      border-top: 1px solid #ccc;
+      margin: 0;
+      padding: 0;
+    }
+
+    // Odkaz na dalsi (napr. v seznamu pobytu v detailu ubytovatele)
+    .more a {
+        padding-left: 45px;
+    }
+}
+
+
+// Polozka
+// -------
+
+.images_list .item {
+  position: relative;
+  height: 36px;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+
+    // Kvuli obtekani .images_column:
+    .text_larger & {
+        left: 0;
+  }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #eee;
+      cursor: pointer;
+
+        // TODO v <body.ajax> existuji .item bez <a> uvnitr a na ne :hover nechceme
+        // resit jinak nez timto hackem
+        .ajax & {
+            background-color: transparent;
+            cursor: default;
+        }
+    }
+
+    &:hover a,
+    &:focus a,
+    &:active a {
+      color: darken(@color-alpha, 20%);
+      text-decoration: underline;
+    }
+}
+
+// Obrazek v polozce seznamu
+.images_list .image {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  overflow: hidden;
+
+    img {
+      max-width: none;
+      max-height: 32px;
+      margin-left: -12px;
+    }
+}
+
+// Text v polozce seznamu
+.images_list .text {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  display: block;
+  height: 36px;
+  overflow: hidden;
+    width: auto;
+}
+
+// Hvezdickove hodnoceni atrakci
+.images_list .item {
+    .stars {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 4px 7px 8px 15px;
+        background: rgb(238,238,238);
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%,rgba(255,255,255,1) 100%);
+    }
+
+    &:hover .stars,
+    &:focus .stars,
+    &:active .stars {
+        background: rgb(238,238,238);
+        background: linear-gradient(to right, rgba(238,238,238,0) 0%,rgba(238,238,238,1) 20%,rgba(238,238,238,1) 100%);
+    }
+}
+
+// Vzdalenost
+// Napr. Nej atrakce v okoli v detailu ubytovatele
+.images_list .distance {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+}
+
+// Varianta bez spodniho odsazeni
+// ------------------------------
+
+// Napr tady dole nad patickou velkymeder.cz/ubytovani/apartmany-kovacs/
+
+.images_list.without_margin_bottom {
+  margin-bottom: 0;
+}
+
+// Varianta: Strucny seznam s obrazky pro udalosti
+// -----------------------------------------------
+
+.images_list.with_events .item {
+    background-image: url('http://dovolena.ck-rekrea.cz/images/icon-event.png');
+    background-position: 10px 16px;
+    background-repeat: no-repeat;
+
+    // Vicesloupcova varianta - napr. v /udalosti
+    .double_column & .image {
+        right: 5px;
+        left: auto;
+        margin: 0;
+    }
+
+    // Jednosloupcova varianta - uzsi a bez obrazku, napr. v detailu oblasti
+    .column & .item {
+        padding: 3px 0;
+    }
+
+    .column & .text {
+        top: 3px;
+    }
+
+    .column & .text strong {
+        width: 230px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+
+// Varianta: Strucny obrazkovy seznam s obrazky v presne velikosti
+// ---------------------------------------------------------------
+
+.images_list.with_files .image img {
+    margin-left: 0;
+}
+
+.images_list.with_files .text {
+    line-height: 36px;
+}
+

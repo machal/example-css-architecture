@@ -1,0 +1,159 @@
+/* # Modul Button
+
+Univerzální tlačítka
+
+TODO
+- refactor, je to jen přesunuto z old_layout.less
+
+*/
+
+// ## Mixiny
+
+.draw-button() {
+  box-sizing: border-box; // Obcas davame na <a>, pak je toto potreba
+  padding: 5px 10px;
+  font: 12px/18px Arial, sans-serif;
+  color: #666;
+  border: 1px outset #ddd;
+  cursor: pointer;
+  vertical-align: middle;
+  border-color: darken(@color-light, 5%);
+  background: @color-light; // Old browsers
+  background: linear-gradient(to bottom, lighten(@color-light, 5%) 0%, @color-light 100%);
+  // Same dimensions hacketery http://www.vzhurudolu.cz/test/submit-button-dimensions/
+  overflow: visible; // remove extra padding in IE6+7:
+  height: 30px;   // unify height in Firefox, Opera  (watch traditional box model):
+  margin: 0;   // remove extra margin in Webkit:
+}
+
+.draw-small-button-addons() {
+  height: 24px;
+  line-height: 16px;
+  padding: 3px 10px;
+  min-width: 60px; /* IE8- bez toho nezobrazi postranni padding, uf  */
+  text-align: center;
+}
+
+// ## CSS
+
+.button {
+  .draw-button();
+}
+
+// remove extra padding in Firefox:
+.button::-moz-focus-inner {
+  padding: 0;
+}
+
+// hover/focus
+.button:hover,
+.button:focus {
+  background: lighten(@color-light-plus, 5%);
+  background: linear-gradient(to bottom, @color-light-plus 0%,lighten(@color-light-plus, 5%) 100%);
+  text-decoration: none;
+}
+
+
+// Disabled (napr. v rezervacnim formulari)
+.button[disabled],
+.button.disabled {
+	opacity: 0.5;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	background: #999 !important;
+  border: 1px outset #666 !important;
+	cursor: default;
+}
+
+// Mensi tlacitko - napr. hned vedle textoveho inputu
+
+.button.small {
+  .draw-small-button-addons;
+}
+
+// Vyrazne tlacitko s pozadim v barve odkazu
+
+.button.submit {
+  color: #fff;
+  border-color: darken(@color-alpha, 5%);
+  background: @color-alpha;
+  background: linear-gradient(to bottom, lighten(@color-alpha, 5%) 0%, @color-alpha 100%);
+
+  .container a& { // TODO specificnost
+    color: #fff;
+  }
+}
+
+.button.submit:hover,
+.button.submit:focus {
+  background: lighten(@color-alpha, 5%);
+  background: linear-gradient(to bottom, @color-alpha 0%,lighten(@color-alpha, 5%) 100%);
+
+  .container a& { // TODO specificnost
+    text-decoration: none;
+  }
+}
+
+
+
+// Ikonka uvnitr tlacitka
+// Napr. v detailu kapacity
+
+.button {
+  .icon-bottom-arrow {
+    position: relative;
+    top: -2px;
+  }
+}
+
+// Varianta: tlacitko pres cely layout - `.button-wide`
+// ----------------------------------------------------
+
+// Napr. v detailu kapacity
+
+.button.button-wide {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+// Varianta: průhledné s pixelovým rámečkem - `.button-outlined`
+// -----------------------------------------------------------
+
+// TODO
+// - .button.button-outlined specifičnost kvůli
+//   .out-of-box--inverted a
+
+.button.button-outlined {
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid @color-alpha;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    text-decoration: underline;
+  }
+}
+
+// Varianta: průhledné s pixelovým rámečkem na tmavém pozadí - `.button-outlined-white`
+// -----------------------------------------------------------------
+
+// TODO
+// - .button.button-outlined specifičnost kvůli
+//   .out-of-box--inverted a
+
+.button.button-outlined-white {
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: transparent;
+    text-decoration: underline;
+  }
+}

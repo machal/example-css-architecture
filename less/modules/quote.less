@@ -1,0 +1,67 @@
+/* --- Modul Quote ---
+
+Bublina pro citace.
+Např. na stránce O nás nebo v modulu Recommendation, tzn. v detailu ubytovatele.
+
+```
+<blockquote class="quote">
+  <p class="quote-bubble">
+    Zasílám pozdrav všem zaměstnancům Vaší cestovní kanceláře z hotelu Kamzík v Jeseníkách, užíváme si to tady. Díky za radu.
+  </p>
+  <cite class="quote-author">
+    Rodina Fylajkova, srpen 2014
+  </cite>
+</blockquote>
+````
+
+*/
+
+
+.quote {
+  // Reset <blockquote> stylovani
+  blockquote& {
+    margin-left: 0;
+  }
+}
+
+// Bublina citace
+// --------------
+
+.quote-bubble {
+  font-style: normal;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  box-shadow: 1px 1px rgba(0,0,0,.2);
+  border-radius: 5px;
+  position: relative;
+  padding: 9px 15px;
+  background: @color-light-plus;
+
+  // Sipka dole
+  &:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 10px 0 10px;
+    border-color: @color-light-plus transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -10px;
+    bottom: -20px;
+    left: 20px;
+  }
+}
+
+// Autor citace
+// ------------
+
+.quote-author {
+  display: block;
+  margin-top: -5px;
+  margin-left: 40px;
+
+  cite& {
+    font-style: normal;
+  }
+}

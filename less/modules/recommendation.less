@@ -1,0 +1,60 @@
+/* --- Modul Recommendation ---
+
+Fotka s bublinou jako doporučení pobytu v detailu kapacity.
+*/
+
+.recommendations {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.recommendation {
+  .clearfix;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+// Bublina citace
+// --------------
+
+// Vyuzivame .quote-bubble podobjekt, zde jen upravujeme
+// tak, aby mel sipku zezdola atd.
+
+.recommendation-quote.quote-bubble {
+  display: block;
+  float: left;
+  margin-left: (3*@base-line-height + 30px);
+  font-size: @larger-font-size;
+  line-height: @larger-line-height;
+
+  &:after {
+    border-width: 10px 20px 10px 0;
+    border-color: transparent @color-light-plus;
+    display: block;
+    bottom: auto;
+    left: -20px;
+    top: 25px;
+  }
+}
+
+.recommendation-quote-name {
+  display: block;
+  color: #666;
+}
+
+// Obrazek
+// -------
+
+.recommendation-image {
+  position: absolute;
+  left: 0;
+}
+
+.recommendation-image img {
+  border-radius: 50%;
+  width: auto;
+  height: 3*@base-line-height;
+  border: 2px solid @color-light-plus;
+}

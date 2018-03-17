@@ -1,0 +1,88 @@
+/*
+
+Hlavička obsahu stránky
+=======================
+
+*/
+
+// Hlavička s nadpisem, příp. filtry, bonusovou reklamou, lajkovacím tlačítkem a subnavigací.
+
+// TODO
+// - neni to spis komponenta nez element komponenty?
+// - zgruntu refactor + dokumentovat
+
+
+.content__head {
+	position: relative;
+  margin: 11px -7px 27px -7px;
+	background: linear-gradient(to bottom, #ffffff 25%, #f4f4f4 100%);
+
+  @media @large-start {
+    margin: 0 -22px 27px -23px;
+  }
+}
+
+.content__head h1 {
+  margin: 0 7px 0 7px;
+  display: block;
+	text-align: center;
+}
+
+.content__head.without_nav {
+  border-bottom: 1px solid #ddd;
+
+  @media @large-start {
+  	height: 57px;
+  }
+}
+
+// FB Like tlacitko
+// TODO takhle to samozřejmě na mobilech nestačí
+.content__head .fb-like {
+	display: none;
+}
+
+@media @large-start {
+
+	.content__head {
+	  //margin: 0 -8px 27px -30px;
+	}
+
+	.content__head h1 {
+    float: left;
+	  margin: 0 5px 18px 30px;
+	  text-align: left;
+	}
+
+	.content__head h1 a {
+		color: #666;
+		border-bottom: 1px dotted #999;
+	}
+
+	.content__head h1 a:hover,
+	.content__head h1 a:focus,
+	.content__head h1 a:active {
+		text-decoration: none;
+		color: #666;
+	  border-color: #666;
+	}
+
+	.content__head .fb-like {
+		display: block;
+	  float: right;
+	  width: 85px !important; // Important kvuli noveho stylovani FB like na tabletech
+	  margin: -12px 30px 0 0;
+	  opacity: .5;
+	}
+
+	.content__head.with_nav_inside .fb-like {
+	  margin-top: -2px;
+	}
+
+	.content__head .fb-like:hover,
+	.content__head .fb-like:focus,
+	.content__head .fb-like:active {
+	  opacity: 1;
+	}
+
+}

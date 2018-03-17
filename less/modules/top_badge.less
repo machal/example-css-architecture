@@ -1,0 +1,62 @@
+/* # Modul Top Badge
+
+(reklamni placka co je na kazde strance vpravo nahore
+napr. na HL.cz s akci "Levneji nez v hotelu")
+
+## Použití
+
+Modul je absolutně pozicován, takže se bude zobrazovat někde napravo nahoře viewportu.
+
+```
+<p class="top-badge">
+    <a href="/levneji/" class="fancybox_content">
+        <img src="http://www.hotelyjeseniky.cz/images/hj-badge.png" width="126" height="126" alt="Levněji než v hotelu">
+    </a>
+</p>
+```
+*/
+
+.top-badge {
+	position: absolute;
+  display: none;
+	top: 0px;
+	right: -10px;
+	width: 80px;
+	height: 80px;
+
+  @media @large-start {
+    display: block;
+  }
+
+  @media @large-start {
+    width: 116px;
+    height: 116px;
+    right: 8px;
+  }
+}
+
+.top-badge a {
+	display: block;
+	width: 80px;
+	height: 80px;
+
+  @media @large-start {
+    width: 116px;
+    height: 116px;
+  }
+}
+
+.top-badge img {
+	width: 80px;
+	height: auto;
+
+  @media @large-start {
+    width: 116px;
+  }
+}
+
+.top-badge a:hover,
+.top-badge a:focus,
+.top-badge a:active {
+  .opacity(.95);
+}

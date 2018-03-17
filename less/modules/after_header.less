@@ -1,0 +1,48 @@
+// --- Modul After Header ---
+
+// Inline obsah za nadpisem .content__head h1
+// TODO refactor a dokumentace
+
+.after_header {
+  margin: 0 0 18px 0;
+  display: block;
+  color: #aaa;
+	text-align: center;
+
+	.content__head & a {
+	  color: #aaa;
+	  border-bottom: 1px dotted #ddd;
+	}
+
+	.content__head & a:hover,
+	.content__head & a:focus,
+	.content__head & a:active {
+	  color: #666;
+	  border-color: #666;
+	  text-decoration: none;
+	}
+}
+
+@media @large-start {
+	.after_header {
+	  float: left;
+		text-align: left;
+		white-space: nowrap;
+    margin-top: 8px;
+	}
+
+  .after_header .stars {
+    margin-right: 10px;
+  }
+
+	// Varianta: s filtrem
+	// Napr. v seznamu LM/FM
+
+	.after_header.filters {
+		margin-top: 0;
+		margin-bottom: 0;
+		top: 5px;
+		left: 10px;
+		position: relative;
+	}
+}

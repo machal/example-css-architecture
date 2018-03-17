@@ -1,0 +1,7475 @@
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/*!
+ * Bootstrap v2.0.2
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.bootstrap_block .clearfix {
+  *zoom: 1;
+}
+.bootstrap_block .clearfix:before,
+.bootstrap_block .clearfix:after {
+  display: table;
+  content: "";
+}
+.bootstrap_block .clearfix:after {
+  clear: both;
+}
+.bootstrap_block .hide-text {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+.bootstrap_block .input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bootstrap_block form {
+  margin: 0 0 18px;
+}
+.bootstrap_block fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.bootstrap_block legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 27px;
+  font-size: 19.5px;
+  line-height: 36px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #eee;
+}
+.bootstrap_block legend small {
+  font-size: 13.5px;
+  color: #999999;
+}
+.bootstrap_block label,
+.bootstrap_block input,
+.bootstrap_block button,
+.bootstrap_block select,
+.bootstrap_block textarea {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+.bootstrap_block input,
+.bootstrap_block button,
+.bootstrap_block select,
+.bootstrap_block textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.bootstrap_block label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+}
+.bootstrap_block input,
+.bootstrap_block textarea,
+.bootstrap_block select,
+.bootstrap_block .uneditable-input {
+  display: inline-block;
+  width: 210px;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+.bootstrap_block .uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+.bootstrap_block label input,
+.bootstrap_block label textarea,
+.bootstrap_block label select {
+  display: block;
+}
+.bootstrap_block input[type="image"],
+.bootstrap_block input[type="checkbox"],
+.bootstrap_block input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;
+  /* IE7 */
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 0;
+  border: 0 \9;
+  /* IE9 and down */
+}
+.bootstrap_block input[type="image"] {
+  border: 0;
+}
+.bootstrap_block input[type="file"] {
+  width: auto;
+  padding: initial;
+  line-height: initial;
+  border: initial;
+  background-color: #ffffff;
+  background-color: initial;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.bootstrap_block input[type="button"],
+.bootstrap_block input[type="reset"],
+.bootstrap_block input[type="submit"] {
+  width: auto;
+  height: auto;
+}
+.bootstrap_block select,
+.bootstrap_block input[type="file"] {
+  height: 28px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+  line-height: 28px;
+}
+.bootstrap_block input[type="file"] {
+  line-height: 18px \9;
+}
+.bootstrap_block select {
+  width: 220px;
+  background-color: #ffffff;
+}
+.bootstrap_block select[multiple],
+.bootstrap_block select[size] {
+  height: auto;
+}
+.bootstrap_block input[type="image"] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.bootstrap_block textarea {
+  height: auto;
+}
+.bootstrap_block input[type="hidden"] {
+  display: none;
+}
+.bootstrap_block .radio,
+.bootstrap_block .checkbox {
+  padding-left: 18px;
+}
+.bootstrap_block .radio input[type="radio"],
+.bootstrap_block .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+.bootstrap_block .controls > .radio:first-child,
+.bootstrap_block .controls > .checkbox:first-child {
+  padding-top: 5px;
+}
+.bootstrap_block .radio.inline,
+.bootstrap_block .checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.bootstrap_block .radio.inline + .radio.inline,
+.bootstrap_block .checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+.bootstrap_block input,
+.bootstrap_block textarea {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, -webkit-box-shadow linear 0.2s;
+  transition: border linear 0.2s, -webkit-box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s, -webkit-box-shadow linear 0.2s;
+}
+.bootstrap_block input:focus,
+.bootstrap_block textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+.bootstrap_block input[type="file"]:focus,
+.bootstrap_block input[type="radio"]:focus,
+.bootstrap_block input[type="checkbox"]:focus,
+.bootstrap_block select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.bootstrap_block .input-mini {
+  width: 60px;
+}
+.bootstrap_block .input-small {
+  width: 90px;
+}
+.bootstrap_block .input-medium {
+  width: 150px;
+}
+.bootstrap_block .input-large {
+  width: 210px;
+}
+.bootstrap_block .input-xlarge {
+  width: 270px;
+}
+.bootstrap_block .input-xxlarge {
+  width: 530px;
+}
+.bootstrap_block input[class*="span"],
+.bootstrap_block select[class*="span"],
+.bootstrap_block textarea[class*="span"],
+.bootstrap_block .uneditable-input {
+  float: none;
+  margin-left: 0;
+}
+.bootstrap_block input,
+.bootstrap_block textarea,
+.bootstrap_block .uneditable-input {
+  margin-left: 0;
+}
+.bootstrap_block input.span12,
+.bootstrap_block textarea.span12,
+.bootstrap_block .uneditable-input.span12 {
+  width: 930px;
+}
+.bootstrap_block input.span11,
+.bootstrap_block textarea.span11,
+.bootstrap_block .uneditable-input.span11 {
+  width: 850px;
+}
+.bootstrap_block input.span10,
+.bootstrap_block textarea.span10,
+.bootstrap_block .uneditable-input.span10 {
+  width: 770px;
+}
+.bootstrap_block input.span9,
+.bootstrap_block textarea.span9,
+.bootstrap_block .uneditable-input.span9 {
+  width: 690px;
+}
+.bootstrap_block input.span8,
+.bootstrap_block textarea.span8,
+.bootstrap_block .uneditable-input.span8 {
+  width: 610px;
+}
+.bootstrap_block input.span7,
+.bootstrap_block textarea.span7,
+.bootstrap_block .uneditable-input.span7 {
+  width: 530px;
+}
+.bootstrap_block input.span6,
+.bootstrap_block textarea.span6,
+.bootstrap_block .uneditable-input.span6 {
+  width: 450px;
+}
+.bootstrap_block input.span5,
+.bootstrap_block textarea.span5,
+.bootstrap_block .uneditable-input.span5 {
+  width: 370px;
+}
+.bootstrap_block input.span4,
+.bootstrap_block textarea.span4,
+.bootstrap_block .uneditable-input.span4 {
+  width: 290px;
+}
+.bootstrap_block input.span3,
+.bootstrap_block textarea.span3,
+.bootstrap_block .uneditable-input.span3 {
+  width: 210px;
+}
+.bootstrap_block input.span2,
+.bootstrap_block textarea.span2,
+.bootstrap_block .uneditable-input.span2 {
+  width: 130px;
+}
+.bootstrap_block input.span1,
+.bootstrap_block textarea.span1,
+.bootstrap_block .uneditable-input.span1 {
+  width: 50px;
+}
+.bootstrap_block input[disabled],
+.bootstrap_block select[disabled],
+.bootstrap_block textarea[disabled],
+.bootstrap_block input[readonly],
+.bootstrap_block select[readonly],
+.bootstrap_block textarea[readonly] {
+  background-color: #eeeeee;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+.bootstrap_block .control-group.warning > label,
+.bootstrap_block .control-group.warning .help-block,
+.bootstrap_block .control-group.warning .help-inline {
+  color: #c09853;
+}
+.bootstrap_block .control-group.warning input,
+.bootstrap_block .control-group.warning select,
+.bootstrap_block .control-group.warning textarea {
+  color: #c09853;
+  border-color: #c09853;
+}
+.bootstrap_block .control-group.warning input:focus,
+.bootstrap_block .control-group.warning select:focus,
+.bootstrap_block .control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: 0 0 6px #dbc59e;
+          box-shadow: 0 0 6px #dbc59e;
+}
+.bootstrap_block .control-group.warning .input-prepend .add-on,
+.bootstrap_block .control-group.warning .input-append .add-on {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+.bootstrap_block .control-group.error > label,
+.bootstrap_block .control-group.error .help-block,
+.bootstrap_block .control-group.error .help-inline {
+  color: #b94a48;
+}
+.bootstrap_block .control-group.error input,
+.bootstrap_block .control-group.error select,
+.bootstrap_block .control-group.error textarea {
+  color: #b94a48;
+  border-color: #b94a48;
+}
+.bootstrap_block .control-group.error input:focus,
+.bootstrap_block .control-group.error select:focus,
+.bootstrap_block .control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+          box-shadow: 0 0 6px #d59392;
+}
+.bootstrap_block .control-group.error .input-prepend .add-on,
+.bootstrap_block .control-group.error .input-append .add-on {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #b94a48;
+}
+.bootstrap_block .control-group.success > label,
+.bootstrap_block .control-group.success .help-block,
+.bootstrap_block .control-group.success .help-inline {
+  color: #468847;
+}
+.bootstrap_block .control-group.success input,
+.bootstrap_block .control-group.success select,
+.bootstrap_block .control-group.success textarea {
+  color: #468847;
+  border-color: #468847;
+}
+.bootstrap_block .control-group.success input:focus,
+.bootstrap_block .control-group.success select:focus,
+.bootstrap_block .control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: 0 0 6px #7aba7b;
+          box-shadow: 0 0 6px #7aba7b;
+}
+.bootstrap_block .control-group.success .input-prepend .add-on,
+.bootstrap_block .control-group.success .input-append .add-on {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #468847;
+}
+.bootstrap_block input:focus:required:invalid,
+.bootstrap_block textarea:focus:required:invalid,
+.bootstrap_block select:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+.bootstrap_block input:focus:required:invalid:focus,
+.bootstrap_block textarea:focus:required:invalid:focus,
+.bootstrap_block select:focus:required:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+          box-shadow: 0 0 6px #f8b9b7;
+}
+.bootstrap_block .form-actions {
+  padding: 17px 20px 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background-color: #eeeeee;
+  border-top: 1px solid #ddd;
+  *zoom: 1;
+}
+.bootstrap_block .form-actions:before,
+.bootstrap_block .form-actions:after {
+  display: table;
+  content: "";
+}
+.bootstrap_block .form-actions:after {
+  clear: both;
+}
+.bootstrap_block .uneditable-input {
+  display: block;
+  background-color: #ffffff;
+  border-color: #eee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  cursor: not-allowed;
+}
+.bootstrap_block :-moz-placeholder {
+  color: #999999;
+}
+.bootstrap_block ::-webkit-input-placeholder {
+  color: #999999;
+}
+.bootstrap_block .help-block,
+.bootstrap_block .help-inline {
+  color: #555555;
+}
+.bootstrap_block .help-block {
+  display: block;
+  margin-bottom: 9px;
+}
+.bootstrap_block .help-inline {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.bootstrap_block .input-prepend,
+.bootstrap_block .input-append {
+  margin-bottom: 5px;
+}
+.bootstrap_block .input-prepend input,
+.bootstrap_block .input-append input,
+.bootstrap_block .input-prepend select,
+.bootstrap_block .input-append select,
+.bootstrap_block .input-prepend .uneditable-input,
+.bootstrap_block .input-append .uneditable-input {
+  *margin-left: 0;
+  border-radius: 0 3px 3px 0;
+}
+.bootstrap_block .input-prepend input:focus,
+.bootstrap_block .input-append input:focus,
+.bootstrap_block .input-prepend select:focus,
+.bootstrap_block .input-append select:focus,
+.bootstrap_block .input-prepend .uneditable-input:focus,
+.bootstrap_block .input-append .uneditable-input:focus {
+  position: relative;
+  z-index: 2;
+}
+.bootstrap_block .input-prepend .uneditable-input,
+.bootstrap_block .input-append .uneditable-input {
+  border-left-color: #ccc;
+}
+.bootstrap_block .input-prepend .add-on,
+.bootstrap_block .input-append .add-on {
+  display: inline-block;
+  width: auto;
+  min-width: 16px;
+  height: 18px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 18px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+.bootstrap_block .input-prepend .add-on,
+.bootstrap_block .input-append .add-on,
+.bootstrap_block .input-prepend .btn,
+.bootstrap_block .input-append .btn {
+  border-radius: 3px 0 0 3px;
+}
+.bootstrap_block .input-prepend .active,
+.bootstrap_block .input-append .active {
+  background-color: #a9dba9;
+  border-color: #46a546;
+}
+.bootstrap_block .input-prepend .add-on,
+.bootstrap_block .input-prepend .btn {
+  margin-right: -1px;
+}
+.bootstrap_block .input-append input,
+.bootstrap_block .input-append select .uneditable-input {
+  border-radius: 3px 0 0 3px;
+}
+.bootstrap_block .input-append .uneditable-input {
+  border-left-color: #eee;
+  border-right-color: #ccc;
+}
+.bootstrap_block .input-append .add-on,
+.bootstrap_block .input-append .btn {
+  margin-left: -1px;
+  border-radius: 0 3px 3px 0;
+}
+.bootstrap_block .input-prepend.input-append input,
+.bootstrap_block .input-prepend.input-append select,
+.bootstrap_block .input-prepend.input-append .uneditable-input {
+  border-radius: 0;
+}
+.bootstrap_block .input-prepend.input-append .add-on:first-child,
+.bootstrap_block .input-prepend.input-append .btn:first-child {
+  margin-right: -1px;
+  border-radius: 3px 0 0 3px;
+}
+.bootstrap_block .input-prepend.input-append .add-on:last-child,
+.bootstrap_block .input-prepend.input-append .btn:last-child {
+  margin-left: -1px;
+  border-radius: 0 3px 3px 0;
+}
+.bootstrap_block .search-query {
+  padding-left: 14px;
+  padding-right: 14px;
+  margin-bottom: 0;
+  border-radius: 14px;
+}
+.bootstrap_block .form-search input,
+.bootstrap_block .form-inline input,
+.bootstrap_block .form-horizontal input,
+.bootstrap_block .form-search textarea,
+.bootstrap_block .form-inline textarea,
+.bootstrap_block .form-horizontal textarea,
+.bootstrap_block .form-search select,
+.bootstrap_block .form-inline select,
+.bootstrap_block .form-horizontal select,
+.bootstrap_block .form-search .help-inline,
+.bootstrap_block .form-inline .help-inline,
+.bootstrap_block .form-horizontal .help-inline,
+.bootstrap_block .form-search .uneditable-input,
+.bootstrap_block .form-inline .uneditable-input,
+.bootstrap_block .form-horizontal .uneditable-input,
+.bootstrap_block .form-search .input-prepend,
+.bootstrap_block .form-inline .input-prepend,
+.bootstrap_block .form-horizontal .input-prepend,
+.bootstrap_block .form-search .input-append,
+.bootstrap_block .form-inline .input-append,
+.bootstrap_block .form-horizontal .input-append {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.bootstrap_block .form-search .hide,
+.bootstrap_block .form-inline .hide,
+.bootstrap_block .form-horizontal .hide {
+  display: none;
+}
+.bootstrap_block .form-search label,
+.bootstrap_block .form-inline label {
+  display: inline-block;
+}
+.bootstrap_block .form-search .input-append,
+.bootstrap_block .form-inline .input-append,
+.bootstrap_block .form-search .input-prepend,
+.bootstrap_block .form-inline .input-prepend {
+  margin-bottom: 0;
+}
+.bootstrap_block .form-search .radio,
+.bootstrap_block .form-search .checkbox,
+.bootstrap_block .form-inline .radio,
+.bootstrap_block .form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.bootstrap_block .form-search .radio input[type="radio"],
+.bootstrap_block .form-search .checkbox input[type="checkbox"],
+.bootstrap_block .form-inline .radio input[type="radio"],
+.bootstrap_block .form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: 0;
+  margin-right: 3px;
+}
+.bootstrap_block .control-group {
+  margin-bottom: 9px;
+}
+.bootstrap_block legend + .control-group {
+  margin-top: 18px;
+  -webkit-margin-top-collapse: separate;
+}
+.bootstrap_block .form-horizontal .control-group {
+  margin-bottom: 18px;
+  *zoom: 1;
+}
+.bootstrap_block .form-horizontal .control-group:before,
+.bootstrap_block .form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+.bootstrap_block .form-horizontal .control-group:after {
+  clear: both;
+}
+.bootstrap_block .form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: right;
+}
+.bootstrap_block .form-horizontal .controls {
+  margin-left: 160px;
+  /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
+  *display: inline-block;
+  *margin-left: 0;
+  *padding-left: 20px;
+}
+.bootstrap_block .form-horizontal .help-block {
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.bootstrap_block .form-horizontal .form-actions {
+  padding-left: 160px;
+}
+/*
+   Bootstrap styles
+	(TODO odmazat po instalaci Bootstrapu)
+*/
+.datepicker table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.datepicker .active {
+  background: #666 !important;
+}
+.datepicker .table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.datepicker .table th,
+.datepicker .table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.datepicker .table th {
+  font-weight: bold;
+}
+.datepicker .table thead th {
+  vertical-align: bottom;
+}
+.datepicker .table caption + thead tr:first-child th,
+.datepicker .table caption + thead tr:first-child td,
+.datepicker .table colgroup + thead tr:first-child th,
+.datepicker .table colgroup + thead tr:first-child td,
+.datepicker .table thead:first-child tr:first-child th,
+.datepicker .table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+.datepicker .table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.datepicker .table-condensed th,
+.datepicker .table-condensed td {
+  padding: 4px 5px;
+}
+.datepicker.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 1px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+}
+.datepicker.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.datepicker.dropdown-menu .divider {
+  *width: 100%;
+  height: 1px;
+  margin: 8px 1px;
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+}
+.datepicker.dropdown-menu a {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  color: #333333;
+  white-space: nowrap;
+}
+.datepicker.dropdown-menu li > a:hover,
+.datepicker.dropdown-menu .active > a,
+.datepicker.dropdown-menu .active > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0088cc;
+}
+.datepicker.open {
+  *z-index: 1000;
+}
+.datepicker.open.dropdown-menu {
+  display: block;
+}
+.datepicker [class^="icon-"],
+.datepicker [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("http://dovolena.ck-rekrea.cz/images/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+.datepicker [class^="icon-"]:last-child,
+.datepicker [class*=" icon-"]:last-child {
+  *margin-left: 0;
+}
+.datepicker .icon-arrow-left {
+  background-position: -240px -96px;
+}
+.datepicker .icon-arrow-right {
+  background-position: -264px -96px;
+}
+/*!
+* Datepicker for Bootstrap
+*
+* Copyright 2012 Stefan Petre
+* Licensed under the Apache License v2.0
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+*/
+.datepicker {
+  top: 0;
+  left: 0;
+  padding: 4px;
+  margin-top: 1px;
+  border-radius: 4px;
+  /*.dow {
+border-top: 1px solid #ddd !important;
+}*/
+}
+.datepicker:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 6px;
+}
+.datepicker:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #ffffff;
+  position: absolute;
+  top: -6px;
+  left: 7px;
+}
+.datepicker > div {
+  display: none;
+}
+.datepicker table {
+  width: 100%;
+  margin: 0;
+}
+.datepicker td,
+.datepicker th {
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.datepicker td.day:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.datepicker td.old,
+.datepicker td.new {
+  color: #999999;
+}
+.datepicker td.active,
+.datepicker td.active:hover {
+  background-color: #006dcc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0088cc), to(#0044cc));
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker td.active:hover,
+.datepicker td.active:hover:hover,
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active,
+.datepicker td.active.disabled,
+.datepicker td.active:hover.disabled,
+.datepicker td.active[disabled],
+.datepicker td.active:hover[disabled] {
+  background-color: #0044cc;
+}
+.datepicker td.active:active,
+.datepicker td.active:hover:active,
+.datepicker td.active.active,
+.datepicker td.active:hover.active {
+  background-color: #003399 \9;
+}
+.datepicker td span {
+  display: block;
+  width: 47px;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.datepicker td span:hover {
+  background: #eeeeee;
+}
+.datepicker td span.active {
+  background-color: #006dcc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0088cc), to(#0044cc));
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0044cc', GradientType=0);
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker td span.active:hover,
+.datepicker td span.active:active,
+.datepicker td span.active.active,
+.datepicker td span.active.disabled,
+.datepicker td span.active[disabled] {
+  background-color: #0044cc;
+}
+.datepicker td span.active:active,
+.datepicker td span.active.active {
+  background-color: #003399 \9;
+}
+.datepicker td span.old {
+  color: #999999;
+}
+.datepicker th.switch {
+  width: 145px;
+}
+.datepicker thead tr:first-child th {
+  cursor: pointer;
+}
+.datepicker thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+.input-append.date .add-on i,
+.input-prepend.date .add-on i {
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+/*
+
+  Stylopis pro Fancygallery (prototyp)
+  Knihovna pro zobrazovani galerii obrazku.
+  Verze z 20. 10. 2011
+  Autor: Martin Michalek, michalek@shortcat.cz
+
+  Obsah:
+  1) jquery.fancybox.mod_shortcat.css     Shortcat vzhled FancyBoxu
+  2) jquery.jcarousel.css                 Zakladni stylopis pro jCarousel
+  3) jquery.jcarousel.skin.shortcat.css   Shortcat vizual pro jCarousel
+  4) fancygallery.css                     Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
+
+  Z-indexy:
+  1110	#fancybox-loading, #fancybox-thumbnails .jcarousel-item .hover-image (FB Gallery mouseover)
+  1109	#fancybox-inner:hover (Hover nad obrazkem)
+  1108	#fancybox-thumbnails (FB Gallery lista s thumbnaily)
+  1108	#fancybox-close
+  1107	#fancybox-left, #fancybox-right, #fancybox-left-ico, #fancybox-right-ico
+  1102	#fancybox-title
+  1101	#fancybox-wrap
+  1100	#fancybox-overlay
+
+*/
+/* =================================================================
+   1) jquery.fancybox.mod_shortcat.css
+   Shortcat vzhled FancyBoxu
+*/
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ *
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ *
+ * Version: 1.3.1 (05/03/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+/* Do not show scrollbars when FB is open */
+body.fancybox-active {
+  overflow: hidden;
+}
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1104;
+  display: none;
+}
+#fancybox-loading div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 480px;
+  background-image: url('../../images/fancygallery/fancybox.png');
+}
+#fancybox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  z-index: 1100;
+  display: none;
+}
+#fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: auto;
+  display: none;
+}
+#fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  z-index: 1101;
+  display: none;
+}
+#fancybox-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+}
+#fancybox-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+}
+#fancybox-inner:hover {
+  z-index: 1109;
+}
+#fancybox-hide-sel-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+#fancybox-close {
+  position: fixed;
+  right: 22px;
+  top: 24px;
+  width: 37px;
+  height: 37px;
+  background-image: url('../../images/fancygallery/fancy_close.gif');
+  background-position: top left;
+  cursor: pointer;
+  z-index: 1108;
+  display: none;
+}
+#fancybox-close:hover {
+  background-position: bottom left;
+}
+#fancybox_error {
+  color: #444;
+  font: normal 12px/20px Arial;
+  padding: 7px;
+  margin: 0;
+}
+#fancybox-content {
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+#fancybox-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  line-height: 0;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+#fancybox-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+#fancybox-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1102;
+}
+.fancybox-title-inside {
+  padding: 10px 0;
+  text-align: center;
+  color: #333;
+}
+.fancybox-title-outside {
+  padding-top: 5px;
+  color: #FFF;
+  text-align: center;
+}
+.fancybox-title-over {
+  color: #FFF;
+  text-align: left;
+}
+#fancybox-title-over {
+  padding: 10px;
+  background-image: url('../../images/fancygallery/fancy_title_over.png');
+  display: block;
+}
+/* Outer title content */
+#fancybox-title-wrap {
+  position: fixed;
+  left: 22px;
+  top: 24px;
+  width: auto;
+  max-width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  display: inline-block;
+  padding: 8px 10px;
+  background-image: url('../../images/fancygallery/fancy_title_over.png');
+}
+#fancybox-title-left,
+#fancybox-title-right {
+  display: none;
+}
+#fancybox-title-main {
+  color: #fff;
+  text-align: left;
+  display: block;
+  opacity: 1;
+}
+/* Left and right navigation arrows */
+#fancybox-left,
+#fancybox-right {
+  position: fixed;
+  bottom: 0px;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: none;
+  background-image: url('../../images/fancygallery/blank.gif');
+  z-index: 1107;
+  display: none;
+}
+#fancybox-left {
+  left: 0px;
+}
+#fancybox-right {
+  right: 0px;
+}
+#fancybox-left-ico,
+#fancybox-right-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 61px;
+  height: 77px;
+  margin-top: -30px;
+  cursor: pointer;
+  z-index: 1107;
+  display: block;
+}
+#fancybox-left-ico {
+  background-image: url('../../images/fancygallery/fancy_nav_left.png');
+  left: 0px;
+}
+#fancybox-right-ico {
+  background-image: url('../../images/fancygallery/fancy_nav_right.png');
+  left: auto;
+  right: 0px;
+}
+#fancybox-left:hover #fancybox-left-ico,
+#fancybox-left:focus #fancybox-left-ico,
+#fancybox-left:active #fancybox-left-ico,
+#fancybox-right:hover #fancybox-right-ico,
+#fancybox-right:focus #fancybox-right-ico,
+#fancybox-right:active #fancybox-right-ico {
+  background-position: 0 -77px;
+}
+/* Shadows are off */
+.fancy-bg {
+  display: none;
+}
+/* =================================================================
+   2) jquery.jcarousel.css
+   Zakladni stylopis pro jCarousel
+*/
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+.jcarousel-container {
+  position: relative;
+}
+.jcarousel-clip {
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.jcarousel-list {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.jcarousel-list li,
+.jcarousel-item {
+  float: left;
+  list-style: none;
+  /* We set the width/height explicitly. No width/height causes infinite loops. */
+  width: 75px;
+  height: 75px;
+}
+/**
+ * The buttons are added dynamically by jCarousel before
+ * the <ul> list (inside the <div> described above) and
+ * have the classnames "jcarousel-next" and "jcarousel-prev".
+ */
+.jcarousel-next {
+  z-index: 3;
+  display: none;
+}
+.jcarousel-prev {
+  z-index: 3;
+  display: none;
+}
+/* =================================================================
+   3) jquery.jcarousel.skin.shortcat.css
+   Shortcat vizual pro jCarousel
+*/
+/*
+Stylesheet for jQuery carousel - Shortcat skin
+Author:        Martin Michalek, Studio Shortcat, michalek@shortcat.cz
+*/
+.jcarousel-skin-shortcat .jcarousel-container {
+  top: -2px;
+  left: -2px;
+  position: relative;
+  margin: 0 10px;
+  width: 897px;
+}
+.jcarousel-skin-shortcat .jcarousel-container-horizontal {
+  padding: 0 40px;
+  width: auto;
+}
+.jcarousel-skin-shortcat .jcarousel-clip-horizontal {
+  height: 40px;
+  width: auto;
+}
+.jcarousel-skin-shortcat .jcarousel-item,
+.jcarousel-skin-shortcat .jcarousel-item img {
+  width: 40px;
+  height: 40px;
+}
+.jcarousel-skin-shortcat .jcarousel-item img {
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.jcarousel-skin-shortcat .jcarousel-item.active img,
+.jcarousel-skin-shortcat .jcarousel-item:hover img {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+.jcarousel-skin-shortcat .jcarousel-item-horizontal {
+  margin-right: 3px;
+}
+.jcarousel-skin-shortcat .jcarousel-item-placeholder {
+  background: #fff;
+  color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-shortcat .jcarousel-next-horizontal {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 33px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent url(../../images/fancygallery/fancygallery_next.gif) no-repeat top right;
+}
+.jcarousel-skin-shortcat .jcarousel-next-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-next-horizontal.hover,
+.jcarousel-skin-shortcat .jcarousel-next-horizontal:active {
+  background-position: top right;
+}
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:active {
+  cursor: default;
+  background-image: none;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 33px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent url(../../images/fancygallery/fancygallery_prev.gif) no-repeat 0 0;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal.hover,
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal:active {
+  background-position: 0 0;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:active {
+  cursor: default;
+  background-image: none;
+}
+/* =================================================================
+   4) fancygallery.css
+   Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
+*/
+/* Vrstva s thumbnaily  */
+#fancybox-thumbnails {
+  position: fixed;
+  z-index: 1108;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+}
+/* == Vrstva s thumbnaily v pripade kdy zobrazujeme vetsi obrazek na mouseover == */
+#fancybox-thumbnails,
+#fancybox-thumbnails .jcarousel-skin-shortcat .jcarousel-clip-horizontal {
+  height: 129px;
+  /* 40px maly nahled + 75px mouseover nahled + 4px border + 10px sipka */
+}
+/* Vetsi obrazek zobrazovany na mouseover */
+#fancybox-thumbnails .jcarousel-item .hover-image {
+  width: 75px;
+  height: 86px;
+  padding: 2px;
+  position: relative;
+  top: -129px;
+  left: -20px;
+  display: none;
+  background-image: url(../../images/fancygallery/fancygallery_thumbnail_hover.gif);
+  background-repeat: no-repeat;
+}
+#fancybox-thumbnails .jcarousel-item .hover-image img {
+  width: 75px;
+  height: 75px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+#fancybox-thumbnails .jcarousel-item:hover .hover-image {
+  display: block;
+}
+#fancybox-thumbnails .jcarousel-item,
+#fancybox-thumbnails .jcarousel-next-horizontal,
+#fancybox-thumbnails .jcarousel-prev-horizontal {
+  margin-top: 89px;
+  /* 75px mouseover nahled + 4px border + 10px sipka */
+}
+/*
+Zkousime dostat mouseover ven z rodicovskeho overflow:hidden prvku:
+Rodicum nastavime position: static a synovi pak position: absolute.
+(Viz http://www.vzhurudolu.cz/test/override-overflow-hidden/)
+*/
+#fancybox-thumbnails .jcarousel-clip,
+#fancybox-thumbnails .jcarousel-list {
+  position: static;
+}
+#fancybox-thumbnails .jcarousel-item .hover-image {
+  position: absolute;
+  top: auto;
+  left: auto;
+  margin-top: -129px;
+  margin-left: -20px;
+  z-index: 1110;
+}
+#fancybox-thumbnails.scrolling .jcarousel-clip,
+#fancybox-thumbnails.scrolling .jcarousel-list {
+  position: relative;
+}
+/* Pokud v titulku fotky zobrazujeme i titulek setu, zmenime jeho barvu */
+#fancybox-title-main .set {
+  color: #999;
+}
+.gsc-control-cse {
+  padding: 0 !important;
+}
+/*
+Chat application - SmartSupp chat
+*/
+@media print {
+  #chat-application {
+    display: none !important;
+  }
+}
+/*
+
+Reset
+=====
+
+*/
+body {
+  margin: 0;
+  padding: 0;
+}
+a img,
+img {
+  border: 0;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height: auto;
+}
+/*
+
+Vzhled body
+===========
+
+*/
+body {
+  background: #eee;
+  color: #000;
+}
+@media only screen and (min-width: 768px) {
+  body {
+    background: url('../../images/light_noise_diagonal.png') repeat;
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body.ajax {
+    background: #fff;
+    padding: 0;
+  }
+  body.ajax .container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+/*
+
+Typografie a linearni design
+============================
+
+*/
+body,
+input,
+textarea,
+option,
+select {
+  font: 12px/18px Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: #0EB10E;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #075207;
+  text-decoration: underline;
+}
+p,
+ul,
+ol,
+table,
+blockquote {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 18px;
+}
+h1,
+.h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 27px 5px;
+  color: #666;
+  font-weight: normal;
+}
+@media only screen and (min-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+h2,
+.h2 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #999;
+}
+@media only screen and (min-width: 768px) {
+  h2,
+  .h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+h3,
+.h3 {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #666;
+}
+h4,
+.h4 {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #666;
+}
+h2 small,
+h3 small {
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+}
+big {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+}
+ul,
+ol {
+  margin: 0 0 18px 14px;
+  padding: 0 0 0 0;
+  color: #ccc;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ul {
+  list-style-type: square;
+}
+ul li,
+ol li {
+  color: #000;
+}
+@media only screen and (min-width: 768px) {
+  h2 small.float_right {
+    margin-top: 5px;
+  }
+}
+/*
+
+Helpery
+=======
+
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.container .margin_bottom {
+  margin-bottom: 18px;
+}
+.container .margin_bottom_half {
+  margin-bottom: 9px;
+}
+.container .margin_bottom_double {
+  margin-bottom: 36px;
+}
+.without_margin_bottom {
+  margin-bottom: 0;
+}
+.margin_top_negative {
+  margin-top: -18px;
+}
+.container .margin_top {
+  margin-top: 18px;
+}
+.container .margin_top_double {
+  margin-top: 36px;
+}
+.margin_top_half {
+  margin-top: 9px;
+}
+.desktop_only {
+  display: none !important;
+}
+@media only screen and (min-width: 768px) {
+  .desktop_only {
+    display: block !important;
+  }
+}
+.dumb_only {
+  display: none !important;
+}
+.center,
+.text-center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.clear_both {
+  clear: both;
+}
+.block_center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+.suppress {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.float_right {
+  float: right;
+}
+.float_left {
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  .last {
+    margin-right: 0 !important;
+  }
+}
+.tabbed_text {
+  padding-left: 15px;
+  padding-right: 45px;
+}
+.small {
+  font-size: 11px;
+  line-height: 13px;
+  color: #999;
+}
+.small a {
+  color: #999;
+  text-decoration: underline;
+}
+.small a:hover,
+.small a:focus,
+.small a:active {
+  color: #666;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.floatLeft50 {
+  float: left;
+  width: 48%;
+}
+.floatRight50 {
+  float: right;
+  width: 48%;
+}
+.clearBothZero,
+.clear_zero {
+  display: block;
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+  height: 1px;
+}
+.marginBottom3 {
+  margin-bottom: 3em;
+}
+.marginBottom1half {
+  margin-bottom: 1.5em;
+}
+.marginRight15 {
+  margin-right: 15px;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.displayNone {
+  display: none;
+}
+.marginTopNo {
+  margin-top: 0;
+}
+.sideOne .marginTopNo {
+  margin-top: -1.5em;
+}
+.alignLeft {
+  text-align: left;
+}
+.alignRight {
+  text-align: right;
+}
+.alignCenter {
+  text-align: center;
+}
+.alignMiddle {
+  vertical-align: middle;
+}
+.required {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f60;
+}
+p.submit {
+  text-align: right;
+}
+.big {
+  font-size: 1.5em;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.fontSmall {
+  font-size: .5em;
+  font-weight: normal;
+}
+small.fontSmall {
+  font-size: .6em;
+  font-weight: normal;
+}
+table.fontSmall td,
+table.fontSmall th {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+.clearBoth {
+  clear: both;
+}
+.container .alignRight {
+  text-align: right;
+}
+.container .alignLeft {
+  text-align: left;
+}
+.container .alignCenter {
+  text-align: center;
+}
+.testRed {
+  border: 1px solid red;
+}
+.displayInline {
+  display: inline;
+}
+.displayNone {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.width100 {
+  width: 100%;
+}
+.width50 {
+  width: 50%;
+}
+.display_block {
+  display: block;
+}
+.more_link {
+  margin: 2em 0;
+  text-align: center;
+}
+.accommodation_big_item {
+  margin-bottom: 36px;
+}
+.unveil {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+}
+.more_info {
+  color: #666;
+}
+.legend {
+  color: #999;
+  text-align: right;
+}
+.similar_items {
+  margin-top: 54px;
+}
+#map_container {
+  margin: -35px -8px 27px -30px;
+  width: auto;
+  height: 562px;
+}
+#mapa_okoli {
+  margin-top: 8px;
+}
+#subdivisions {
+  max-width: 940px;
+  margin-bottom: 36px;
+}
+#subdivisions h3 {
+  margin-bottom: 9px;
+  border-bottom: 1px solid #ccc;
+}
+.more_photos a {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0;
+  padding-left: 0;
+  padding: 5px 7px;
+  display: block;
+}
+.more_photos a:hover,
+.more_photos a:focus,
+.more_photos a:active {
+  background-color: #eee;
+  cursor: pointer;
+}
+input.input--border {
+  border: 1px solid #000;
+}
+textarea.textarea--border {
+  border: 1px solid #000;
+}
+/*
+Kontejner layoutu
+=================
+*/
+.container {
+  width: 1000px;
+  max-width: 100%;
+  background: #fff url(../../images/layout/sidebox-bg.gif) repeat-y right top;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+/* # Layout
+
+Obsah ma celkem 940px (1000px + 30px paddingy).
+
+## TODO
+
+- refaktor po prechodu na novou strukturu, viz dole
+- % jednotky
+
+## Struktura layoutu
+
+Stará:
+
+```
+#container
+  .head
+  #content
+    #content_head
+    #content_body
+      (.row)
+        .column|.double_column|.triple_column|.half_column
+  #footNew
+  #footBottom
+```
+
+Nová (od 12/2015)
+
+```
+.container
+  .head
+  .content
+    .content__head
+    .content__body
+      (.row)
+        .column|.double_column|.triple_column|.half_column
+  #footNew
+  #footBottom
+```
+
+*/
+.container {
+  background-image: none !important;
+  /* DEPRECATED if newlayout */
+}
+.container.ajax {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}
+.content {
+  padding: 13px 7px 36px;
+}
+@media only screen and (min-width: 1180px) {
+  .content {
+    padding: 22px 23px 36px;
+  }
+}
+.show_grid .container {
+  background: #fff url(grid.png) repeat-y 0 0;
+}
+@media only screen and (max-width: 767px) {
+  /*
+  Layout obsahu (#content)
+  - 7px levy margin
+
+  Zakladni obsahovy sloupec (.column):
+  - 304px width
+
+  Obrazky maji pomer 16/9
+  - jeden sloupec: 304x171
+  */
+  .container {
+    width: auto;
+    background-image: none !important;
+    /* DEPRECATED if newlayout */
+  }
+  .show_grid .container {
+    background-position: -20px 0;
+  }
+}
+/* --- Telo dokumentu - hlavni informace, jez se budou prenaset do Fancyboxu --- */
+.content__body {
+  *zoom: 1;
+  margin-bottom: 18px;
+}
+.content__body:before,
+.content__body:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.content__body:after {
+  clear: both;
+}
+.content__body:before,
+.content__body:after {
+  content: " ";
+  display: table;
+}
+.content__body:after {
+  clear: both;
+}
+.content__body h1 {
+  margin-left: 0;
+  color: #999;
+}
+/*
+## Řádka layoutu je `.row`
+*/
+.row {
+  margin-bottom: 18px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+/*
+`.row.row-limited` nemá zprava díru pro poslední column. Využíváme ho pak například
+pro block grid komponentu.
+
+Vyšší specifičnost kvůli kolizím např. s `.out-of-box`.
+*/
+@media only screen and (min-width: 768px) {
+  .row.row-limited {
+    margin-right: 22px;
+  }
+}
+/*
+## Základní layout je 3sloupcový (s 6sloupcovou alternativou)
+
+Mikrosloupec (v obsahu je jich 6, .half_column): 145px a 14px pravy margin
+
+Zakladni obsahovy sloupec (v obsahu jsou 3, tridy .column, .double_column):
+304px width a 14px pravy margin, na mobilech 7px margin ze stran a auto sirka
+
+Obrazky maji pomer 16/9  (?? TODO:  realne v .figure pozame 4:3,
+v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
+*/
+@media only screen and (min-width: 768px) {
+  .column {
+    float: left;
+    width: calc(97% / 3);
+    margin-right: 1.5%;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .double_column {
+    float: left;
+    width: calc((97% / 3) * 2);
+    margin-right: 1.5%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .triple_column {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .half_column {
+    float: left;
+    width: 138px;
+    margin-right: 14px;
+  }
+}
+.column--last {
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .content.without_top_pad {
+    padding-top: 0;
+    margin-top: -1px;
+  }
+  .row {
+    margin-bottom: 36px;
+  }
+  .column.centered,
+  .half_column.centered,
+  .double_column.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .offset_half {
+    margin-left: 159px;
+  }
+  .offset_one {
+    margin-left: 318px;
+  }
+  .double_column.with_text img {
+    max-width: 100%;
+  }
+}
+/* ================================================================================
+   Vrstva pro mobilni zarizeni
+   ...........................
+
+   Obsahuje:
+   - Layout vsech webu
+   - Layout uvnitr stranky
+   - Stary layout uvnitr stranky (docasny)
+
+*/
+@media only screen and (max-width: 767px) {
+  /* Nezobrazujeme cely Likebox, jen maly buttonek */
+  #facebookLikeBox {
+    display: none;
+  }
+  #facebookButton {
+    display: block;
+    text-align: center;
+  }
+  /* --- Layout uvnitr stranky --- */
+  .column,
+  .double_column {
+    margin-right: 0;
+    width: auto;
+  }
+}
+/* @media screen and (max-width: 640px) */
+.columns_as_list_item {
+  padding-top: 9px;
+}
+.column.as_list_item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.column.as_list_item .image {
+  margin-bottom: -4px;
+}
+.column.as_list_item .image img {
+  width: 100%;
+  max-width: auto;
+}
+.column.as_list_item .text {
+  position: absolute;
+  margin-top: -38px;
+  top: 100%;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.66);
+  color: #fff;
+  padding: 1px 9px 9px 9px;
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.column.as_list_item:hover .text,
+.column.as_list_item:focus .text,
+.column.as_list_item:active .text {
+  top: 0;
+  margin-top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.column.as_list_item .text h2 {
+  margin-bottom: 0;
+}
+.column.as_list_item .text h2 a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+.column.as_list_item .text a {
+  color: #fff;
+  text-decoration: underline;
+}
+.column.as_list_item .text p {
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+/* Mapa s klikacimi oblastmi
+   =========================
+*/
+.area-map__wrapper {
+  position: relative;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .area-map__wrapper {
+    width: 100%;
+    max-width: 620px;
+  }
+}
+.area-map {
+  position: relative;
+  display: none;
+  margin-top: 20px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 568px) {
+  .area-map {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .area-map {
+    width: 100%;
+  }
+}
+.area-map__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 88;
+}
+.area-map--italy {
+  width: 80%;
+  margin: auto;
+}
+.area-map--hungary {
+  width: 80%;
+  margin: auto;
+}
+/* Bod oblasti na mape
+   ================
+
+   Mixiny a zakladni tridy pro umisteni bodu na mapu oblasti.
+*/
+.area-map-point {
+  position: absolute;
+  display: block;
+  font-size: 90%;
+}
+@media only screen and (min-width: 768px) {
+  .area-map-point {
+    font-size: 100%;
+  }
+}
+.area-map-point:hover {
+  text-decoration: none;
+}
+.area-map-point__title {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 1.16666667em;
+  line-height: 1.3;
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 4px;
+  padding: 7px 4px;
+  background-color: #024E40;
+  cursor: pointer;
+  z-index: 98;
+}
+.area-map-point__title:before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 50%;
+  bottom: -7px;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #024E40;
+}
+.area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point__small {
+  display: block;
+  font-size: 75%;
+  line-height: 1.5;
+}
+.area-map-point__zone {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(ellipse at center, #9BD04E 0%, rgba(255, 255, 255, 0) 70%);
+  top: 0;
+  left: 50%;
+  margin-left: -40px;
+  z-index: 78;
+}
+.area-map-point--jizni-cechy {
+  top: 64%;
+  left: 24%;
+  width: 130px;
+}
+.area-map-point--jizni-cechy .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 12px;
+  z-index: 99;
+}
+.area-map-point--jizni-cechy .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--jizni-cechy .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--jizni-cechy .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--jizni-cechy .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--jizni-morava {
+  top: 67%;
+  left: 54%;
+  width: 131px;
+}
+.area-map-point--jizni-morava .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--jizni-morava .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--jizni-morava .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--jizni-morava .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--jizni-morava .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--stredni-cechy {
+  top: 42%;
+  left: 21%;
+  width: 115px;
+}
+.area-map-point--stredni-cechy .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--zapadni-cechy {
+  top: 21%;
+  left: 0%;
+  width: 160px;
+}
+.area-map-point--zapadni-cechy .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--zapadni-cechy .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--zapadni-cechy .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--zapadni-cechy .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--zapadni-cechy .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--praha {
+  top: 29%;
+  left: 34%;
+  width: 75px;
+}
+.area-map-point--praha .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--ceske-svycarsko {
+  top: -2%;
+  left: 25%;
+  width: 125px;
+}
+.area-map-point--ceske-svycarsko .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--cesky-raj {
+  top: 21%;
+  left: 42%;
+  width: 80px;
+}
+.area-map-point--cesky-raj .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--vychodni-cechy {
+  top: 44%;
+  left: 45%;
+  width: 140px;
+}
+.area-map-point--vychodni-cechy .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--moravsky-kras {
+  top: 54%;
+  left: 58%;
+  width: 115px;
+}
+.area-map-point--moravsky-kras .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--valassko {
+  top: 65%;
+  left: 76%;
+  width: 87px;
+}
+.area-map-point--valassko .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--orlicke-hory {
+  top: 23%;
+  left: 55%;
+  width: 95px;
+}
+.area-map-point--orlicke-hory .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--broumovsko {
+  top: 12%;
+  left: 53%;
+  width: 95px;
+}
+.area-map-point--broumovsko .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--jizerske-hory {
+  top: 13%;
+  left: 32%;
+  width: 105px;
+}
+.area-map-point--jizerske-hory .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--krkonose {
+  top: -2%;
+  left: 44%;
+  width: 131px;
+}
+.area-map-point--krkonose .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--krkonose .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--krkonose .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--krkonose .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--krkonose .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--jeseniky {
+  top: 19%;
+  left: 65%;
+  width: 91px;
+}
+.area-map-point--jeseniky .area-map-point__title {
+  width: 91px;
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  margin-left: 35.5px;
+  z-index: 99;
+}
+.area-map-point--jeseniky .area-map-point__title:before {
+  border-top-color: #04997d;
+  left: 0;
+  margin-left: 10px;
+}
+.area-map-point--jeseniky .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--jeseniky .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--jeseniky .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--beskydy {
+  top: 49%;
+  left: 77%;
+  width: 141px;
+}
+.area-map-point--beskydy .area-map-point__title {
+  margin-top: -5px;
+}
+.area-map-point--zapadni-slovensko {
+  top: 19%;
+  left: 9%;
+  width: 140px;
+}
+.area-map-point--zapadni-slovensko .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 8px;
+  z-index: 99;
+}
+.area-map-point--zapadni-slovensko .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--zapadni-slovensko .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--zapadni-slovensko .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--zapadni-slovensko .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--vysoke-tatry {
+  top: 16%;
+  left: 52%;
+  width: 100px;
+}
+.area-map-point--vysoke-tatry .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--vychodni-slovensko {
+  top: 29%;
+  left: 76%;
+  width: 140px;
+}
+.area-map-point--vychodni-slovensko .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--stredni-slovensko {
+  top: 47%;
+  left: 29%;
+  width: 135px;
+}
+.area-map-point--stredni-slovensko .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--slovensky-raj {
+  top: 28%;
+  left: 59%;
+  width: 100px;
+}
+.area-map-point--slovensky-raj .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--rohace-zapadni-tatry-orava {
+  top: -2%;
+  left: 39.5%;
+  width: 125px;
+}
+.area-map-point--rohace-zapadni-tatry-orava .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--pieniny {
+  top: 7%;
+  left: 69.5%;
+  width: 80px;
+}
+.area-map-point--pieniny .area-map-point__title {
+  margin-top: -5px;
+  width: 80px;
+  margin-left: 30px;
+}
+.area-map-point--pieniny .area-map-point__title:before {
+  left: 0;
+  margin-left: 5px;
+}
+.area-map-point--nizke-tatry {
+  top: 27%;
+  left: 39%;
+  width: 115px;
+}
+.area-map-point--nizke-tatry .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--mala-fatra {
+  top: 5%;
+  left: 23%;
+  width: 100px;
+}
+.area-map-point--mala-fatra .area-map-point__title {
+  margin-top: -5px;
+}
+.area-map-point--liptov {
+  top: 16%;
+  left: 39%;
+  width: 75px;
+}
+.area-map-point--liptov .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--jizni-slovensko {
+  top: 67%;
+  left: 15%;
+  width: 115px;
+}
+.area-map-point--jizni-slovensko .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 8px;
+  z-index: 99;
+}
+.area-map-point--jizni-slovensko .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--jizni-slovensko .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--jizni-slovensko .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--jizni-slovensko .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--bratislava {
+  top: 61%;
+  left: 0%;
+  width: 90px;
+}
+.area-map-point--bratislava .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--belianske-tatry {
+  top: 1%;
+  left: 55%;
+  width: 80px;
+}
+.area-map-point--belianske-tatry .area-map-point__title {
+  margin-top: 8px;
+  width: 80px;
+  margin-left: 30px;
+}
+.area-map-point--belianske-tatry .area-map-point__title:before {
+  left: 0;
+  margin-left: 5px;
+}
+.area-map-point--alsopahok {
+  top: 43%;
+  left: 19%;
+  width: 80px;
+}
+.area-map-point--alsopahok .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--budapest {
+  top: 24%;
+  left: 36%;
+  width: 80px;
+}
+.area-map-point--budapest .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--bukfurdo {
+  top: 33%;
+  left: 12%;
+  width: 70px;
+}
+.area-map-point--bukfurdo .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--gyorn {
+  top: 17%;
+  left: 22%;
+  width: 90px;
+}
+.area-map-point--gyorn .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--hajduszoboszlo {
+  top: 26%;
+  left: 65%;
+  width: 115px;
+}
+.area-map-point--hajduszoboszlo .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--harkany {
+  top: 80%;
+  left: 28%;
+  width: 70px;
+}
+.area-map-point--harkany .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--heviz {
+  top: 51%;
+  left: 25%;
+  width: 60px;
+}
+.area-map-point--heviz .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--mosonmagyarovar {
+  top: 11%;
+  left: 13%;
+  width: 135px;
+}
+.area-map-point--mosonmagyarovar .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--sarvar {
+  top: 33%;
+  left: 24%;
+  width: 55px;
+}
+.area-map-point--sarvar .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--siofok {
+  top: 43%;
+  left: 32%;
+  width: 65px;
+}
+.area-map-point--siofok .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--tapolca {
+  top: 33%;
+  left: 33%;
+  width: 60px;
+}
+.area-map-point--tapolca .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--zalakaros {
+  top: 57%;
+  left: 17%;
+  width: 75px;
+}
+.area-map-point--zalakaros .area-map-point__title {
+  margin-top: 8px;
+}
+.area-map-point--marche-palmova-riviera {
+  top: 28%;
+  left: 45%;
+  width: 150px;
+}
+.area-map-point--marche-palmova-riviera .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 8px;
+  z-index: 99;
+}
+.area-map-point--marche-palmova-riviera .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--marche-palmova-riviera .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--marche-palmova-riviera .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--marche-palmova-riviera .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--benatsko-veneto {
+  top: 7%;
+  left: 38%;
+  width: 131px;
+}
+.area-map-point--benatsko-veneto .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 8px;
+  z-index: 99;
+}
+.area-map-point--benatsko-veneto .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--benatsko-veneto .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--benatsko-veneto .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--benatsko-veneto .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--abruzzo {
+  top: 36%;
+  left: 52%;
+  width: 131px;
+}
+.area-map-point--abruzzo .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 30px;
+  z-index: 99;
+}
+.area-map-point--abruzzo .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--abruzzo .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--abruzzo .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--abruzzo .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--istrie {
+  top: 21%;
+  left: 0%;
+  width: 100px;
+}
+.area-map-point--istrie .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--istrie .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--istrie .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--istrie .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--istrie .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--ostrov-krk {
+  top: 29%;
+  left: 9%;
+  width: 130px;
+}
+.area-map-point--ostrov-krk .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 8px;
+  z-index: 99;
+}
+.area-map-point--ostrov-krk .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--ostrov-krk .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--ostrov-krk .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--ostrov-krk .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--severni-dalmacie {
+  top: 52%;
+  left: 28%;
+  width: 185px;
+}
+.area-map-point--severni-dalmacie .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--severni-dalmacie .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--severni-dalmacie .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--severni-dalmacie .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--severni-dalmacie .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--stredni-dalmacie {
+  top: 62%;
+  left: 37%;
+  width: 185px;
+}
+.area-map-point--stredni-dalmacie .area-map-point__title {
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 21px;
+  z-index: 99;
+}
+.area-map-point--stredni-dalmacie .area-map-point__title:before {
+  border-top-color: #04997d;
+}
+.area-map-point--stredni-dalmacie .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--stredni-dalmacie .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--stredni-dalmacie .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.area-map-point--kvarner {
+  top: 23%;
+  left: 11%;
+  width: 100px;
+}
+.area-map-point--kvarner .area-map-point__title {
+  width: 100px;
+  font-size: 1.58333333em;
+  line-height: 1.15;
+  font-weight: 700;
+  padding: 7px 8px;
+  background-color: #04997d;
+  margin-top: 0px;
+  margin-left: 40px;
+  z-index: 99;
+}
+.area-map-point--kvarner .area-map-point__title:before {
+  border-top-color: #04997d;
+  left: 0;
+  margin-left: 10px;
+}
+.area-map-point--kvarner .area-map-point__title:hover {
+  background-color: #9BD04E;
+}
+.area-map-point--kvarner .area-map-point__title:hover:before {
+  border-top-color: #9BD04E;
+}
+.area-map-point--kvarner .area-map-point__zone {
+  width: 130px;
+  height: 130px;
+  margin-left: -65px;
+}
+.after_header {
+  margin: 0 0 18px 0;
+  display: block;
+  color: #aaa;
+  text-align: center;
+}
+.content__head .after_header a {
+  color: #aaa;
+  border-bottom: 1px dotted #ddd;
+}
+.content__head .after_header a:hover,
+.content__head .after_header a:focus,
+.content__head .after_header a:active {
+  color: #666;
+  border-color: #666;
+  text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+  .after_header {
+    float: left;
+    text-align: left;
+    white-space: nowrap;
+    margin-top: 8px;
+  }
+  .after_header .stars {
+    margin-right: 10px;
+  }
+  .after_header.filters {
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 5px;
+    left: 10px;
+    position: relative;
+  }
+}
+/*
+
+.box - Zvyrazneny boxik
+=======================
+
+*/
+.box {
+  padding: 18px 18px 1px 18px;
+  background: #eee;
+  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.bg_box {
+  padding: 12px 18px 18px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #eee;
+}
+.bg_box.double_column {
+  width: 586px;
+  /*  622-(2*18) */
+}
+.bg_box h2 {
+  color: #333;
+}
+/* Boxik s obsahem pro .details/.summary tady ma jiny vzhled */
+.bg_box .details_content {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  background-color: #fcfcfc;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+/* # Modul Accommodation Search
+
+`.accomm-search`
+
+Formulář pro vyhledávání ubytování. Očekává vložení data a počtu a věku lidí.
+
+Na velkých displejích se zobrazuje s obrázkem na pozadí a jeho popiskem v pravém
+dolním rohu. Samotný formulář je na poloprůhledné vrstvě uprostřed obrázku.
+
+Na malých displejích odpadá maškaráda s obrázkem na pozadí. Formulář je tam
+vycentrovaný.
+
+Zjednodušeně HTML struktura asi takto:
+
+```
+<div class="accomm-search">
+  <form class="accomm-search__form">
+    <div class="accomm-search__head">
+      <h2>Najít ubytování</h2>
+    </div>
+    <div class="accomm-search__body">
+      <div class="accomm-search__date-row">
+        …
+      </div>
+    </div>
+    <p class="accomm-search__submit">
+      <input type="submit" value="Najít ubytování" class="button small">
+    </p>
+  </form>
+  <p class="accomm-search__photo-legend">
+    <a href="http://www.e-slovensko.cz/ubytovani/vysoke-tatry/chatky-tatry-holiday/">
+      Foto: Chatky Tatry Holiday ve Vysokých Tatrách.
+    </a>
+  </p>
+</div>
+```
+
+*/
+.accomm-search {
+  margin-bottom: 18px;
+}
+.container .accomm-search p,
+.container .accomm-search h2,
+.container .accomm-search a {
+  color: white;
+}
+.container .accomm-search a:hover,
+.container .accomm-search a:focus,
+.container .accomm-search a:active {
+  color: white;
+}
+.accomm-search label {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search {
+    position: relative;
+    padding: 54px 10px;
+    background-color: #efefef;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__form {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+.accomm-search__head,
+.accomm-search__body,
+.accomm-search__submit {
+  background: black;
+  background: rgba(0, 0, 0, 0.75);
+  margin: 0 0 1px 0;
+  padding: 18px 0;
+  text-align: center;
+}
+.accomm-search__head h2 {
+  margin: 0;
+}
+.accomm-search__date-row {
+  *zoom: 1;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.accomm-search__date-row:before,
+.accomm-search__date-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.accomm-search__date-row:after {
+  clear: both;
+}
+.accomm-search__date-row:before,
+.accomm-search__date-row:after {
+  content: " ";
+  display: table;
+}
+.accomm-search__date-row:after {
+  clear: both;
+}
+.accomm-search__persons-row {
+  *zoom: 1;
+  text-align: center;
+}
+.accomm-search__persons-row:before,
+.accomm-search__persons-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.accomm-search__persons-row:after {
+  clear: both;
+}
+.accomm-search__persons-row:before,
+.accomm-search__persons-row:after {
+  content: " ";
+  display: table;
+}
+.accomm-search__persons-row:after {
+  clear: both;
+}
+.accomm-search__region-row {
+  *zoom: 1;
+  text-align: center;
+}
+.accomm-search__region-row:before,
+.accomm-search__region-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.accomm-search__region-row:after {
+  clear: both;
+}
+.accomm-search__region-row:before,
+.accomm-search__region-row:after {
+  content: " ";
+  display: table;
+}
+.accomm-search__region-row:after {
+  clear: both;
+}
+.accomm-search__icon {
+  vertical-align: middle;
+  margin-left: 0;
+  margin-right: 5px;
+}
+.accomm-search__icon.calendar_icon {
+  top: -3px;
+  margin-left: -5px;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.accomm-search__icon-remove {
+  position: absolute;
+  right: 40px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.accomm-search__icon-remove:hover,
+.accomm-search__icon-remove:focus,
+.accomm-search__icon-remove:active {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.accomm-search__date {
+  text-align: center;
+  width: auto;
+  display: block;
+  margin: 0 0 18px 0;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__date {
+    width: 150px;
+    float: left;
+  }
+  div > .accomm-search__date:first-child {
+    margin-left: 11px;
+  }
+}
+.accomm-search__person {
+  position: relative;
+  text-align: center;
+  width: auto;
+  display: block;
+  margin: 0 0 18px 0;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__person {
+    text-align: center;
+  }
+}
+.accomm-search__date-head,
+.accomm-search__date {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__date-head,
+  .accomm-search__date {
+    display: inline-block;
+  }
+}
+.accomm-search__date-prepos {
+  margin-left: -3px;
+}
+.accomm-search__persons-row select.accomm-search__person-select {
+  width: 90px;
+}
+.accomm-search__persons-row .accomm-search__person-count {
+  color: #fff;
+}
+.accomm-search__persons-row .accomm-search__person-count input {
+  width: 26px;
+}
+.accomm-search__person-add {
+  clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__person-add {
+    float: none;
+    width: 120px;
+    margin: 0 auto;
+  }
+}
+.accomm-search__person-add .accomm-search__icon {
+  margin-left: -5px;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__person-add .accomm-search__icon {
+    margin-left: 0;
+  }
+}
+.accomm-search__photo-legend {
+  font-style: 11px;
+  line-height: 13px;
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .accomm-search__photo-legend {
+    display: block;
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    width: 220px;
+    margin: 0;
+  }
+  .container .accomm-search__photo-legend a {
+    display: block;
+    color: white;
+    color: rgba(255, 255, 255, 0.8);
+    background: black;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+  }
+}
+/*
+Vylepseni Bootstrap Forms
+=========================
+*/
+.bootstrap_block label,
+.bootstrap_block input,
+.bootstrap_block button,
+.bootstrap_block select,
+.bootstrap_block textarea {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+}
+/* Legend mame sice pritomnu jen v dumb vrsve, ale Bootstrap i tak sousedicimu .control-group
+   pridava horni margin. Mimo summary/details Davame pryc.
+*/
+legend + .control-group {
+  margin-top: 0;
+}
+.details_content .control-group {
+  margin-top: 18px;
+}
+/*
+.block_anchor - blokove odkazy
+*/
+.container .block_anchor .anchor {
+  color: #0EB10E;
+}
+.container .block_anchor:hover .anchor,
+.container .block_anchor:focus .anchor,
+.container .block_anchor:active .anchor {
+  color: #075207;
+  text-decoration: underline;
+}
+/* # Modul Button
+
+Univerzální tlačítka
+
+TODO
+- refactor, je to jen přesunuto z old_layout.less
+
+*/
+.button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px;
+  font: 12px/18px Arial, sans-serif;
+  color: #666;
+  border: 1px outset #ddd;
+  cursor: pointer;
+  vertical-align: middle;
+  border-color: #e2e9e2;
+  background: #f1f4f1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f4f1));
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f4f1 100%);
+  overflow: visible;
+  height: 30px;
+  margin: 0;
+}
+.button::-moz-focus-inner {
+  padding: 0;
+}
+.button:hover,
+.button:focus {
+  background: #e5e7e5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8dbd8), to(#e5e7e5));
+  background: linear-gradient(to bottom, #d8dbd8 0%, #e5e7e5 100%);
+  text-decoration: none;
+}
+.button[disabled],
+.button.disabled {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background: #999 !important;
+  border: 1px outset #666 !important;
+  cursor: default;
+}
+.button.small {
+  height: 24px;
+  line-height: 16px;
+  padding: 3px 10px;
+  min-width: 60px;
+  /* IE8- bez toho nezobrazi postranni padding, uf  */
+  text-align: center;
+}
+.button.submit {
+  color: #fff;
+  border-color: #0c990c;
+  background: #0EB10E;
+  background: -webkit-gradient(linear, left top, left bottom, from(#10c910), to(#0EB10E));
+  background: linear-gradient(to bottom, #10c910 0%, #0EB10E 100%);
+}
+.container a.button.submit {
+  color: #fff;
+}
+.button.submit:hover,
+.button.submit:focus {
+  background: #10c910;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0EB10E), to(#10c910));
+  background: linear-gradient(to bottom, #0EB10E 0%, #10c910 100%);
+}
+.container a.button.submit:hover,
+.container a.button.submit:focus {
+  text-decoration: none;
+}
+.button .icon-bottom-arrow {
+  position: relative;
+  top: -2px;
+}
+.button.button-wide {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+.button.button-outlined {
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid #0EB10E;
+  text-decoration: none;
+}
+.button.button-outlined:hover,
+.button.button-outlined:focus,
+.button.button-outlined:active {
+  background: transparent;
+  text-decoration: underline;
+}
+.button.button-outlined-white {
+  background: transparent;
+  border-radius: 3px;
+  border: 1px solid white;
+  text-decoration: none;
+}
+.button.button-outlined-white:hover,
+.button.button-outlined-white:focus,
+.button.button-outlined-white:active {
+  background: transparent;
+  text-decoration: underline;
+}
+/*
+
+Hlavička obsahu stránky
+=======================
+
+*/
+.content__head {
+  position: relative;
+  margin: 11px -7px 27px -7px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ffffff), to(#f4f4f4));
+  background: linear-gradient(to bottom, #ffffff 25%, #f4f4f4 100%);
+}
+@media only screen and (min-width: 768px) {
+  .content__head {
+    margin: 0 -22px 27px -23px;
+  }
+}
+.content__head h1 {
+  margin: 0 7px 0 7px;
+  display: block;
+  text-align: center;
+}
+.content__head.without_nav {
+  border-bottom: 1px solid #ddd;
+}
+@media only screen and (min-width: 768px) {
+  .content__head.without_nav {
+    height: 57px;
+  }
+}
+.content__head .fb-like {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .content__head h1 {
+    float: left;
+    margin: 0 5px 18px 30px;
+    text-align: left;
+  }
+  .content__head h1 a {
+    color: #666;
+    border-bottom: 1px dotted #999;
+  }
+  .content__head h1 a:hover,
+  .content__head h1 a:focus,
+  .content__head h1 a:active {
+    text-decoration: none;
+    color: #666;
+    border-color: #666;
+  }
+  .content__head .fb-like {
+    display: block;
+    float: right;
+    width: 85px !important;
+    margin: -12px 30px 0 0;
+    opacity: .5;
+  }
+  .content__head.with_nav_inside .fb-like {
+    margin-top: -2px;
+  }
+  .content__head .fb-like:hover,
+  .content__head .fb-like:focus,
+  .content__head .fb-like:active {
+    opacity: 1;
+  }
+}
+/* # Modul Sleva v hlavičce stránky
+
+Upozornění na bonus nebo speciální akci v šedivém buttonu hned vedle lajkovacího tlačítka
+nahoře v hlavičce stránky.
+
+Třída `.discount_in_head`.
+
+## TODO
+
+- Vymanit ze zajetí `#content` – po přesunu všech barev do proměnných
+
+## Použití:
+
+```
+<div id="content">
+  <div id="content_head">
+    <div class="discount_in_head">
+      <a href=
+      "http://www.e-slovensko.cz/novinky/630/sleva-10-na-salasi-kozi-vrsok"><b>Akce</b><br>
+      -10% v salaši<br>
+      jen u nás!</a>
+    </div>
+  </div>
+</div>
+```
+*/
+.discount_in_head {
+  text-align: center;
+  width: auto;
+  margin: 0 auto 18px auto;
+  font-size: 11px;
+  line-height: 13px;
+}
+.discount_in_head b {
+  color: #444;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+}
+.discount_in_head p {
+  margin: 0;
+}
+.discount_in_head a {
+  display: inline-block;
+  padding: 7px 10px 6px;
+  color: #999;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+.discount_in_head a:hover,
+.discount_in_head a:focus,
+.discount_in_head a:active {
+  text-decoration: none;
+  background: #444;
+  color: #ddd;
+}
+.discount_in_head a:hover b,
+.discount_in_head a:focus b,
+.discount_in_head a:active b {
+  color: #ddd;
+}
+@media only screen and (min-width: 768px) {
+  .discount_in_head {
+    position: absolute;
+    top: -2px;
+    right: 30px;
+    margin-bottom: 0;
+  }
+}
+/*
+## Varianta: s obrázkovou ikonou namísto textem
+
+Třída `.discount_in_head.with_image_icon`.
+
+```
+<div id="content">
+    <div id="content_head">
+      <div class="discount_in_head with_image_icon">
+        <a href="http://www.hotelyjeseniky.cz/sleva/"><img alt="Jeseníky - voucher"
+        src=
+        "http://www.ck-rekrea.cz/katalogy-data/images/bonusy/4/sleva_jeseniky.png"></a>
+      </div>
+    </div>
+</div>
+```
+*/
+.discount_in_head.with_image_icon a,
+.discount_in_head.with_image_icon a:hover,
+.discount_in_head.with_image_icon a:focus,
+.discount_in_head.with_image_icon a:active {
+  background: transparent;
+  padding: 0;
+}
+.discount_in_head.with_image_icon img {
+  max-height: 60px;
+}
+.discount_in_head.with_image_icon a:hover img,
+.discount_in_head.with_image_icon a:focus img,
+.discount_in_head.with_image_icon a:active img {
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+}
+/*
+# Modul Benefity
+*/
+.benefits {
+  *zoom: 1;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 10px;
+}
+.benefits:before,
+.benefits:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.benefits:after {
+  clear: both;
+}
+.benefits:before,
+.benefits:after {
+  content: " ";
+  display: table;
+}
+.benefits:after {
+  clear: both;
+}
+@media only screen and (min-width: 1180px) {
+  .benefits {
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 22.5px;
+    padding-bottom: 24.3px;
+  }
+}
+.benefits--standalone {
+  background: #f8f8f8;
+  margin-top: 36px;
+}
+.benefit {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  width: 33.33333333%;
+  color: #214b3f;
+  padding-right: 10px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .benefit {
+    font-size: 18px;
+    line-height: 19.2px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .benefit {
+    position: relative;
+    height: 70px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+}
+.benefit__strong {
+  color: #ff9933;
+}
+.benefit__image-wrapper {
+  display: block;
+  margin-bottom: 6px;
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+  }
+}
+.benefit__image {
+  max-width: 50px;
+  -webkit-transition: 50ms;
+  transition: 50ms;
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image {
+    width: auto;
+    max-width: 100%;
+  }
+}
+.benefit:hover .benefit__image,
+.benefit:focus .benefit__image,
+.benefit:active .benefit__image {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+.benefit__text {
+  display: block;
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__text {
+    position: absolute;
+    top: 10px;
+    left: 85px;
+    text-align: left;
+    font-weight: normal;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image-wrapper--price {
+    top: -3px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image-wrapper--slovakia {
+    top: 0px;
+    left: -5px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image-wrapper--slovakia .benefit__image {
+    width: 85px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .benefit__image-wrapper--ten {
+    left: 5px;
+    top: -3px;
+  }
+}
+/*
+.important - Zvyrazneny boxik (obvykle se zlutym gradientem na pozadi)
+----------------------------------------------------------------------
+*/
+.important {
+  background: #FDFECF url(../../images/important-bg.gif) no-repeat right bottom;
+  padding: .75em 15px;
+  margin-bottom: 1.5em;
+  border: 1px solid #F9E1BB;
+}
+.important hr {
+  background: #F9E1BB;
+  color: #F9E1BB;
+  height: 1px;
+  border: 0;
+}
+.importantTwo {
+  background: #E4E1C5;
+  padding: 1em;
+}
+/*
+.images_list - Strucny obrazkovy seznam
+=======================================
+*/
+.images_list {
+  margin-bottom: 18px;
+}
+.images_list ul {
+  border-top: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+}
+.images_list .more a {
+  padding-left: 45px;
+}
+.images_list .item {
+  position: relative;
+  height: 36px;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+.text_larger .images_list .item {
+  left: 0;
+}
+.images_list .item:hover,
+.images_list .item:focus,
+.images_list .item:active {
+  background-color: #eee;
+  cursor: pointer;
+}
+.ajax .images_list .item:hover,
+.ajax .images_list .item:focus,
+.ajax .images_list .item:active {
+  background-color: transparent;
+  cursor: default;
+}
+.images_list .item:hover a,
+.images_list .item:focus a,
+.images_list .item:active a {
+  color: #075207;
+  text-decoration: underline;
+}
+.images_list .image {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.images_list .image img {
+  max-width: none;
+  max-height: 32px;
+  margin-left: -12px;
+}
+.images_list .text {
+  position: absolute;
+  top: 5px;
+  left: 40px;
+  display: block;
+  height: 36px;
+  overflow: hidden;
+  width: auto;
+}
+.images_list .item .stars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 4px 7px 8px 15px;
+  background: #eeeeee;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(20%, #ffffff), to(#ffffff));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 20%, #ffffff 100%);
+}
+.images_list .item:hover .stars,
+.images_list .item:focus .stars,
+.images_list .item:active .stars {
+  background: #eeeeee;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(238, 238, 238, 0)), color-stop(20%, #eeeeee), to(#eeeeee));
+  background: linear-gradient(to right, rgba(238, 238, 238, 0) 0%, #eeeeee 20%, #eeeeee 100%);
+}
+.images_list .distance {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+}
+.images_list.without_margin_bottom {
+  margin-bottom: 0;
+}
+.images_list.with_events .item {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/icon-event.png');
+  background-position: 10px 16px;
+  background-repeat: no-repeat;
+}
+.double_column .images_list.with_events .item .image {
+  right: 5px;
+  left: auto;
+  margin: 0;
+}
+.column .images_list.with_events .item .item {
+  padding: 3px 0;
+}
+.column .images_list.with_events .item .text {
+  top: 3px;
+}
+.column .images_list.with_events .item .text strong {
+  width: 230px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.images_list.with_files .image img {
+  margin-left: 0;
+}
+.images_list.with_files .text {
+  line-height: 36px;
+}
+/*
+  Inline list
+  ===========
+*/
+.inline_list {
+  line-height: 36px;
+}
+.inline_list .item {
+  padding: 9px 8px 8px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+.inline_list .item:hover,
+.inline_list .item:focus,
+.inline_list .item:active {
+  background-color: #eee;
+  text-decoration: underline;
+}
+.inline_list .item.two_stars,
+.inline_list .item.three_stars {
+  font-weight: bold;
+}
+/*
+   Fancybox
+   ========
+*/
+.fancybox:hover img,
+.fancybox:active img,
+.fancybox:focus img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  opacity: .9;
+}
+/*
+
+Modul filtry
+=============
+
+*/
+.filters {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.filters h3 {
+  font-size: 12px;
+  line-height: 12px;
+  display: inline-block;
+  margin-right: 2px;
+}
+.filters form {
+  display: inline-block;
+  margin-right: 10px;
+}
+.filters form p {
+  margin-bottom: 8px;
+}
+.filters .filter_item {
+  display: inline-block;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 768px) {
+  .filters {
+    text-align: right;
+  }
+  .filters select,
+  .filters input {
+    max-width: 150px;
+  }
+  .filters form p {
+    margin-bottom: 0;
+  }
+}
+/*
+
+Figure - obrazky s popiskem
+===========================
+
+*/
+.figure {
+  margin-bottom: 18px;
+  min-height: 200px;
+}
+.figure img {
+  width: 100%;
+  height: auto;
+}
+.figure .figimage {
+  display: block;
+}
+.figure .figimage:hover img,
+.figure .figimage:focus img,
+.figure .figimage:active img {
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.figure .figcaption {
+  padding: 0 10px 0 5px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0;
+  color: #000;
+}
+.figure.with_border {
+  border: 1px solid #ddd;
+  padding: 9px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .figure img {
+    width: 284px;
+    height: 190px;
+  }
+}
+/*
+Flag - priznaky slev, Last Minute atd.
+=========================================
+*/
+.flag {
+  display: inline-block;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 5px 8px;
+}
+a.flag:hover,
+a.flag:focus,
+a.flag:active {
+  color: white;
+  text-decoration: underline;
+}
+.flag--sm {
+  font-size: 9px;
+  padding: 2px 3px;
+  letter-spacing: .02em;
+}
+@media only screen and (max-width: 420px) {
+  .flag {
+    font-size: 9px;
+    padding: 2px 3px;
+    letter-spacing: .02em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flag--lg {
+    font-size: 14px;
+    padding: 9px 12px;
+  }
+}
+.flag--bestseller {
+  background: rgba(16, 201, 16, 0.91);
+}
+.flag--ratings {
+  background: rgba(16, 201, 16, 0.91);
+}
+.flag--lastminute {
+  background: #FF9900;
+  background: rgba(255, 153, 0, 0.91);
+}
+.flag--hottip {
+  background: #FFCC00;
+  background: rgba(255, 204, 0, 0.91);
+}
+.flag--new {
+  background: #1eed1e;
+  background: rgba(30, 237, 30, 0.91);
+}
+.flag--discount {
+  background: #FF6600;
+  background: rgba(255, 102, 0, 0.91);
+}
+.flags .flag {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.flags .flag + .flag {
+  top: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .flags .flag + .flag.flag--lg {
+    top: 40px;
+  }
+}
+.flags .flag + .flag.flag--sm {
+  top: 28px;
+}
+@media only screen and (max-width: 420px) {
+  .flags .flag + .flag {
+    top: 28px;
+  }
+}
+.flags .flag + .flag + .flag {
+  top: 62px;
+}
+@media only screen and (min-width: 768px) {
+  .flags .flag + .flag + .flag.flag--lg {
+    top: 78px;
+  }
+}
+.flags .flag + .flag + .flag.flag--sm {
+  top: 54px;
+}
+@media only screen and (max-width: 420px) {
+  .flags .flag + .flag + .flag {
+    top: 54px;
+  }
+}
+.flags .flag + .flag + .flag + .flag {
+  top: 92px;
+}
+@media only screen and (min-width: 768px) {
+  .flags .flag + .flag + .flag + .flag.flag--lg {
+    top: 116px;
+  }
+}
+.flags .flag + .flag + .flag + .flag.flag--sm {
+  top: 80px;
+}
+@media only screen and (max-width: 420px) {
+  .flags .flag + .flag + .flag + .flag {
+    top: 80px;
+  }
+}
+.flags .flag + .flag + .flag + .flag + .flag {
+  top: 122px;
+}
+@media only screen and (min-width: 768px) {
+  .flags .flag + .flag + .flag + .flag + .flag.flag--lg {
+    top: 154px;
+  }
+}
+.flags .flag + .flag + .flag + .flag + .flag.flag--sm {
+  top: 106px;
+}
+@media only screen and (max-width: 420px) {
+  .flags .flag + .flag + .flag + .flag + .flag {
+    top: 106px;
+  }
+}
+/*
+
+Formulare ze stareho old_layout.less
+------------------------------------
+
+*/
+table.form {
+  width: 100%;
+}
+table.form th,
+table.form td {
+  padding: .45em .2em .45em 0;
+  vertical-align: top;
+}
+table.form th {
+  text-align: left;
+  width: 31%;
+  font-weight: normal;
+}
+table.form td {
+  text-align: left;
+  width: 69%;
+}
+table tr.rowOne td,
+table tr.rowOne th {
+  background: #efefef;
+}
+table tr.rowTwo td,
+table tr.rowTwo th {
+  background: #f8f8f8;
+}
+table tr.rowThree td,
+table tr.rowThree th {
+  background: #dfdfdf;
+}
+table tr.rowCena td {
+  background: #FDFECF;
+  font-weight: bold;
+}
+table tr.error td,
+table tr.error th {
+  background: #FED0D0;
+  color: red;
+}
+table.form small {
+  color: #666;
+}
+.sendOK,
+#contentBox p.sendOK {
+  border: 2px solid #213630;
+  padding: .5em 8px;
+  margin: 2.5em 0;
+}
+.sendKO,
+#contentBox p.sendKO {
+  background: #FF0;
+  padding: 1.5em 8px;
+  margin: 2.5em 0;
+}
+input,
+textarea {
+  padding: 5px;
+}
+input.s {
+  width: 4em;
+}
+input.xs {
+  width: 6em;
+}
+input.l {
+  width: 10em;
+}
+input.m {
+  width: 8em;
+}
+input.xl {
+  width: 15em;
+}
+input.xxl {
+  width: 20em;
+}
+input.maxxxl {
+  width: 445px;
+}
+textarea {
+  resize: vertical;
+  min-height: 66px;
+}
+textarea.l {
+  width: 95%;
+  height: 5em;
+}
+textarea.xl {
+  height: 5em;
+}
+input.inputBigger {
+  font-size: 1em;
+  font-weight: bold;
+}
+select.inputBigger {
+  font-size: 1em;
+  font-weight: bold;
+}
+/*
+
+Foot - stara paticka
+====================
+
+*/
+#footNew {
+  margin-top: 0;
+}
+@media print {
+  #footNew {
+    display: none;
+  }
+}
+#foot {
+  clear: both;
+  padding: .75em 30px;
+  background: #E1EBE6;
+  margin-bottom: 0;
+}
+@media print {
+  #foot {
+    display: none;
+  }
+}
+#foot small,
+small.temporary,
+small.temporary a {
+  color: #999;
+  font-size: 1em;
+}
+#footDotazy {
+  width: 212px;
+  float: right;
+}
+#footServer {
+  width: 220px;
+  float: left;
+}
+#foot h2 {
+  font-size: 1.1em;
+}
+#footBottom {
+  background: #024E40;
+  padding: .75em 30px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: -18px;
+}
+@media print {
+  #footBottom {
+    display: none;
+  }
+}
+.container #footBottom a {
+  color: #fff;
+}
+/* -------------------------------------------------------------------------------
+   Nova paticka pro velke weby
+*/
+#footNew {
+  background: transparent;
+  padding: 0 0 .5em;
+  color: #888;
+  margin: 0;
+  margin-top: 3em;
+  border-top: 1px dotted #d0d0d0;
+  background-color: #fff;
+}
+.container #footNew a {
+  color: #888;
+}
+.container #footNew a:hover,
+.container #footNew a:active,
+.container #footNew a:focus {
+  color: #333;
+}
+/* Prava cast paticky kde je Facebook Like box */
+#footSide {
+  clear: both;
+  _display: inline;
+  /*IE6*/
+  margin: 0 30px 10px 0;
+  padding: 0;
+  width: 280px;
+  float: right;
+}
+#footStranka {
+  margin: 0 0 0 30px;
+  padding: 0;
+  width: 55%;
+  float: left;
+  _display: inline;
+  /*IE6*/
+}
+@media only screen and (min-width: 1180px) {
+  #footStranka {
+    width: 630px;
+  }
+}
+/* Newsletter v paticce */
+#footNewsletter {
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto 24px;
+  padding: 18px 0 22px;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #f8f8f8;
+}
+#footNewsletter .label {
+  font-size: 15px;
+  margin-bottom: 5px;
+  line-height: 17px;
+  color: #666;
+}
+#footNewsletter .label small {
+  font-size: 12px;
+  color: #888888;
+}
+#footNewsletter .inputs {
+  margin-bottom: 0;
+}
+#footNewsletter input.email {
+  height: 18px;
+  border-width: 1px;
+  padding: 2px 5px;
+  vertical-align: middle;
+  color: #888888;
+  border: 1px inset #bbb;
+}
+/* Navigace v paticce */
+#footNav {
+  margin-bottom: 5px;
+}
+/* Drobni partneri uvedeni textem */
+#footPartners {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  width: 610px;
+}
+/* Logo Rekrey v paticce */
+#footBigPartners {
+  margin-left: -10px;
+}
+.footBigPartner {
+  width: 114px;
+  float: left;
+  font-size: 9px;
+  line-height: 12px;
+  text-align: center;
+  margin-right: 5px;
+  opacity: .7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: alpha(opacity=70);
+}
+.footBigPartner:hover,
+.footBigPartner:active,
+.footBigPartner:focus {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+.footBigPartner img {
+  margin-top: 8px;
+}
+.footNovinka {
+  color: #000;
+  font-weight: bold;
+}
+/* Nezobrazujeme Facebook buttonek pro mobilni verzi v paticce */
+#facebookButton {
+  display: none;
+}
+.caps {
+  letter-spacing: .1em;
+}
+@media only screen and (max-width: 767px) {
+  /* Nezobrazujeme prvky, ktere nepotrebujeme nutne */
+  #footNewsletter,
+  #footPartners,
+  #footBigPartners {
+    display: none;
+  }
+  /* --- Paticka --- */
+  /* Centrujeme, stejne jako hlavicku */
+  #footNew,
+  #footBottom {
+    text-align: center;
+  }
+  #footNewsletter,
+  #footSide,
+  #footStranka,
+  #footPartners {
+    width: auto;
+    float: none;
+    margin: 0 0 0 10px;
+    padding: 18px 0;
+  }
+}
+.banner_bottom {
+  margin: 18px 10px 36px;
+  text-align: center;
+}
+.banner_bottom .label {
+  display: block;
+  color: #ccc;
+  font-size: 10px;
+  line-height: 10px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+.banner_bottom img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .banner_bottom {
+    width: 468px;
+    height: 75px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banner_bottom img {
+    max-width: auto;
+  }
+  .banner_bottom img:hover,
+  .banner_bottom img:focus,
+  .banner_bottom img:active {
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+  }
+}
+@media only screen and (min-width: 768px) and print {
+  .banner_bottom {
+    display: none;
+  }
+}
+/* # Modul Hot tip
+
+Tipy na nejzajímavější nabídky v hlavičkách stránek.
+*/
+.hottip {
+  padding: 9px 15px;
+  text-align: center;
+  border-bottom: 1px dotted #d0d0d0;
+}
+@media print {
+  .hottip {
+    display: none;
+  }
+}
+.hottip_content {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.hottip_content_label {
+  color: #024E40;
+}
+.hottip_content a:hover,
+.hottip_content a:focus,
+.hottip_content a:active {
+  text-decoration: none;
+}
+.hottip_content a:hover .hottip_content_text,
+.hottip_content a:focus .hottip_content_text,
+.hottip_content a:active .hottip_content_text {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+  .hottip {
+    position: absolute;
+    width: 400px;
+    top: 60px;
+    left: 300px;
+    padding: 0;
+    -webkit-animation: fadein 2s;
+            animation: fadein 2s;
+    border-bottom: none;
+  }
+  .hottip_content {
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* # Ikonky
+
+TODO
+
+* přepsat do BEM -- .icon.icon--calendar
+
+*/
+/* --- Aktivni ikona kalendare --- */
+.calendar_icon {
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+a:hover .calendar_icon,
+a:focus .calendar_icon,
+a:active .calendar_icon {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+/*
+Obrazek v seznamu obrazku
+============================
+*/
+.image_item .image {
+  display: inline-block;
+  width: 304px;
+}
+.image_item img {
+  max-width: 100%;
+}
+.image_item .text {
+  color: #999;
+  display: inline-block;
+}
+.image_item .panoramio_link {
+  white-space: nowrap;
+  color: #ccc;
+}
+.images_column .image_item .panoramio_link {
+  white-space: normal;
+}
+.image_item .panoramio_link a img {
+  margin-left: 1px;
+}
+.image_item .panoramio_link a {
+  color: #ccc;
+}
+.image_item .panoramio_link img {
+  margin-bottom: -2px;
+}
+.image_item_small,
+.small_images .image_item {
+  display: inline-block;
+  float: left;
+  margin: 0 3px 3px 0;
+  height: 40px;
+}
+.image_item_small .image,
+.small_images .image_item .image {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+}
+.image_item_small .photo,
+.small_images .image_item .photo {
+  height: 40px;
+}
+.image_item_small .text,
+.small_images .image_item .text {
+  display: none;
+}
+.image_item_smaller {
+  display: inline-block;
+  float: left;
+  margin: 0 3px 3px 0;
+  height: 50px;
+}
+.image_item_smaller .image {
+  display: inline-block;
+  width: auto;
+  height: 50px;
+}
+.image_item_smaller .photo {
+  height: 50px;
+}
+.image_item_full {
+  position: relative;
+  float: none;
+  height: auto;
+  margin-bottom: -2px;
+}
+.image_item_full .image {
+  width: 100%;
+}
+.small_images.without_texts {
+  margin-bottom: 18px;
+}
+/* # Modul obrázky ve sloupečku
+
+
+`.images_column`
+
+Obrázky ve sloupci obtékané textem. 
+
+Např. detail oblasti, obce, atrakce….
+
+## TODO
+
+- pryč s #content
+- .images_column .image_item patří jako varianta do .image_item
+- .images_column & se vyskytuje i v jinych modulech, ktere je potreba upravit kvuli obtekani .images_column v .text_larger
+
+## Ukázka
+
+```
+<div id="content">
+    <div class="images_column">
+      <p class="image_item">
+          <a class="fancybox image" 
+            href="http://www.ck-rekrea.cz/katalogy-data/images/oblasti/111/liptov-liptov-sk.jpg"
+            rel="images_group" title="Přehrada Liptovská mara zabírá ohromné území Liptova a nastavuje zrcadlo okolním horám.. Autor fotografie: Liptov.sk">
+              <img alt="" class="photo"
+                src="http://www.ck-rekrea.cz/katalogy-data/images/oblasti/111/liptov-liptov-sk_s.jpg"
+                title="Autor fotografie: Liptov.sk">
+          </a> 
+          <span class="text">Přehrada Liptovská mara zabírá ohromné území Liptova a nastavuje
+          zrcadlo okolním horám.</span>
+      </p>
+    </div>
+</div>
+```
+*/
+.images_column h2 {
+  font-size: 14px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .images_column {
+    float: left;
+    width: 215px;
+    margin: 0 28px 0 0;
+  }
+}
+.images_column .image_item .image {
+  width: 100%;
+}
+.images_column .image_item .text {
+  line-height: 16px;
+}
+.images_column.without_texts .image_item {
+  margin-bottom: -1px;
+}
+.images_column.without_texts .small_images {
+  margin-top: 0;
+}
+.images_column.without_texts .small_images .image_item {
+  margin-bottom: 3px;
+}
+/* # Modul seznam obrázků v řádku
+
+`.images_row`
+
+První obrázek je vždy větší s fixní výškou (`.image_item_fixed_height`), ostatní pak menší (`.image_item_smaller`).
+
+Např. v detailu kapacity, LM/FM.
+
+## Ukázka
+
+```
+<div class="images_row">
+  <p class="image_item image_item_fixed_height">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal0.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal0_s.JPG" alt="Penzion Agrothermal**" title="Penzion Agrothermal**" />
+      </a>
+  </p>
+
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal5.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal5_s.JPG" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal1.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal1_s.JPG" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal2.jpg" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal2_s.jpg" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal3.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal3_s.JPG" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal6.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal6_s.JPG" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal7.jpg" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal7_s.jpg" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal10.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal10_s.JPG" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal11.jpg" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal11_s.jpg" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal12.jpg" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal12_s.jpg" alt="" title="" />
+      </a>
+  </p>
+  <p class="image_item image_item_smaller">
+      <a class="fancybox image" href="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal13.JPG" rel="group">
+          <img class="photo" src="http://www.ck-rekrea.cz/katalogy-data/images/mista/186/Penzionagrothermal13_s.JPG" alt="" title="" />
+      </a>
+  </p>
+</div>
+```
+*/
+.images_row {
+  *zoom: 1;
+  margin-bottom: 18px;
+  margin-right: 30px;
+}
+.images_row:before,
+.images_row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.images_row:after {
+  clear: both;
+}
+.images_row:before,
+.images_row:after {
+  content: " ";
+  display: table;
+}
+.images_row:after {
+  clear: both;
+}
+/*
+
+.landmark_map - Orientacni mapka s Google Static Maps
+=====================================================
+
+*/
+.landmark_map {
+  margin-bottom: 18px;
+}
+.landmark_map .maps {
+  position: relative;
+  width: 304px;
+  height: 192px;
+  overflow: hidden;
+  margin: 0;
+}
+.landmark_map .legend {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 179px;
+  left: 0px;
+  width: 304px;
+  height: 12px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ccc;
+}
+.landmark_map .zoom_1,
+.landmark_map .zoom_2,
+.landmark_map .zoom_3 {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 304px;
+  height: 171px;
+}
+.landmark_map .zoom_1 {
+  z-index: 30;
+}
+.landmark_map .zoom_2 {
+  z-index: 20;
+}
+.landmark_map .zoom_3 {
+  z-index: 10;
+}
+/* # Modul List
+
+`.list` — Seznam jednořádkových položek oddělených rámečky.
+
+Např. Vybavení v detailu ubytovatele, seznam tabulek v detailu LM/FM…
+
+## TODO
+
+- `list_splitted` by na mobilech mělo být jen dvousloupcové
+- Proč je výchozí stav jedné položky `inline-block`?
+
+## Použití
+
+```
+<div id="content">
+    <div class="list">
+      <h2 class="soft_head">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+.list {
+  margin-bottom: 18px;
+}
+.list ul {
+  border-top: 1px solid #ccc;
+  margin-left: 0;
+  padding-left: 0;
+}
+.text_larger .list {
+  overflow: hidden;
+}
+.list li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 28px;
+}
+.text_larger .list li {
+  left: 0;
+  position: static;
+}
+.list li .item {
+  height: 18px;
+  padding: 5px 7px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list li a.item:hover,
+.list li a.item:focus,
+.list li a.item:active {
+  background-color: #eee;
+  cursor: pointer;
+}
+.list li h2,
+.list li h3 {
+  margin-bottom: 0;
+}
+.list li a:hover,
+.list li a:focus,
+.list li a:active {
+  color: #044c04;
+  text-decoration: underline;
+}
+/*
+
+## Element: Odkaz více
+
+`.more`
+
+```
+<div id="content">
+    <div class="list">
+      <h2 class="soft_head">Vybavení</h2>
+      <ul class="without_margin_bottom">
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <p class="more"><a href="#URL">Více</a></p>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+.list .more {
+  clear: both;
+}
+.list .more a {
+  height: 18px;
+  padding: 5px 7px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list_block_items .more a {
+  display: block;
+}
+/*
+
+## Varianta: na více řádků
+
+`.list.list_multiline`
+
+```
+<div id="content">
+    <div class="list list_multiline">
+      <h2 id="vybaveni">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+.list.list_multiline li,
+.list.list_multiline .item {
+  overflow: auto;
+  height: auto;
+  white-space: normal;
+}
+.list.list_multiline .item {
+  display: block;
+}
+.list.list_multiline .item_body {
+  font-size: 12px;
+  line-height: 18px;
+}
+/*
+## Varianta: s vytečkovaným rámečkem
+
+`.list.list_dotted`
+
+Např. seznam cen v textu detailu LM.
+
+```
+<div id="content">
+    <div class="list list_multiline list_dotted">
+      <ul>
+        <li>
+            <span class="item">
+              <h3 class="head">
+                Wellness pobyt s lyžováním na 2 noci
+              </h3>
+              <span class="item_body">
+                  <span>12. 3. 2014 - 16. 4. 2014</span><br>
+                  <strong>1 990 Kč</strong>&nbsp;/&nbsp;Lůžko v pokoji<br>
+                  <span>Cena za osobu/ 2 noci s polopenzí a programem. Pobyt je na 2 noci.
+                  Nástup na pobyt je možný kterýkoliv den v týdnu.
+                  <a href="#">Více…</a></span>
+              </span>
+          </span>
+        </li>
+        <li>
+            <span class="item">
+              <h3 class="head">
+                Wellness pobyt s lyžováním na 3 noci</span>
+              </h3>
+              <span class="item_body">
+                  <span>12. 3. 2014 - 16. 4. 2014</span><br>
+                  <strong>2 990 Kč</strong>&nbsp;/&nbsp;Lůžko v pokoji<br>
+                  <span>Cena za osobu/ 3 noci s polopenzí a programem. Pobyt je na 3 noci.
+                  Nástup na pobyt je možný kterýkoliv den v týdnu.
+                  <a href="#">Více…</a></span>
+              </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+</div>
+```
+*/
+.list.list_dotted ul {
+  border-top-style: dotted;
+}
+.list.list_dotted li {
+  border-bottom-style: dotted;
+}
+.list.list_dotted .more a {
+  border-bottom-style: dotted;
+}
+/*
+
+## Varianta: vícesloupcová
+
+`.list.list_spitted`
+
+Např. seznam vybavení v detailu ubytovatele.
+
+```
+<div id="content">
+    <div class="list list_splitted">
+      <h2 id="vybaveni">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#">Sociální zařízení na pokoji</a></li>
+        <li><a class="item" href="#">Sauna</a></li>
+        <li><a class="item" href="#">Kavárna</a></li>
+        <li><a class="item" href="#">Bazén venkovní</a></li>
+        <li><a class="item" href="#">Fitness</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+.list.list_splitted ul {
+  border-top: none;
+}
+.list.list_splitted li {
+  display: block;
+  float: left;
+  margin-right: 3%;
+  width: 31%;
+}
+.list.list_splitted li:nth-child(3n) {
+  margin-right: 0;
+}
+.list.list_splitted li:nth-child(1),
+.list.list_splitted li:nth-child(2),
+.list.list_splitted li:nth-child(3) {
+  border-top: 1px solid #ccc;
+}
+.list.list_splitted .item {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+}
+/*
+
+## Varianta: položky nastavené na display: block;
+
+`.list.list_block_items`
+
+*/
+.list_block_items li,
+.list_block_items li .item {
+  display: block;
+}
+/* # Modul Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+Obrazky, nadpisy
+
+*/
+.list_item {
+  position: relative;
+  padding: 9px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .list_item {
+    float: left;
+    width: calc((100% - 42px) / 3);
+    height: 352px;
+    padding: 18px 9px 9px;
+    margin: 0 7px 0 7px;
+  }
+}
+.list_item .image {
+  position: relative;
+  float: left;
+  width: 36%;
+  margin-right: 4%;
+}
+@media only screen and (min-width: 768px) {
+  .list_item .image {
+    width: auto;
+    float: none;
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list_item .image {
+    height: 215px;
+  }
+}
+.list_item .image img {
+  max-width: 100%;
+}
+.container .list_item h2 {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .list_item .price {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list_item .price {
+    top: 200px;
+  }
+}
+.list_item .list_item_content {
+  float: left;
+  width: 60%;
+}
+@media only screen and (min-width: 768px) {
+  .list_item .list_item_content {
+    float: none;
+    width: auto;
+  }
+}
+.list_item p {
+  margin-bottom: 0;
+}
+.list_item .place em {
+  color: #333;
+  font-style: normal;
+  display: block;
+  text-overflow: ellipsis;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container .list_item .place a {
+  color: #333;
+}
+.list_item .date strong {
+  color: #666;
+}
+.list_item.without_border {
+  border-bottom: 0;
+}
+.list_item:hover,
+.list_item:focus,
+.list_item:active {
+  background-color: #eee;
+  cursor: pointer;
+  color: #333;
+}
+.list_item:hover h2 a,
+.list_item:focus h2 a,
+.list_item:active h2 a {
+  color: #075207;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 1180px) {
+  .list_item .image {
+    width: auto;
+    float: none;
+    height: 215px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+  .list_item .image img {
+    width: 100%;
+  }
+  .container .list_item h2 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+  .list_item .price {
+    position: absolute;
+    top: 200px;
+    right: 3px;
+  }
+  .list_item .list_item_content {
+    float: none;
+    width: auto;
+  }
+  .list_item .text_content {
+    position: relative;
+    height: 133px;
+    overflow: hidden;
+  }
+  .list_item .icon {
+    top: -15px;
+    left: -5px;
+  }
+  .list_item:hover,
+  .list_item:focus,
+  .list_item:active {
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  .list_item.is_lower {
+    height: 288px;
+  }
+  .list_item.without_image {
+    height: 186px;
+  }
+  .list_item.without_image.without_text {
+    height: 113px;
+  }
+  .list_item.without_image.without_text .price {
+    top: 55px;
+    right: -6px;
+  }
+}
+.discount_in_list_item {
+  position: absolute;
+  bottom: 17px;
+  left: 2px;
+  max-width: 30%;
+  z-index: 10;
+  font-size: 11px;
+  line-height: 13px;
+}
+.discount_in_list_item a {
+  display: inline-block;
+  padding: 3px;
+  background: #efefef;
+  color: #444;
+}
+@media only screen and (min-width: 768px) {
+  .discount_in_list_item {
+    top: 155px;
+    right: 12px;
+    left: auto;
+    max-width: 150px;
+  }
+  .discount_in_list_item a {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+.discount_in_list_item.with_image_icon {
+  padding-left: 3px;
+  margin-top: -10px;
+}
+.discount_in_list_item.with_image_icon a {
+  padding: 0;
+  background: transparent;
+}
+.discount_in_list_item.with_image_icon img {
+  max-height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .discount_in_list_item.with_image_icon img {
+    max-height: 50px;
+  }
+}
+/*
+   .message - Univerzalni informativni hlaska
+   ------------------------------------------
+*/
+.message {
+  z-index: 500;
+  background: #024E40;
+  color: #fff;
+  left: 50%;
+  margin-left: -160px;
+  padding: 10px 10px 12px 10px;
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  top: 0;
+  width: 300px;
+  /* Total 320 */
+  border-radius: 0 0 5px 5px;
+}
+.container .message h2 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+.message a {
+  color: #fff;
+}
+/*
+
+ .numbered - Seznam odrazek
+ ------------------------------
+
+*/
+.numbered {
+  padding-left: 105px;
+}
+.numbered.nr1 {
+  background: transparent url(../../images/nr-1.gif) no-repeat left top;
+}
+.numbered.nr2 {
+  background: transparent url(../../images/nr-2.gif) no-repeat left top;
+}
+.numbered.nr3 {
+  background: transparent url(../../images/nr-3.gif) no-repeat left top;
+}
+.numbered.nr4 {
+  background: transparent url(../../images/nr-4.gif) no-repeat left top;
+}
+.numbered.nr5 {
+  background: transparent url(../../images/nr-5.gif) no-repeat left top;
+}
+.numbered.nr6 {
+  background: transparent url(../../images/nr-6.gif) no-repeat left top;
+}
+.numbered.nr7 {
+  background: transparent url(../../images/nr-7.gif) no-repeat left top;
+}
+.numbered.nr8 {
+  background: transparent url(../../images/nr-8.gif) no-repeat left top;
+}
+.numbered.nr9 {
+  background: transparent url(../../images/nr-9.gif) no-repeat left top;
+}
+.numbered.nr0 {
+  background: transparent url(../../images/nr-0.gif) no-repeat left top;
+}
+.numbered.nrQ {
+  background: transparent url(../../images/nr-q.gif) no-repeat left top;
+}
+.numbered.nrA {
+  background: transparent url(../../images/nr-a.gif) no-repeat left top;
+}
+.nr_item {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-0-grey.gif');
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 70px;
+  margin-bottom: 20px;
+}
+.nr_item.nr1 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-1-grey.gif');
+}
+.nr_item.nr2 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-2-grey.gif');
+}
+.nr_item.nr3 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-3-grey.gif');
+}
+.nr_item.nr4 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-4-grey.gif');
+}
+.nr_item.nr5 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-5-grey.gif');
+}
+.nr_item.nr6 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-6-grey.gif');
+}
+.nr_item.nr7 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-7-grey.gif');
+}
+.nr_item.nr8 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-8-grey.gif');
+}
+.nr_item.nr9 {
+  background-image: url('http://dovolena.ck-rekrea.cz/images/nr-9-grey.gif');
+}
+/* # Navigace druhé úrovně
+TODO přepsat a zdokumentovat
+*/
+#nav_inside {
+  clear: both;
+  font-size: 10px;
+  line-height: 14px;
+  min-height: 10px;
+  padding: 0 7px;
+  margin: 18px 0 0 0;
+  border-bottom: 1px solid #ddd;
+}
+@media print {
+  #nav_inside {
+    display: none;
+  }
+}
+#nav_inside .item {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin-bottom: -1px;
+  margin-right: 3px;
+  padding: 7px 5px;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px 5px 0 0;
+}
+#nav_inside strong.item,
+#nav_inside strong .item {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: normal;
+  color: #666;
+}
+.map_page #nav_inside strong.item {
+  padding-bottom: 6px;
+}
+@media only screen and (min-width: 768px) {
+  #nav_inside {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 30px;
+  }
+  #nav_inside .item {
+    padding: 7px 10px;
+  }
+}
+/*
+
+.more - Vice informaci
+==========================
+
+*/
+.more a {
+  display: block;
+  padding: 8px 7px;
+  border-bottom: 1px solid #ccc;
+}
+.more a:hover,
+.more a:focus,
+.more a:active {
+  background-color: #eee;
+  cursor: pointer;
+}
+.more.standalone {
+  margin-top: 18px;
+  border-top: 1px solid #ccc;
+}
+/* Modul Out Of Box
+   ================
+
+  Řádka layoutu, která vystupuje z řady
+  spacingem nebo podbarvením.
+
+  Používáme na homepage nebo na o-nas stránce.
+*/
+.out-of-box {
+  width: calc(100% + 14px);
+  padding: 35px 12px 27px;
+  margin: 0px -7px 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .out-of-box {
+    margin: -35px -7px 27px;
+    padding: 35px 30px 27px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .out-of-box {
+    width: calc(100% + 46px);
+    margin: -35px -23px 27px;
+  }
+}
+.out-of-box__heading-spaced {
+  top: -10px;
+  position: relative;
+}
+.out-of-box__heading-spaced.h1 {
+  top: 0;
+}
+.out-of-box--tall .out-of-box__heading-spaced {
+  top: -30px;
+}
+.out-of-box--tall .out-of-box__heading-spaced.h1 {
+  top: -18px;
+}
+.out-of-box--last {
+  margin-bottom: -90px;
+}
+.out-of-box--bottomrule {
+  border-bottom: 1px solid #ddd;
+}
+.out-of-box--colored {
+  background: #f1f4f1;
+}
+.out-of-box--colored .out-of-box__heading {
+  top: -30px;
+  position: relative;
+}
+.out-of-box--inverted {
+  background-color: #759375;
+}
+.out-of-box--inverted,
+.out-of-box--inverted h1,
+.out-of-box--inverted h2 {
+  color: #fff;
+}
+.out-of-box--inverted a {
+  color: #fff;
+  text-decoration: underline;
+}
+.out-of-box--inverted a:hover,
+.out-of-box--inverted a:focus,
+.out-of-box--inverted a:active {
+  color: #fff;
+}
+.out-of-box--gradient {
+  background-color: #024E40;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#024E40), to(#011c17));
+  background-image: linear-gradient(to bottom, #024E40, #011c17);
+}
+.out-of-box--gradient,
+.out-of-box--gradient h1,
+.out-of-box--gradient h2 {
+  color: #fff;
+}
+.out-of-box--gradient a {
+  color: #fff;
+  text-decoration: underline;
+}
+.out-of-box--gradient a:hover,
+.out-of-box--gradient a:focus,
+.out-of-box--gradient a:active {
+  color: #fff;
+}
+.out-of-box--tall {
+  padding-top: 70px;
+  padding-bottom: 62px;
+}
+.out-of-box--pattern {
+  background: #f8f8f8 url(http://dovolena.ck-rekrea.cz/images/creampaper.png) repeat;
+}
+.out-of-box--mt-negative {
+  margin-top: -40px;
+}
+.out-of-box--mt-zero {
+  margin-top: 0;
+}
+.out-of-box--blur {
+  background-color: #0058a6;
+}
+.out-of-box--blur,
+.out-of-box--blur h1,
+.out-of-box--blur h2 {
+  color: #fff;
+}
+.out-of-box--blur a {
+  color: #fff;
+  text-decoration: underline;
+}
+.out-of-box--blur a:hover,
+.out-of-box--blur a:focus,
+.out-of-box--blur a:active {
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .out-of-box--blur {
+    background-image: url('http://dovolena.ck-rekrea.cz/images/out-of-box-blur-supetar.jpg');
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://dovolena.ck-rekrea.cz/images/out-of-box-blur-supetar.jpg', sizingMethod='scale');
+  }
+}
+/*
+  Cenova tabulka
+  ==============
+*/
+.price_table {
+  font-size: 11px;
+  line-height: 13px;
+  overflow: auto;
+}
+.price_table table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+.price_table td,
+.price_table th {
+  margin: 0;
+  padding: 3px;
+  text-align: right;
+}
+.price_table th {
+  text-align: center;
+  font-weight: normal;
+  color: #666;
+}
+.price_table td.price_table_dates,
+.price_table th.price_table_dates {
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .price_table td.price_table_dates,
+  .price_table th.price_table_dates {
+    white-space: nowrap;
+  }
+}
+.price_table td.price_table_price {
+  text-align: center;
+  white-space: nowrap;
+}
+.price_table tr:nth-child(2n+1) {
+  background: #e8e8e8;
+}
+.price_table tr:nth-child(2n) {
+  background: #dfdfdf;
+}
+.price_table tr td:first-child,
+.price_table tr th:first-child {
+  padding-left: 15px;
+}
+.price_table tr td:last-child,
+.price_table tr th:last-child {
+  padding-right: 15px;
+}
+.price_table_discount td,
+.price_table_discount th {
+  background: #f3c5a7;
+}
+.price_table_discount strong {
+  font-weight: normal;
+}
+.price_table_discount_info {
+  font-size: 11px;
+  color: #666;
+}
+.price-table__title {
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .price-table__title {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .price-table__title {
+    font-size: 18px;
+  }
+}
+.price-table__title .calendar_icon {
+  width: 16px;
+}
+@media only screen and (min-width: 1180px) {
+  .price-table__title .calendar_icon {
+    width: 23px;
+  }
+}
+.price-table__title .float_right {
+  display: block;
+  float: none;
+}
+@media only screen and (min-width: 768px) {
+  .price-table__title .float_right {
+    display: inline-block;
+    float: right;
+  }
+}
+.bootstrap_block .price_calc {
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.bootstrap_block .price_calc .controls {
+  margin-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .bootstrap_block .price_calc .controls {
+    margin-left: 160px;
+  }
+}
+.price_calc_for_item,
+.price_calc_sum {
+  display: inline-block;
+  width: 57px;
+  text-align: right;
+}
+.price_calc_times,
+.price_calc_equal {
+  font-size: 20px;
+  color: #ccc;
+  display: inline-block;
+  width: 15px;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.price_calc_total {
+  clear: both;
+  margin-bottom: 18px;
+  padding-top: 9px;
+  border-top: #ccc dotted 2px;
+}
+.price_calc_total_text {
+  display: block;
+  text-align: center;
+}
+.price_calc_total_sum {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+}
+.submit_row {
+  clear: both;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+.submit_row .button.submit {
+  font-weight: bold;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.complete_pricelist {
+  padding: 18px 27px;
+  overflow: auto;
+}
+.detail_prices .complete_pricelist {
+  display: none;
+}
+.complete_pricelist h2 {
+  /* TODO: az bude centralni definice pro h2, muzeme odmazat */
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #999;
+}
+.complete_pricelist table {
+  width: auto;
+}
+.complete_pricelist th {
+  font-weight: normal;
+  background-color: #eee;
+  text-align: center;
+}
+.complete_pricelist .price_calc_note {
+  padding-left: 0;
+}
+.occupancy_overview {
+  padding: 18px 27px;
+  overflow: auto;
+  max-width: 830px;
+}
+.detail_prices .occupancy_overview {
+  display: none;
+}
+.occupancy_month {
+  float: left;
+  width: 250px;
+  height: 210px;
+  margin: 0 20px 20px 0;
+}
+.occupancy_month table.normal.spacy td,
+.occupancy_month table.normal.spacy th {
+  padding: 0;
+}
+.occupancy_month table.normal.spacy span,
+.occupancy_month table.normal.spacy span {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.reservation_form {
+  margin-top: 36px;
+}
+.reservation_form h2 {
+  margin-bottom: 18px;
+  padding-top: 9px;
+  border-top: #ccc dotted 2px;
+}
+.head_aside {
+  font-size: 11px;
+  line-height: 15px;
+  color: #999;
+}
+.bg_box .head_aside {
+  color: #666;
+}
+.tab_nights_count {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .tab_nights_count {
+    margin-left: 60px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tab_nights_count {
+    display: inline;
+    margin-left: 0;
+  }
+}
+.supplements {
+  padding-top: 9px;
+}
+.calc_form .supplements h2 {
+  margin-bottom: 0;
+}
+.form-horizontal.price_calc .control-label {
+  width: 100%;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .form-horizontal.price_calc .control-label {
+    width: 30%;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .form-horizontal.price_calc .control-label {
+    width: 300px;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .form-horizontal.price_calc .controls {
+    margin-left: 305px;
+  }
+}
+.price_calc_total_sum {
+  display: block;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .price_calc_total_sum {
+    display: inline-block;
+    width: 86px;
+    margin-left: 350px;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .price_calc_total_sum {
+    margin-left: 480px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .price_calc_note {
+    width: 50%;
+  }
+  .price_calc_total_text {
+    text-align: left;
+    float: left;
+    width: 300px;
+  }
+  .reservation_form .control-group {
+    margin-left: 75px;
+    margin-right: 25px;
+  }
+  .page_accommodation_detail #ceny .head_with_border {
+    padding-right: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+/*
+
+Ceny, datumy - velke "cenovky"
+===============================
+
+*/
+.price {
+  display: inline-block;
+  width: auto;
+  color: #444;
+}
+.price strong {
+  font-weight: normal;
+  color: #888;
+}
+.price.price--big {
+  background-color: #ddd;
+  padding: 3px;
+  margin: 0 6px 18px 0;
+}
+.date.date--big {
+  display: inline-block;
+  width: auto;
+  color: #444;
+  background-color: #ddd;
+  padding: 3px;
+  margin: 0 6px 18px 0;
+}
+.date.date--big strong {
+  font-weight: normal;
+  color: #888;
+}
+.big_label {
+  display: inline-block;
+  width: auto;
+  color: #444;
+  background-color: #ddd;
+  padding: 3px;
+  margin: 0 6px 18px 0;
+}
+.big_label strong {
+  font-weight: normal;
+  color: #888;
+}
+@media only screen and (min-width: 768px) {
+  .price.price--big {
+    font-size: 16px;
+    padding: 7px;
+  }
+  .date.date--big {
+    font-size: 16px;
+    padding: 7px;
+  }
+  .big_label {
+    font-size: 16px;
+    padding: 7px;
+  }
+}
+/*
+  Tistene katalogy
+  ================
+*/
+.printCatalogues {
+  width: auto;
+}
+.printCatalogues p {
+  float: left;
+}
+.printCatalogues p a {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+  background-color: #f8f8f8;
+  display: block;
+  margin: 0 20px 20px 0;
+}
+.printCatalogues p a img {
+  margin-bottom: 10px;
+}
+.printCatalogues p a:hover {
+  text-decoration: none;
+  background-color: #ddd;
+}
+.printCatalogues p.aktualni a {
+  border: 1px solid #ddd;
+  background-color: #efefef;
+}
+.printCatalogues p.aktualni a:hover {
+  background-color: #eee;
+}
+/*
+
+Review - klientske hodnoceni
+============================
+
+*/
+.reviews__heading-stars {
+  color: #9BD04E;
+  float: right;
+}
+@media only screen and (max-width: 420px) {
+  .reviews__heading-stars {
+    margin-top: 4.5px;
+    float: none;
+    display: block;
+  }
+}
+.review {
+  border-radius: 5px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid #d8dbd8;
+}
+.review__heading {
+  padding: 9px 15px;
+  background: #f1f4f1;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 540px) {
+  .review__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.review__heading-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 540px) {
+  .review__heading-text {
+    white-space: normal;
+    display: block;
+  }
+}
+.review__stars {
+  margin-left: auto;
+  width: 145px;
+  color: #9BD04E;
+}
+.review__content {
+  font-size: 12px;
+  line-height: 18px;
+  padding: 9px 15px;
+}
+@media only screen and (min-width: 480px) {
+  .review__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.review__content-plus {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 10em;
+  margin-right: 1em;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 480px) {
+  .review__content-plus {
+    margin-bottom: 1em;
+    margin-right: 0px;
+  }
+}
+.review__content-minus {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 10em;
+  margin-bottom: 0px;
+}
+.review--in-group {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.review--in-group .review__heading {
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+}
+.review--in-group:first-child .review__heading {
+  padding-top: 9px;
+}
+.review--in-group:last-child .review__heading {
+  padding-bottom: 9px;
+}
+.reviews__group {
+  border-radius: 5px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid #d8dbd8;
+}
+/*
+
+.stars - Hvezdickove hodnoceni
+==============================
+
+*/
+.stars {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999;
+}
+.stars-plus {
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+/*
+  Zalozky po strane obsahu
+  ========================
+*/
+.side_tabs ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ccc;
+}
+.side_tabs li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.side_tabs_item {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+.side_tabs_item.active {
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  margin-top: -1px;
+  padding-right: 19px;
+}
+@media only screen and (min-width: 768px) {
+  .side_tabs_item.active {
+    margin-right: -14px;
+  }
+}
+.side_tabs_item h3 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  width: 290px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+.container .side_tabs_item.active h3 {
+  color: #333;
+  text-decoration: none;
+}
+.side_tabs_item_flag {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+.side_tabs_item.active .side_tabs_item_flag {
+  right: 15px;
+}
+/* # Modul Site Logo
+
+Na velkých displejích nalevo, na malých veprostřed nahoře.
+
+*/
+.site-logo {
+  padding: 18px 0;
+  margin: 0;
+  width: auto;
+  text-align: center;
+}
+.site-logo__tagline {
+  top: -4px;
+  position: relative;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .site-logo {
+    float: left;
+    margin-left: 30px;
+    text-align: left;
+    width: 300px;
+  }
+  .site-logo a:hover {
+    text-decoration: none;
+  }
+}
+/* # Modul Site Nav
+
+Hlavní navigace webu.
+
+Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
+
+## Tři části navigace
+
+* `.site-nav__accom-search-link` – odkaz na vyhledávač ubytování
+* `.site-nav__main` – hlavní navigace, zobrazuje se jen na velkých displejích (řízeno Pine.JS)
+* `.site-nav__small-screen` – zobrazuje se jen na malých displejích
+
+## Příklad
+
+```
+<div role="navigation" class="site-nav">
+  <ul class="site-nav__accom-search-link">
+    <li><strong><a class="item" href="/">Najít ubytování</a></strong></li>
+  </ul>
+  <div id="navigace" class="site-nav__main pine pine-horizontal">
+    <ul class="pine-level-1">
+      <li><a class="item" href="/">Oblasti</a>
+        <ul class="pine-level-2">
+          <li><a class="item" href="/oblast/belianske-tatry/">Belianské Tatry</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Bratislava</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Jižní Slovensko</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Liptov</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Malá a Velká Fatra, Kysuca</a></li>
+        </ul>
+      </li>
+      <li><a class="item" href="/last-minute/">Last Minute</a></li>
+      <li><a class="item" href="/novinky/">Novinky</a></li>
+      <li><a class="item" href="/o/">O nás</a></li>
+      <li><a class="item" href="/kontakt/">Kontakt</a></li>
+    </ul>
+   </div>
+   <ul class="site-nav__small-screen">
+     <li><a href="#vyhledavani" class="site-nav__small-screen-search">Vyhledávání</a></li>
+     <li><a data-pine="toggle" class="site-nav__small-screen-nav" href="#navigace">Menu</a></li>
+   </ul>
+</div>
+```
+
+*/
+/* ## Využívá Pine.JS responzivní navigaci */
+.pine {
+  z-index: 100;
+  margin-bottom: 18px;
+  background: #024E40;
+  *zoom: 1;
+}
+.pine:before,
+.pine:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.pine:after {
+  clear: both;
+}
+.pine:before,
+.pine:after {
+  content: " ";
+  display: table;
+}
+.pine:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .pine {
+    border-radius: 0;
+  }
+}
+@media print {
+  .pine {
+    display: none;
+  }
+}
+.pine ul,
+.pine li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.pine li > a,
+.pine li > strong {
+  display: block;
+  padding: 9px 12px;
+  color: white;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  background: #024E40;
+}
+.pine li.pine-level-open > a,
+.pine li strong {
+  background: #9BD04E;
+}
+.pine li a:hover,
+.pine li a:focus,
+.pine li a:active {
+  background: #9BD04E;
+}
+.pine .pine-level-2 > li > a,
+.pine .pine-level-2 > li > strong {
+  text-indent: 1em;
+}
+.pine .pine-level-3 > li > a,
+.pine .pine-level-3 > li > strong {
+  text-indent: 2em;
+}
+@media (max-width: 767px) {
+  .js .pine {
+    max-height: 0;
+    position: absolute;
+    top: 146px;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    -webkit-transition: max-height 0.1s ease-in-out;
+    transition: max-height 0.1s ease-in-out;
+  }
+  .js .pine.pine-visible {
+    max-height: none;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 768px) {
+  .pine {
+    background: #024E40;
+    border: none;
+  }
+  .pine li {
+    position: relative;
+  }
+  .pine a,
+  .pine strong {
+    display: block;
+    border-bottom: 0;
+    text-indent: 0;
+  }
+}
+@media (min-width: 768px) {
+  .pine-horizontal ul > li {
+    display: inline-block;
+    position: relative;
+    float: left;
+  }
+  .pine-horizontal ul > li > a,
+  .pine-horizontal ul > li > strong {
+    text-align: center;
+    display: block;
+  }
+  .pine-horizontal ul a {
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .pine-horizontal .pine-level-2,
+  .pine-horizontal .pine-level-3 {
+    position: absolute;
+  }
+  .pine-horizontal .pine-level-2 li,
+  .pine-horizontal .pine-level-3 li {
+    display: block;
+    float: none;
+  }
+  .pine-horizontal .pine-level-2 > li > a,
+  .pine-horizontal .pine-level-3 > li > a,
+  .pine-horizontal .pine-level-2 > li > strong,
+  .pine-horizontal .pine-level-3 > li > strong {
+    text-align: left;
+  }
+  .js .pine-horizontal .pine-level-2,
+  .js .pine-horizontal .pine-level-3 {
+    visibility: hidden;
+  }
+  .pine-horizontal .pine-level-3 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .pine-horizontal .pine-level-2 {
+    z-index: 50001;
+    visibility: visible;
+    left: 0;
+    top: 100%;
+    width: 200px;
+  }
+  .pine-horizontal .pine-level-3 {
+    z-index: 50002;
+    visibility: visible;
+    left: 100%;
+    top: 0;
+    width: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .pine-horizontal .pine-level-open > .pine-level-2 {
+    z-index: 50001;
+    visibility: visible;
+    left: 0;
+    top: 100%;
+    width: 200px;
+  }
+  .pine-horizontal .pine-level-open > .pine-level-3 {
+    z-index: 50002;
+    visibility: visible;
+    left: 100%;
+    top: 0;
+    width: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .pine-vertical a,
+  .pine-vertical strong {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+@media (min-width: 768px) {
+  .pine-vertical .pine-level-2,
+  .pine-vertical .pine-level-3 {
+    top: 0;
+    position: absolute;
+  }
+  .js .pine-vertical .pine-level-2,
+  .js .pine-vertical .pine-level-3 {
+    visibility: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .pine-vertical .pine-level-2 {
+    z-index: 50001;
+    visibility: visible;
+    left: 100%;
+    width: 200px;
+  }
+  .pine-vertical .pine-level-3 {
+    z-index: 50002;
+    visibility: visible;
+    left: 100%;
+    width: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .pine-vertical .pine-level-open > .pine-level-2 {
+    z-index: 50001;
+    visibility: visible;
+    left: 100%;
+    width: 200px;
+  }
+  .pine-vertical .pine-level-open > .pine-level-3 {
+    z-index: 50002;
+    visibility: visible;
+    left: 100%;
+    width: 200px;
+  }
+}
+.js .pine-fixed {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .js .pine-fixed {
+    top: 146px;
+  }
+}
+@media (max-width: 767px) {
+  .js .pine-fixed-small {
+    top: 146px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .js .pine-fixed-large {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+}
+.pine-has-subnav > a,
+.pine-has-subnav > strong {
+  position: relative;
+}
+.pine-has-subnav > a,
+.pine .pine-level-open .pine-has-subnav > a {
+  padding-right: 30px;
+}
+.pine-has-subnav > a:before,
+.pine .pine-level-open .pine-has-subnav > a:before {
+  z-index: 100;
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 6px;
+  margin-top: -4px;
+  border-color: transparent transparent transparent white;
+}
+@media (max-width: 767px) {
+  .pine-has-subnav > a:before,
+  .pine .pine-level-open .pine-has-subnav > a:before {
+    right: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .pine-has-subnav > a:before,
+  .pine .pine-level-open .pine-has-subnav > a:before {
+    border-color: transparent transparent transparent white;
+  }
+}
+.pine-horizontal .pine-has-subnav > a {
+  padding-right: 30px;
+}
+.pine-horizontal .pine-has-subnav > a:before {
+  border-width: 6px 4px 0 4px;
+  margin-top: -2px;
+  border-color: white transparent transparent transparent;
+}
+@media (max-width: 767px) {
+  .pine-horizontal .pine-has-subnav > a:before {
+    border-color: white transparent transparent transparent;
+  }
+}
+@media (max-width: 767px) {
+  .pine-horizontal .pine-has-subnav > a:before {
+    border-width: 4px 0 4px 6px;
+    margin-top: -4px;
+    border-color: transparent transparent transparent white;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .pine-horizontal .pine-has-subnav > a:before {
+    border-color: transparent transparent transparent white;
+  }
+}
+.pine-trigger {
+  display: none;
+  padding: 9px 12px;
+  color: white;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #024E40;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .js .pine-trigger {
+    display: inline-block;
+  }
+}
+.pine-trigger .icon-bar {
+  position: relative;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.pine-trigger .icon-bar,
+.pine-trigger .icon-bar:before,
+.pine-trigger .icon-bar:after {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: black;
+  -webkit-border-radius: 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.pine-trigger .icon-bar:before,
+.pine-trigger .icon-bar:after {
+  position: absolute;
+  top: -4px;
+  content: '';
+}
+.pine-trigger .icon-bar:after {
+  top: 4px;
+}
+.pine-trigger-title {
+  display: inline-block;
+}
+.fx-collapse ul ul {
+  overflow: hidden;
+  max-height: 0;
+}
+.fx-collapse .pine-level-open > .pine-level-2,
+.fx-collapse .pine-level-open > .pine-level-3 {
+  overflow: visible;
+  max-height: none;
+}
+@media (max-width: 767px) {
+  .fx-collapse .pine-level-1 > .pine-has-subnav > a:before,
+  .fx-collapse .pine-level-2 > .pine-has-subnav > a:before,
+  .fx-collapse .pine-level-3 > .pine-has-subnav > a:before {
+    border-width: 6px 4px 0 4px;
+    margin-top: -2px;
+    border-color: white transparent transparent transparent;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .fx-collapse .pine-level-1 > .pine-has-subnav > a:before,
+  .fx-collapse .pine-level-2 > .pine-has-subnav > a:before,
+  .fx-collapse .pine-level-3 > .pine-has-subnav > a:before {
+    border-color: white transparent transparent transparent;
+  }
+}
+.fx-hover-fade .pine-level-2,
+.fx-hover-fade .pine-level-3 {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  -webkit-transition: visibility 0s .1s, opacity .1s ease-in-out;
+  transition: visibility 0s .1s, opacity .1s ease-in-out;
+}
+.fx-hover-fade .pine-level-2 > li > a,
+.fx-hover-fade .pine-level-3 > li > a,
+.fx-hover-fade .pine-level-2 > li > strong,
+.fx-hover-fade .pine-level-3 > li > strong {
+  text-indent: 0;
+}
+.fx-hover-fade .pine-level-1 > li > a,
+.fx-hover-fade .pine-level-1 > li > strong {
+  -webkit-transition: background .1s;
+  transition: background .1s;
+}
+.fx-hover-fade .pine-level-open > .pine-level-2,
+.fx-hover-fade .pine-level-open > .pine-level-3 {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.fx-hover-fade .noanim {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.fx-right-to-left .pine-level-1 {
+  position: relative;
+  left: 0;
+}
+.fx-right-to-left ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.js .fx-right-to-left ul ul {
+  visibility: hidden;
+  -webkit-transition: visibility 0s .2s;
+  transition: visibility 0s .2s;
+}
+.fx-right-to-left ul li > a,
+.fx-right-to-left ul li > strong {
+  text-indent: 0 !important;
+}
+.fx-right-to-left .pine-level-2 > ul {
+  left: 200%;
+}
+.fx-right-to-left .pine-level-3 > ul {
+  left: 300%;
+}
+.fx-right-to-left ul .pine-level-open > ul {
+  visibility: visible;
+}
+.fx-right-to-left .pine-level-1 > .pine-level-open > ul {
+  -webkit-transition: visibility 0s 0s;
+  transition: visibility 0s 0s;
+}
+.fx-right-to-left .pine-back > a {
+  position: relative;
+  background: #9BD04E;
+  text-align: center;
+}
+.fx-right-to-left .pine-back > a:before {
+  z-index: 100;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 6px 4px 0;
+  margin-top: -4px;
+  border-color: transparent white transparent transparent;
+}
+.pine-has-subnav > a:before {
+  border-style: inset;
+}
+.site-nav {
+  clear: both;
+  background: #024E40;
+  height: 41px;
+  border-bottom: #9BD04E 10px solid;
+  border-top: #E0E9E8 10px solid;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media print {
+  .site-nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__main .pine-level-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__main .pine-level-1 > li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.site-nav li {
+  list-style-type: none;
+}
+.site-nav__accom-search-link,
+.site-nav__main,
+.site-nav__small-screen {
+  display: inline-block;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__accom-search-link,
+  .site-nav__main,
+  .site-nav__small-screen {
+    width: 100%;
+  }
+}
+.site-nav__accom-search-link {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__accom-search-link {
+    display: none;
+  }
+}
+.site-nav__accom-search-link-desktop {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .site-nav__accom-search-link-desktop {
+    display: block;
+  }
+}
+.site-nav__small-screen {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .site-nav__small-screen {
+    display: block;
+    width: 130px;
+    margin-right: -2px;
+    float: right;
+  }
+}
+.site-nav__small-screen li {
+  display: inline-block;
+}
+.site-nav__small-screen a.active {
+  background-color: #9BD04E;
+}
+@media only screen and (max-width: 767px) {
+  .site-nav__small-screen-search {
+    text-indent: -500px;
+    width: 40px;
+    background-image: url(../../images/glyphicons_027_search_white.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .container .site-nav .site-nav__small-screen-nav {
+    width: 90px;
+    padding-left: 40px;
+    background-image: url(../../images/glyphicons_158_show_lines_white.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    margin-left: -5px;
+  }
+}
+.container .site-nav a {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding: 12px 12px 11px;
+  color: #fff;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.container .site-nav a:hover,
+.container .site-nav a:focus,
+.container .site-nav a:active,
+.container .site-nav a.active {
+  color: white;
+  text-decoration: none;
+  background-color: #9BD04E;
+}
+.container .pine-level-2 a {
+  padding: 9px 15px 10px;
+}
+@media only screen and (min-width: 768px) {
+  .pine-level-1 > li {
+    display: inline-block;
+    position: relative;
+    float: left;
+  }
+  .container .pine-level-1 > .pine-has-subnav > a {
+    padding-right: 25px;
+  }
+  .container .pine-level-1 > .pine-has-subnav > a:before {
+    top: 19px;
+    right: 50%;
+    margin-right: -27px;
+    border-top-color: rgba(255, 255, 255, 0.5);
+  }
+}
+/* # Modul Site Search
+
+Fulltextové vyhledávání na celém webu.
+
+Zatím Google Custom Search, bude ale vlastní našeptávač.
+
+Na velkých displejích napravo od loga, na malých odkazem v navigaci.
+
+*/
+.site-search {
+  width: auto;
+  text-align: center;
+}
+@media print {
+  .site-search {
+    display: none;
+  }
+}
+.site-search [type=submit] {
+  position: relative;
+  top: -1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px;
+  font: 12px/18px Arial, sans-serif;
+  color: #666;
+  border: 1px outset #ddd;
+  cursor: pointer;
+  vertical-align: middle;
+  border-color: #e2e9e2;
+  background: #f1f4f1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f4f1));
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f4f1 100%);
+  overflow: visible;
+  height: 30px;
+  margin: 0;
+  height: 24px;
+  line-height: 16px;
+  padding: 3px 10px;
+  min-width: 60px;
+  /* IE8- bez toho nezobrazi postranni padding, uf  */
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .site-search {
+    border-top: 1px solid white;
+    background: #9BD04E;
+    padding: 18px 0;
+  }
+  .js .site-search {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-search {
+    position: absolute;
+    top: 48px;
+    right: 30px;
+    text-align: right;
+    width: 300px;
+  }
+}
+/*
+  Soft hlavicka s podkresem - pro bocni listy
+  =============================================
+*/
+.container .soft_head {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 7px 5px 9px 7px;
+  margin-bottom: 0;
+  color: #666;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ffffff), to(#f8f8f8));
+  background: linear-gradient(to bottom, #ffffff 25%, #f8f8f8 100%);
+}
+.container .soft_head.with_border {
+  border-bottom: 1px solid #eee;
+}
+.soft_head {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 940px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 7px 5px 9px 7px;
+  margin-bottom: 0;
+  color: #666;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ffffff), to(#eee));
+  background: linear-gradient(to bottom, #ffffff 25%, #eee 100%);
+}
+.soft_head.with_border {
+  border-bottom: 1px solid #ccc;
+}
+.soft_head.with_margin_bottom {
+  margin-bottom: 18px;
+}
+.soft_head.standalone {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 18px;
+}
+.accommodation_list .soft_head {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #ccc;
+  max-width: 940px;
+}
+.head_with_border {
+  padding-bottom: 10px;
+  border-bottom: 2px dotted #ccc;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .head_aside {
+    float: right;
+    text-align: right;
+    margin-top: -52px;
+    margin-bottom: 0;
+  }
+}
+/* --- Modul Recommendation ---
+
+Fotka s bublinou jako doporučení pobytu v detailu kapacity.
+*/
+.recommendations {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.recommendation {
+  *zoom: 1;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.recommendation:before,
+.recommendation:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.recommendation:after {
+  clear: both;
+}
+.recommendation:before,
+.recommendation:after {
+  content: " ";
+  display: table;
+}
+.recommendation:after {
+  clear: both;
+}
+.recommendation-quote.quote-bubble {
+  display: block;
+  float: left;
+  margin-left: 84px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.recommendation-quote.quote-bubble:after {
+  border-width: 10px 20px 10px 0;
+  border-color: transparent #d8dbd8;
+  display: block;
+  bottom: auto;
+  left: -20px;
+  top: 25px;
+}
+.recommendation-quote-name {
+  display: block;
+  color: #666;
+}
+.recommendation-image {
+  position: absolute;
+  left: 0;
+}
+.recommendation-image img {
+  border-radius: 50%;
+  width: auto;
+  height: 54px;
+  border: 2px solid #d8dbd8;
+}
+/*
+
+ Table - tabulky
+ ===============
+
+*/
+table.kontakt {
+  width: 100%;
+  margin-bottom: 1.5em;
+  border-collapse: collapse;
+}
+table.kontakt td,
+table.kontakt th {
+  margin-bottom: .5em;
+  vertical-align: top;
+  text-align: left;
+  padding: .5em 5px;
+}
+table.kontakt tr.bottomLine td,
+table.kontakt tr.bottomLine th {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+}
+table.normal th {
+  text-align: left;
+}
+table.normal th,
+table.normal td {
+  padding-right: 8px;
+}
+table.tableBordered th,
+table.tableBordered td {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  padding: 2px;
+}
+table.tableBordered {
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-collapse: collapse;
+}
+table.normal.with_borders th,
+table.normal.with_borders td {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+table.normal.with_borders {
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-collapse: collapse;
+}
+table.normal.spacy th,
+table.normal.spacy td {
+  padding: 5px 10px;
+}
+table.normal.with_borders th.with_bg,
+table.normal.with_borders td.with_bg {
+  background: #f8f8f8;
+}
+table.normal.with_borders th.past,
+table.normal.with_borders td.past {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+table.table_w100 {
+  width: 100%;
+}
+.table_rwd {
+  overflow-x: auto;
+}
+/* # Modul .text
+
+Blok s textem, který má trochu posunuté horizontální okraje dovnitř oproti třeba obrázkům.
+
+## TODO
+
+* .text_larger se vyskytuje i v jinych modulech kvuli obtekani .images_column
+* .text.narrow
+
+## Ukázka
+
+```
+<div class="text">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+
+*/
+.text {
+  padding: 0 10px 0 5px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+}
+/*
+## Varianta: větší text
+
+`.text.text_larger`
+
+Obteka floatovany .images_column, proto je potreba upravit UL/LI seznamy atd.
+http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
+
+```
+<div class="text text_larger">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+*/
+.text_larger {
+  font-size: 14px;
+  line-height: 20px;
+}
+.text_larger.text {
+  display: block;
+}
+.text_larger ul {
+  list-style-position: inside;
+}
+.text_larger ul li,
+.text_larger ol li {
+  position: relative;
+}
+.text_larger ul ul li,
+.text_larger ol ul li,
+.text_larger ol ol li,
+.text_larger ul ol li {
+  left: 18px;
+}
+/*
+## Varianta: užší textový blok
+
+Platí jen pro velké displeje.
+
+`.text.text_narrow` a `.text.text_narrower`.
+
+Například text v detailu kapacity.
+
+
+```
+<div class="text text_larger text_narrower">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, explicabo, earum magnam eius impedit esse rem laboriosam nulla dolorem quidem tempora ea sapiente quo dicta dolor totam alias qui cupiditate.</p>
+</div>
+```
+*/
+/*
+Modul: Textovy seznam
+=====================
+*/
+.text_list {
+  border-top: 1px solid #ccc;
+  margin-bottom: 18px;
+}
+.text_list ul,
+.text_list li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.text_list .item {
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+}
+.text_list .item p {
+  margin-bottom: 0;
+}
+/* # Modul Top Badge
+
+(reklamni placka co je na kazde strance vpravo nahore
+napr. na HL.cz s akci "Levneji nez v hotelu")
+
+## Použití
+
+Modul je absolutně pozicován, takže se bude zobrazovat někde napravo nahoře viewportu.
+
+```
+<p class="top-badge">
+    <a href="/levneji/" class="fancybox_content">
+        <img src="http://www.hotelyjeseniky.cz/images/hj-badge.png" width="126" height="126" alt="Levněji než v hotelu">
+    </a>
+</p>
+```
+*/
+.top-badge {
+  position: absolute;
+  display: none;
+  top: 0px;
+  right: -10px;
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .top-badge {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .top-badge {
+    width: 116px;
+    height: 116px;
+    right: 8px;
+  }
+}
+.top-badge a {
+  display: block;
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .top-badge a {
+    width: 116px;
+    height: 116px;
+  }
+}
+.top-badge img {
+  width: 80px;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .top-badge img {
+    width: 116px;
+  }
+}
+.top-badge a:hover,
+.top-badge a:focus,
+.top-badge a:active {
+  -webkit-opacity: 0.95;
+  -moz-opacity: 0.95;
+  opacity: 0.95;
+}
+/* --- Modul Quote ---
+
+Bublina pro citace.
+Např. na stránce O nás nebo v modulu Recommendation, tzn. v detailu ubytovatele.
+
+```
+<blockquote class="quote">
+  <p class="quote-bubble">
+    Zasílám pozdrav všem zaměstnancům Vaší cestovní kanceláře z hotelu Kamzík v Jeseníkách, užíváme si to tady. Díky za radu.
+  </p>
+  <cite class="quote-author">
+    Rodina Fylajkova, srpen 2014
+  </cite>
+</blockquote>
+````
+
+*/
+blockquote.quote {
+  margin-left: 0;
+}
+.quote-bubble {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  padding: 9px 15px;
+  background: #d8dbd8;
+}
+.quote-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 10px 0 10px;
+  border-color: #d8dbd8 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-top: -10px;
+  bottom: -20px;
+  left: 20px;
+}
+.quote-author {
+  display: block;
+  margin-top: -5px;
+  margin-left: 40px;
+}
+cite.quote-author {
+  font-style: normal;
+}
+/* Modul About
+   ===========
+
+   Stránka "O nás".
+*/
+.about-perex {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .about-perex {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-perex {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+.about-person {
+  text-align: center;
+}
+.about-person-image img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 138px;
+  display: block;
+  margin: 0 auto;
+}
+.about-person-short-text {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .about-person-full-text,
+  .about-person-full-contact {
+    margin-top: 9px;
+  }
+}
+.about-history {
+  background-color: #d8dbd8;
+  background-position: center center;
+}
+@media only screen and (max-width: 767px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+    background-attachment: fixed;
+  }
+}
+.about-history-perex {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3em 2em 2em 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.about-history-perex .h1 {
+  margin-bottom: 10px;
+}
+.about-history-perex .h2 {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .about-history-perex {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.about-web-item {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  border-bottom: 2px solid #999;
+}
+.about-web-item-eslovensko {
+  border-color: #0EB10E;
+}
+.about-web-item-velkymeder {
+  border-color: #06F;
+}
+.about-web-item-tuzemskadovolena {
+  border-color: #F60;
+}
+.about-web-item-epodhajska {
+  border-color: #c00;
+}
+.about-web-item-besenova {
+  border-color: #06F;
+}
+@media only screen and (min-width: 768px) {
+  .about-web-etc {
+    text-align: center;
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .about-legal {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+/* Modul Slovnik
+   =============
+
+   Stranka ESK/Slovnik.
+*/
+.slovnik-input {
+  text-align: center;
+}
+.slovnik-radios {
+  text-align: center;
+}
+.slovnik-message {
+  margin-top: 18px;
+}
+@media only screen and (min-width: 768px) {
+  .slovnik-input {
+    text-align: left;
+    width: 320px;
+    float: left;
+  }
+  .slovnik-input input[type="text"] {
+    width: 220px;
+  }
+  .slovnik-radios {
+    text-align: left;
+    width: 250px;
+    float: left;
+    margin-top: 5px;
+  }
+  .slovnik-message {
+    margin-top: 36px;
+  }
+}

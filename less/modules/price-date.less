@@ -1,0 +1,105 @@
+/*
+
+Ceny, datumy - velke "cenovky"
+===============================
+
+*/
+
+// Je zde .price, .date, .big_label
+// Dole pak velke displeje
+// TODO sjednotit? Jaky je vztah k .flag?
+
+
+// --- Modul Cena ---
+// Uziva se v polozce seznamu ubytovatelu, last minute, v malych nahledech last minute atd.
+// <p class="price"><strong>5 nocí od</strong> 2 690 Kč</p>
+
+.price {
+  display: inline-block;
+  width: auto;
+  color: #444;
+
+    strong {
+      font-weight: normal;
+      color: #888;
+    }
+}
+
+.price.price--big {
+  background-color: #ddd;
+  padding: 3px;
+    margin: 0 6px 18px 0;
+}
+
+
+// --- Modul Boxik s terminy ---
+// Uziva se v detailu last minute, v seznamu LM nebo seznamu ubytovni
+// <p class="date"><strong>Termíny:</strong> 28. 10. 2012 - 16. 11. 2012</p>
+
+.date { }
+
+// Varianta: Velky boxik pro detail last minute
+.date.date--big {
+  display: inline-block;
+  width: auto;
+  color: #444;
+  background-color: #ddd;
+  padding: 3px;
+    margin: 0 6px 18px 0;
+
+    strong {
+      font-weight: normal;
+      color: #888;
+    }
+}
+
+
+// --- Modul univerzalni velke navesti ---
+// Uziva se v detailu last minute, pobytu, nebo v seznamech
+// <p class="big_label">Polopenze</p>
+// TODO: muze se sem strcit i .date--big, .price--big atd.
+
+.big_label {
+  display: inline-block;
+  width: auto;
+  color: #444;
+  background-color: #ddd;
+  padding: 3px;
+    margin: 0 6px 18px 0;
+
+    strong {
+      font-weight: normal;
+      color: #888;
+    }
+}
+
+
+// Velke displeje
+// --------------
+
+@media @large-start {
+
+
+  // --- Modul Cena ---
+
+  .price.price--big {
+    font-size: 16px;
+    padding: 7px;
+  }
+
+  // --- Modul Boxik s terminy ---
+
+  .date.date--big {
+    font-size: 16px;
+    padding: 7px;
+  }
+
+  // --- Modul univerzalni velke navesti ---
+
+  .big_label {
+    font-size: 16px;
+    padding: 7px;
+  }
+
+
+} // @large-start

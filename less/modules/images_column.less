@@ -1,0 +1,87 @@
+/* # Modul obrázky ve sloupečku
+
+
+`.images_column`
+
+Obrázky ve sloupci obtékané textem. 
+
+Např. detail oblasti, obce, atrakce….
+
+## TODO
+
+- pryč s #content
+- .images_column .image_item patří jako varianta do .image_item
+- .images_column & se vyskytuje i v jinych modulech, ktere je potreba upravit kvuli obtekani .images_column v .text_larger
+
+## Ukázka
+
+```
+<div id="content">
+    <div class="images_column">
+      <p class="image_item">
+          <a class="fancybox image" 
+            href="http://www.ck-rekrea.cz/katalogy-data/images/oblasti/111/liptov-liptov-sk.jpg"
+            rel="images_group" title="Přehrada Liptovská mara zabírá ohromné území Liptova a nastavuje zrcadlo okolním horám.. Autor fotografie: Liptov.sk">
+              <img alt="" class="photo"
+                src="http://www.ck-rekrea.cz/katalogy-data/images/oblasti/111/liptov-liptov-sk_s.jpg"
+                title="Autor fotografie: Liptov.sk">
+          </a> 
+          <span class="text">Přehrada Liptovská mara zabírá ohromné území Liptova a nastavuje
+          zrcadlo okolním horám.</span>
+      </p>
+    </div>
+</div>
+```
+*/
+
+
+.images_column {
+    h2 {
+        font-size: @larger-font-size;
+        line-height: @larger-line-height;           
+    }
+}
+
+@media @large-start {
+
+    .images_column {
+        float: left;
+        width: 215px; 
+        margin: 0 28px 0 0;
+    }
+
+}
+
+
+// (Následuje TODO…)
+
+// Varianta: Seznam obrazku v .images_column
+// (napr. v novych detailech oblasti, atrakce, udalosti)
+.images_column .image_item {
+    
+      .image {
+        width: 100%;
+      }
+
+      .text {
+        line-height: 16px;
+      }
+}     
+
+// Varianta: seznam obrazku bez popisku
+// (napr. v detailu kapacity nalevo pod velkou fotkou)
+.images_column.without_texts {
+    
+    .image_item {
+      margin-bottom: -1px;
+    }
+        
+    .small_images {
+      margin-top: 0;
+    }       
+    
+    .small_images .image_item {
+      margin-bottom: 3px;
+    }
+        
+}

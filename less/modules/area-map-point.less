@@ -1,0 +1,459 @@
+/* Bod oblasti na mape
+   ================
+
+   Mixiny a zakladni tridy pro umisteni bodu na mapu oblasti.
+*/
+
+
+// Promene pro vetsi oblast na mape
+// ================
+//
+// @point-size - velikost kruhoveho zvirazneni oblasti
+@point-size: 130px;
+
+// @point-font-size-big - velikost pisma
+@point-font-size-big: unit( 19px / @base-font-size, em ); // 19px;
+
+// @point-line-height-big - velikost line-height
+@point-line-height-big: 1.15;
+
+
+
+// Promene pro mensi oblast na mape
+// ================
+//
+// @point-size-small - velikost kruhoveho zvirazneni oblasti
+@point-size-small: 80px;
+
+// @point-font-size-small - velikost pisma
+@point-font-size-small: unit( @larger-font-size / @base-font-size, em ); // 14px
+
+// @point-line-height-small - velikost line-height
+@point-line-height-small: 1.3;
+
+
+// mixin .point-small-pos
+// ----------------
+//
+// @top - pozice bodu od horni hrany mapy
+// @left - pozice bodu od levé hrany mapy
+//
+// @width-title - velikost bubliny pro popisek oblasti
+// @title-top - odsazeni bubliny s nadpisem oblasti od horní hrany vyznacene oblasti
+
+.point-small-pos(@top, @left, @width-title: 130px, @title-top: 8px) {
+	top: @top;
+	left: @left;
+	width: @width-title;
+
+	.area-map-point__title {
+		margin-top: @title-top;
+	}
+}
+
+
+// mixin .point-big-pos
+// ----------------
+//
+// @top - pozice bodu od horni hrany mapy
+// @left - pozice bodu od levé hrany mapy
+//
+// @width-title - velikost bubliny pro popisek oblasti
+// @title-top - odsazeni bubliny s nadpisem oblasti od horní hrany vyznacene oblasti
+
+.point-big-pos(@top, @left, @width-title: 130px, @title-top: 8px) {
+	top: @top;
+	left: @left;
+	width: @width-title;
+
+	.area-map-point__title {
+		font-size: @point-font-size-big;
+		line-height: @point-line-height-big;
+  	font-weight: 700;
+  	padding: 7px 8px;
+  	background-color: lighten(@color-beta, 15%);
+  	margin-top: @title-top;
+    z-index: (@map-z-index + 11); // z-index vetsi nez mapa aby popisek oblasti byl viditelny za hranici oblasti
+
+  	&:before {
+  		border-top-color: lighten(@color-beta, 15%);
+  	}
+
+  	&:hover {
+  		background-color: @color-gamma;
+
+  		&:before {
+  			border-top-color: @color-gamma;
+  		}
+  	}
+  }
+
+  .area-map-point__zone {
+  	width: @point-size;
+		height: @point-size;
+		margin-left: -(@point-size / 2);
+  }
+}
+
+// mixin .point-small-pos-left
+// ----------------
+//
+// @top - pozice bodu od horni hrany mapy
+// @left - pozice bodu od levé hrany mapy
+//
+// @width-title - velikost bubliny pro popisek oblasti
+// @title-top - odsazeni bubliny s nadpisem oblasti od horní hrany vyznacene oblasti
+
+.point-small-pos-left(@top, @left, @width-title: 130px, @title-top: 8px) {
+  top: @top;
+  left: @left;
+  width: @width-title;
+
+  .area-map-point__title {
+    margin-top: @title-top;
+    width: @width-title;
+    margin-left: ((@width-title / 2) - 10px); // posunuti bubliny do stredu vyznacene plochy
+
+    &:before {
+      left: 0;
+      margin-left: 5px;
+    }
+  }
+}
+
+// mixin .point-big-pos
+// ----------------
+//
+// @top - pozice bodu od horni hrany mapy
+// @left - pozice bodu od levé hrany mapy
+//
+// @width-title - velikost bubliny pro popisek oblasti
+// @title-top - odsazeni bubliny s nadpisem oblasti od horní hrany vyznacene oblasti
+
+.point-big-pos-left(@top, @left, @width-title: 130px, @title-top: 8px) {
+  top: @top;
+  left: @left;
+  width: @width-title;
+
+  .area-map-point__title {
+    width: @width-title;
+    font-size: @point-font-size-big;
+    line-height: @point-line-height-big;
+    font-weight: 700;
+    padding: 7px 8px;
+    background-color: lighten(@color-beta, 15%);
+    margin-top: @title-top;
+    margin-left: ((@width-title / 2) - 10px); // posunuti bubliny do stredu vyznacene plochy
+    z-index: (@map-z-index + 11); // z-index vetsi nez mapa aby popisek oblasti byl viditelny za hranici oblasti
+
+    &:before {
+      border-top-color: lighten(@color-beta, 15%);
+      left: 0;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: @color-gamma;
+
+      &:before {
+        border-top-color: @color-gamma;
+      }
+    }
+  }
+
+  .area-map-point__zone {
+    width: @point-size;
+    height: @point-size;
+    margin-left: -(@point-size / 2);
+  }
+}
+
+
+
+.area-map-point {
+	position: absolute;
+	display: block;
+
+  font-size: 90%;
+
+  @media @large-start {
+    font-size: 100%;
+  }
+}
+
+.area-map-point:hover {
+  text-decoration: none;
+}
+
+.area-map-point__title {
+	position: relative;
+	display: block;
+	color: #fff;
+	font-size: @point-font-size-small;
+  line-height: @point-line-height-small;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 4px;
+  padding: 7px 4px;
+  background-color: @color-beta;
+  cursor: pointer;
+  z-index: (@map-z-index + 10); // z-index vetsi nez mapa aby popisek oblasti byl viditelny za hranici oblasti
+}
+
+.area-map-point__title:before {
+	position: absolute;
+	display: block;
+	content: "";
+  left: 50%;
+
+  // Vytvoreni trojuhlenicku na spodni hrane popisku
+  bottom: -7px;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid @color-beta;
+}
+
+.area-map-point__title:hover {
+	background-color: @color-gamma;
+
+	&:before {
+		border-top-color: @color-gamma;
+	}
+}
+
+.area-map-point__small {
+  display: block;
+  font-size: 75%;
+  line-height: 1.5;
+}
+
+.area-map-point__zone {
+	position: absolute;
+	display: block;
+	content: "";
+	width: @point-size-small;
+	height: @point-size-small;
+	background: radial-gradient(ellipse at center,@color-gamma 0%,rgba(255,255,255,0) 70%);
+	top: 0;
+  left: 50%;
+	margin-left: -(@point-size-small / 2);
+	z-index: (@map-z-index - 10); // z-index mensi nez mapa aby oblast neprekryvala hranici mapy
+}
+
+
+// Oblasti v Cesku
+// ----------------
+
+.area-map-point--jizni-cechy {
+	.point-big-pos(64%, 24%, 130px, 12px);
+}
+
+.area-map-point--jizni-morava {
+	.point-big-pos(67%, 54%, 131px, 21px);
+}
+
+.area-map-point--stredni-cechy {
+	.point-small-pos(42%, 21%, 115px);
+}
+
+.area-map-point--zapadni-cechy {
+	.point-big-pos(21%, 0%, 160px, 21px);
+}
+
+.area-map-point--praha {
+	.point-small-pos(29%, 34%, 75px);
+}
+
+.area-map-point--ceske-svycarsko {
+	.point-small-pos(-2%, 25%, 125px);
+}
+
+.area-map-point--cesky-raj {
+	.point-small-pos(21%, 42%, 80px);
+}
+
+.area-map-point--vychodni-cechy {
+	.point-small-pos(44%, 45%, 140px);
+}
+
+.area-map-point--moravsky-kras {
+	.point-small-pos(54%, 58%, 115px);
+}
+
+.area-map-point--valassko {
+	.point-small-pos(65%, 76%, 87px);
+}
+
+.area-map-point--orlicke-hory {
+	.point-small-pos(23%, 55%, 95px);
+}
+
+.area-map-point--broumovsko {
+	.point-small-pos(12%, 53%, 95px);
+}
+
+.area-map-point--jizerske-hory {
+	.point-small-pos(13%, 32%, 105px);
+}
+
+.area-map-point--krkonose {
+	.point-big-pos(-2%, 44%, 131px, 21px);
+}
+
+.area-map-point--jeseniky {
+	.point-big-pos-left(19%, 65%, 91px, 21px);
+}
+
+.area-map-point--beskydy {
+	.point-small-pos(49%, 77%, 141px, -5px);
+}
+
+
+// Oblasti na Slovensku
+// ----------------
+
+.area-map-point--zapadni-slovensko {
+  .point-big-pos(19%, 9%, 140px);
+}
+
+.area-map-point--vysoke-tatry {
+  .point-small-pos(16%, 52%, 100px);
+}
+
+.area-map-point--vychodni-slovensko {
+  .point-small-pos(29%, 76%, 140px);
+}
+
+.area-map-point--stredni-slovensko {
+  .point-small-pos(47%, 29%, 135px);
+}
+
+.area-map-point--slovensky-raj {
+  .point-small-pos(28%, 59%, 100px);
+}
+
+.area-map-point--rohace-zapadni-tatry-orava {
+  .point-small-pos(-2%, 39.5%, 125px);
+}
+
+.area-map-point--pieniny {
+  .point-small-pos-left(7%, 69.5%, 80px, -5px);
+}
+
+.area-map-point--nizke-tatry {
+  .point-small-pos(27%, 39%, 115px);
+}
+
+.area-map-point--mala-fatra {
+  .point-small-pos(5%, 23%, 100px, -5px);
+}
+
+.area-map-point--liptov {
+  .point-small-pos(16%, 39%, 75px);
+}
+
+.area-map-point--jizni-slovensko {
+  .point-big-pos(67%, 15%, 115px);
+}
+
+.area-map-point--bratislava {
+  .point-small-pos(61%, 0%, 90px);
+}
+
+.area-map-point--belianske-tatry {
+  .point-small-pos-left(1%, 55%, 80px);
+}
+
+
+// Oblasti v Madarsku
+// ----------------
+
+.area-map-point--alsopahok {
+  .point-small-pos(43%, 19%, 80px);
+}
+
+.area-map-point--budapest {
+  .point-small-pos(24%, 36%, 80px);
+}
+
+.area-map-point--bukfurdo {
+  .point-small-pos(33%, 12%, 70px);
+}
+
+.area-map-point--gyorn {
+  .point-small-pos(17%, 22%, 90px);
+}
+
+.area-map-point--hajduszoboszlo {
+  .point-small-pos(26%, 65%, 115px);
+}
+
+.area-map-point--harkany {
+  .point-small-pos(80%, 28%, 70px);
+}
+
+.area-map-point--heviz {
+  .point-small-pos(51%, 25%, 60px);
+}
+
+.area-map-point--mosonmagyarovar {
+  .point-small-pos(11%, 13%, 135px);
+}
+
+.area-map-point--sarvar {
+  .point-small-pos(33%, 24%, 55px);
+}
+
+.area-map-point--siofok {
+  .point-small-pos(43%, 32%, 65px);
+}
+
+.area-map-point--tapolca {
+  .point-small-pos(33%, 33%, 60px);
+}
+
+.area-map-point--zalakaros {
+  .point-small-pos(57%, 17%, 75px);
+}
+
+
+// Oblasti v Italii
+// ----------------
+
+.area-map-point--marche-palmova-riviera {
+  .point-big-pos(28%, 45%, 150px);
+}
+
+.area-map-point--benatsko-veneto {
+  .point-big-pos(7%, 38%, 131px);
+}
+
+.area-map-point--abruzzo {
+  .point-big-pos(36%, 52%, 131px, 30px);
+}
+
+
+// Oblasti v Chorvatsku
+// ----------------
+
+.area-map-point--istrie {
+  .point-big-pos(21%, 0%, 100px, 21px);
+}
+
+.area-map-point--ostrov-krk {
+  .point-big-pos(29%, 9%, 130px);
+}
+
+.area-map-point--severni-dalmacie {
+  .point-big-pos(52%, 28%, 185px, 21px);
+}
+
+.area-map-point--stredni-dalmacie {
+  .point-big-pos(62%, 37%, 185px, 21px);
+}
+
+.area-map-point--kvarner {
+  .point-big-pos-left(23%, 11%, 100px, 0px);
+}
+

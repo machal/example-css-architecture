@@ -1,0 +1,242 @@
+/* Modul Out Of Box
+   ================
+
+  Řádka layoutu, která vystupuje z řady
+  spacingem nebo podbarvením.
+
+  Používáme na homepage nebo na o-nas stránce.
+*/
+
+// Základní `.out-of-box`
+// -------------------------
+
+// Normálně nic nedělá, protože záporný margin doplňuje zpět paddingem.
+
+// ```
+// <div id="content_body">
+// 	<div class="out-of-box">
+// 		<div class="column">.column</div>
+// 		<div class="column">.column</div>
+// 		<div class="column last">.column.last</div>
+// 	</div>
+// 	<div class="clear_zero">&nbsp;</div>
+// </div>
+// ```
+
+.out-of-box {
+	width: calc(~"100% + 14px");
+	padding: 35px 12px 27px;
+  margin: 0px -7px 27px;
+  box-sizing: border-box;
+
+  @media @large-start {
+    margin: -35px -7px 27px;
+    padding: 35px 30px 27px;
+  }
+
+  @media @extra-large-start {
+    width: calc(~"100% + 46px");
+    margin: -35px -23px 27px;
+  }
+}
+
+
+// Vnitřní prvky
+// -------------
+
+// ### Nadpis
+
+.out-of-box__heading { }
+
+// Varianta nadpis s větším odsazením zezhora i zezdola
+
+.out-of-box__heading-spaced {
+  top: -10px;
+  position: relative;
+
+  &.h1 {
+    top: 0;
+  }
+
+  .out-of-box--tall & {
+    top: -30px;
+  }
+
+  .out-of-box--tall &.h1 {
+    top: -18px;
+  }
+}
+
+
+// Varianta: poslední na stránce
+// -----------------------------
+
+// Je přilepenější k patičce
+// TODO Proč nefičí #content_body > .out-of-box:last-child ?
+
+.out-of-box--last {
+  margin-bottom: -5*@base-line-height;
+}
+
+
+// Varianta: s čárou dole
+// ----------------------
+
+// TODO elegantnější čára a ne přes celou šířku
+
+.out-of-box--bottomrule {
+  border-bottom: 1px solid #ddd;
+}
+
+
+// Varianta: s šedivou barvou pozadí `.out-of-box--colored`
+// -----------------------------------------------------------
+
+// ```
+// <div id="content_body">
+// 	<div class="out-of-box out-of-box--colored">
+// 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+// 	</div>
+// </div>
+// ```
+
+.out-of-box--colored {
+	background: @color-light;
+
+	.out-of-box__heading {
+		top: -30px;
+		position: relative;
+	}
+}
+
+// Varianta: s tmavým pozadím `.out-of-box--inverted`
+// -----------------------------------------------------------
+
+// A bílými texty:
+
+// ```
+// <div id="content_body">
+//   <div class="out-of-box out-of-box--inverted">
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+//   </div>
+// </div>
+// ```
+
+.out-of-box--inverted {
+  background-color: @color-dark;
+  .out-of-box-white-text;
+}
+
+// Varianta: s pozadím s přechodem `.out-of-box--gradient`
+// -------------------------------------------------------
+
+// A bílými texty:
+
+// ```
+// <div id="content_body">
+//   <div class="out-of-box out-of-box--gradient">
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+//   </div>
+// </div>
+// ```
+
+.out-of-box--gradient {
+  background-color: @color-beta;
+  background-image: linear-gradient(to bottom, @color-beta, darken(@color-beta, 10%));
+
+  .out-of-box-white-text;
+}
+
+// Varianta: větší vertikální padding `.out-of-box--tall`
+// ------------------------------------------------------
+
+// ```
+// <div id="content_body">
+// 	<div class="out-of-box out-of-box--tall">
+// 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+// 	</div>
+// </div>
+// ```
+
+.out-of-box--tall {
+	padding-top: 70px;
+	padding-bottom: 62px;
+}
+
+
+// Varianta: s  obrázkovým patternem na pozadí `.out-of-box--pattern`
+// ------------------------------------------------------------------
+
+// ```
+// <div id="content_body">
+//   <div class="out-of-box out-of-box--pattern">
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+//   </div>
+// </div>
+// ```
+
+.out-of-box--pattern {
+  background: #f8f8f8 url(http://dovolena.ck-rekrea.cz/images/creampaper.png) repeat;
+}
+
+
+// Varianta:  se záporným marginem zezhora `.out-of-box--mt-negative`
+// ---------------------------------------------------------------------
+
+// (Viz helper `.margin_top_negative`)
+
+// TODO
+// - zpočítáno podle reálného užití (/ubytovani/), potřeba
+//   přepsat systematicky podle proměnných pro výšku řádku
+
+// ```
+// <div id="content_body">
+//   <div class="out-of-box out-of-box--pattern">
+//     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptatem nisi illo esse accusantium! Reiciendis aspernatur, molestias facere esse expedita, repudiandae hic maxime quasi, odio maiores necessitatibus quas, mollitia qui!</p>
+//   </div>
+// </div>
+// ```
+
+.out-of-box--mt-negative {
+  margin-top: -40px;
+}
+
+// Varianta:  se žádným marginem zezhora `.out-of-box--mt-zero`
+// ------------------------------------------------------------
+
+// Např. http://hotelyjeseniky.cz/
+
+.out-of-box--mt-zero {
+  margin-top: 0;
+}
+
+
+// Varianta: s rozmazaným obrázkem na pozadí
+// --------------------------------------------
+
+// ```
+// <div id="content_body">
+//   <div class="out-of-box out-of-box--blur">
+//     <div class="column">.column</div>
+//     <div class="column">.column</div>
+//     <div class="column last">.column.last</div>
+//     <div class="clear_zero">&nbsp;</div>
+//   </div>
+// </div>
+// ```
+
+.out-of-box--blur {
+  background-color: #0058a6;
+
+  .out-of-box-white-text;
+
+  @media @large-start {
+    background-image: url('http://dovolena.ck-rekrea.cz/images/out-of-box-blur-supetar.jpg');
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+      src='http://dovolena.ck-rekrea.cz/images/out-of-box-blur-supetar.jpg',
+      sizingMethod='scale');
+  }
+}

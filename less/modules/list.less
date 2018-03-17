@@ -1,0 +1,300 @@
+/* # Modul List
+
+`.list` — Seznam jednořádkových položek oddělených rámečky.
+
+Např. Vybavení v detailu ubytovatele, seznam tabulek v detailu LM/FM…
+
+## TODO
+
+- `list_splitted` by na mobilech mělo být jen dvousloupcové
+- Proč je výchozí stav jedné položky `inline-block`?
+
+## Použití
+
+```
+<div id="content">
+    <div class="list">
+      <h2 class="soft_head">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+
+.list {
+  margin-bottom: @base-line-height;
+
+  ul {
+    border-top: 1px solid #ccc;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  // Kvuli obtekani .images_column:
+  .text_larger & {
+    overflow: hidden;
+  }
+}
+
+.list li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // Hack kvuli stejne vysce <li> a .item ve FF a IE
+  height: 28px;
+
+  // Kvuli obtekani .images_column:
+  .text_larger & {
+      left: 0;
+      position: static;
+  }
+
+  .item {
+    height: @base-line-height;
+    padding: 5px 7px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a.item:hover, a.item:focus, a.item:active {
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+
+.list li {
+    h2, h3 {
+      margin-bottom: 0;
+    }
+}
+
+.list li a:hover, .list li a:focus, .list li a:active {
+  color: #044c04;
+  text-decoration: underline;
+}
+
+/*
+
+## Element: Odkaz více
+
+`.more`
+
+```
+<div id="content">
+    <div class="list">
+      <h2 class="soft_head">Vybavení</h2>
+      <ul class="without_margin_bottom">
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <p class="more"><a href="#URL">Více</a></p>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+
+
+.list .more {
+  clear: both;
+
+  a {
+    padding: 5px 7px;
+    height: @base-line-height;
+    padding: 5px 7px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.list_block_items .more a {
+  display: block;
+}
+
+
+/*
+
+## Varianta: na více řádků
+
+`.list.list_multiline`
+
+```
+<div id="content">
+    <div class="list list_multiline">
+      <h2 id="vybaveni">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#URL" title="Restaurace">Restaurace</a></li>
+        <li><a class="item" href="#URL" title="Bar">Bar</a></li>
+        <li><a class="item" href="#URL" title="Připrojení k internetu">Připrojení k internetu</a></li>
+        <li><a class="item" href="#URL" title="Sociální  zařízení na pokoji">Sociální  zařízení na pokoji</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+
+.list.list_multiline {
+  li, .item {
+    overflow: auto;
+    height: auto;
+    white-space: normal;
+  }
+
+  .item {
+    display: block; // Kvuli odsazeni navic zezdola pri inline-block
+  }
+
+  .item_body {
+    font-size: @base-font-size;
+    line-height: @base-line-height;
+  }
+}
+
+
+/*
+## Varianta: s vytečkovaným rámečkem
+
+`.list.list_dotted`
+
+Např. seznam cen v textu detailu LM.
+
+```
+<div id="content">
+    <div class="list list_multiline list_dotted">
+      <ul>
+        <li>
+            <span class="item">
+              <h3 class="head">
+                Wellness pobyt s lyžováním na 2 noci
+              </h3>
+              <span class="item_body">
+                  <span>12. 3. 2014 - 16. 4. 2014</span><br>
+                  <strong>1 990 Kč</strong>&nbsp;/&nbsp;Lůžko v pokoji<br>
+                  <span>Cena za osobu/ 2 noci s polopenzí a programem. Pobyt je na 2 noci.
+                  Nástup na pobyt je možný kterýkoliv den v týdnu.
+                  <a href="#">Více…</a></span>
+              </span>
+          </span>
+        </li>
+        <li>
+            <span class="item">
+              <h3 class="head">
+                Wellness pobyt s lyžováním na 3 noci</span>
+              </h3>
+              <span class="item_body">
+                  <span>12. 3. 2014 - 16. 4. 2014</span><br>
+                  <strong>2 990 Kč</strong>&nbsp;/&nbsp;Lůžko v pokoji<br>
+                  <span>Cena za osobu/ 3 noci s polopenzí a programem. Pobyt je na 3 noci.
+                  Nástup na pobyt je možný kterýkoliv den v týdnu.
+                  <a href="#">Více…</a></span>
+              </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+</div>
+```
+*/
+
+.list.list_dotted {
+
+  ul  {
+    border-top-style: dotted;
+  }
+
+  li {
+    border-bottom-style: dotted;
+  }
+
+  .more a {
+    border-bottom-style: dotted;
+  }
+}
+
+
+/*
+
+## Varianta: vícesloupcová
+
+`.list.list_spitted`
+
+Např. seznam vybavení v detailu ubytovatele.
+
+```
+<div id="content">
+    <div class="list list_splitted">
+      <h2 id="vybaveni">Vybavení</h2>
+      <ul>
+        <li><a class="item" href="#">Sociální zařízení na pokoji</a></li>
+        <li><a class="item" href="#">Sauna</a></li>
+        <li><a class="item" href="#">Kavárna</a></li>
+        <li><a class="item" href="#">Bazén venkovní</a></li>
+        <li><a class="item" href="#">Fitness</a></li>
+      </ul>
+      <div class="clear_zero"></div>
+    </div>
+</div>
+```
+*/
+
+.list.list_splitted {
+
+    ul {
+      border-top: none;
+    }
+
+    li {
+      display: block;
+      float: left;
+      margin-right: 3%;
+      width: 31%;
+
+      // Posledni sloupec nema margin zprava
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      // Prvni tri maji oramovani zezhora
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        border-top: 1px solid #ccc;
+      }
+    }
+
+    .item {
+      display: block;
+      font-size: @base-font-size;
+      line-height: @base-line-height;
+    }
+}
+
+/*
+
+## Varianta: položky nastavené na display: block;
+
+`.list.list_block_items`
+
+*/
+
+.list_block_items {
+  li, li .item {
+    display: block;
+  }
+}

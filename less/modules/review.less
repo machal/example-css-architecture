@@ -1,0 +1,135 @@
+/*
+
+Review - klientske hodnoceni
+============================
+
+*/
+
+// (napr. v detailu kapacity)
+
+// Nadpis hodnoceni: hvezdy
+// ------------------------
+
+.reviews__heading-stars {
+  color: @color-gamma;
+  float: right;
+
+  @media only screen and (max-width: 420px) {
+    margin-top: (@base-line-height / 4);
+    float: none;
+    display: block;
+  }
+}
+
+// Jednotlive hodnoceni
+// --------------------
+
+.review {
+  border-radius: 5px;
+  margin-bottom: @base-line-height;
+  overflow: hidden;
+  border: 1px solid @color-light-plus;
+}
+
+// Hlavicka jedn. hodnoceni
+// ------------------------
+
+.review__heading {
+  padding: 9px 15px;
+  background: @color-light;
+  margin-bottom: 0;
+  
+  @media only screen and (min-width: 540px) {
+    display: flex;  
+  }
+  
+}
+
+.review__heading-text {
+  .text-overflow();
+  
+  @media only screen and (max-width: 540px) {
+    white-space:normal;
+    display: block;
+  }
+}
+
+.review__stars {
+  margin-left: auto;
+  width: 145px;
+  color: @color-gamma;
+}
+
+// Obsah jedn. hodnoceni
+// ---------------------
+
+.review__content {
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  padding: 9px 15px;
+  
+  @media only screen and (min-width: 480px) {
+    display: flex;
+  }
+}
+
+.review__content-plus {
+  flex: 1;
+  min-width: 10em;
+  margin-right: 1em;
+  margin-bottom: 0px;
+  
+    @media only screen and (max-width: 480px) {
+      margin-bottom: 1em;
+      margin-right: 0px;
+    }
+  
+}
+
+.review__content-minus {
+  flex: 1;
+  min-width: 10em;
+  margin-bottom: 0px;
+}
+
+
+// Varianta: bez spodniho odsazeni a zakulaceni
+// --------------------------------------------
+
+// (napr. pro .reviews__group)
+
+.review--in-group {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+// Nadpisy uvnitr maji mensi odsazeni, krome prvniho a posledniho
+
+.review--in-group {
+  .review__heading {
+    padding-top: (@base-line-height / 4);
+    padding-bottom: (@base-line-height / 4);
+  }
+
+  &:first-child .review__heading {
+    padding-top: (@base-line-height / 2);
+  }
+
+  &:last-child .review__heading {
+    padding-bottom: (@base-line-height / 2);
+  }
+}
+
+// Skupina hodnoceni
+// -----------------
+
+// (napr. v detailu hodnoceni - v zalozkach)
+
+.reviews__group {
+  border-radius: 5px;
+  margin-bottom: @base-line-height;
+  overflow: hidden;
+  border: 1px solid @color-light-plus;
+}
+
