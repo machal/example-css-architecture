@@ -72,13 +72,13 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .site-nav {
 	clear: both;
 	background: @color-beta;
-	height: 41px;
   border-bottom: @color-gamma 10px solid;
 	border-top: @color-delta 10px solid;
 
 	@media @large-start {
 		padding-left: 15px;
 		padding-right: 15px;
+    height: 41px;
 	}
 
   @media print {
@@ -87,14 +87,18 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 
 .site-nav__main .pine-level-1 {
+  margin: 0;
+  padding: 0;
+  
     @media @large-start {
       display: flex;
     }
 }
 
 .site-nav__main .pine-level-1 > li {
+  text-align: center;
   @media @large-start {
-    flex: 1;
+    flex: 1;    
   }
 }
 
@@ -107,8 +111,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .site-nav__accom-search-link,
 .site-nav__main,
 .site-nav__small-screen {
-  display: inline-block;
-  float: left;
+  display: block;
 
   @media @large-start {
     width: 100%;
@@ -155,27 +158,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 
   a.active {
     background-color: @color-gamma;
-  }
-}
-
-@media @small-end {
-  // Odkaz na fulltext vyhledávání - ikona
-  .site-nav__small-screen-search {
-    text-indent: -500px;
-    width: 40px;
-    background-image: url(../../images/glyphicons_027_search_white.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  // Odkaz na navigaci - ikona + text
-  .container .site-nav .site-nav__small-screen-nav {
-    width: 90px;
-    padding-left: 40px;
-    background-image: url(../../images/glyphicons_158_show_lines_white.png);
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    margin-left: -5px; // -3 desktop, -5 iPhone TODO better prosim
   }
 }
 

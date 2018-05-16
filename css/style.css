@@ -516,7 +516,6 @@ body {
 }
 @media only screen and (min-width: 768px) {
   body {
-    background: url('../../images/light_noise_diagonal.png') repeat;
     padding-bottom: 50px;
   }
 }
@@ -1247,63 +1246,12 @@ Hlavička obsahu stránky
 
 */
 .content__head {
-  position: relative;
-  margin: 11px -7px 27px -7px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #ffffff), to(#f4f4f4));
-  background: linear-gradient(to bottom, #ffffff 25%, #f4f4f4 100%);
+  text-align: center;
+  padding: 12px 20px;
 }
 @media only screen and (min-width: 768px) {
   .content__head {
-    margin: 0 -22px 27px -23px;
-  }
-}
-.content__head h1 {
-  margin: 0 7px 0 7px;
-  display: block;
-  text-align: center;
-}
-.content__head.without_nav {
-  border-bottom: 1px solid #ddd;
-}
-@media only screen and (min-width: 768px) {
-  .content__head.without_nav {
-    height: 57px;
-  }
-}
-.content__head .fb-like {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .content__head h1 {
-    float: left;
-    margin: 0 5px 18px 30px;
     text-align: left;
-  }
-  .content__head h1 a {
-    color: #666;
-    border-bottom: 1px dotted #999;
-  }
-  .content__head h1 a:hover,
-  .content__head h1 a:focus,
-  .content__head h1 a:active {
-    text-decoration: none;
-    color: #666;
-    border-color: #666;
-  }
-  .content__head .fb-like {
-    display: block;
-    float: right;
-    width: 85px !important;
-    margin: -12px 30px 0 0;
-    opacity: .5;
-  }
-  .content__head.with_nav_inside .fb-like {
-    margin-top: -2px;
-  }
-  .content__head .fb-like:hover,
-  .content__head .fb-like:focus,
-  .content__head .fb-like:active {
-    opacity: 1;
   }
 }
 /*
@@ -1470,6 +1418,7 @@ Foot - stara paticka
   ===========
 */
 .inline-list {
+  margin-left: 23px;
   line-height: 36px;
 }
 .inline-list__heading {
@@ -1781,11 +1730,9 @@ Na velkých displejích nalevo, na malých veprostřed nahoře.
   margin: 0;
   width: auto;
   text-align: center;
-}
-.site-logo__tagline {
-  top: -4px;
-  position: relative;
-  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9BD04E;
 }
 @media only screen and (min-width: 768px) {
   .site-logo {
@@ -1793,6 +1740,8 @@ Na velkých displejích nalevo, na malých veprostřed nahoře.
     margin-left: 30px;
     text-align: left;
     width: 300px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
   .site-logo a:hover {
     text-decoration: none;
@@ -2308,7 +2257,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .site-nav {
   clear: both;
   background: #024E40;
-  height: 41px;
   border-bottom: #9BD04E 10px solid;
   border-top: #E0E9E8 10px solid;
 }
@@ -2316,6 +2264,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   .site-nav {
     padding-left: 15px;
     padding-right: 15px;
+    height: 41px;
   }
 }
 @media print {
@@ -2323,12 +2272,19 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     display: none;
   }
 }
+.site-nav__main .pine-level-1 {
+  margin: 0;
+  padding: 0;
+}
 @media only screen and (min-width: 768px) {
   .site-nav__main .pine-level-1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+.site-nav__main .pine-level-1 > li {
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .site-nav__main .pine-level-1 > li {
@@ -2343,8 +2299,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .site-nav__accom-search-link,
 .site-nav__main,
 .site-nav__small-screen {
-  display: inline-block;
-  float: left;
+  display: block;
 }
 @media only screen and (min-width: 768px) {
   .site-nav__accom-search-link,
@@ -2388,23 +2343,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .site-nav__small-screen a.active {
   background-color: #9BD04E;
-}
-@media only screen and (max-width: 767px) {
-  .site-nav__small-screen-search {
-    text-indent: -500px;
-    width: 40px;
-    background-image: url(../../images/glyphicons_027_search_white.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .container .site-nav .site-nav__small-screen-nav {
-    width: 90px;
-    padding-left: 40px;
-    background-image: url(../../images/glyphicons_158_show_lines_white.png);
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    margin-left: -5px;
-  }
 }
 .container .site-nav a {
   -webkit-box-sizing: border-box;
