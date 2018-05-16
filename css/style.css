@@ -2971,14 +2971,13 @@ Např. seznam vybavení v detailu ubytovatele.
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
-Obrazky, nadpisy
-
 */
 .list_item {
   position: relative;
   padding: 9px 0;
   border-bottom: 1px solid #ddd;
-  color: #666;
+  color: #66;
+  font-style: italic;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
