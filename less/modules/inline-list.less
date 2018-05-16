@@ -3,30 +3,55 @@
   ===========
 */
 
-// - seznam polozek v bublinach - napr. staty na Rywalu/Rekrei
+// - seznam polozek v bublinach - napr. staty
 
-// Zatim jen zkopirovane z old_layout.less
-
-.inline_list {
+.inline-list {
   line-height: 36px;
-}
 
-.inline_list .item {
-  padding: 9px 8px 8px;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  white-space: nowrap;
-  border-radius: 5px;
-}
+  &__heading {
+    font-style: 36px;
 
-.inline_list .item:hover,
-.inline_list .item:focus,
-.inline_list .item:active {
-  background-color: #eee;
-  text-decoration: underline;
-}
+    // Schovano pred screen readery
+    &--invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
 
-.inline_list .item.two_stars,
-.inline_list .item.three_stars {
-  font-weight: bold;
+  &__item {
+    padding: 9px 8px 8px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    border-radius: 5px;
+
+    &-icon {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+      background: @color-beta;
+    }
+
+    &--two-stars,
+    &--three-stars {
+      font-weight: bold;
+
+      // TODO
+      // .inline-list--large-items .inline-list__item--two-stars,
+      // .inline-list--large-items .inline-list__item--three-stars { … }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #eee;
+      text-decoration: underline;
+    }
+  }
 }
