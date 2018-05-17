@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         reportNeedlessDisables: false,
         syntax: "less"
       },
-      src: ["less/**/*.less", "!less/lib/**/*"]
+      src: ["less/modules/clean/**/*.less"]
     },
 
     watch: {
