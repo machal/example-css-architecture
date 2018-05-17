@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         reportNeedlessDisables: false,
         syntax: "less"
       },
-      src: ["less/**/*.less"]
+      src: ["less/**/*.less", "!less/lib/**/*"]
     },
 
     watch: {
@@ -70,6 +70,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask("css", ["less", "postcss"]);
+  grunt.registerTask("css", ["newer:prettier:css", "less", "postcss"]);
   grunt.registerTask("default", ["browserSync", "watch"]);
 };
