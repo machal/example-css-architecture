@@ -42,17 +42,10 @@ module.exports = function(grunt) {
 
     prettier: {
       css: {
-        src: [
-          "less/**/*.less",
-          "!less/lib/*.less"
-        ]
+        src: ["less/**/*.less", "!less/lib/**/*"]
       },
       js: {
-        src: [
-          "Gruntfile.js",
-          "js/*.js",
-          "!js/lib/*.js"
-        ]
+        src: ["Gruntfile.js", "js/*.js", "!js/lib/*.js"]
       }
     },
 
@@ -66,10 +59,7 @@ module.exports = function(grunt) {
         reportNeedlessDisables: false,
         syntax: "less"
       },
-      src: [
-        "less/**/*.less",
-        "!less/lib/*.less"
-      ]
+      src: ["less/**/*.less", "!less/lib/*.less"]
     },
 
     watch: {
@@ -78,8 +68,6 @@ module.exports = function(grunt) {
         tasks: ["css"]
       }
     }
-
-
   });
 
   grunt.registerTask("css", ["newer:prettier:css", "less", "postcss"]);
