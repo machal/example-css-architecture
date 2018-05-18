@@ -20,6 +20,7 @@
     "media-feature-name-no-vendor-prefix": true,
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
+    "no-eol-whitespace": null,
     "no-extra-semicolons": true,
     "property-no-vendor-prefix": true,
     "rule-empty-line-before": null,
