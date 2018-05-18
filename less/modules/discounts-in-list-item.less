@@ -1,0 +1,59 @@
+// Modul sleva na polozce seznamu
+// -------------------------------
+
+// Napr. v seznamech ubytovani
+
+.discount_in_list_item {
+  position: absolute;
+  bottom: 17px;
+  left: 2px;
+  max-width: 30%;
+  z-index: 10;
+  font-size: @smaller-font-size;
+  line-height: @smaller-line-height;
+
+  a {
+    display: inline-block;
+    padding: 3px;
+    background: #efefef;
+    color: #444;
+  }
+}
+
+@media @large-start {
+  .discount_in_list_item {
+    top: 155px;
+    right: 12px;
+    left: auto;
+    max-width: 150px;
+
+    a {
+      font-size: 12px;
+      padding: 7px;
+    }
+  }
+} // @large-start
+
+// - Varianta: s obrazkovou ikonou -
+
+.discount_in_list_item.with_image_icon {
+  padding-left: 3px;
+  margin-top: -10px;
+
+  a {
+    padding: 0;
+    background: transparent;
+  }
+
+  img {
+    max-height: 40px;
+  }
+}
+
+@media @large-start {
+  .discount_in_list_item.with_image_icon {
+    img {
+      max-height: 50px;
+    }
+  }
+} // @large-start

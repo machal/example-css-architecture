@@ -540,7 +540,7 @@ input,
 textarea,
 option,
 select {
-  font: 12px/18px Arial, Helvetica, sans-serif;
+  font: 12px / 18px Arial, Helvetica, sans-serif;
 }
 h1,
 h2,
@@ -551,7 +551,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
-  color: #0EB10E;
+  color: #0eb10e;
   text-decoration: none;
 }
 a:hover,
@@ -836,11 +836,11 @@ p.submit {
   vertical-align: middle;
 }
 .fontSmall {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: normal;
 }
 small.fontSmall {
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: normal;
 }
 table.fontSmall td,
@@ -1239,6 +1239,223 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   margin-bottom: 4px;
   margin-top: 0;
 }
+/* Modul About
+   ===========
+
+   Stránka "O nás".
+*/
+.about-perex {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .about-perex {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-perex {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+.about-person {
+  text-align: center;
+}
+.about-person-image img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 138px;
+  display: block;
+  margin: 0 auto;
+}
+.about-person-short-text {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .about-person-full-text,
+  .about-person-full-contact {
+    margin-top: 9px;
+  }
+}
+.about-history {
+  background-color: #d8dbd8;
+  background-position: center center;
+}
+@media only screen and (max-width: 767px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+    background-attachment: fixed;
+  }
+}
+.about-history-perex {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3em 2em 2em 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.about-history-perex .h1 {
+  margin-bottom: 10px;
+}
+.about-history-perex .h2 {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .about-history-perex {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.about-web-item {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  border-bottom: 2px solid #999;
+}
+.about-web-item-eslovensko {
+  border-color: #0eb10e;
+}
+.about-web-item-velkymeder {
+  border-color: #06f;
+}
+.about-web-item-tuzemskadovolena {
+  border-color: #f60;
+}
+.about-web-item-epodhajska {
+  border-color: #c00;
+}
+.about-web-item-besenova {
+  border-color: #06f;
+}
+@media only screen and (min-width: 768px) {
+  .about-web-etc {
+    text-align: center;
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .about-legal {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+/* # Modul Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+*/
+.list-item {
+  position: relative;
+  padding: 9px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .list-item {
+    float: left;
+    width: calc((100% - 42px) / 3);
+    height: 352px;
+    padding: 18px 9px 9px;
+    margin: 0 7px 0 7px;
+  }
+}
+.list-item-image {
+  position: relative;
+  float: left;
+  width: 36%;
+  margin-right: 4%;
+}
+@media only screen and (min-width: 768px) {
+  .list-item-image {
+    width: auto;
+    float: none;
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list-item-image {
+    height: 215px;
+  }
+}
+.list-item-image-img {
+  max-width: 100%;
+}
+.list-item-heading {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .list-item-price {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list-item-price {
+    top: 200px;
+  }
+}
+.list-item-content {
+  float: left;
+  width: 60%;
+}
+@media only screen and (min-width: 768px) {
+  .list-item-content {
+    float: none;
+    width: auto;
+  }
+}
+.list-item-content p {
+  margin-bottom: 0;
+}
+.list-item-place em {
+  color: #333;
+  font-style: normal;
+  display: block;
+  text-overflow: ellipsis;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list-item-place em {
+  color: #333;
+}
+.list-item-date strong {
+  color: #666;
+}
+.list-item-without-border {
+  border-bottom: 0;
+}
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
+  background-color: #eee;
+  cursor: pointer;
+  color: #333;
+}
+.list-item:hover .list-item-heading-anchor,
+.list-item:focus .list-item-heading-anchor,
+.list-item:active .list-item-heading-anchor {
+  color: #075207;
+  text-decoration: underline;
+}
 /*
 
 Hlavička obsahu stránky
@@ -1263,7 +1480,7 @@ Hlavička obsahu stránky
 .fancybox:focus img {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
-  opacity: .9;
+  opacity: 0.9;
 }
 /*
 Flag - priznaky slev, Last Minute atd.
@@ -1286,13 +1503,13 @@ a.flag:active {
 .flag--sm {
   font-size: 9px;
   padding: 2px 3px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 @media only screen and (max-width: 420px) {
   .flag {
     font-size: 9px;
     padding: 2px 3px;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1308,11 +1525,11 @@ a.flag:active {
   background: rgba(16, 201, 16, 0.91);
 }
 .flag--lastminute {
-  background: #FF9900;
+  background: #ff9900;
   background: rgba(255, 153, 0, 0.91);
 }
 .flag--hottip {
-  background: #FFCC00;
+  background: #ffcc00;
   background: rgba(255, 204, 0, 0.91);
 }
 .flag--new {
@@ -1320,7 +1537,7 @@ a.flag:active {
   background: rgba(30, 237, 30, 0.91);
 }
 .flag--discount {
-  background: #FF6600;
+  background: #ff6600;
   background: rgba(255, 102, 0, 0.91);
 }
 .flags .flag {
@@ -1399,8 +1616,8 @@ Foot - stara paticka
 
 */
 #foot {
-  background: #024E40;
-  padding: .75em 30px;
+  background: #024e40;
+  padding: 0.75em 30px;
   color: #fff;
   margin: 0;
   margin-bottom: -18px;
@@ -1445,7 +1662,7 @@ Foot - stara paticka
   display: inline-block;
   padding: 5px;
   border-radius: 5px;
-  background: #024E40;
+  background: #024e40;
 }
 .inline-list__item--two-stars,
 .inline-list__item--three-stars {
@@ -1456,211 +1673,6 @@ Foot - stara paticka
 .inline-list__item:active {
   background-color: #eee;
   text-decoration: underline;
-}
-/* # Modul Velka polozka seznamu
-
-Napr. seznamy ubytovatelu, pobytu, last-minute atd.
-
-*/
-.list_item {
-  position: relative;
-  padding: 9px 0;
-  border-bottom: 1px solid #ddd;
-  color: #66;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-@media only screen and (min-width: 768px) {
-  .list_item {
-    float: left;
-    width: calc((100% - 42px) / 3);
-    height: 352px;
-    padding: 18px 9px 9px;
-    margin: 0 7px 0 7px;
-  }
-}
-.list_item .image {
-  position: relative;
-  float: left;
-  width: 36%;
-  margin-right: 4%;
-}
-@media only screen and (min-width: 768px) {
-  .list_item .image {
-    width: auto;
-    float: none;
-    height: 165px;
-    overflow: hidden;
-    margin-bottom: 12px;
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .list_item .image {
-    height: 215px;
-  }
-}
-.list_item .image img {
-  max-width: 100%;
-}
-.container .list_item h2 {
-  font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 768px) {
-  .list_item .price {
-    position: absolute;
-    right: 3px;
-    top: 150px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .list_item .price {
-    top: 200px;
-  }
-}
-.list_item .list_item_content {
-  float: left;
-  width: 60%;
-}
-@media only screen and (min-width: 768px) {
-  .list_item .list_item_content {
-    float: none;
-    width: auto;
-  }
-}
-.list_item p {
-  margin-bottom: 0;
-}
-.list_item .place em {
-  color: #333;
-  font-style: normal;
-  display: block;
-  text-overflow: ellipsis;
-  height: 18px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.container .list_item .place a {
-  color: #333;
-}
-.list_item .date strong {
-  color: #666;
-}
-.list_item.without_border {
-  border-bottom: 0;
-}
-.list_item:hover,
-.list_item:focus,
-.list_item:active {
-  background-color: #eee;
-  cursor: pointer;
-  color: #333;
-}
-.list_item:hover h2 a,
-.list_item:focus h2 a,
-.list_item:active h2 a {
-  color: #075207;
-  text-decoration: underline;
-}
-@media only screen and (min-width: 1180px) {
-  .list_item .image {
-    width: auto;
-    float: none;
-    height: 215px;
-    overflow: hidden;
-    margin-bottom: 12px;
-    margin-right: 0;
-  }
-  .list_item .image img {
-    width: 100%;
-  }
-  .container .list_item h2 {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 0;
-  }
-  .list_item .price {
-    position: absolute;
-    top: 200px;
-    right: 3px;
-  }
-  .list_item .list_item_content {
-    float: none;
-    width: auto;
-  }
-  .list_item .text_content {
-    position: relative;
-    height: 133px;
-    overflow: hidden;
-  }
-  .list_item .icon {
-    top: -15px;
-    left: -5px;
-  }
-  .list_item:hover,
-  .list_item:focus,
-  .list_item:active {
-    background-color: #f4f4f4;
-    cursor: pointer;
-  }
-  .list_item.is_lower {
-    height: 288px;
-  }
-  .list_item.without_image {
-    height: 186px;
-  }
-  .list_item.without_image.without_text {
-    height: 113px;
-  }
-  .list_item.without_image.without_text .price {
-    top: 55px;
-    right: -6px;
-  }
-}
-.discount_in_list_item {
-  position: absolute;
-  bottom: 17px;
-  left: 2px;
-  max-width: 30%;
-  z-index: 10;
-  font-size: 11px;
-  line-height: 13px;
-}
-.discount_in_list_item a {
-  display: inline-block;
-  padding: 3px;
-  background: #efefef;
-  color: #444;
-}
-@media only screen and (min-width: 768px) {
-  .discount_in_list_item {
-    top: 155px;
-    right: 12px;
-    left: auto;
-    max-width: 150px;
-  }
-  .discount_in_list_item a {
-    font-size: 12px;
-    padding: 7px;
-  }
-}
-.discount_in_list_item.with_image_icon {
-  padding-left: 3px;
-  margin-top: -10px;
-}
-.discount_in_list_item.with_image_icon a {
-  padding: 0;
-  background: transparent;
-}
-.discount_in_list_item.with_image_icon img {
-  max-height: 40px;
-}
-@media only screen and (min-width: 768px) {
-  .discount_in_list_item.with_image_icon img {
-    max-height: 50px;
-  }
 }
 /*
 
@@ -1732,7 +1744,7 @@ Na velkých displejích nalevo, na malých veprostřed nahoře.
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #9BD04E;
+  color: #9bd04e;
 }
 @media only screen and (min-width: 768px) {
   .site-logo {
@@ -1795,7 +1807,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .pine {
   z-index: 100;
   margin-bottom: 18px;
-  background: #024E40;
+  background: #024e40;
   *zoom: 1;
 }
 .pine:before,
@@ -1841,16 +1853,16 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  background: #024E40;
+  background: #024e40;
 }
 .pine li.pine-level-open > a,
 .pine li strong {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine li a:hover,
 .pine li a:focus,
 .pine li a:active {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine .pine-level-2 > li > a,
 .pine .pine-level-2 > li > strong {
@@ -1878,7 +1890,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 @media (min-width: 768px) {
   .pine {
-    background: #024E40;
+    background: #024e40;
     border: none;
   }
   .pine li {
@@ -2104,7 +2116,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: #024E40;
+  background: #024e40;
   text-decoration: none;
 }
 @media (max-width: 767px) {
@@ -2234,7 +2246,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-right-to-left .pine-back > a {
   position: relative;
-  background: #9BD04E;
+  background: #9bd04e;
   text-align: center;
 }
 .fx-right-to-left .pine-back > a:before {
@@ -2256,9 +2268,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .site-nav {
   clear: both;
-  background: #024E40;
-  border-bottom: #9BD04E 10px solid;
-  border-top: #E0E9E8 10px solid;
+  background: #024e40;
+  border-bottom: #9bd04e 10px solid;
+  border-top: #e0e9e8 10px solid;
 }
 @media only screen and (min-width: 768px) {
   .site-nav {
@@ -2342,7 +2354,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   display: inline-block;
 }
 .site-nav__small-screen a.active {
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .site-nav a {
   -webkit-box-sizing: border-box;
@@ -2362,7 +2374,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .container .site-nav a.active {
   color: white;
   text-decoration: none;
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .pine-level-2 a {
   padding: 9px 15px 10px;
@@ -2381,115 +2393,5 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     right: 50%;
     margin-right: -27px;
     border-top-color: rgba(255, 255, 255, 0.5);
-  }
-}
-/* Modul About
-   ===========
-
-   Stránka "O nás".
-*/
-.about-perex {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-@media only screen and (min-width: 360px) and (max-width: 767px) {
-  .about-perex {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about-perex {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-.about-person {
-  text-align: center;
-}
-.about-person-image img {
-  border-radius: 50%;
-  overflow: hidden;
-  max-width: 138px;
-  display: block;
-  margin: 0 auto;
-}
-.about-person-short-text {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (min-width: 768px) {
-  .about-person-full-text,
-  .about-person-full-contact {
-    margin-top: 9px;
-  }
-}
-.about-history {
-  background-color: #d8dbd8;
-  background-position: center center;
-}
-@media only screen and (max-width: 767px) {
-  .about-history {
-    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about-history {
-    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
-    background-attachment: fixed;
-  }
-}
-.about-history-perex {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3em 2em 2em 2em;
-  margin-top: 5em;
-  margin-bottom: 5em;
-}
-.about-history-perex .h1 {
-  margin-bottom: 10px;
-}
-.about-history-perex .h2 {
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .about-history-perex {
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.about-web-item {
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 0;
-  border-bottom: 2px solid #999;
-}
-.about-web-item-eslovensko {
-  border-color: #0EB10E;
-}
-.about-web-item-velkymeder {
-  border-color: #06F;
-}
-.about-web-item-tuzemskadovolena {
-  border-color: #F60;
-}
-.about-web-item-epodhajska {
-  border-color: #c00;
-}
-.about-web-item-besenova {
-  border-color: #06F;
-}
-@media only screen and (min-width: 768px) {
-  .about-web-etc {
-    text-align: center;
-    padding-left: 260px;
-    padding-right: 260px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .about-legal {
-    padding-left: 300px;
-    padding-right: 300px;
   }
 }
