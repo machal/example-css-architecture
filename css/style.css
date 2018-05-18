@@ -1451,11 +1451,14 @@ Foot - stara paticka
 .inline-list__item--three-stars {
   font-weight: bold;
 }
+.inline-list__item.active,
 .inline-list__item:hover,
 .inline-list__item:focus,
 .inline-list__item:active {
   background-color: #eee;
   text-decoration: underline;
+  cursor: pointer;
+  border: 1px solid #ddd;
 }
 /* # Modul Velka polozka seznamu
 
@@ -1465,7 +1468,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list_item {
   position: relative;
   padding: 9px 0;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid transparent;
   color: #66;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1551,73 +1554,24 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list_item.without_border {
   border-bottom: 0;
 }
+.list_item.bordered {
+  border: 1px solid #ddd;
+}
+.list_item.active,
 .list_item:hover,
 .list_item:focus,
 .list_item:active {
   background-color: #eee;
   cursor: pointer;
   color: #333;
+  border: 1px solid #ddd;
 }
+.list_item.active h2 a,
 .list_item:hover h2 a,
 .list_item:focus h2 a,
 .list_item:active h2 a {
   color: #075207;
   text-decoration: underline;
-}
-@media only screen and (min-width: 1180px) {
-  .list_item .image {
-    width: auto;
-    float: none;
-    height: 215px;
-    overflow: hidden;
-    margin-bottom: 12px;
-    margin-right: 0;
-  }
-  .list_item .image img {
-    width: 100%;
-  }
-  .container .list_item h2 {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 0;
-  }
-  .list_item .price {
-    position: absolute;
-    top: 200px;
-    right: 3px;
-  }
-  .list_item .list_item_content {
-    float: none;
-    width: auto;
-  }
-  .list_item .text_content {
-    position: relative;
-    height: 133px;
-    overflow: hidden;
-  }
-  .list_item .icon {
-    top: -15px;
-    left: -5px;
-  }
-  .list_item:hover,
-  .list_item:focus,
-  .list_item:active {
-    background-color: #f4f4f4;
-    cursor: pointer;
-  }
-  .list_item.is_lower {
-    height: 288px;
-  }
-  .list_item.without_image {
-    height: 186px;
-  }
-  .list_item.without_image.without_text {
-    height: 113px;
-  }
-  .list_item.without_image.without_text .price {
-    top: 55px;
-    right: -6px;
-  }
 }
 .discount_in_list_item {
   position: absolute;

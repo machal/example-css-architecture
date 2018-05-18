@@ -48,11 +48,14 @@
       // .inline-list--large-items .inline-list__item--three-stars { … }
     }
 
+    &.active,
     &:hover,
     &:focus,
     &:active {
       background-color: #eee;
       text-decoration: underline;
+      cursor: pointer;
+      border: 1px solid #ddd;
     }
   }
 }

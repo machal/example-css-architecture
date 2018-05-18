@@ -8,10 +8,11 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list_item {
   position: relative;
   padding: 9px 0;
-  border-bottom: 1px solid #ddd;
-  color: #66; 
+  border: 1px solid transparent;
+  color: #66;
 
   box-sizing: border-box;
+
 
   @media @large-start {
     float: left;
@@ -108,106 +109,24 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   border-bottom: 0;
 }
 
+.list_item.bordered {
+  border: 1px solid #ddd;
+}
+
 
 // Aktivni stavy
+.list_item.active,
 .list_item:hover,
 .list_item:focus,
 .list_item:active {
   background-color: #eee;
   cursor: pointer;
   color: #333;
+  border: 1px solid #ddd;
 
   h2 a {
     color: darken(@color-alpha, 20%);
     text-decoration: underline;
-  }
-}
-
-@media @extra-large-start {
-
-
-  // Obrazek, nadpis, cena
-
-  .list_item {
-    .image {
-      width: auto;
-      float: none;
-      height: 215px; // 4:3
-      overflow: hidden;
-      margin-bottom: 12px;
-      margin-right: 0;
-    }
-
-    // TODO: roztahujeme vice nez je fyzicka velikost 286px
-    // potrebujeme 304px a vice
-    .image img {
-      width: 100%;
-    }
-
-    .container & h2 {
-      font-size: 16px;
-      line-height: 20px;
-      margin-bottom: 0;
-    }
-
-    .price {
-      position: absolute;
-      top: 200px;
-      right: 3px;
-    }
-  }
-
-  // Textovy obsah, ikony
-
-  .list_item {
-    .list_item_content {
-      float: none;
-      width: auto;
-    }
-
-    .text_content {
-      position: relative;
-      height: 133px;
-      overflow: hidden;
-    }
-
-    .icon {
-      top: -15px;
-      left: -5px;
-    }
-  }
-
-  // Aktivni stavy
-
-  .list_item:hover,
-  .list_item:focus,
-  .list_item:active {
-    background-color: #f4f4f4;
-    cursor: pointer;
-  }
-
-  // Varianta: Nizsi polozka seznamu
-  // napr. seznamy pobytu u kapacity
-
-  .list_item.is_lower {
-    height: 288px;
-  }
-
-  // Varianta: Bez obrazku
-
-  .list_item.without_image {
-    height: 186px;
-  }
-
-  // Varianta: Bez obrazku a textu
-  // napr. na e-slovensko.cz/slovnik
-
-  .list_item.without_image.without_text {
-    height: 113px;
-    .price {
-      top: 55px;
-      right: -6px;
-    }
   }
 }
 
