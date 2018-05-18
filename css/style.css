@@ -1465,7 +1465,7 @@ Foot - stara paticka
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
 */
-.list_item {
+.list-item {
   position: relative;
   padding: 9px 0;
   border: 1px solid transparent;
@@ -1474,7 +1474,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
           box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
-  .list_item {
+  .list-item {
     float: left;
     width: calc((100% - 42px) / 3);
     height: 352px;
@@ -1482,14 +1482,14 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     margin: 0 7px 0 7px;
   }
 }
-.list_item .image {
+.list-item .image {
   position: relative;
   float: left;
   width: 36%;
   margin-right: 4%;
 }
 @media only screen and (min-width: 768px) {
-  .list_item .image {
+  .list-item .image {
     width: auto;
     float: none;
     height: 165px;
@@ -1499,44 +1499,33 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 @media only screen and (min-width: 1180px) {
-  .list_item .image {
+  .list-item .image {
     height: 215px;
   }
 }
-.list_item .image img {
+.list-item .image img {
   max-width: 100%;
 }
-.container .list_item h2 {
+.container .list-item .image h2 {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 0;
 }
-@media only screen and (min-width: 768px) {
-  .list_item .price {
-    position: absolute;
-    right: 3px;
-    top: 150px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .list_item .price {
-    top: 200px;
-  }
-}
-.list_item .list_item_content {
+.list-item .content {
   float: left;
   width: 60%;
+  padding: 0;
 }
 @media only screen and (min-width: 768px) {
-  .list_item .list_item_content {
+  .list-item .content {
     float: none;
     width: auto;
   }
 }
-.list_item p {
+.list-item .content p {
   margin-bottom: 0;
 }
-.list_item .place em {
+.list-item .content .place em {
   color: #333;
   font-style: normal;
   display: block;
@@ -1545,35 +1534,47 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   overflow: hidden;
   white-space: nowrap;
 }
-.container .list_item .place a {
+.container .list-item .content .place a {
   color: #333;
 }
-.list_item .date strong {
+.list-item .content .date strong {
   color: #666;
 }
-.list_item.without_border {
+@media only screen and (min-width: 768px) {
+  .list-item .content .price {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list-item .content .price {
+    top: 200px;
+  }
+}
+.list-item.without_border {
   border-bottom: 0;
 }
-.list_item.bordered {
+.list-item.bordered {
   border: 1px solid #ddd;
 }
-.list_item.active,
-.list_item:hover,
-.list_item:focus,
-.list_item:active {
+.list-item.active,
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
   background-color: #eee;
   cursor: pointer;
   color: #333;
   border: 1px solid #ddd;
 }
-.list_item.active h2 a,
-.list_item:hover h2 a,
-.list_item:focus h2 a,
-.list_item:active h2 a {
+.list-item.active h2 a,
+.list-item:hover h2 a,
+.list-item:focus h2 a,
+.list-item:active h2 a {
   color: #075207;
   text-decoration: underline;
 }
-.discount_in_list_item {
+.discount_in_list-item {
   position: absolute;
   bottom: 17px;
   left: 2px;
@@ -1582,37 +1583,37 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   font-size: 11px;
   line-height: 13px;
 }
-.discount_in_list_item a {
+.discount_in_list-item a {
   display: inline-block;
   padding: 3px;
   background: #efefef;
   color: #444;
 }
 @media only screen and (min-width: 768px) {
-  .discount_in_list_item {
+  .discount_in_list-item {
     top: 155px;
     right: 12px;
     left: auto;
     max-width: 150px;
   }
-  .discount_in_list_item a {
+  .discount_in_list-item a {
     font-size: 12px;
     padding: 7px;
   }
 }
-.discount_in_list_item.with_image_icon {
+.discount_in_list-item.with_image_icon {
   padding-left: 3px;
   margin-top: -10px;
 }
-.discount_in_list_item.with_image_icon a {
+.discount_in_list-item.with_image_icon a {
   padding: 0;
   background: transparent;
 }
-.discount_in_list_item.with_image_icon img {
+.discount_in_list-item.with_image_icon img {
   max-height: 40px;
 }
 @media only screen and (min-width: 768px) {
-  .discount_in_list_item.with_image_icon img {
+  .discount_in_list-item.with_image_icon img {
     max-height: 50px;
   }
 }
