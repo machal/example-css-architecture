@@ -1349,7 +1349,9 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
     padding-right: 300px;
   }
 }
-/* # Modul Velka polozka seznamu
+/* @define list-item; weak
+
+# Modul Velka polozka seznamu
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
@@ -1371,14 +1373,14 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     margin: 0 7px 0 7px;
   }
 }
-.list-item-image {
+.list-item__image {
   position: relative;
   float: left;
   width: 36%;
   margin-right: 4%;
 }
 @media only screen and (min-width: 768px) {
-  .list-item-image {
+  .list-item__image {
     width: auto;
     float: none;
     height: 165px;
@@ -1388,44 +1390,44 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 @media only screen and (min-width: 1180px) {
-  .list-item-image {
+  .list-item__image {
     height: 215px;
   }
 }
-.list-item-image-img {
+.list-item__image-img {
   max-width: 100%;
 }
-.list-item-heading {
+.list-item__heading {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
-  .list-item-price {
+  .list-item__price {
     position: absolute;
     right: 3px;
     top: 150px;
   }
 }
 @media only screen and (min-width: 1180px) {
-  .list-item-price {
+  .list-item__price {
     top: 200px;
   }
 }
-.list-item-content {
+.list-item__content {
   float: left;
   width: 60%;
 }
 @media only screen and (min-width: 768px) {
-  .list-item-content {
+  .list-item__content {
     float: none;
     width: auto;
   }
 }
-.list-item-content p {
+.list-item__content p {
   margin-bottom: 0;
 }
-.list-item-place em {
+.list-item__place em {
   color: #333;
   font-style: normal;
   display: block;
@@ -1434,13 +1436,13 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   overflow: hidden;
   white-space: nowrap;
 }
-.list-item-place em {
+.list-item__place em {
   color: #333;
 }
-.list-item-date strong {
+.list-item__date strong {
   color: #666;
 }
-.list-item-without-border {
+.list-item--without-border {
   border-bottom: 0;
 }
 .list-item:hover,
@@ -1630,9 +1632,10 @@ Foot - stara paticka
 #foot a {
   color: #fff;
 }
-/*
-  Inline list
-  ===========
+/* @define inline-list; weak
+
+Inline list
+===========
 */
 .inline-list {
   margin-left: 23px;

@@ -1,10 +1,12 @@
-/* # Modul Velka polozka seznamu
+/* @define list-item; weak
+
+# Modul Velka polozka seznamu
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
 */
 
-// .list-item(.list-item-without-border)
+// .list-item(.list-item-border)
 //   .list-item-image
 //     .list-item-image-img
 //     .flags
@@ -32,7 +34,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 
-.list-item-image {
+.list-item__image {
   position: relative;
   float: left;
   width: 36%;
@@ -52,17 +54,17 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 
-.list-item-image-img {
+.list-item__image-img {
   max-width: 100%;
 }
 
-.list-item-heading {
+.list-item__heading {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 0;
 }
 
-.list-item-price {
+.list-item__price {
   @media @large-start {
     position: absolute;
     right: 3px;
@@ -77,7 +79,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 // Textovy obsah
 // -------------
 
-.list-item-content {
+.list-item__content {
   float: left;
   width: 60%;
 
@@ -91,7 +93,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 
-.list-item-place em {
+.list-item__place em {
   color: #333;
   font-style: normal;
   display: block;
@@ -101,11 +103,11 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   white-space: nowrap;
 }
 
-.list-item-place em {
+.list-item__place em {
   color: #333;
 }
 
-.list-item-date strong {
+.list-item__date strong {
   color: #666;
 }
 
@@ -115,7 +117,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 // Varianta bez spodniho ramecku
 // Napr. na homepages verze 2014
 
-.list-item-without-border {
+.list-item--without-border {
   border-bottom: 0;
 }
 
