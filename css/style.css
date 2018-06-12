@@ -1578,49 +1578,6 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   color: #075207;
   text-decoration: underline;
 }
-.discount_in_list-item {
-  position: absolute;
-  bottom: 17px;
-  left: 2px;
-  max-width: 30%;
-  z-index: 10;
-  font-size: 11px;
-  line-height: 13px;
-}
-.discount_in_list-item a {
-  display: inline-block;
-  padding: 3px;
-  background: #efefef;
-  color: #444;
-}
-@media only screen and (min-width: 768px) {
-  .discount_in_list-item {
-    top: 155px;
-    right: 12px;
-    left: auto;
-    max-width: 150px;
-  }
-  .discount_in_list-item a {
-    font-size: 12px;
-    padding: 7px;
-  }
-}
-.discount_in_list-item.with_image_icon {
-  padding-left: 3px;
-  margin-top: -10px;
-}
-.discount_in_list-item.with_image_icon a {
-  padding: 0;
-  background: transparent;
-}
-.discount_in_list-item.with_image_icon img {
-  max-height: 40px;
-}
-@media only screen and (min-width: 768px) {
-  .discount_in_list-item.with_image_icon img {
-    max-height: 50px;
-  }
-}
 /*
 
 Ceny, datumy - velke "cenovky"
