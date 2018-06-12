@@ -52,12 +52,6 @@ module.exports = function(grunt) {
 
     stylelint: {
       options: {
-        configFile: ".stylelintrc",
-        formatter: "string",
-        ignoreDisables: false,
-        failOnError: true,
-        outputFile: "",
-        reportNeedlessDisables: false,
         syntax: "less"
       },
       src: ["less/**/*.less"]
