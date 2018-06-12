@@ -9,6 +9,7 @@ module.exports = function(grunt) {
           "css/style.css": "less/index.less"
         },
         options: {
+          inlineJavaScript: true,
           sourceMap: true,
           sourceMapFilename: "css/style.css.map",
           sourceMapURL: "rekrea.css.map",

@@ -9,8 +9,8 @@
 
   .pine-level-2,
   .pine-level-3 {
-    .opacity(0);
-    .transition(~"visibility 0s .1s, opacity .1s ease-in-out");
+    opacity: 0;
+    transition: visibility 0s .1s, opacity .1s ease-in-out;
 
     // Removed default indentation
     > li > a,
@@ -24,17 +24,17 @@
   // Animation on 1st level
   .pine-level-1 > li > a,
   .pine-level-1 > li > strong {
-    .transition(~"background .1s");
+    transition: background .1s;
   }
 
   // Animation on 2nd, 3rd level
   .pine-level-open > .pine-level-2,
   .pine-level-open > .pine-level-3 {
-    .opacity(1);
-    .transition(opacity .1s ease-in-out);
+    opacity: 1;
+    transition: opacity .1s ease-in-out;
   }
 
   .noanim {
-    .transition(~"none !important");
+    transition: none !important;
   }
 }

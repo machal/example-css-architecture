@@ -890,8 +890,8 @@ table.fontSmall th {
 }
 .unveil {
   opacity: 0;
-  -webkit-transition: opacity .5s ease-in;
-  transition: opacity .5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 .more_info {
   color: #666;
@@ -999,7 +999,7 @@ Nová (od 12/2015)
 }
 .container.ajax {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   margin: 0;
 }
 .content {
@@ -2083,14 +2083,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   width: 18px;
   height: 2px;
   background-color: black;
-  -webkit-border-radius: 1px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 1px;
-  -moz-background-clip: padding;
   border-radius: 1px;
-  background-clip: padding-box;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .pine-trigger .icon-bar:before,
 .pine-trigger .icon-bar:after {
@@ -2131,11 +2126,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-hover-fade .pine-level-2,
 .fx-hover-fade .pine-level-3 {
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  -webkit-transition: visibility 0s .1s, opacity .1s ease-in-out;
-  transition: visibility 0s .1s, opacity .1s ease-in-out;
+  -webkit-transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
+  transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
 }
 .fx-hover-fade .pine-level-2 > li > a,
 .fx-hover-fade .pine-level-3 > li > a,
@@ -2150,8 +2143,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-hover-fade .pine-level-open > .pine-level-2,
 .fx-hover-fade .pine-level-open > .pine-level-3 {
-  -webkit-opacity: 1;
-  -moz-opacity: 1;
   opacity: 1;
   -webkit-transition: opacity 0.1s ease-in-out;
   transition: opacity 0.1s ease-in-out;
@@ -2305,7 +2296,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .container .site-nav a {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
   padding: 12px 12px 11px;
   color: #fff;
