@@ -8,25 +8,25 @@
 
 .fx-right-to-left {
 
-	.pine-level-1 {
-		position: relative; // height cannot be calculated with absolute position
-		left: 0;
-	}
+  .pine-level-1 {
+    position: relative; // height cannot be calculated with absolute position
+    left: 0;
+  }
 }
 
 // - Second and succeeding levels are stacked on the side and animated -
 
 .fx-right-to-left {
 
-	ul ul {
-		position: absolute;
-		top: 0;
-		left: 100%;
-	}
+  ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
 
   .js & ul ul {
     visibility: hidden;
-    transition: visibility 0s .2s;
+    transition: visibility 0s 0.2s;
   }
 
   // No 2nd, 3rd level indentation
@@ -35,21 +35,21 @@
     text-indent: 0 !important;
   }
 
-	.pine-level-2 > ul {
-		left: 200%;
-	}
+  .pine-level-2 > ul {
+    left: 200%;
+  }
 
-	.pine-level-3 > ul {
-		left: 300%;
-	}
+  .pine-level-3 > ul {
+    left: 300%;
+  }
 
-	ul .pine-level-open > ul {
-		visibility: visible;
-	}
+  ul .pine-level-open > ul {
+    visibility: visible;
+  }
 
-	.pine-level-1 > .pine-level-open > ul {
-		transition: visibility 0s 0s;
-	}
+  .pine-level-1 > .pine-level-open > ul {
+    transition: visibility 0s 0s;
+  }
 }
 
 // - Back button for return to highest level -
@@ -60,17 +60,17 @@
   text-align: center;
 
   &:before {
-  	z-index: 100;
-  	content: "";
-  	position: absolute;
-  	top: 50%;
-  	left: @p-padding-horizontal;
-  	display: inline-block;
-  	width: 0;
-  	height: 0;
-  	border-style: solid;
-  	border-width: 4px 6px 4px 0;
-  	margin-top: -4px;
-  	border-color: transparent @p-color transparent transparent;
+    z-index: 100;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: @p-padding-horizontal;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 6px 4px 0;
+    margin-top: -4px;
+    border-color: transparent @p-color transparent transparent;
   }
 }

@@ -6,10 +6,10 @@
 // Base for .pine container
 
 .pine {
-	z-index: @p-z-index;
-	margin-bottom: @p-margin-bottom;
-	background: @p-background;
-	.clearfix();
+  z-index: @p-z-index;
+  margin-bottom: @p-margin-bottom;
+  background: @p-background;
+  .clearfix();
 
   // Border radius on large screens
   @media (min-width: @p-large-display-start) {
@@ -17,35 +17,35 @@
   }
 
   // Don't print your navigation
-	@media print {
-		display: none;
-	}
+  @media print {
+    display: none;
+  }
 }
 
 // Base for inner elements
 
 .pine {
-	ul,
-	li {
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 }
 
 // Base for navigation items on small screens and without JS
 
 .pine {
-	li > a,
-	li > strong {
-		display: block;
-		padding: @p-padding-vertical @p-padding-horizontal;
-		color: @p-color;
-		font-weight: normal;
-		.text-overflow();
-		text-decoration: none;
-		background: @p-background;
-	}
+  li > a,
+  li > strong {
+    display: block;
+    padding: @p-padding-vertical @p-padding-horizontal;
+    color: @p-color;
+    font-weight: normal;
+    .text-overflow();
+    text-decoration: none;
+    background: @p-background;
+  }
 
   // Active state
   li.pine-level-open > a,
@@ -53,27 +53,27 @@
     background: @p-active-background;
   }
 
-	// Hover state
-	li a:hover,
-	li a:focus,
-	li a:active {
-		background: @p-hover-background;
-	}
+  // Hover state
+  li a:hover,
+  li a:focus,
+  li a:active {
+    background: @p-hover-background;
+  }
 
   // On small screens or vertical variant for large screens
   // we distinguish levels of nesting using text indentation
 
-	// 2nd level
-	.pine-level-2 > li > a,
-	.pine-level-2 > li > strong {
-		text-indent: 1em;
-	}
+  // 2nd level
+  .pine-level-2 > li > a,
+  .pine-level-2 > li > strong {
+    text-indent: 1em;
+  }
 
-	// 3rd level
-	.pine-level-3 > li > a,
-	.pine-level-3 > li > strong {
-		text-indent: 2em;
-	}
+  // 3rd level
+  .pine-level-3 > li > a,
+  .pine-level-3 > li > strong {
+    text-indent: 2em;
+  }
 }
 
 // Navigiton toggling on small screens
@@ -91,7 +91,7 @@
       left: 0;
       overflow: hidden;
       width: 100%;
-      transition: max-height .1s ease-in-out;
+      transition: max-height 0.1s ease-in-out;
     }
 
     .js &.pine-visible {
