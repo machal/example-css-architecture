@@ -525,8 +525,7 @@ body {
     padding: 0;
   }
   body.ajax .container {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
 /*
@@ -890,7 +889,6 @@ table.fontSmall th {
 }
 .unveil {
   opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
 .more_info {
@@ -950,8 +948,7 @@ Kontejner layoutu
   margin: 0 auto;
   margin-bottom: 15px;
   position: relative;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
 }
 /* # Layout
 
@@ -998,8 +995,7 @@ Nová (od 12/2015)
   /* DEPRECATED if newlayout */
 }
 .container.ajax {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   margin: 0;
 }
 .content {
@@ -1210,7 +1206,6 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   background: rgba(0, 0, 0, 0.66);
   color: #fff;
   padding: 1px 9px 9px 9px;
-  -webkit-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .column.as_list_item:hover .text,
@@ -1474,8 +1469,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   padding: 9px 0;
   border: 1px solid transparent;
   color: #66;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
   .list-item {
@@ -1784,7 +1778,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     left: 0;
     overflow: hidden;
     width: 100%;
-    -webkit-transition: max-height 0.1s ease-in-out;
     transition: max-height 0.1s ease-in-out;
   }
   .js .pine.pine-visible {
@@ -2041,8 +2034,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   height: 2px;
   background-color: black;
   border-radius: 1px;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .pine-trigger .icon-bar:before,
 .pine-trigger .icon-bar:after {
@@ -2084,7 +2076,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .fx-hover-fade .pine-level-2,
 .fx-hover-fade .pine-level-3 {
   opacity: 0;
-  -webkit-transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
   transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
 }
 .fx-hover-fade .pine-level-2 > li > a,
@@ -2095,17 +2086,14 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-hover-fade .pine-level-1 > li > a,
 .fx-hover-fade .pine-level-1 > li > strong {
-  -webkit-transition: background .1s;
   transition: background .1s;
 }
 .fx-hover-fade .pine-level-open > .pine-level-2,
 .fx-hover-fade .pine-level-open > .pine-level-3 {
   opacity: 1;
-  -webkit-transition: opacity 0.1s ease-in-out;
   transition: opacity 0.1s ease-in-out;
 }
 .fx-hover-fade .noanim {
-  -webkit-transition: none !important;
   transition: none !important;
 }
 .fx-right-to-left .pine-level-1 {
@@ -2119,7 +2107,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .js .fx-right-to-left ul ul {
   visibility: hidden;
-  -webkit-transition: visibility 0s .2s;
   transition: visibility 0s .2s;
 }
 .fx-right-to-left ul li > a,
@@ -2136,7 +2123,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   visibility: visible;
 }
 .fx-right-to-left .pine-level-1 > .pine-level-open > ul {
-  -webkit-transition: visibility 0s 0s;
   transition: visibility 0s 0s;
 }
 .fx-right-to-left .pine-back > a {
@@ -2185,8 +2171,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 @media only screen and (min-width: 768px) {
   .site-nav__main .pine-level-1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -2195,9 +2179,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 @media only screen and (min-width: 768px) {
   .site-nav__main .pine-level-1 > li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
 }
 .site-nav li {
@@ -2252,8 +2234,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   background-color: #9BD04E;
 }
 .container .site-nav a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   padding: 12px 12px 11px;
   color: #fff;
@@ -2400,3 +2381,4 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     padding-right: 300px;
   }
 }
+/*# sourceMappingURL=style.css.map */
