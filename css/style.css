@@ -1464,7 +1464,7 @@ Foot - stara paticka
   cursor: pointer;
   border: 1px solid #ddd;
 }
-/* # Modul Velka polozka seznamu
+/* # Komponenta Velka polozka seznamu
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
@@ -1525,8 +1525,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   margin-bottom: 0;
 }
 .list-item .content h2 {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 120%;
   margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -1562,6 +1561,12 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list-item:active h2 a {
   color: #075207;
   text-decoration: underline;
+}
+.js .list-item.active,
+.js .list-item:hover,
+.js .list-item:focus,
+.js .list-item:active {
+  background-color: #dedede;
 }
 /*
 

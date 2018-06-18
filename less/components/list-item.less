@@ -1,4 +1,4 @@
-/* # Modul Velka polozka seznamu
+/* # Komponenta Velka polozka seznamu
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
@@ -66,8 +66,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 
   h2 {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 120%;
     margin-bottom: 0;
   }
 }
@@ -110,4 +109,12 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     color: darken(@color-alpha, 20%);
     text-decoration: underline;
   }
+
+  // Funkcnost s povolenym JS
+
+  .js & {
+    background-color: #dedede;
+  }
 }
+
+
