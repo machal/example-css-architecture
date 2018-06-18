@@ -1510,11 +1510,6 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list-item .image img {
   max-width: 100%;
 }
-.container .list-item .image h2 {
-  font-size: 14px;
-  line-height: 18px;
-  margin-bottom: 0;
-}
 .list-item .content {
   float: left;
   width: 60%;
@@ -1527,6 +1522,11 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 .list-item .content p {
+  margin-bottom: 0;
+}
+.list-item .content h2 {
+  font-size: 14px;
+  line-height: 18px;
   margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
