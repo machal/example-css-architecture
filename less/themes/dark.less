@@ -1,0 +1,44 @@
+/* # Tmave barevne schema
+
+dark.html
+
+*/
+
+.theme-dark {
+  background: #444;
+}
+
+.theme-dark {
+  color: white !important;
+
+  h1, h2, h3 {
+    color: white !important;
+  }
+}
+
+
+// List Item
+
+.theme-dark  {
+  .list-item.active,
+  .list-item:hover,
+  .list-item:focus,
+  .list-item:active {
+    background-color: #555;
+    border-color: #eee;
+    color: white;
+
+    h2 a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    // Funkcnost s povolenym JS
+
+    .js & {
+      background-color: #666;
+    }
+  }
+}
+
+

@@ -2390,3 +2390,40 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     padding-right: 300px;
   }
 }
+/* # Tmave barevne schema
+
+dark.html
+
+*/
+.theme-dark {
+  background: #444;
+}
+.theme-dark {
+  color: white !important;
+}
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3 {
+  color: white !important;
+}
+.theme-dark .list-item.active,
+.theme-dark .list-item:hover,
+.theme-dark .list-item:focus,
+.theme-dark .list-item:active {
+  background-color: #555;
+  border-color: #eee;
+  color: white;
+}
+.theme-dark .list-item.active h2 a,
+.theme-dark .list-item:hover h2 a,
+.theme-dark .list-item:focus h2 a,
+.theme-dark .list-item:active h2 a {
+  color: white;
+  text-decoration: underline;
+}
+.js .theme-dark .list-item.active,
+.js .theme-dark .list-item:hover,
+.js .theme-dark .list-item:focus,
+.js .theme-dark .list-item:active {
+  background-color: #666;
+}
