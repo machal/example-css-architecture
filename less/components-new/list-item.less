@@ -1,0 +1,145 @@
+/* @define list-item; weak
+
+# Komponenta Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+.list-item
+  __image
+    __image-img
+    __flags
+  __content
+    __heading
+    __perex
+    __price
+
+*/
+
+.list-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: (@base-line-height / 2) 0;
+  border: 1px solid transparent;
+  color: #666; // TODO promenna
+
+  @media @large-start {
+    float: left;
+    width: ~"calc((100% - 42px) / 3)"; // TODO magic number
+    height: 352px; // TODO magic number
+    padding: @base-line-height (@base-line-height / 2) (@base-line-height / 2);
+    margin: 0 7px 0 7px; // TODO magic number
+  }
+
+  /* stylelint-disable  plugin/selector-bem-pattern */
+
+  // Ukazka kontextoveho pristupu,
+  // kdy muze byt v poradku porusit BEM syntaxi:
+
+  .cart & {
+    font-size: 11px; // TODO magic number
+  }
+
+  /* stylelint-enable  */
+}
+
+.list-item__image {
+  position: relative;
+  float: left;
+  width: 36%;
+  margin-right: 4%;
+
+  @media @large-start {
+    width: auto;
+    float: none;
+    height: 165px; // 4:3
+    overflow: hidden; // Obrazek nesmi pretekat
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
+  @media @extra-large-start {
+    height: 215px; // 4:3
+  }
+
+  &-img {
+    max-width: 100%; // Prizpusobuje se vysce
+  }
+}
+
+// Textovy obsah
+
+.list-item__content {
+  float: left;
+  width: 60%;
+  padding: 0; // reset .content
+
+  @media @large-start {
+    float: none;
+    width: auto;
+  }
+}
+
+.list-item__perex {
+  margin-bottom: 0; // TODO zobecnit do utility = .mb-0
+}
+
+.list-item__heading {
+  font-size: 120%; // TODO promenna
+  margin-bottom: 0;
+}
+
+.list-item__price {
+  // TODO proc uvedene hodnoty?
+  @media @large-start {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+
+  @media @extra-large-start {
+    top: 200px;
+  }
+}
+
+// Varianta bez spodniho ramecku
+// Napr. na homepages verze 2014
+
+.list-item--without-border {
+  border-bottom: 0;
+}
+
+// Varianta s rameckem
+
+.list-item--bordered {
+  border: 1px solid #ddd; // TODO promenna
+}
+
+// Aktivni stavy
+
+.list-item--active,
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
+  background-color: #eee;  // TODO promenna
+  cursor: pointer;
+  color: #333;  // TODO promenna
+  border: 1px solid #ddd;  // TODO promenna
+
+  .list-item__heading-anchor {
+    color: darken(@color-alpha, 20%);
+    text-decoration: underline;
+  }
+
+  // Funkcnost s povolenym JS
+
+  /* stylelint-disable  plugin/selector-bem-pattern */
+
+  // Ukazka kontextoveho pristupu,
+  // kdy muze byt v poradku porusit BEM syntaxi:
+
+  .no-flexbox & {
+    background-color: #dedede;
+  }
+
+  /* stylelint-enable  */
+}
