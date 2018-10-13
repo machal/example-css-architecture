@@ -2,7 +2,10 @@
   "plugins": [
     "stylelint-selector-bem-pattern"
   ],
-  "extends": "stylelint-config-standard",
+  "extends": : [
+    "stylelint-config-standard",
+    "stylelint-config-visionapps-order"
+  ],
   "rules": {
     "at-rule-empty-line-before": null,
     "at-rule-name-space-after": null,
