@@ -2,7 +2,7 @@
   "plugins": [
     "stylelint-selector-bem-pattern"
   ],
-  "extends": : [
+  "extends": [
     "stylelint-config-standard",
     "stylelint-config-visionapps-order"
   ],

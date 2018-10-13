@@ -17,6 +17,7 @@
     "load-grunt-config": "^0.19.2",
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.0.0",
+    "stylelint-config-visionapps-order": "^0.3.1",
     "stylelint-order": "^1.0.0",
     "stylelint-selector-bem-pattern": "^2.0.0",
     "time-grunt": "^1.2.1"
