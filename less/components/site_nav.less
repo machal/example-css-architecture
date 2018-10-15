@@ -51,13 +51,13 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 // - s timto v prohlizeci kompiluju 10s, bez toho 3s :-( --> vzit jen jako CSS?
 @import "../lib/pine/pine.less";
 
-@p-base-font-size				  				: @base-font-size;
-@p-color                          : white;
-@p-background                     : @color-beta;
-@p-active-background              : @color-gamma;
-@p-hover-background               : @color-gamma;
-@p-small-screen-top               : 146px;
-@p-large-display-start						: @large-start-value;
+@p-base-font-size : @base-font-size;
+@p-color : white;
+@p-background : @color-beta;
+@p-active-background : @color-gamma;
+@p-hover-background : @color-gamma;
+@p-small-screen-top : 146px;
+@p-large-display-start : @large-start-value;
 
 // Fix spatneho vyhlazovani caretu na FF
 .pine-has-subnav > a:before {
@@ -70,16 +70,16 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 // - .container mess
 
 .site-nav {
-	clear: both;
-	background: @color-beta;
+  clear: both;
+  background: @color-beta;
   border-bottom: @color-gamma 10px solid;
-	border-top: @color-delta 10px solid;
+  border-top: @color-delta 10px solid;
 
-	@media @large-start {
-		padding-left: 15px;
-		padding-right: 15px;
+  @media @large-start {
+    padding-left: 15px;
+    padding-right: 15px;
     height: 41px;
-	}
+  }
 
   @media print {
     display: none;
@@ -90,9 +90,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   margin: 0;
   padding: 0;
 
-    @media @large-start {
-      display: flex;
-    }
+  @media @large-start {
+    display: flex;
+  }
 }
 
 .site-nav__main .pine-level-1 > li {
@@ -103,7 +103,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 
 .site-nav li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 //  Layout: Všechny tři subnavigace  jsou na malých displejích vedle sebe
@@ -166,7 +166,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 
 // Položka navigace obecně
 .container .site-nav a {
-  box-sizing:border-box;
+  box-sizing: border-box;
   display: block;
   padding: 12px 12px 11px;
   color: #fff;
@@ -192,17 +192,15 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   padding: @base-font-size*.75 15px (@base-font-size*.75 + 1px);
 }
 
-
 // ## Velké displeje
 
 @media @large-start {
-
-	// Položky navigací jsou na velkých vedle sebe
-	.pine-level-1 > li {
-		display: inline-block;
-		position: relative;
-		float: left;
-	}
+  // Položky navigací jsou na velkých vedle sebe
+  .pine-level-1 > li {
+    display: inline-block;
+    position: relative;
+    float: left;
+  }
 
   // Položka navigace se subnavigací
   // Zobáček jinak než výchozí v Pine.js
@@ -213,8 +211,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
       top: 19px;
       right: 50%;
       margin-right: -27px;
-      border-top-color: rgba(255, 255, 255, .5)
+      border-top-color: rgba(255, 255, 255, 0.5);
     }
   }
-
 }

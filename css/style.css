@@ -540,7 +540,7 @@ input,
 textarea,
 option,
 select {
-  font: 12px/18px Arial, Helvetica, sans-serif;
+  font: 12px / 18px Arial, Helvetica, sans-serif;
 }
 h1,
 h2,
@@ -551,7 +551,7 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
-  color: #0EB10E;
+  color: #0eb10e;
   text-decoration: none;
 }
 a:hover,
@@ -836,11 +836,11 @@ p.submit {
   vertical-align: middle;
 }
 .fontSmall {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: normal;
 }
 small.fontSmall {
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: normal;
 }
 table.fontSmall td,
@@ -1263,7 +1263,7 @@ Hlavička obsahu stránky
 .fancybox:focus img {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
-  opacity: .9;
+  opacity: 0.9;
 }
 /*
 Flag - priznaky slev, Last Minute atd.
@@ -1286,13 +1286,13 @@ a.flag:active {
 .flag--sm {
   font-size: 9px;
   padding: 2px 3px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 @media only screen and (max-width: 420px) {
   .flag {
     font-size: 9px;
     padding: 2px 3px;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1308,11 +1308,11 @@ a.flag:active {
   background: rgba(16, 201, 16, 0.91);
 }
 .flag--lastminute {
-  background: #FF9900;
+  background: #ff9900;
   background: rgba(255, 153, 0, 0.91);
 }
 .flag--hottip {
-  background: #FFCC00;
+  background: #ffcc00;
   background: rgba(255, 204, 0, 0.91);
 }
 .flag--new {
@@ -1320,7 +1320,7 @@ a.flag:active {
   background: rgba(30, 237, 30, 0.91);
 }
 .flag--discount {
-  background: #FF6600;
+  background: #ff6600;
   background: rgba(255, 102, 0, 0.91);
 }
 .flags .flag {
@@ -1399,8 +1399,8 @@ Foot - stara paticka
 
 */
 #foot {
-  background: #024E40;
-  padding: .75em 30px;
+  background: #024e40;
+  padding: 0.75em 30px;
   color: #fff;
   margin: 0;
   margin-bottom: -18px;
@@ -1446,7 +1446,7 @@ Foot - stara paticka
   display: inline-block;
   padding: 5px;
   border-radius: 5px;
-  background: #024E40;
+  background: #024e40;
 }
 .inline-list__item--two-stars,
 .inline-list__item--three-stars {
@@ -1638,7 +1638,7 @@ Na velkých displejích nalevo, na malých veprostřed nahoře.
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #9BD04E;
+  color: #9bd04e;
 }
 @media only screen and (min-width: 768px) {
   .site-logo {
@@ -1701,7 +1701,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .pine {
   z-index: 100;
   margin-bottom: 18px;
-  background: #024E40;
+  background: #024e40;
   *zoom: 1;
 }
 .pine:before,
@@ -1747,16 +1747,16 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  background: #024E40;
+  background: #024e40;
 }
 .pine li.pine-level-open > a,
 .pine li strong {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine li a:hover,
 .pine li a:focus,
 .pine li a:active {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine .pine-level-2 > li > a,
 .pine .pine-level-2 > li > strong {
@@ -1784,7 +1784,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 @media (min-width: 768px) {
   .pine {
-    background: #024E40;
+    background: #024e40;
     border: none;
   }
   .pine li {
@@ -2010,7 +2010,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: #024E40;
+  background: #024e40;
   text-decoration: none;
 }
 @media (max-width: 767px) {
@@ -2131,7 +2131,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-right-to-left .pine-back > a {
   position: relative;
-  background: #9BD04E;
+  background: #9bd04e;
   text-align: center;
 }
 .fx-right-to-left .pine-back > a:before {
@@ -2153,9 +2153,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .site-nav {
   clear: both;
-  background: #024E40;
-  border-bottom: #9BD04E 10px solid;
-  border-top: #E0E9E8 10px solid;
+  background: #024e40;
+  border-bottom: #9bd04e 10px solid;
+  border-top: #e0e9e8 10px solid;
 }
 @media only screen and (min-width: 768px) {
   .site-nav {
@@ -2239,7 +2239,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   display: inline-block;
 }
 .site-nav__small-screen a.active {
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .site-nav a {
   -webkit-box-sizing: border-box;
@@ -2259,7 +2259,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .container .site-nav a.active {
   color: white;
   text-decoration: none;
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .pine-level-2 a {
   padding: 9px 15px 10px;
@@ -2363,19 +2363,19 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   border-bottom: 2px solid #999;
 }
 .about-web-item-eslovensko {
-  border-color: #0EB10E;
+  border-color: #0eb10e;
 }
 .about-web-item-velkymeder {
-  border-color: #06F;
+  border-color: #06f;
 }
 .about-web-item-tuzemskadovolena {
-  border-color: #F60;
+  border-color: #f60;
 }
 .about-web-item-epodhajska {
   border-color: #c00;
 }
 .about-web-item-besenova {
-  border-color: #06F;
+  border-color: #06f;
 }
 @media only screen and (min-width: 768px) {
   .about-web-etc {

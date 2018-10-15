@@ -53,7 +53,7 @@ module.exports = function(grunt) {
       options: {
         syntax: "less"
       },
-      src: ["less/**/*.less"]
+      src: ["less/**/*.less", "!less/lib/**/*"]
     },
 
     watch: {
