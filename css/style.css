@@ -1464,7 +1464,9 @@ Foot - stara paticka
   cursor: pointer;
   border: 1px solid #ddd;
 }
-/* # Komponenta Velka polozka seznamu
+/* @define list-item
+
+# Komponenta Velka polozka seznamu
 
 Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
