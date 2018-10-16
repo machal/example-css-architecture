@@ -5,13 +5,13 @@ Helpery
 
 */
 
-
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
 .clearfix {
   *zoom: 1;
-  &:before, &:after {
+  &:before,
+  &:after {
     display: table;
     content: "";
     // Fixes Opera/contenteditable bug:
@@ -63,12 +63,12 @@ Helpery
   }
 }
 
-
 .dumb_only {
   display: none !important;
 }
 
-.center, .text-center {
+.center,
+.text-center {
   text-align: center;
 }
 
@@ -126,7 +126,9 @@ Helpery
     color: #999;
     text-decoration: underline;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       color: #666;
     }
   }
@@ -146,7 +148,6 @@ Helpery
   border: 0;
 }
 
-
 // Z old_layout.less
 // -----------------
 
@@ -162,14 +163,14 @@ Helpery
   width: 48%;
 }
 
-.clearBothZero, .clear_zero {
+.clearBothZero,
+.clear_zero {
   display: block;
   clear: both;
   font-size: 1px;
   line-height: 1px;
   height: 1px;
 }
-
 
 .marginBottom3 {
   margin-bottom: 3em;
@@ -236,16 +237,17 @@ p.submit {
 }
 
 .fontSmall {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: normal;
 }
 
 small.fontSmall {
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: normal;
 }
 
-table.fontSmall td, table.fontSmall th {
+table.fontSmall td,
+table.fontSmall th {
   font-size: 1.4em;
   font-weight: normal;
 }
@@ -282,7 +284,6 @@ table.fontSmall td, table.fontSmall th {
   display: none;
 }
 
-
 // Nove helpery (verze 2012)
 // Presunout do noveho layoutu (if newlayout TODO)
 
@@ -297,7 +298,6 @@ table.fontSmall td, table.fontSmall th {
 .display_block {
   display: block;
 }
-
 
 // Presunuto z new_layout.less
 // ---------------------------
@@ -323,7 +323,7 @@ table.fontSmall td, table.fontSmall th {
 
 .unveil {
   opacity: 0;
-  transition: opacity .5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 // Odkaz na vice informaci
@@ -380,7 +380,9 @@ table.fontSmall td, table.fontSmall th {
   display: block;
 }
 
-.more_photos a:hover, .more_photos a:focus, .more_photos a:active {
+.more_photos a:hover,
+.more_photos a:focus,
+.more_photos a:active {
   background-color: #eee;
   cursor: pointer;
 }

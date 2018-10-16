@@ -1,13 +1,12 @@
-
 // Pismo
 // -----
 
-@base-font-size: 		   12px;
-@base-line-height: 		 18px;
-@smaller-font-size: 	 11px;
-@smaller-line-height:  13px;
-@larger-font-size: 		 14px;
-@larger-line-height: 	 20px;
+@base-font-size: 12px;
+@base-line-height: 18px;
+@smaller-font-size: 11px;
+@smaller-line-height: 13px;
+@larger-font-size: 14px;
+@larger-line-height: 20px;
 
 // Barvy
 // -----
@@ -16,9 +15,9 @@
 //- Zde jen pro ESK, pridat vychozi sedive schema
 //- Proc anchor a jeste color-alpha?
 
-@anchor-color: 	#0EB10E;
-@active-color: 	darken(@anchor-color, 20%);
-@text-color: 	#000;
+@anchor-color: #0eb10e;
+@active-color: darken(@anchor-color, 20%);
+@text-color: #000;
 
 // Svetla barva pro pozadi prvku
 // Smichana hlavni barva se svetle sedivou.
@@ -31,14 +30,13 @@
 @color-dark-plus: mix(darken(@color-alpha, 20%), #666, 30%);
 
 // Odkazy v textu
-@color-alpha: #0EB10E;
+@color-alpha: #0eb10e;
 // Pozadí navigace a paticky
-@color-beta: #024E40;
+@color-beta: #024e40;
 // Proužek pod navigací
-@color-gamma: #9BD04E;
+@color-gamma: #9bd04e;
 // Proužek nad navigací
-@color-delta: #E0E9E8;
-
+@color-delta: #e0e9e8;
 
 // Layout
 // ------
@@ -46,23 +44,21 @@
 @gutter: 14px;
 @column-width: 304px;
 
-
 // Breakpointy
 // -----------
 
 // Hodnoty
-@large-start-value:         768px;
-@extra-large-start-value:   1180px;
+@large-start-value: 768px;
+@extra-large-start-value: 1180px;
 
 // Odvozene hodnoty
-@small-end-value:     (@large-start-value - 1);
+@small-end-value: (@large-start-value - 1);
 
 // Media Queries
 // (Pouzivame napr. jako @media @medium-start { … }
-@small-end:           ~"only screen and (max-width: @{small-end-value})";
-@large-start:         ~"only screen and (min-width: @{large-start-value})";
-@extra-large-start:   ~"only screen and (min-width: @{extra-large-start-value})";
-
+@small-end: ~"only screen and (max-width: @{small-end-value})";
+@large-start: ~"only screen and (min-width: @{large-start-value})";
+@extra-large-start: ~"only screen and (min-width: @{extra-large-start-value})";
 
 // Padding
 // -------
