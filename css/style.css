@@ -1,486 +1,3 @@
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-/*
-
-  Stylopis pro Fancygallery (prototyp)
-  Knihovna pro zobrazovani galerii obrazku.
-  Verze z 20. 10. 2011
-  Autor: Martin Michalek, michalek@shortcat.cz
-
-  Obsah:
-  1) jquery.fancybox.mod_shortcat.css     Shortcat vzhled FancyBoxu
-  2) jquery.jcarousel.css                 Zakladni stylopis pro jCarousel
-  3) jquery.jcarousel.skin.shortcat.css   Shortcat vizual pro jCarousel
-  4) fancygallery.css                     Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
-
-  Z-indexy:
-  1110	#fancybox-loading, #fancybox-thumbnails .jcarousel-item .hover-image (FB Gallery mouseover)
-  1109	#fancybox-inner:hover (Hover nad obrazkem)
-  1108	#fancybox-thumbnails (FB Gallery lista s thumbnaily)
-  1108	#fancybox-close
-  1107	#fancybox-left, #fancybox-right, #fancybox-left-ico, #fancybox-right-ico
-  1102	#fancybox-title
-  1101	#fancybox-wrap
-  1100	#fancybox-overlay
-
-*/
-/* =================================================================
-   1) jquery.fancybox.mod_shortcat.css
-   Shortcat vzhled FancyBoxu
-*/
-/*
- * FancyBox - jQuery Plugin
- * Simple and fancy lightbox alternative
- *
- * Examples and documentation at: http://fancybox.net
- *
- * Copyright (c) 2008 - 2010 Janis Skarnelis
- *
- * Version: 1.3.1 (05/03/2010)
- * Requires: jQuery v1.3+
- *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
- */
-/* Do not show scrollbars when FB is open */
-body.fancybox-active {
-  overflow: hidden;
-}
-#fancybox-loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  height: 40px;
-  width: 40px;
-  margin-top: -20px;
-  margin-left: -20px;
-  cursor: pointer;
-  overflow: hidden;
-  z-index: 1104;
-  display: none;
-}
-#fancybox-loading div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 480px;
-  background-image: url('../../images/fancygallery/fancybox.png');
-}
-#fancybox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #000;
-  z-index: 1100;
-  display: none;
-}
-#fancybox-tmp {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  overflow: auto;
-  display: none;
-}
-#fancybox-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 20px;
-  z-index: 1101;
-  display: none;
-}
-#fancybox-outer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #FFF;
-}
-#fancybox-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  overflow: hidden;
-}
-#fancybox-inner:hover {
-  z-index: 1109;
-}
-#fancybox-hide-sel-frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-}
-#fancybox-close {
-  position: fixed;
-  right: 22px;
-  top: 24px;
-  width: 37px;
-  height: 37px;
-  background-image: url('../../images/fancygallery/fancy_close.gif');
-  background-position: top left;
-  cursor: pointer;
-  z-index: 1108;
-  display: none;
-}
-#fancybox-close:hover {
-  background-position: bottom left;
-}
-#fancybox_error {
-  color: #444;
-  font: normal 12px/20px Arial;
-  padding: 7px;
-  margin: 0;
-}
-#fancybox-content {
-  height: auto;
-  width: auto;
-  padding: 0;
-  margin: 0;
-}
-#fancybox-img {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  border: none;
-  outline: none;
-  line-height: 0;
-  vertical-align: top;
-  -ms-interpolation-mode: bicubic;
-}
-#fancybox-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-#fancybox-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1102;
-}
-.fancybox-title-inside {
-  padding: 10px 0;
-  text-align: center;
-  color: #333;
-}
-.fancybox-title-outside {
-  padding-top: 5px;
-  color: #FFF;
-  text-align: center;
-}
-.fancybox-title-over {
-  color: #FFF;
-  text-align: left;
-}
-#fancybox-title-over {
-  padding: 10px;
-  background-image: url('../../images/fancygallery/fancy_title_over.png');
-  display: block;
-}
-/* Outer title content */
-#fancybox-title-wrap {
-  position: fixed;
-  left: 22px;
-  top: 24px;
-  width: auto;
-  max-width: 400px;
-  max-height: 80%;
-  overflow-y: auto;
-  display: inline-block;
-  padding: 8px 10px;
-  background-image: url('../../images/fancygallery/fancy_title_over.png');
-}
-#fancybox-title-left,
-#fancybox-title-right {
-  display: none;
-}
-#fancybox-title-main {
-  color: #fff;
-  text-align: left;
-  display: block;
-  opacity: 1;
-}
-/* Left and right navigation arrows */
-#fancybox-left,
-#fancybox-right {
-  position: fixed;
-  bottom: 0px;
-  height: 100%;
-  width: 35%;
-  cursor: pointer;
-  outline: none;
-  background-image: url('../../images/fancygallery/blank.gif');
-  z-index: 1107;
-  display: none;
-}
-#fancybox-left {
-  left: 0px;
-}
-#fancybox-right {
-  right: 0px;
-}
-#fancybox-left-ico,
-#fancybox-right-ico {
-  position: absolute;
-  top: 50%;
-  left: -9999px;
-  width: 61px;
-  height: 77px;
-  margin-top: -30px;
-  cursor: pointer;
-  z-index: 1107;
-  display: block;
-}
-#fancybox-left-ico {
-  background-image: url('../../images/fancygallery/fancy_nav_left.png');
-  left: 0px;
-}
-#fancybox-right-ico {
-  background-image: url('../../images/fancygallery/fancy_nav_right.png');
-  left: auto;
-  right: 0px;
-}
-#fancybox-left:hover #fancybox-left-ico,
-#fancybox-left:focus #fancybox-left-ico,
-#fancybox-left:active #fancybox-left-ico,
-#fancybox-right:hover #fancybox-right-ico,
-#fancybox-right:focus #fancybox-right-ico,
-#fancybox-right:active #fancybox-right-ico {
-  background-position: 0 -77px;
-}
-/* Shadows are off */
-.fancy-bg {
-  display: none;
-}
-/* =================================================================
-   2) jquery.jcarousel.css
-   Zakladni stylopis pro jCarousel
-*/
-/**
- * This <div> element is wrapped by jCarousel around the list
- * and has the classname "jcarousel-container".
- */
-.jcarousel-container {
-  position: relative;
-}
-.jcarousel-clip {
-  z-index: 2;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-}
-.jcarousel-list {
-  z-index: 1;
-  overflow: hidden;
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-.jcarousel-list li,
-.jcarousel-item {
-  float: left;
-  list-style: none;
-  /* We set the width/height explicitly. No width/height causes infinite loops. */
-  width: 75px;
-  height: 75px;
-}
-/**
- * The buttons are added dynamically by jCarousel before
- * the <ul> list (inside the <div> described above) and
- * have the classnames "jcarousel-next" and "jcarousel-prev".
- */
-.jcarousel-next {
-  z-index: 3;
-  display: none;
-}
-.jcarousel-prev {
-  z-index: 3;
-  display: none;
-}
-/* =================================================================
-   3) jquery.jcarousel.skin.shortcat.css
-   Shortcat vizual pro jCarousel
-*/
-/*
-Stylesheet for jQuery carousel - Shortcat skin
-Author:        Martin Michalek, Studio Shortcat, michalek@shortcat.cz
-*/
-.jcarousel-skin-shortcat .jcarousel-container {
-  top: -2px;
-  left: -2px;
-  position: relative;
-  margin: 0 10px;
-  width: 897px;
-}
-.jcarousel-skin-shortcat .jcarousel-container-horizontal {
-  padding: 0 40px;
-  width: auto;
-}
-.jcarousel-skin-shortcat .jcarousel-clip-horizontal {
-  height: 40px;
-  width: auto;
-}
-.jcarousel-skin-shortcat .jcarousel-item,
-.jcarousel-skin-shortcat .jcarousel-item img {
-  width: 40px;
-  height: 40px;
-}
-.jcarousel-skin-shortcat .jcarousel-item img {
-  opacity: .5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-}
-.jcarousel-skin-shortcat .jcarousel-item.active img,
-.jcarousel-skin-shortcat .jcarousel-item:hover img {
-  opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-}
-.jcarousel-skin-shortcat .jcarousel-item-horizontal {
-  margin-right: 3px;
-}
-.jcarousel-skin-shortcat .jcarousel-item-placeholder {
-  background: #fff;
-  color: #000;
-}
-/**
- *  Horizontal Buttons
- */
-.jcarousel-skin-shortcat .jcarousel-next-horizontal {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  width: 33px;
-  height: 40px;
-  cursor: pointer;
-  background: transparent url(../../images/fancygallery/fancygallery_next.gif) no-repeat top right;
-}
-.jcarousel-skin-shortcat .jcarousel-next-horizontal:hover,
-.jcarousel-skin-shortcat .jcarousel-next-horizontal.hover,
-.jcarousel-skin-shortcat .jcarousel-next-horizontal:active {
-  background-position: top right;
-}
-.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal,
-.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:hover,
-.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:active {
-  cursor: default;
-  background-image: none;
-}
-.jcarousel-skin-shortcat .jcarousel-prev-horizontal {
-  position: absolute;
-  top: 0px;
-  left: 10px;
-  width: 33px;
-  height: 40px;
-  cursor: pointer;
-  background: transparent url(../../images/fancygallery/fancygallery_prev.gif) no-repeat 0 0;
-}
-.jcarousel-skin-shortcat .jcarousel-prev-horizontal:hover,
-.jcarousel-skin-shortcat .jcarousel-prev-horizontal.hover,
-.jcarousel-skin-shortcat .jcarousel-prev-horizontal:active {
-  background-position: 0 0;
-}
-.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal,
-.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:hover,
-.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:active {
-  cursor: default;
-  background-image: none;
-}
-/* =================================================================
-   4) fancygallery.css
-   Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
-*/
-/* Vrstva s thumbnaily  */
-#fancybox-thumbnails {
-  position: fixed;
-  z-index: 1108;
-  bottom: 20px;
-  left: 0px;
-  width: 100%;
-  height: 40px;
-}
-/* == Vrstva s thumbnaily v pripade kdy zobrazujeme vetsi obrazek na mouseover == */
-#fancybox-thumbnails,
-#fancybox-thumbnails .jcarousel-skin-shortcat .jcarousel-clip-horizontal {
-  height: 129px;
-  /* 40px maly nahled + 75px mouseover nahled + 4px border + 10px sipka */
-}
-/* Vetsi obrazek zobrazovany na mouseover */
-#fancybox-thumbnails .jcarousel-item .hover-image {
-  width: 75px;
-  height: 86px;
-  padding: 2px;
-  position: relative;
-  top: -129px;
-  left: -20px;
-  display: none;
-  background-image: url(../../images/fancygallery/fancygallery_thumbnail_hover.gif);
-  background-repeat: no-repeat;
-}
-#fancybox-thumbnails .jcarousel-item .hover-image img {
-  width: 75px;
-  height: 75px;
-  opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-}
-#fancybox-thumbnails .jcarousel-item:hover .hover-image {
-  display: block;
-}
-#fancybox-thumbnails .jcarousel-item,
-#fancybox-thumbnails .jcarousel-next-horizontal,
-#fancybox-thumbnails .jcarousel-prev-horizontal {
-  margin-top: 89px;
-  /* 75px mouseover nahled + 4px border + 10px sipka */
-}
-/*
-Zkousime dostat mouseover ven z rodicovskeho overflow:hidden prvku:
-Rodicum nastavime position: static a synovi pak position: absolute.
-(Viz http://www.vzhurudolu.cz/test/override-overflow-hidden/)
-*/
-#fancybox-thumbnails .jcarousel-clip,
-#fancybox-thumbnails .jcarousel-list {
-  position: static;
-}
-#fancybox-thumbnails .jcarousel-item .hover-image {
-  position: absolute;
-  top: auto;
-  left: auto;
-  margin-top: -129px;
-  margin-left: -20px;
-  z-index: 1110;
-}
-#fancybox-thumbnails.scrolling .jcarousel-clip,
-#fancybox-thumbnails.scrolling .jcarousel-list {
-  position: relative;
-}
-/* Pokud v titulku fotky zobrazujeme i titulek setu, zmenime jeho barvu */
-#fancybox-title-main .set {
-  color: #999;
-}
 /*
 
 Reset
@@ -540,7 +57,7 @@ input,
 textarea,
 option,
 select {
-  font: 12px/18px Arial, Helvetica, sans-serif;
+  font: 12px / 18px Arial, Helvetica, sans-serif;
 }
 h1,
 h2,
@@ -551,8 +68,8 @@ h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 a {
-  color: #0EB10E;
   text-decoration: none;
+  color: #0eb10e;
 }
 a:hover,
 a:focus,
@@ -655,289 +172,115 @@ ol li {
     margin-top: 5px;
   }
 }
-/*
+/* Modul About
+   ===========
 
-Helpery
-=======
-
+   Stránka "O nás".
 */
-.clearfix {
-  *zoom: 1;
+.about-perex {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.container .margin_bottom {
-  margin-bottom: 18px;
-}
-.container .margin_bottom_half {
-  margin-bottom: 9px;
-}
-.container .margin_bottom_double {
-  margin-bottom: 36px;
-}
-.without_margin_bottom {
-  margin-bottom: 0;
-}
-.margin_top_negative {
-  margin-top: -18px;
-}
-.container .margin_top {
-  margin-top: 18px;
-}
-.container .margin_top_double {
-  margin-top: 36px;
-}
-.margin_top_half {
-  margin-top: 9px;
-}
-.desktop_only {
-  display: none !important;
-}
-@media only screen and (min-width: 768px) {
-  .desktop_only {
-    display: block !important;
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .about-perex {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
-.dumb_only {
-  display: none !important;
+@media only screen and (min-width: 768px) {
+  .about-perex {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
 }
-.center,
-.text-center {
+.about-person {
   text-align: center;
 }
-.right {
-  text-align: right;
-}
-.left {
-  text-align: left;
-}
-.clear_both {
-  clear: both;
-}
-.block_center {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  float: none !important;
-}
-.suppress {
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
-}
-.float_right {
-  float: right;
-}
-.float_left {
-  float: left;
-}
-@media only screen and (min-width: 768px) {
-  .last {
-    margin-right: 0 !important;
-  }
-}
-.tabbed_text {
-  padding-left: 15px;
-  padding-right: 45px;
-}
-.small {
-  font-size: 11px;
-  line-height: 13px;
-  color: #999;
-}
-.small a {
-  color: #999;
-  text-decoration: underline;
-}
-.small a:hover,
-.small a:focus,
-.small a:active {
-  color: #666;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
+.about-person-image img {
+  border-radius: 50%;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.floatLeft50 {
-  float: left;
-  width: 48%;
-}
-.floatRight50 {
-  float: right;
-  width: 48%;
-}
-.clearBothZero,
-.clear_zero {
+  max-width: 138px;
   display: block;
-  clear: both;
-  font-size: 1px;
-  line-height: 1px;
-  height: 1px;
+  margin: 0 auto;
 }
-.marginBottom3 {
-  margin-bottom: 3em;
+.about-person-short-text {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.marginBottom1half {
-  margin-bottom: 1.5em;
+@media only screen and (min-width: 768px) {
+  .about-person-full-text,
+  .about-person-full-contact {
+    margin-top: 9px;
+  }
 }
-.marginRight15 {
-  margin-right: 15px;
+.about-history {
+  background-color: #d8dbd8;
+  background-position: center center;
 }
-.floatLeft {
-  float: left;
+@media only screen and (max-width: 767px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
+  }
 }
-.floatRight {
-  float: right;
+@media only screen and (min-width: 768px) {
+  .about-history {
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+    background-attachment: fixed;
+  }
 }
-.displayNone {
-  display: none;
+.about-history-perex {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3em 2em 2em 2em;
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
-.marginTopNo {
-  margin-top: 0;
+.about-history-perex .h1 {
+  margin-bottom: 10px;
 }
-.sideOne .marginTopNo {
-  margin-top: -1.5em;
+.about-history-perex .h2 {
+  margin-bottom: 20px;
 }
-.alignLeft {
-  text-align: left;
+@media only screen and (min-width: 768px) {
+  .about-history-perex {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.alignRight {
-  text-align: right;
-}
-.alignCenter {
+.about-web-item {
+  padding: 10px;
   text-align: center;
+  margin-bottom: 0;
+  border-bottom: 2px solid #999;
 }
-.alignMiddle {
-  vertical-align: middle;
+.about-web-item-eslovensko {
+  border-color: #0eb10e;
 }
-.required {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #f60;
+.about-web-item-velkymeder {
+  border-color: #06f;
 }
-p.submit {
-  text-align: right;
+.about-web-item-tuzemskadovolena {
+  border-color: #f60;
 }
-.big {
-  font-size: 1.5em;
-  font-weight: bold;
-  vertical-align: middle;
+.about-web-item-epodhajska {
+  border-color: #c00;
 }
-.fontSmall {
-  font-size: .5em;
-  font-weight: normal;
+.about-web-item-besenova {
+  border-color: #06f;
 }
-small.fontSmall {
-  font-size: .6em;
-  font-weight: normal;
+@media only screen and (min-width: 768px) {
+  .about-web-etc {
+    text-align: center;
+    padding-left: 260px;
+    padding-right: 260px;
+  }
 }
-table.fontSmall td,
-table.fontSmall th {
-  font-size: 1.4em;
-  font-weight: normal;
-}
-.clearBoth {
-  clear: both;
-}
-.container .alignRight {
-  text-align: right;
-}
-.container .alignLeft {
-  text-align: left;
-}
-.container .alignCenter {
-  text-align: center;
-}
-.testRed {
-  border: 1px solid red;
-}
-.displayInline {
-  display: inline;
-}
-.displayNone {
-  display: none;
-}
-.hide {
-  display: none;
-}
-.width100 {
-  width: 100%;
-}
-.width50 {
-  width: 50%;
-}
-.display_block {
-  display: block;
-}
-.more_link {
-  margin: 2em 0;
-  text-align: center;
-}
-.accommodation_big_item {
-  margin-bottom: 36px;
-}
-.unveil {
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
-}
-.more_info {
-  color: #666;
-}
-.legend {
-  color: #999;
-  text-align: right;
-}
-.similar_items {
-  margin-top: 54px;
-}
-#map_container {
-  margin: -35px -8px 27px -30px;
-  width: auto;
-  height: 562px;
-}
-#mapa_okoli {
-  margin-top: 8px;
-}
-#subdivisions {
-  max-width: 940px;
-  margin-bottom: 36px;
-}
-#subdivisions h3 {
-  margin-bottom: 9px;
-  border-bottom: 1px solid #ccc;
-}
-.more_photos a {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin-left: 0;
-  padding-left: 0;
-  padding: 5px 7px;
-  display: block;
-}
-.more_photos a:hover,
-.more_photos a:focus,
-.more_photos a:active {
-  background-color: #eee;
-  cursor: pointer;
-}
-input.input--border {
-  border: 1px solid #000;
-}
-textarea.textarea--border {
-  border: 1px solid #000;
+@media only screen and (min-width: 1180px) {
+  .about-legal {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 }
 /*
 Kontejner layoutu
@@ -1040,17 +383,17 @@ Nová (od 12/2015)
 }
 .content__body:before,
 .content__body:after {
+  content: " ";
   display: table;
-  content: "";
-  line-height: 0;
 }
 .content__body:after {
   clear: both;
 }
 .content__body:before,
 .content__body:after {
-  content: " ";
   display: table;
+  content: "";
+  line-height: 0;
 }
 .content__body:after {
   clear: both;
@@ -1068,17 +411,17 @@ Nová (od 12/2015)
 }
 .row:before,
 .row:after {
+  content: " ";
   display: table;
-  content: "";
-  line-height: 0;
 }
 .row:after {
   clear: both;
 }
 .row:before,
 .row:after {
-  content: " ";
   display: table;
+  content: "";
+  line-height: 0;
 }
 .row:after {
   clear: both;
@@ -1170,6 +513,14 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
    - Stary layout uvnitr stranky (docasny)
 
 */
+<<<<<<< Updated upstream
+body,
+input,
+textarea,
+option,
+select {
+  font: 12px / 18px Arial, Helvetica, sans-serif;
+=======
 @media only screen and (max-width: 767px) {
   /* Nezobrazujeme cely Likebox, jen maly buttonek */
   #facebookLikeBox {
@@ -1185,11 +536,16 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
     margin-right: 0;
     width: auto;
   }
+>>>>>>> Stashed changes
 }
 /* @media screen and (max-width: 640px) */
 .columns_as_list_item {
   padding-top: 9px;
 }
+<<<<<<< Updated upstream
+a {
+  color: #0eb10e;
+=======
 .column.as_list_item {
   position: relative;
   overflow: hidden;
@@ -1226,6 +582,7 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
 }
 .column.as_list_item .text h2 a {
   font-weight: bold;
+>>>>>>> Stashed changes
   text-decoration: none;
   display: block;
   padding-bottom: 8px;
@@ -1263,7 +620,7 @@ Hlavička obsahu stránky
 .fancybox:focus img {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
-  opacity: .9;
+  opacity: 0.9;
 }
 /*
 Flag - priznaky slev, Last Minute atd.
@@ -1286,13 +643,13 @@ a.flag:active {
 .flag--sm {
   font-size: 9px;
   padding: 2px 3px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 @media only screen and (max-width: 420px) {
   .flag {
     font-size: 9px;
     padding: 2px 3px;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1308,11 +665,11 @@ a.flag:active {
   background: rgba(16, 201, 16, 0.91);
 }
 .flag--lastminute {
-  background: #FF9900;
+  background: #ff9900;
   background: rgba(255, 153, 0, 0.91);
 }
 .flag--hottip {
-  background: #FFCC00;
+  background: #ffcc00;
   background: rgba(255, 204, 0, 0.91);
 }
 .flag--new {
@@ -1320,7 +677,7 @@ a.flag:active {
   background: rgba(30, 237, 30, 0.91);
 }
 .flag--discount {
-  background: #FF6600;
+  background: #ff6600;
   background: rgba(255, 102, 0, 0.91);
 }
 .flags .flag {
@@ -1399,8 +756,8 @@ Foot - stara paticka
 
 */
 #foot {
-  background: #024E40;
-  padding: .75em 30px;
+  background: #024e40;
+  padding: 0.75em 30px;
   color: #fff;
   margin: 0;
   margin-bottom: -18px;
@@ -1412,161 +769,6 @@ Foot - stara paticka
 }
 #foot a {
   color: #fff;
-}
-/*
-  Inline list
-  ===========
-*/
-.inline-list {
-  margin-left: 23px;
-  line-height: 36px;
-  margin-bottom: 12px;
-}
-.inline-list__heading {
-  font-style: 36px;
-}
-.inline-list__heading--invisible {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.inline-list__item {
-  padding: 9px 8px 8px;
-  background-color: transparent;
-  border: 1px solid #ccc;
-  white-space: nowrap;
-  border-radius: 5px;
-}
-.inline-list__item-icon {
-  display: inline-block;
-  padding: 5px;
-  border-radius: 5px;
-  background: #024E40;
-}
-.inline-list__item--two-stars,
-.inline-list__item--three-stars {
-  font-weight: bold;
-}
-.inline-list__item--no-margin-bottom {
-  margin-bottom: 0;
-}
-.inline-list__item.active,
-.inline-list__item:hover,
-.inline-list__item:focus,
-.inline-list__item:active {
-  background-color: #eee;
-  text-decoration: underline;
-  cursor: pointer;
-  border: 1px solid #ddd;
-}
-/* # Komponenta Velka polozka seznamu
-
-Napr. seznamy ubytovatelu, pobytu, last-minute atd.
-
-*/
-.list-item {
-  position: relative;
-  padding: 9px 0;
-  border: 1px solid transparent;
-  color: #66;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-@media only screen and (min-width: 768px) {
-  .list-item {
-    float: left;
-    width: calc((100% - 42px) / 3);
-    height: 352px;
-    padding: 18px 9px 9px;
-    margin: 0 7px 0 7px;
-  }
-}
-.list-item .image {
-  position: relative;
-  float: left;
-  width: 36%;
-  margin-right: 4%;
-}
-@media only screen and (min-width: 768px) {
-  .list-item .image {
-    width: auto;
-    float: none;
-    height: 165px;
-    overflow: hidden;
-    margin-bottom: 12px;
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .list-item .image {
-    height: 215px;
-  }
-}
-.list-item .image img {
-  max-width: 100%;
-}
-.list-item .content {
-  float: left;
-  width: 60%;
-  padding: 0;
-}
-@media only screen and (min-width: 768px) {
-  .list-item .content {
-    float: none;
-    width: auto;
-  }
-}
-.list-item .content p {
-  margin-bottom: 0;
-}
-.list-item .content h2 {
-  font-size: 120%;
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 768px) {
-  .list-item .content .price {
-    position: absolute;
-    right: 3px;
-    top: 150px;
-  }
-}
-@media only screen and (min-width: 1180px) {
-  .list-item .content .price {
-    top: 200px;
-  }
-}
-.list-item.without_border {
-  border-bottom: 0;
-}
-.list-item.bordered {
-  border: 1px solid #ddd;
-}
-.list-item.active,
-.list-item:hover,
-.list-item:focus,
-.list-item:active {
-  background-color: #eee;
-  cursor: pointer;
-  color: #333;
-  border: 1px solid #ddd;
-}
-.list-item.active h2 a,
-.list-item:hover h2 a,
-.list-item:focus h2 a,
-.list-item:active h2 a {
-  color: #075207;
-  text-decoration: underline;
-}
-.js .list-item.active,
-.js .list-item:hover,
-.js .list-item:focus,
-.js .list-item:active {
-  background-color: #dedede;
 }
 /*
 
@@ -1638,8 +840,17 @@ Na velkých displejích nalevo, na malých veprostřed nahoře.
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  color: #9BD04E;
+  color: #9bd04e;
 }
+<<<<<<< Updated upstream
+.fontSmall {
+  font-size: 0.5em;
+  font-weight: normal;
+}
+small.fontSmall {
+  font-size: 0.6em;
+  font-weight: normal;
+=======
 @media only screen and (min-width: 768px) {
   .site-logo {
     float: left;
@@ -1701,22 +912,23 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .pine {
   z-index: 100;
   margin-bottom: 18px;
-  background: #024E40;
+  background: #024e40;
   *zoom: 1;
+>>>>>>> Stashed changes
 }
 .pine:before,
 .pine:after {
+  content: " ";
   display: table;
-  content: "";
-  line-height: 0;
 }
 .pine:after {
   clear: both;
 }
 .pine:before,
 .pine:after {
-  content: " ";
   display: table;
+  content: "";
+  line-height: 0;
 }
 .pine:after {
   clear: both;
@@ -1747,16 +959,16 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   text-overflow: ellipsis;
   white-space: nowrap;
   text-decoration: none;
-  background: #024E40;
+  background: #024e40;
 }
 .pine li.pine-level-open > a,
 .pine li strong {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine li a:hover,
 .pine li a:focus,
 .pine li a:active {
-  background: #9BD04E;
+  background: #9bd04e;
 }
 .pine .pine-level-2 > li > a,
 .pine .pine-level-2 > li > strong {
@@ -1784,7 +996,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 @media (min-width: 768px) {
   .pine {
-    background: #024E40;
+    background: #024e40;
     border: none;
   }
   .pine li {
@@ -2010,7 +1222,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background: #024E40;
+  background: #024e40;
   text-decoration: none;
 }
 @media (max-width: 767px) {
@@ -2071,11 +1283,24 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     border-color: white transparent transparent transparent;
   }
 }
+<<<<<<< Updated upstream
+/*
+   Fancybox
+   ========
+*/
+.fancybox:hover img,
+.fancybox:active img,
+.fancybox:focus img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+=======
 .fx-hover-fade .pine-level-2,
 .fx-hover-fade .pine-level-3 {
   opacity: 0;
   -webkit-transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
   transition: visibility 0s 0.1s, opacity 0.1s ease-in-out;
+>>>>>>> Stashed changes
 }
 .fx-hover-fade .pine-level-2 > li > a,
 .fx-hover-fade .pine-level-3 > li > a,
@@ -2088,6 +1313,19 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   -webkit-transition: background .1s;
   transition: background .1s;
 }
+<<<<<<< Updated upstream
+.flag--sm {
+  font-size: 9px;
+  padding: 2px 3px;
+  letter-spacing: 0.02em;
+}
+@media only screen and (max-width: 420px) {
+  .flag {
+    font-size: 9px;
+    padding: 2px 3px;
+    letter-spacing: 0.02em;
+  }
+=======
 .fx-hover-fade .pine-level-open > .pine-level-2,
 .fx-hover-fade .pine-level-open > .pine-level-3 {
   opacity: 1;
@@ -2097,6 +1335,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .fx-hover-fade .noanim {
   -webkit-transition: none !important;
   transition: none !important;
+>>>>>>> Stashed changes
 }
 .fx-right-to-left .pine-level-1 {
   position: relative;
@@ -2112,18 +1351,34 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   -webkit-transition: visibility 0s .2s;
   transition: visibility 0s .2s;
 }
+<<<<<<< Updated upstream
+.flag--lastminute {
+  background: #ff9900;
+  background: rgba(255, 153, 0, 0.91);
+}
+.flag--hottip {
+  background: #ffcc00;
+  background: rgba(255, 204, 0, 0.91);
+=======
 .fx-right-to-left ul li > a,
 .fx-right-to-left ul li > strong {
   text-indent: 0 !important;
 }
 .fx-right-to-left .pine-level-2 > ul {
   left: 200%;
+>>>>>>> Stashed changes
 }
 .fx-right-to-left .pine-level-3 > ul {
   left: 300%;
 }
+<<<<<<< Updated upstream
+.flag--discount {
+  background: #ff6600;
+  background: rgba(255, 102, 0, 0.91);
+=======
 .fx-right-to-left ul .pine-level-open > ul {
   visibility: visible;
+>>>>>>> Stashed changes
 }
 .fx-right-to-left .pine-level-1 > .pine-level-open > ul {
   -webkit-transition: visibility 0s 0s;
@@ -2131,7 +1386,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .fx-right-to-left .pine-back > a {
   position: relative;
-  background: #9BD04E;
+  background: #9bd04e;
   text-align: center;
 }
 .fx-right-to-left .pine-back > a:before {
@@ -2153,9 +1408,9 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 .site-nav {
   clear: both;
-  background: #024E40;
-  border-bottom: #9BD04E 10px solid;
-  border-top: #E0E9E8 10px solid;
+  background: #024e40;
+  border-bottom: #9bd04e 10px solid;
+  border-top: #e0e9e8 10px solid;
 }
 @media only screen and (min-width: 768px) {
   .site-nav {
@@ -2235,11 +1490,26 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     float: right;
   }
 }
+<<<<<<< Updated upstream
+/*
+
+Foot - stara paticka
+====================
+
+*/
+#foot {
+  background: #024e40;
+  padding: 0.75em 30px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: -18px;
+=======
 .site-nav__small-screen li {
   display: inline-block;
+>>>>>>> Stashed changes
 }
 .site-nav__small-screen a.active {
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .site-nav a {
   -webkit-box-sizing: border-box;
@@ -2259,7 +1529,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 .container .site-nav a.active {
   color: white;
   text-decoration: none;
-  background-color: #9BD04E;
+  background-color: #9bd04e;
 }
 .container .pine-level-2 a {
   padding: 9px 15px 10px;
@@ -2280,115 +1550,1095 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
     border-top-color: rgba(255, 255, 255, 0.5);
   }
 }
-/* Modul About
-   ===========
-
-   Stránka "O nás".
+/*
+  Inline list
+  ===========
 */
-.about-perex {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+.inline-list {
+  margin-left: 23px;
+  line-height: 36px;
+  margin-bottom: 12px;
 }
-@media only screen and (min-width: 360px) and (max-width: 767px) {
-  .about-perex {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+.inline-list__heading {
+  font-style: 36px;
 }
-@media only screen and (min-width: 768px) {
-  .about-perex {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-.about-person {
-  text-align: center;
-}
-.about-person-image img {
-  border-radius: 50%;
+.inline-list__heading--invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  max-width: 138px;
-  display: block;
-  margin: 0 auto;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
-.about-person-short-text {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
+.inline-list__item {
+  padding: 9px 8px 8px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  border-radius: 5px;
 }
-@media only screen and (min-width: 768px) {
-  .about-person-full-text,
-  .about-person-full-contact {
-    margin-top: 9px;
-  }
+.inline-list__item-icon {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  background: #024e40;
 }
-.about-history {
-  background-color: #d8dbd8;
-  background-position: center center;
+.inline-list__item--two-stars,
+.inline-list__item--three-stars {
+  font-weight: bold;
 }
-@media only screen and (max-width: 767px) {
-  .about-history {
-    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .about-history {
-    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
-    background-attachment: fixed;
-  }
-}
-.about-history-perex {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3em 2em 2em 2em;
-  margin-top: 5em;
-  margin-bottom: 5em;
-}
-.about-history-perex .h1 {
-  margin-bottom: 10px;
-}
-.about-history-perex .h2 {
-  margin-bottom: 20px;
-}
-@media only screen and (min-width: 768px) {
-  .about-history-perex {
-    width: 55%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.about-web-item {
-  padding: 10px;
-  text-align: center;
+.inline-list__item--no-margin-bottom {
   margin-bottom: 0;
-  border-bottom: 2px solid #999;
 }
-.about-web-item-eslovensko {
-  border-color: #0EB10E;
+.inline-list__item.active,
+.inline-list__item:hover,
+.inline-list__item:focus,
+.inline-list__item:active {
+  background-color: #eee;
+  text-decoration: underline;
+  cursor: pointer;
+  border: 1px solid #ddd;
 }
-.about-web-item-velkymeder {
-  border-color: #06F;
-}
-.about-web-item-tuzemskadovolena {
-  border-color: #F60;
-}
-.about-web-item-epodhajska {
-  border-color: #c00;
-}
-.about-web-item-besenova {
-  border-color: #06F;
+<<<<<<< Updated upstream
+/* @define list-item
+=======
+/* @define list-item; weak
+>>>>>>> Stashed changes
+
+# Komponenta Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+*/
+.list-item {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 9px 0;
+  color: #666;
+  border: 1px solid transparent;
 }
 @media only screen and (min-width: 768px) {
-  .about-web-etc {
-    text-align: center;
-    padding-left: 260px;
-    padding-right: 260px;
+  .list-item {
+    float: left;
+    width: calc((100% - 42px) / 3);
+    height: 352px;
+    padding: 18px 9px 9px;
+    margin: 0 7px 0 7px;
+  }
+}
+.list-item__image {
+  position: relative;
+  float: left;
+  width: 36%;
+  margin-right: 4%;
+}
+@media only screen and (min-width: 768px) {
+  .list-item__image {
+    float: none;
+    width: auto;
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-right: 0;
   }
 }
 @media only screen and (min-width: 1180px) {
-  .about-legal {
-    padding-left: 300px;
-    padding-right: 300px;
+  .list-item__image {
+    height: 215px;
   }
+}
+.list-item__image img {
+  max-width: 100%;
+}
+.list-item__content {
+  float: left;
+  width: 60%;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .list-item__content {
+    float: none;
+    width: auto;
+  }
+}
+.list-item__content-paragraph {
+  margin-bottom: 0;
+}
+.list-item__content-heading {
+  font-size: 120%;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .list-item__content .price {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .list-item__content .price {
+    top: 200px;
+  }
+}
+.list-item--without-border {
+  border-bottom: 0;
+}
+.list-item--bordered {
+  border: 1px solid #ddd;
+}
+.list-item--active,
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
+  background-color: #eee;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.list-item--active-heading-anchor,
+.list-item:hover-heading-anchor,
+.list-item:focus-heading-anchor,
+.list-item:active-heading-anchor {
+  color: #075207;
+  text-decoration: underline;
+}
+.js .list-item--active,
+.js .list-item:hover,
+.js .list-item:focus,
+.js .list-item:active {
+  background-color: #dedede;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/*
+
+  Stylopis pro Fancygallery (prototyp)
+  Knihovna pro zobrazovani galerii obrazku.
+  Verze z 20. 10. 2011
+  Autor: Martin Michalek, michalek@shortcat.cz
+
+  Obsah:
+  1) jquery.fancybox.mod_shortcat.css     Shortcat vzhled FancyBoxu
+  2) jquery.jcarousel.css                 Zakladni stylopis pro jCarousel
+  3) jquery.jcarousel.skin.shortcat.css   Shortcat vizual pro jCarousel
+  4) fancygallery.css                     Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
+
+  Z-indexy:
+  1110	#fancybox-loading, #fancybox-thumbnails .jcarousel-item .hover-image (FB Gallery mouseover)
+  1109	#fancybox-inner:hover (Hover nad obrazkem)
+  1108	#fancybox-thumbnails (FB Gallery lista s thumbnaily)
+  1108	#fancybox-close
+  1107	#fancybox-left, #fancybox-right, #fancybox-left-ico, #fancybox-right-ico
+  1102	#fancybox-title
+  1101	#fancybox-wrap
+  1100	#fancybox-overlay
+
+*/
+/* =================================================================
+   1) jquery.fancybox.mod_shortcat.css
+   Shortcat vzhled FancyBoxu
+*/
+/*
+ * FancyBox - jQuery Plugin
+ * Simple and fancy lightbox alternative
+ *
+ * Examples and documentation at: http://fancybox.net
+ *
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
+ *
+ * Version: 1.3.1 (05/03/2010)
+ * Requires: jQuery v1.3+
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+ */
+/* Do not show scrollbars when FB is open */
+body.fancybox-active {
+  overflow: hidden;
+}
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1104;
+  display: none;
+}
+#fancybox-loading div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 480px;
+  background-image: url('../../images/fancygallery/fancybox.png');
+}
+#fancybox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  z-index: 1100;
+  display: none;
+}
+#fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: auto;
+  display: none;
+}
+#fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  z-index: 1101;
+  display: none;
+}
+#fancybox-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+}
+#fancybox-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+}
+#fancybox-inner:hover {
+  z-index: 1109;
+}
+#fancybox-hide-sel-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+#fancybox-close {
+  position: fixed;
+  right: 22px;
+  top: 24px;
+  width: 37px;
+  height: 37px;
+  background-image: url('../../images/fancygallery/fancy_close.gif');
+  background-position: top left;
+  cursor: pointer;
+  z-index: 1108;
+  display: none;
+}
+#fancybox-close:hover {
+  background-position: bottom left;
+}
+#fancybox_error {
+  color: #444;
+  font: normal 12px/20px Arial;
+  padding: 7px;
+  margin: 0;
+}
+#fancybox-content {
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+#fancybox-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  line-height: 0;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+#fancybox-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+#fancybox-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1102;
+}
+.fancybox-title-inside {
+  padding: 10px 0;
+  text-align: center;
+<<<<<<< Updated upstream
+  font-size: 24px;
+  font-weight: bold;
+  color: #9bd04e;
+}
+@media only screen and (min-width: 768px) {
+  .site-logo {
+    float: left;
+    margin-left: 30px;
+    text-align: left;
+    width: 300px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .site-logo a:hover {
+    text-decoration: none;
+  }
+}
+/* # Modul Site Nav
+
+Hlavní navigace webu.
+
+Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
+
+## Tři části navigace
+
+* `.site-nav__accom-search-link` – odkaz na vyhledávač ubytování
+* `.site-nav__main` – hlavní navigace, zobrazuje se jen na velkých displejích (řízeno Pine.JS)
+* `.site-nav__small-screen` – zobrazuje se jen na malých displejích
+
+## Příklad
+
+```
+<div role="navigation" class="site-nav">
+  <ul class="site-nav__accom-search-link">
+    <li><strong><a class="item" href="/">Najít ubytování</a></strong></li>
+  </ul>
+  <div id="navigace" class="site-nav__main pine pine-horizontal">
+    <ul class="pine-level-1">
+      <li><a class="item" href="/">Oblasti</a>
+        <ul class="pine-level-2">
+          <li><a class="item" href="/oblast/belianske-tatry/">Belianské Tatry</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Bratislava</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Jižní Slovensko</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Liptov</a></li>
+          <li><a class="item" href="/oblast/belianske-tatry/">Malá a Velká Fatra, Kysuca</a></li>
+        </ul>
+      </li>
+      <li><a class="item" href="/last-minute/">Last Minute</a></li>
+      <li><a class="item" href="/novinky/">Novinky</a></li>
+      <li><a class="item" href="/o/">O nás</a></li>
+      <li><a class="item" href="/kontakt/">Kontakt</a></li>
+    </ul>
+   </div>
+   <ul class="site-nav__small-screen">
+     <li><a href="#vyhledavani" class="site-nav__small-screen-search">Vyhledávání</a></li>
+     <li><a data-pine="toggle" class="site-nav__small-screen-nav" href="#navigace">Menu</a></li>
+   </ul>
+</div>
+```
+
+*/
+/* ## Využívá Pine.JS responzivní navigaci */
+.pine {
+  z-index: 100;
+  margin-bottom: 18px;
+  background: #024e40;
+  *zoom: 1;
+=======
+  color: #333;
+}
+.fancybox-title-outside {
+  padding-top: 5px;
+  color: #FFF;
+  text-align: center;
+>>>>>>> Stashed changes
+}
+.fancybox-title-over {
+  color: #FFF;
+  text-align: left;
+}
+#fancybox-title-over {
+  padding: 10px;
+  background-image: url('../../images/fancygallery/fancy_title_over.png');
+  display: block;
+}
+/* Outer title content */
+#fancybox-title-wrap {
+  position: fixed;
+  left: 22px;
+  top: 24px;
+  width: auto;
+  max-width: 400px;
+  max-height: 80%;
+  overflow-y: auto;
+  display: inline-block;
+  padding: 8px 10px;
+  background-image: url('../../images/fancygallery/fancy_title_over.png');
+}
+#fancybox-title-left,
+#fancybox-title-right {
+  display: none;
+}
+#fancybox-title-main {
+  color: #fff;
+  text-align: left;
+  display: block;
+  opacity: 1;
+}
+/* Left and right navigation arrows */
+#fancybox-left,
+#fancybox-right {
+  position: fixed;
+  bottom: 0px;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: none;
+  background-image: url('../../images/fancygallery/blank.gif');
+  z-index: 1107;
+  display: none;
+}
+#fancybox-left {
+  left: 0px;
+}
+#fancybox-right {
+  right: 0px;
+}
+#fancybox-left-ico,
+#fancybox-right-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 61px;
+  height: 77px;
+  margin-top: -30px;
+  cursor: pointer;
+  z-index: 1107;
+  display: block;
+}
+#fancybox-left-ico {
+  background-image: url('../../images/fancygallery/fancy_nav_left.png');
+  left: 0px;
+}
+#fancybox-right-ico {
+  background-image: url('../../images/fancygallery/fancy_nav_right.png');
+  left: auto;
+  right: 0px;
+}
+#fancybox-left:hover #fancybox-left-ico,
+#fancybox-left:focus #fancybox-left-ico,
+#fancybox-left:active #fancybox-left-ico,
+#fancybox-right:hover #fancybox-right-ico,
+#fancybox-right:focus #fancybox-right-ico,
+#fancybox-right:active #fancybox-right-ico {
+  background-position: 0 -77px;
+}
+/* Shadows are off */
+.fancy-bg {
+  display: none;
+}
+/* =================================================================
+   2) jquery.jcarousel.css
+   Zakladni stylopis pro jCarousel
+*/
+/**
+ * This <div> element is wrapped by jCarousel around the list
+ * and has the classname "jcarousel-container".
+ */
+.jcarousel-container {
+  position: relative;
+}
+.jcarousel-clip {
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+<<<<<<< Updated upstream
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  background: #024e40;
+}
+.pine li.pine-level-open > a,
+.pine li strong {
+  background: #9bd04e;
+}
+.pine li a:hover,
+.pine li a:focus,
+.pine li a:active {
+  background: #9bd04e;
+=======
+  position: relative;
+}
+.jcarousel-list {
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.jcarousel-list li,
+.jcarousel-item {
+  float: left;
+  list-style: none;
+  /* We set the width/height explicitly. No width/height causes infinite loops. */
+  width: 75px;
+  height: 75px;
+>>>>>>> Stashed changes
+}
+/**
+ * The buttons are added dynamically by jCarousel before
+ * the <ul> list (inside the <div> described above) and
+ * have the classnames "jcarousel-next" and "jcarousel-prev".
+ */
+.jcarousel-next {
+  z-index: 3;
+  display: none;
+}
+.jcarousel-prev {
+  z-index: 3;
+  display: none;
+}
+/* =================================================================
+   3) jquery.jcarousel.skin.shortcat.css
+   Shortcat vizual pro jCarousel
+*/
+/*
+Stylesheet for jQuery carousel - Shortcat skin
+Author:        Martin Michalek, Studio Shortcat, michalek@shortcat.cz
+*/
+.jcarousel-skin-shortcat .jcarousel-container {
+  top: -2px;
+  left: -2px;
+  position: relative;
+  margin: 0 10px;
+  width: 897px;
+}
+<<<<<<< Updated upstream
+@media (min-width: 768px) {
+  .pine {
+    background: #024e40;
+    border: none;
+  }
+  .pine li {
+    position: relative;
+  }
+  .pine a,
+  .pine strong {
+    display: block;
+    border-bottom: 0;
+    text-indent: 0;
+  }
+=======
+.jcarousel-skin-shortcat .jcarousel-container-horizontal {
+  padding: 0 40px;
+  width: auto;
+>>>>>>> Stashed changes
+}
+.jcarousel-skin-shortcat .jcarousel-clip-horizontal {
+  height: 40px;
+  width: auto;
+}
+.jcarousel-skin-shortcat .jcarousel-item,
+.jcarousel-skin-shortcat .jcarousel-item img {
+  width: 40px;
+  height: 40px;
+}
+.jcarousel-skin-shortcat .jcarousel-item img {
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.jcarousel-skin-shortcat .jcarousel-item.active img,
+.jcarousel-skin-shortcat .jcarousel-item:hover img {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+.jcarousel-skin-shortcat .jcarousel-item-horizontal {
+  margin-right: 3px;
+}
+.jcarousel-skin-shortcat .jcarousel-item-placeholder {
+  background: #fff;
+  color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-shortcat .jcarousel-next-horizontal {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 33px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent url(../../images/fancygallery/fancygallery_next.gif) no-repeat top right;
+}
+.jcarousel-skin-shortcat .jcarousel-next-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-next-horizontal.hover,
+.jcarousel-skin-shortcat .jcarousel-next-horizontal:active {
+  background-position: top right;
+}
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-next-disabled-horizontal:active {
+  cursor: default;
+  background-image: none;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  width: 33px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent url(../../images/fancygallery/fancygallery_prev.gif) no-repeat 0 0;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal.hover,
+.jcarousel-skin-shortcat .jcarousel-prev-horizontal:active {
+  background-position: 0 0;
+}
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-shortcat .jcarousel-prev-disabled-horizontal:active {
+  cursor: default;
+  background-image: none;
+}
+/* =================================================================
+   4) fancygallery.css
+   Styly pro FancyGallery, ktere neobsahuje Fancybox Shortcat mod
+*/
+/* Vrstva s thumbnaily  */
+#fancybox-thumbnails {
+  position: fixed;
+  z-index: 1108;
+  bottom: 20px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+}
+/* == Vrstva s thumbnaily v pripade kdy zobrazujeme vetsi obrazek na mouseover == */
+#fancybox-thumbnails,
+#fancybox-thumbnails .jcarousel-skin-shortcat .jcarousel-clip-horizontal {
+  height: 129px;
+  /* 40px maly nahled + 75px mouseover nahled + 4px border + 10px sipka */
+}
+/* Vetsi obrazek zobrazovany na mouseover */
+#fancybox-thumbnails .jcarousel-item .hover-image {
+  width: 75px;
+  height: 86px;
+  padding: 2px;
+  position: relative;
+  top: -129px;
+  left: -20px;
+  display: none;
+  background-image: url(../../images/fancygallery/fancygallery_thumbnail_hover.gif);
+  background-repeat: no-repeat;
+}
+#fancybox-thumbnails .jcarousel-item .hover-image img {
+  width: 75px;
+  height: 75px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+}
+#fancybox-thumbnails .jcarousel-item:hover .hover-image {
+  display: block;
+}
+#fancybox-thumbnails .jcarousel-item,
+#fancybox-thumbnails .jcarousel-next-horizontal,
+#fancybox-thumbnails .jcarousel-prev-horizontal {
+  margin-top: 89px;
+  /* 75px mouseover nahled + 4px border + 10px sipka */
+}
+/*
+Zkousime dostat mouseover ven z rodicovskeho overflow:hidden prvku:
+Rodicum nastavime position: static a synovi pak position: absolute.
+(Viz http://www.vzhurudolu.cz/test/override-overflow-hidden/)
+*/
+#fancybox-thumbnails .jcarousel-clip,
+#fancybox-thumbnails .jcarousel-list {
+  position: static;
+}
+#fancybox-thumbnails .jcarousel-item .hover-image {
+  position: absolute;
+  top: auto;
+  left: auto;
+  margin-top: -129px;
+  margin-left: -20px;
+  z-index: 1110;
+}
+#fancybox-thumbnails.scrolling .jcarousel-clip,
+#fancybox-thumbnails.scrolling .jcarousel-list {
+  position: relative;
+}
+/* Pokud v titulku fotky zobrazujeme i titulek setu, zmenime jeho barvu */
+#fancybox-title-main .set {
+  color: #999;
+}
+/*
+
+Helpery
+=======
+
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+<<<<<<< Updated upstream
+.pine-trigger {
+  display: none;
+  padding: 9px 12px;
+  color: white;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #024e40;
+  text-decoration: none;
+=======
+.clearfix:after {
+  clear: both;
+>>>>>>> Stashed changes
+}
+.container .margin_bottom {
+  margin-bottom: 18px;
+}
+.container .margin_bottom_half {
+  margin-bottom: 9px;
+}
+.container .margin_bottom_double {
+  margin-bottom: 36px;
+}
+.without_margin_bottom {
+  margin-bottom: 0;
+}
+.margin_top_negative {
+  margin-top: -18px;
+}
+.container .margin_top {
+  margin-top: 18px;
+}
+.container .margin_top_double {
+  margin-top: 36px;
+}
+.margin_top_half {
+  margin-top: 9px;
+}
+.desktop_only {
+  display: none !important;
+}
+@media only screen and (min-width: 768px) {
+  .desktop_only {
+    display: block !important;
+  }
+}
+.dumb_only {
+  display: none !important;
+}
+.center,
+.text-center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.clear_both {
+  clear: both;
+}
+.block_center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+.suppress {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+.float_right {
+  float: right;
+}
+.float_left {
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  .last {
+    margin-right: 0 !important;
+  }
+}
+.tabbed_text {
+  padding-left: 15px;
+  padding-right: 45px;
+}
+.small {
+  font-size: 11px;
+  line-height: 13px;
+  color: #999;
+}
+.small a {
+  color: #999;
+  text-decoration: underline;
+}
+<<<<<<< Updated upstream
+.fx-right-to-left .pine-back > a {
+  position: relative;
+  background: #9bd04e;
+  text-align: center;
+=======
+.small a:hover,
+.small a:focus,
+.small a:active {
+  color: #666;
+>>>>>>> Stashed changes
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.floatLeft50 {
+  float: left;
+  width: 48%;
+}
+<<<<<<< Updated upstream
+.site-nav {
+  clear: both;
+  background: #024e40;
+  border-bottom: #9bd04e 10px solid;
+  border-top: #e0e9e8 10px solid;
+=======
+.floatRight50 {
+  float: right;
+  width: 48%;
+>>>>>>> Stashed changes
+}
+.clearBothZero,
+.clear_zero {
+  display: block;
+  clear: both;
+  font-size: 1px;
+  line-height: 1px;
+  height: 1px;
+}
+.marginBottom3 {
+  margin-bottom: 3em;
+}
+.marginBottom1half {
+  margin-bottom: 1.5em;
+}
+.marginRight15 {
+  margin-right: 15px;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.displayNone {
+  display: none;
+}
+.marginTopNo {
+  margin-top: 0;
+}
+.sideOne .marginTopNo {
+  margin-top: -1.5em;
+}
+.alignLeft {
+  text-align: left;
+}
+.alignRight {
+  text-align: right;
+}
+.alignCenter {
+  text-align: center;
+}
+.alignMiddle {
+  vertical-align: middle;
+}
+.required {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #f60;
+}
+p.submit {
+  text-align: right;
+}
+.big {
+  font-size: 1.5em;
+  font-weight: bold;
+  vertical-align: middle;
+}
+<<<<<<< Updated upstream
+.site-nav__small-screen a.active {
+  background-color: #9bd04e;
+=======
+.fontSmall {
+  font-size: 0.5em;
+  font-weight: normal;
+>>>>>>> Stashed changes
+}
+small.fontSmall {
+  font-size: 0.6em;
+  font-weight: normal;
+}
+<<<<<<< Updated upstream
+.container .site-nav a:hover,
+.container .site-nav a:focus,
+.container .site-nav a:active,
+.container .site-nav a.active {
+  color: white;
+  text-decoration: none;
+  background-color: #9bd04e;
+=======
+table.fontSmall td,
+table.fontSmall th {
+  font-size: 1.4em;
+  font-weight: normal;
+>>>>>>> Stashed changes
+}
+.clearBoth {
+  clear: both;
+}
+.container .alignRight {
+  text-align: right;
+}
+.container .alignLeft {
+  text-align: left;
+}
+.container .alignCenter {
+  text-align: center;
+}
+.testRed {
+  border: 1px solid red;
+}
+.displayInline {
+  display: inline;
+}
+.displayNone {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.width100 {
+  width: 100%;
+}
+.width50 {
+  width: 50%;
+}
+.display_block {
+  display: block;
+}
+.more_link {
+  margin: 2em 0;
+  text-align: center;
+}
+.accommodation_big_item {
+  margin-bottom: 36px;
+}
+.unveil {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+.more_info {
+  color: #666;
+}
+.legend {
+  color: #999;
+  text-align: right;
+}
+.similar_items {
+  margin-top: 54px;
+}
+<<<<<<< Updated upstream
+.about-web-item-eslovensko {
+  border-color: #0eb10e;
+}
+.about-web-item-velkymeder {
+  border-color: #06f;
+}
+.about-web-item-tuzemskadovolena {
+  border-color: #f60;
+=======
+#map_container {
+  margin: -35px -8px 27px -30px;
+  width: auto;
+  height: 562px;
+}
+#mapa_okoli {
+  margin-top: 8px;
+}
+#subdivisions {
+  max-width: 940px;
+  margin-bottom: 36px;
+>>>>>>> Stashed changes
+}
+#subdivisions h3 {
+  margin-bottom: 9px;
+  border-bottom: 1px solid #ccc;
+}
+<<<<<<< Updated upstream
+.about-web-item-besenova {
+  border-color: #06f;
+=======
+.more_photos a {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0;
+  padding-left: 0;
+  padding: 5px 7px;
+  display: block;
+>>>>>>> Stashed changes
+}
+.more_photos a:hover,
+.more_photos a:focus,
+.more_photos a:active {
+  background-color: #eee;
+  cursor: pointer;
+}
+input.input--border {
+  border: 1px solid #000;
+}
+textarea.textarea--border {
+  border: 1px solid #000;
 }
 /* # Tmave barevne schema
 
