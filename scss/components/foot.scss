@@ -1,0 +1,26 @@
+/*
+
+Foot - stara paticka
+====================
+
+*/
+
+// TODO
+// - cele  znova
+
+#foot {
+  background: $color-beta;
+  padding:.75em 30px;
+  color:#fff;
+  margin:0;
+  // Fix kvuli toplistu a spol napr pro velkymeder.cz/ubytovani/apartmany-kovacs/
+  margin-bottom: -18px;
+
+  @media print {
+    display: none;
+  }
+}
+
+#foot a {
+  color:#fff;
+}

@@ -1,0 +1,30 @@
+/*
+
+Vzhled body
+===========
+
+*/
+
+body {
+  background: #eee;
+  color: #000;
+
+  @media $large-start {
+    padding-bottom: 50px;
+  }
+}
+
+// Ajaxova varianta body
+// Napr. http://e-slovensko.local/ajax/atrakce/1148-thermal-park-besenova/
+
+@media $large-start {
+
+  body.ajax {
+    background: #fff;
+    padding: 0;
+  }
+
+  body.ajax .container {
+    box-shadow: none;
+  }
+}

@@ -1,8 +1,12 @@
 module.exports = function(grunt) {
+
+  const sass = require('node-sass');
+
   // Nacteme vsechny grunt tasky a urychlime srandu
   require("jit-grunt")(grunt);
 
   grunt.initConfig({
+
     less: {
       default: {
         files: {
@@ -14,6 +18,16 @@ module.exports = function(grunt) {
           sourceMapURL: "style.css.map",
           sourceMapRootpath: ""
         }
+      }
+    },
+
+    sass: {
+      options: {
+          implementation: sass,
+          sourceMap: true
+      },
+      dist: {
+        "css/style.css": "scss/index.scss"
       }
     },
 

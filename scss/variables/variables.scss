@@ -1,0 +1,77 @@
+
+// Pismo
+// -----
+
+$base-font-size: 		   12px;
+$base-line-height: 		 18px;
+$smaller-font-size: 	 11px;
+$smaller-line-height:  13px;
+$larger-font-size: 		 14px;
+$larger-line-height: 	 20px;
+
+// Barvy
+// -----
+
+// TODO:
+//- Zde jen pro ESK, pridat vychozi sedive schema
+//- Proc anchor a jeste color-alpha?
+
+$anchor-color: 	#0EB10E;
+$active-color: 	darken($anchor-color, 20%);
+$text-color: 	#000;
+
+// Svetla barva pro pozadi prvku
+// Smichana hlavni barva se svetle sedivou.
+// (Otestovano jako viditelne i na mem Samsung monitoru)
+$color-light: mix(lighten($color-alpha, 60%), #f0f0f0, 30%);
+$color-light-plus: mix(lighten($color-alpha, 60%), #ccc, 30%);
+
+// Tmave barvy
+$color-dark: mix(darken($color-alpha, 10%), #999, 25%);
+$color-dark-plus: mix(darken($color-alpha, 20%), #666, 30%);
+
+// Odkazy v textu
+$color-alpha: #0EB10E;
+// Pozadí navigace a paticky
+$color-beta: #024E40;
+// Proužek pod navigací
+$color-gamma: #9BD04E;
+// Proužek nad navigací
+$color-delta: #E0E9E8;
+
+
+// Layout
+// ------
+
+$gutter: 14px;
+$column-width: 304px;
+
+
+// Breakpointy
+// -----------
+
+// Hodnoty
+$large-start-value:         768px;
+$extra-large-start-value:   1180px;
+
+// Odvozene hodnoty
+$small-end-value:     ($large-start-value - 1);
+
+// Media Queries
+// (Pouzivame napr. jako @media @medium-start { … }
+$small-end:           ~"only screen and (max-width: @{small-end-value})";
+$large-start:         ~"only screen and (min-width: @{large-start-value})";
+$extra-large-start:   ~"only screen and (min-width: @{extra-large-start-value})";
+
+
+// Padding
+// -------
+
+$padding-y: 5px;
+$padding-x: 8px;
+
+$padding-sm-y: 3px;
+$padding-sm-x: 5px;
+
+$padding-lg-y: 9px;
+$padding-lg-x: 12px;

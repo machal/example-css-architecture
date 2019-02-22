@@ -1,0 +1,14 @@
+/*
+   Fancybox
+   ========
+*/
+
+// Zatim jen zkopirovane z old_layout.less
+
+.fancybox:hover img,
+.fancybox:active img,
+.fancybox:focus img {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  opacity: .9;
+}

@@ -16,6 +16,7 @@
     "grunt-stylelint": "^0.10.1",
     "jit-grunt": "^0.10.0",
     "load-grunt-config": "^1.0.1",
+    "node-sass": "^4.11.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-config-visionapps-order": "^0.3.1",

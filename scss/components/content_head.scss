@@ -1,0 +1,17 @@
+/*
+
+Hlavička obsahu stránky
+=======================
+
+*/
+
+// Hlavička s nadpisem, příp. filtry, bonusovou reklamou, lajkovacím tlačítkem a subnavigací.
+
+.content__head {
+  text-align: center;
+  padding: 12px 20px;
+
+  @media $large-start {
+    text-align: left;
+  }
+}

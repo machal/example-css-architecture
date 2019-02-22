@@ -1,0 +1,120 @@
+/* # Komponenta Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+*/
+
+
+.list-item {
+  position: relative;
+  padding: 9px 0;
+  border: 1px solid transparent;
+  color: #66;
+
+  box-sizing: border-box;
+
+
+  @media $large-start {
+    float: left;
+    width:  ~"calc((100% - 42px) / 3)";   // 304
+    height: 352px;
+    padding: 18px 9px 9px;
+    margin: 0 7px 0 7px;
+  }
+}
+
+.list-item  .image {
+  position: relative;
+  float: left;
+  width: 36%;
+  margin-right: 4%;
+
+  @media $large-start {
+    width: auto;
+    float: none;
+    height: 165px; // 4:3
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
+  @media $extra-large-start {
+    height: 215px; // 4:3
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+// Textovy obsah
+
+.list-item .content {
+  float: left;
+  width: 60%;
+  padding: 0; // reset .content
+
+  @media $large-start {
+    float: none;
+    width: auto;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 120%;
+    margin-bottom: 0;
+  }
+}
+
+.list-item .content .price {
+  @media $large-start {
+    position: absolute;
+    right: 3px;
+    top: 150px;
+  }
+
+  @media $extra-large-start {
+    top: 200px;
+  }
+}
+
+// Varianta bez spodniho ramecku
+// Napr. na homepages verze 2014
+
+.list-item.without_border {
+  border-bottom: 0;
+}
+
+.list-item.bordered {
+  border: 1px solid #ddd;
+}
+
+
+// Aktivni stavy
+.list-item.active,
+.list-item:hover,
+.list-item:focus,
+.list-item:active {
+  background-color: #eee;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid #ddd;
+
+  h2 a {
+    color: darken($color-alpha, 20%);
+    text-decoration: underline;
+  }
+
+  // Funkcnost s povolenym JS
+
+  .js & {
+    background-color: #dedede;
+  }
+}
+
+

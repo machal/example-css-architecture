@@ -1,0 +1,141 @@
+/*
+
+Typografie a linearni design
+============================
+
+*/
+
+// TODO
+// * `#content` pryc
+// * sjednotit velikosti fontů, viz třeba h2 zde vs. `$larger-font-size`
+
+// Typografie
+// ----------
+
+body, input, textarea, option, select {
+  font: $base-font-size/$base-line-height Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+// Odkazy
+// ------
+
+a {
+  color: $color-alpha;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color-alpha, 20%);
+    text-decoration: underline;
+  }
+}
+
+// Linearni design
+// ---------------
+
+
+p, ul, ol, table, blockquote {
+  padding: 0;
+  margin: 0;
+  margin-bottom: $base-line-height;
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 27px 5px;
+  color: #666;
+  font-weight: normal;
+
+  @media $large-start {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #999;
+
+  @media $large-start {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+h3,
+.h3 {
+	display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #666;
+}
+
+h4,
+.h4 {
+	display: block;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+
+h2 small,
+h3 small {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+	color: #999;
+}
+
+big {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+ul,
+ol {
+  margin: 0 0 $base-line-height 14px;
+  padding: 0 0 0 0;
+  color: #ccc;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ul li,
+ol li {
+  color: #000;
+}
+
+@media $large-start {
+
+  h2 small.float_right {
+    margin-top: 5px;
+  }
+}
