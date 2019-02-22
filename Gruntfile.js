@@ -7,20 +7,6 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    less: {
-      default: {
-        files: {
-          "css/style.css": "less/index.less"
-        },
-        options: {
-          sourceMap: true,
-          sourceMapFilename: "css/style.css.map",
-          sourceMapURL: "style.css.map",
-          sourceMapRootpath: ""
-        }
-      }
-    },
-
     sass: {
       options: {
           implementation: sass,
@@ -58,7 +44,7 @@ module.exports = function(grunt) {
 
     prettier: {
       css: {
-        src: ["less/**/*.less", "!less/lib/**/*"]
+        src: ["scss/**/*.scss", "!scss/lib/**/*"]
       },
       js: {
         src: ["Gruntfile.js", "js/*.js"]
@@ -67,19 +53,19 @@ module.exports = function(grunt) {
 
     stylelint: {
       options: {
-        syntax: "less"
+        syntax: "scss"
       },
-      src: ["less/**/*.less"]
+      src: ["scss/**/*.scss"]
     },
 
     watch: {
       default: {
-        files: ["less/**/*.less"],
+        files: ["scss/**/*.scss"],
         tasks: ["css"]
       }
     }
   });
 
-  grunt.registerTask("css", ["less", "postcss"]);
+  grunt.registerTask("css", ["scss", "postcss"]);
   grunt.registerTask("default", ["browserSync", "watch"]);
 };
