@@ -5,13 +5,12 @@ Hlavička obsahu stránky
 
 */
 
-// Hlavička s nadpisem, příp. filtry, bonusovou reklamou, lajkovacím tlačítkem a subnavigací.
-
 .content__head {
   text-align: center;
-  padding: 12px 20px;
+  padding: 2*$base-line-height;
+  text-align: center;
+}
 
-  @media $large-start {
-    text-align: left;
-  }
+.content__head h1 {
+  margin-bottom: 0;
 }

@@ -14,7 +14,7 @@
     padding-left: 50px;
     padding-right: 50px;
   }
-  @media $large-start {
+  @media #{$large-start} {
     padding-left: 250px;
     padding-right: 250px;
   }
@@ -43,7 +43,7 @@
 
 .about-person-full-text,
 .about-person-full-contact {
-  @media $large-start {
+  @media #{$large-start} {
     margin-top: $base-line-height/2;
   }
 }
@@ -55,12 +55,12 @@
   background-color: $color-light-plus;
   background-position: center center;
 
-  @media $small-end {
+  @media #{$small-end} {
     background-image:
       url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
   }
 
-  @media $large-start {
+  @media #{$large-start} {
     background-image:
       url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
     // Na mobilech bud nefunguje (iOS)
@@ -84,7 +84,7 @@
     margin-bottom: 20px;
   }
 
-  @media $large-start {
+  @media #{$large-start} {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
@@ -108,7 +108,7 @@
 .about-web-item-besenova { border-color: #06F; }
 
 .about-web-etc {
-  @media $large-start {
+  @media #{$large-start} {
     text-align: center;
     padding-left: 260px;
     padding-right: 260px;
@@ -119,7 +119,7 @@
 // -------------------
 
 .about-legal {
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     padding-left: 300px;
     padding-right: 300px;
   }

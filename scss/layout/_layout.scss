@@ -51,7 +51,7 @@ Nová (od 12/2015)
 .content {
   padding: 13px 7px 36px;
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     padding: 22px 23px 36px;
   }
 }
@@ -60,7 +60,7 @@ Nová (od 12/2015)
   background: #fff url(grid.png) repeat-y 0 0;
 }
 
-@media $small-end {
+@media #{$small-end} {
   /*
   Layout obsahu (#content)
   - 7px levy margin
@@ -86,7 +86,7 @@ Nová (od 12/2015)
 /* --- Telo dokumentu - hlavni informace, jez se budou prenaset do Fancyboxu --- */
 
 .content__body {
-  .clearfix;
+  @include clearfix();
   margin-bottom: 18px;
 }
 
@@ -102,7 +102,7 @@ Nová (od 12/2015)
 
 .row {
 	margin-bottom: $base-line-height;
-	.clearfix();
+	@include clearfix();
 }
 
 /*
@@ -113,7 +113,7 @@ Vyšší specifičnost kvůli kolizím např. s `.out-of-box`.
 */
 
 .row.row-limited {
-  @media $large-start {
+  @media #{$large-start} {
     margin-right: 22px; // 30-8, viz #content
   }
 }
@@ -131,30 +131,30 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
 */
 
 .column {
-  @media $large-start {
+  @media #{$large-start} {
     float: left;
-    width: ~"calc(97% / 3)"; // gutter (1.5%) * 2
+    width: calc(97% / 3); // gutter (1.5%) * 2
     margin-right: 1.5%;
     overflow: hidden; // Aby nedochazelo ke spatnemu zalamovani sloupcu pri desetinich napr 0.1px sloupcich
   }
 }
 
 .double_column {
-  @media $large-start {
+  @media #{$large-start} {
     float: left;
-    width: ~"calc((97% / 3) * 2)"; // gutter (1.5%) * 2
+    width: calc((97% / 3) * 2); // gutter (1.5%) * 2
     margin-right: 1.5%;
   }
 }
 
 .triple_column {
-  @media $large-start {
+  @media #{$large-start} {
     width: 100%;
   }
 }
 
 .half_column {
-  @media $large-start {
+  @media #{$large-start} {
     float: left;
     width: ($column-width/2 - $gutter); // 145px
     margin-right: $gutter;
@@ -165,7 +165,7 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   margin-right: 0;
 }
 
-@media $large-start {
+@media #{$large-start} {
 
 	.content.without_top_pad {
 		padding-top: 0;
@@ -213,7 +213,7 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
    - Stary layout uvnitr stranky (docasny)
 
 */
-@media $small-end {
+@media #{$small-end} {
 
     /* Nezobrazujeme cely Likebox, jen maly buttonek */
     #facebookLikeBox

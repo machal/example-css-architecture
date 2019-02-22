@@ -12,9 +12,14 @@ $larger-line-height: 	 20px;
 // Barvy
 // -----
 
-// TODO:
-//- Zde jen pro ESK, pridat vychozi sedive schema
-//- Proc anchor a jeste color-alpha?
+// Odkazy v textu
+$color-alpha: #0EB10E;
+// Pozadí navigace a paticky
+$color-beta: #024E40;
+// Proužek pod navigací
+$color-gamma: #9BD04E;
+// Proužek nad navigací
+$color-delta: #E0E9E8;
 
 $anchor-color: 	#0EB10E;
 $active-color: 	darken($anchor-color, 20%);
@@ -29,16 +34,6 @@ $color-light-plus: mix(lighten($color-alpha, 60%), #ccc, 30%);
 // Tmave barvy
 $color-dark: mix(darken($color-alpha, 10%), #999, 25%);
 $color-dark-plus: mix(darken($color-alpha, 20%), #666, 30%);
-
-// Odkazy v textu
-$color-alpha: #0EB10E;
-// Pozadí navigace a paticky
-$color-beta: #024E40;
-// Proužek pod navigací
-$color-gamma: #9BD04E;
-// Proužek nad navigací
-$color-delta: #E0E9E8;
-
 
 // Layout
 // ------
@@ -58,10 +53,10 @@ $extra-large-start-value:   1180px;
 $small-end-value:     ($large-start-value - 1);
 
 // Media Queries
-// (Pouzivame napr. jako @media @medium-start { … }
-$small-end:           "only screen and (max-width: #{small-end-value})";
-$large-start:         "only screen and (min-width: #{large-start-value})";
-$extra-large-start:   "only screen and (min-width: #{extra-large-start-value})";
+// (Pouzivame napr. jako @media #{$small-end-value} { … }
+$small-end:           "only screen and (max-width: #{$small-end-value})";
+$large-start:         "only screen and (min-width: #{$large-start-value})";
+$extra-large-start:   "only screen and (min-width: #{$extra-large-start-value})";
 
 
 // Padding

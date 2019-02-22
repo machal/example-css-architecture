@@ -13,7 +13,9 @@ Typografie a linearni design
 // ----------
 
 body, input, textarea, option, select {
-  font: $base-font-size/$base-line-height Arial, Helvetica, sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -53,7 +55,7 @@ h1,
   color: #666;
   font-weight: normal;
 
-  @media $large-start {
+  @media #{$large-start} {
     font-size: 24px;
     line-height: 28px;
   }
@@ -68,7 +70,7 @@ h2,
   font-weight: normal;
   color: #999;
 
-  @media $large-start {
+  @media #{$large-start} {
     font-size: 18px;
     line-height: 24px;
   }
@@ -133,7 +135,7 @@ ol li {
   color: #000;
 }
 
-@media $large-start {
+@media #{$large-start} {
 
   h2 small.float_right {
     margin-top: 5px;

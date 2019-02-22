@@ -9,14 +9,13 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   position: relative;
   padding: 9px 0;
   border: 1px solid transparent;
-  color: #66;
+  color: #666;
 
   box-sizing: border-box;
 
-
-  @media $large-start {
+  @media #{$large-start} {
     float: left;
-    width:  ~"calc((100% - 42px) / 3)";   // 304
+    width:  calc((100% - 42px) / 3);   // 304
     height: 352px;
     padding: 18px 9px 9px;
     margin: 0 7px 0 7px;
@@ -29,7 +28,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   width: 36%;
   margin-right: 4%;
 
-  @media $large-start {
+  @media #{$large-start} {
     width: auto;
     float: none;
     height: 165px; // 4:3
@@ -38,7 +37,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     margin-right: 0;
   }
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     height: 215px; // 4:3
   }
 
@@ -56,7 +55,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   width: 60%;
   padding: 0; // reset .content
 
-  @media $large-start {
+  @media #{$large-start} {
     float: none;
     width: auto;
   }
@@ -72,13 +71,13 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 }
 
 .list-item .content .price {
-  @media $large-start {
+  @media #{$large-start} {
     position: absolute;
     right: 3px;
     top: 150px;
   }
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     top: 200px;
   }
 }

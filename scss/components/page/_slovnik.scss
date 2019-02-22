@@ -19,7 +19,7 @@
 
 // --- Stranka ESK/Slovnik ---
 
-@media $large-start {
+@media #{$large-start} {
 
   .slovnik-input {
       text-align: left;
@@ -42,4 +42,4 @@
       margin-top: 36px;
   }
 
-} // @media $large-start
+} // @media #{$large-start}

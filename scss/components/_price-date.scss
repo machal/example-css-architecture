@@ -77,7 +77,7 @@ Ceny, datumy - velke "cenovky"
 // Velke displeje
 // --------------
 
-@media $large-start {
+@media #{$large-start} {
 
 
   // --- Modul Cena ---

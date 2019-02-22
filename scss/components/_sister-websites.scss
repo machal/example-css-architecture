@@ -10,15 +10,15 @@
   margin:0;
 
   // Na malych displejich a v tisku nezobrazujeme
-  @media $small-end, print {
+  @media #{$small-end}, print {
     display: none;
   }
 
-  @media $large-start {
+  @media #{$large-start} {
     height: 44px;
   }
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     height: 22px;
   }
 }
@@ -31,11 +31,11 @@
   padding:3px 0;
   color:#ccc;
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     width: 10%;
   }
 
-  @media $extra-large-start {
+  @media #{$extra-large-start} {
     width: 100px; /* = sirka .container (1000px) / pocet polozek (10)  */
   }
 }
