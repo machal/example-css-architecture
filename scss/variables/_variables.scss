@@ -59,9 +59,9 @@ $small-end-value:     ($large-start-value - 1);
 
 // Media Queries
 // (Pouzivame napr. jako @media @medium-start { … }
-$small-end:           ~"only screen and (max-width: @{small-end-value})";
-$large-start:         ~"only screen and (min-width: @{large-start-value})";
-$extra-large-start:   ~"only screen and (min-width: @{extra-large-start-value})";
+$small-end:           "only screen and (max-width: #{small-end-value})";
+$large-start:         "only screen and (min-width: #{large-start-value})";
+$extra-large-start:   "only screen and (min-width: #{extra-large-start-value})";
 
 
 // Padding

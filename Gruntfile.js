@@ -26,8 +26,10 @@ module.exports = function(grunt) {
           implementation: sass,
           sourceMap: true
       },
-      dist: {
-        "css/style.css": "scss/index.scss"
+      default: {
+        files: {
+          "css/style.css": "scss/index.scss"
+        }
       }
     },
 
