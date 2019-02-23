@@ -1369,6 +1369,19 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     font-size: 120%;
     margin-bottom: 0; }
 
+.list-item .price {
+  display: inline-block;
+  width: auto;
+  color: #444; }
+  .list-item .price strong {
+    font-weight: normal;
+    color: #888; }
+
+.list-item .price.price--big {
+  background-color: #ddd;
+  padding: 3px;
+  margin: 0 6px 18px 0; }
+
 @media only screen and (min-width: 768px) {
   .list-item .content .price {
     position: absolute;
@@ -1400,58 +1413,6 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   .list-item:focus, .js
   .list-item:active {
     background-color: #dedede; }
-
-/*
-
-Ceny, datumy - velke "cenovky"
-===============================
-
-*/
-.price {
-  display: inline-block;
-  width: auto;
-  color: #444; }
-  .price strong {
-    font-weight: normal;
-    color: #888; }
-
-.price.price--big {
-  background-color: #ddd;
-  padding: 3px;
-  margin: 0 6px 18px 0; }
-
-.date.date--big {
-  display: inline-block;
-  width: auto;
-  color: #444;
-  background-color: #ddd;
-  padding: 3px;
-  margin: 0 6px 18px 0; }
-  .date.date--big strong {
-    font-weight: normal;
-    color: #888; }
-
-.big_label {
-  display: inline-block;
-  width: auto;
-  color: #444;
-  background-color: #ddd;
-  padding: 3px;
-  margin: 0 6px 18px 0; }
-  .big_label strong {
-    font-weight: normal;
-    color: #888; }
-
-@media only screen and (min-width: 768px) {
-  .price.price--big {
-    font-size: 16px;
-    padding: 7px; }
-  .date.date--big {
-    font-size: 16px;
-    padding: 7px; }
-  .big_label {
-    font-size: 16px;
-    padding: 7px; } }
 
 /* # Modul Site Logo
 

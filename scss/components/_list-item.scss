@@ -67,6 +67,25 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
 // Cenovy stitek
 
+.list-item .price {
+  display: inline-block;
+  width: auto;
+  color: #444;
+
+    strong {
+      font-weight: normal;
+      color: #888;
+    }
+}
+
+.list-item .price.price--big {
+  background-color: #ddd;
+  padding: 3px;
+    margin: 0 6px 18px 0;
+}
+
+// Umisteni v komponente
+
 .list-item .content .price {
   @media #{$large-start} {
     position: absolute;
@@ -74,6 +93,8 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
     right: -3px;
   }
 }
+
+
 
 // Varianta bez spodniho ramecku
 // Napr. na homepages verze 2014
