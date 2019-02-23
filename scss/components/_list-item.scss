@@ -60,7 +60,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 
   h2 {
-    font-size: 120%;
+    @include fs(22px);
     margin-bottom: 0;
   }
 }

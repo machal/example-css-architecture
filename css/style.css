@@ -526,7 +526,7 @@ Typografie a linearni design
 */
 body, input, textarea, option, select {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   font-family: Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -542,7 +542,7 @@ a {
 p, ul, ol, table, blockquote {
   padding: 0;
   margin: 0;
-  margin-bottom: 24px; }
+  margin-bottom: 22px; }
 
 h1,
 .h1 {
@@ -585,7 +585,7 @@ h4,
 .h4 {
   display: block;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   margin: 0;
   padding: 0;
   font-weight: bold;
@@ -594,7 +594,7 @@ h4,
 h2 small,
 h3 small {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22px;
   color: #999; }
 
 big {
@@ -604,7 +604,7 @@ big {
 
 ul,
 ol {
-  margin: 0 0 24px 14px;
+  margin: 0 0 22px 14px;
   padding: 0 0 0 0;
   color: #ccc; }
 
@@ -1003,7 +1003,7 @@ Nová (od 12/2015)
 ## Řádka layoutu je `.row`
 */
 .row {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   *zoom: 1; }
   .row:before, .row:after {
     display: table;
@@ -1162,7 +1162,7 @@ Hlavička obsahu stránky
 */
 .content__head {
   text-align: center;
-  padding: 48px;
+  padding: 44px;
   text-align: center; }
 
 .content__head h1 {
@@ -1211,7 +1211,7 @@ a.flag:active {
 
 @media only screen and (min-width: 768px) {
   .flag--lg {
-    font-size: 14px;
+    font-size: 20px;
     padding: 9px 12px; } }
 
 .flag--bestseller {
@@ -1242,15 +1242,15 @@ a.flag:active {
   left: 2px; }
 
 .flags .flag + .flag {
-  top: 38px; }
+  top: 36px; }
   @media only screen and (min-width: 768px) {
     .flags .flag + .flag.flag--lg {
-      top: 46px; } }
+      top: 44px; } }
   .flags .flag + .flag.flag--sm {
-    top: 34px; }
+    top: 32px; }
   @media only screen and (max-width: 420px) {
     .flags .flag + .flag {
-      top: 34px; } }
+      top: 32px; } }
 
 /*
 
@@ -1366,7 +1366,8 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   .list-item .content p {
     margin-bottom: 0; }
   .list-item .content h2 {
-    font-size: 120%;
+    font-size: 22px;
+    line-height: 30.8px;
     margin-bottom: 0; }
 
 .list-item .price {
@@ -1424,10 +1425,10 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   font-size: 24px;
   font-weight: bold;
   color: #9BD04E;
-  padding: 24px 0; }
+  padding: 22px 0; }
   @media only screen and (min-width: 768px) {
     .site-logo {
-      padding: 72px 0; } }
+      padding: 66px 0; } }
 
 /* # Modul Site Nav
 
@@ -1465,7 +1466,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 48px;
+  height: 44px;
   color: #fff; }
   .site-nav a:hover, .site-nav a:focus, .site-nav a:active {
     text-decoration: underline; }
@@ -1480,7 +1481,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
         -ms-flex: 1;
             flex: 1; }
   .site-nav a {
-    height: 72px; } }
+    height: 66px; } }
 
 /* Modul About
    ===========
@@ -1516,7 +1517,7 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 @media only screen and (min-width: 768px) {
   .about-person-full-text,
   .about-person-full-contact {
-    margin-top: 12px; } }
+    margin-top: 11px; } }
 
 .about-history {
   background-color: #d8dbd8;

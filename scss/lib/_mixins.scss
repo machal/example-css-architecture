@@ -16,9 +16,18 @@
   }
 }
 
+// Font-size mixin
+// ---------------
+
+@mixin fs($font-size) {
+  font-size: $font-size;
+  line-height: 1.4 * $font-size;
+}
+
 
 // Webkit-style focus
 // ------------------
+
 @mixin tab-focus() {
   // Default
   outline: thin dotted #333;
@@ -29,6 +38,7 @@
 
 // Center-align a block level element
 // ----------------------------------
+
 @mixin center-block() {
   display: block;
   margin-left: auto;
