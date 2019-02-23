@@ -61,7 +61,7 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
   h2 {
     @include fs(22px);
-    margin-bottom: 0;
+    margin-bottom: 8px;
   }
 }
 
@@ -80,8 +80,8 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
 .list-item .price.price--big {
   background-color: #ddd;
-  padding: 3px;
-    margin: 0 6px 18px 0;
+  padding: 4px 6px;
+  margin: 0 6px 18px 0;
 }
 
 // Umisteni v komponente
@@ -89,8 +89,8 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 .list-item .content .price {
   @media #{$large-start} {
     position: absolute;
-    top: -52px;
-    right: -3px;
+    top: -44px; // 2px od kraje obrazku
+    right: -3px; // 2px od kraje obrazku
   }
 }
 
