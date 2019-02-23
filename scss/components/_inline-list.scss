@@ -28,7 +28,9 @@
   }
 
   &__item {
-    padding: 9px 8px 8px;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 8px;
     background-color: transparent;
     border: 1px solid #ccc;
     white-space: nowrap;

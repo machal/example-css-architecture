@@ -4,45 +4,41 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 
 */
 
+.list-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .list-item {
-  position: relative;
-  padding: 9px 0;
   border: 1px solid transparent;
-  color: #666;
-
+  color: #555;
   box-sizing: border-box;
+  padding: 9px;
+  margin-bottom: 18px;
+  display: flex;
 
   @media #{$large-start} {
-    float: left;
-    width:  calc((100% - 42px) / 3);   // 304
-    height: 352px;
-    padding: 18px 9px 9px;
-    margin: 0 7px 0 7px;
+    display: block;
+    width: calc(33.3% - 28px/3); // Tretina minus dva guttery
   }
 }
 
+// Obrazek
+
 .list-item  .image {
-  position: relative;
-  float: left;
-  width: 36%;
-  margin-right: 4%;
+  width: 33.3%;
+  margin-right: 14px; // gutter
+  position: relative; // .flags
+
+  a, img {
+    display: block;
+  }
 
   @media #{$large-start} {
     width: auto;
-    float: none;
-    height: 165px; // 4:3
-    overflow: hidden;
     margin-bottom: 12px;
     margin-right: 0;
-  }
-
-  @media #{$extra-large-start} {
-    height: 215px; // 4:3
-  }
-
-  img {
-    max-width: 100%;
   }
 }
 
@@ -51,12 +47,11 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
 // Textovy obsah
 
 .list-item .content {
-  float: left;
-  width: 60%;
+  position: relative; // .price
+  width: calc(66.6% - 14px); // viz .image
   padding: 0; // reset .content
 
   @media #{$large-start} {
-    float: none;
     width: auto;
   }
 
@@ -70,15 +65,13 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   }
 }
 
+// Cenovy stitek
+
 .list-item .content .price {
   @media #{$large-start} {
     position: absolute;
-    right: 3px;
-    top: 150px;
-  }
-
-  @media #{$extra-large-start} {
-    top: 200px;
+    top: -52px;
+    right: -3px;
   }
 }
 
@@ -89,12 +82,15 @@ Napr. seznamy ubytovatelu, pobytu, last-minute atd.
   border-bottom: 0;
 }
 
+// Varianta s rameckem
+
 .list-item.bordered {
   border: 1px solid #ddd;
 }
 
 
 // Aktivni stavy
+
 .list-item.active,
 .list-item:hover,
 .list-item:focus,
