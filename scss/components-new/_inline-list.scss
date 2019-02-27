@@ -1,0 +1,69 @@
+/*
+  Inline list
+  ===========
+*/
+
+// - seznam polozek v bublinach - napr. staty
+
+.inline-list {
+  margin-bottom: 12px;
+  margin-left: 23px;
+  line-height: 36px;
+  text-align: center;
+
+  &__heading {
+    font-style: 36px;
+
+    // Schovano pred screen readery
+    &--invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+
+    &-icon {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+      background: $color-beta;
+    }
+
+    &--two-stars,
+    &--three-stars {
+      font-weight: bold;
+
+      // TODO
+      // .inline-list--large-items .inline-list__item--two-stars,
+      // .inline-list--large-items .inline-list__item--three-stars { … }
+    }
+
+    &--no-margin-bottom {
+      margin-bottom: 0;
+    }
+
+    &.active,
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      border: 1px solid #ddd;
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+}

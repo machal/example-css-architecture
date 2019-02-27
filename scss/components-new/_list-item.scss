@@ -1,0 +1,91 @@
+/* @define list-item; weak
+
+# Komponenta Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+*/
+
+.list-item {
+  display: flex;
+  box-sizing: border-box;
+  padding: ($base-line-height / 2);
+  margin-bottom: $base-line-height;
+  color: $color-grey-2;
+  border: 1px solid transparent; // viz .list-item--active
+
+  @media #{$large-start} {
+    display: block;
+    width: calc(#{percentage(1 / 3)} - (2 * #{$gutter}) / 3); // Tretina minus dva guttery
+  }
+}
+
+// Obrazek
+
+.list-item__image {
+  width: percentage(1 / 3);
+  margin-right: $gutter;
+
+  a,
+  &-img {
+    display: block;
+  }
+
+  @media #{$large-start} {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: ($base-line-height / 2);
+  }
+}
+
+// Textovy obsah
+
+.list-item__content {
+  position: relative; // viz .price
+  width: calc(#{percentage(2 / 3)} - #{$gutter});
+
+  @media #{$large-start} {
+    width: auto;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &-heading {
+    margin-bottom: ($base-line-height / 2);
+    font-size: $larger-font-size;
+  }
+}
+
+// Varianta s rameckem
+
+.list-item--bordered {
+  border: 1px solid #ddd;
+}
+
+// Aktivni stavy
+
+.list-item {
+  &--active,
+  &:hover,
+  &:focus,
+  &:active {
+    color: #333;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    cursor: pointer;
+
+    h2 a {
+      text-decoration: underline;
+      color: darken($color-alpha, 20%);
+    }
+
+    // Funkcnost s povolenym JS
+
+    // postcss-bem-linter: ignore
+    .js & {
+      background-color: #dedede;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/*
+
+Ceny - velke "cenovky"
+======================
+
+- potrebuje jako rodice utilitu .p-r
+
+*/
+
+$price-corner-margin: 2px;
+$price-big-height: (2* $padding-y) + $base-line-height;
+
+.price {
+  display: inline-block;
+  width: auto;
+  color: #444;
+
+  strong {
+    font-weight: normal;
+    color: #888;
+  }
+}
+
+.price--big {
+  padding: $padding-y $padding-x;
+  margin: 0 0 $base-line-height 0;
+  background-color: #ddd;
+}
+
+// Umisteni v komponente TODO
+
+.list-item .price {
+  @media #{$large-start} {
+    position: absolute;
+    top: (-1 * ($price-big-height + $price-corner-margin + $base-line-height / 2));
+    right: $price-corner-margin;
+  }
+}

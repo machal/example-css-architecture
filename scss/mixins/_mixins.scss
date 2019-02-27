@@ -1,0 +1,116 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Font-size mixin
+// ---------------
+
+@mixin fs($font-size) {
+  font-size: $font-size;
+  line-height: 1.4 * $font-size;
+}
+
+
+// Webkit-style focus
+// ------------------
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Center-align a block level element
+// ----------------------------------
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Sizing shortcuts
+// -------------------------
+@mixin size($height, $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// Placeholder text
+// -------------------------
+@mixin placeholder($color) {
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+
+// Mixin pro bílý text uvnitř elementu
+// -----------------------------------
+// Používáme např. v .out-of-box--blur
+
+@mixin out-of-box-white-text() {
+
+  &,
+  h1,
+  h2 {
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+  }
+}
