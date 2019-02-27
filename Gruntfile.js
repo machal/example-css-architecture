@@ -1,16 +1,14 @@
 module.exports = function(grunt) {
-
-  const sass = require('node-sass');
+  const sass = require("node-sass");
 
   // Nacteme vsechny grunt tasky a urychlime srandu
   require("jit-grunt")(grunt);
 
   grunt.initConfig({
-
     sass: {
       options: {
-          implementation: sass,
-          sourceMap: true
+        implementation: sass,
+        sourceMap: true
       },
       default: {
         files: {
@@ -56,7 +54,7 @@ module.exports = function(grunt) {
       options: {
         syntax: "scss"
       },
-      src: ["scss/**/*.scss"]
+      src: ["scss/components-new/**/*.scss"]
     },
 
     watch: {

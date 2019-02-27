@@ -3,6 +3,8 @@ Flag - priznaky slev, Last Minute atd.
 =========================================
 */
 
+// Pro pouziti potreba position: relative
+
 .flag {
   font-size: 12px;
   display: inline-block;
@@ -28,7 +30,7 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
 @mixin mixin-flag-sm() {
   font-size: 9px;
   padding: 2px 3px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
 }
 
 .flag--sm {
@@ -46,8 +48,8 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
 
 @media #{$large-start} {
   .flag--lg {
-   font-size: $larger-font-size;
-   padding: $padding-lg-y $padding-lg-x;
+    font-size: $larger-font-size;
+    padding: $padding-lg-y $padding-lg-x;
   }
 }
 
@@ -69,15 +71,15 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
 // "Last Minute"
 
 .flag--lastminute {
-  background: #FF9900;
-  background: fade-out(#FF9900, 0.15);
+  background: #ff9900;
+  background: fade-out(#ff9900, 0.15);
 }
 
 // "Horky tip"
 
 .flag--hottip {
-  background: #FFCC00;
-  background: fade-out(#FFCC00, 0.15);
+  background: #ffcc00;
+  background: fade-out(#ffcc00, 0.15);
 }
 
 // "Novinka"
@@ -90,10 +92,9 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
 // "Sleva"
 
 .flag--discount {
-  background: #FF6600;
-  background: fade-out(#FF6600,  0.15);
+  background: #ff6600;
+  background: fade-out(#ff6600, 0.15);
 }
-
 
 // Pozicovani ikon, pokud jich je vice
 // -----------------------------------
@@ -103,7 +104,6 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
 // * Zatim vzdy prekryvaji obrazek (.image_item v detailu a .list_item .image v seznamu)
 
 .flags {
-
   .flag {
     position: absolute;
     top: 2px;
@@ -114,13 +114,13 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
   // * Zaroven je .flag--lg jen na velkych displejich.
 
   // Vyska .flag:
-  $flag-height: 2*$padding-y + $base-line-height + 2px;
+  $flag-height: 2 * $padding-y + $base-line-height + 2px;
 
   // Vyska .flag--lg:
-  $flag-large-height: 2*$padding-lg-y + $base-line-height + 2px;
+  $flag-large-height: 2 * $padding-lg-y + $base-line-height + 2px;
 
   // Vyska .flag--sm:
-  $flag-small-height: 2*$padding-sm-y + $base-line-height + 2px;
+  $flag-small-height: 2 * $padding-sm-y + $base-line-height + 2px;
 
   // TODO plus selektory kvuli podpore IE8
   // casem nahradit pomoci .flag:nth-child(2) atd.
@@ -142,5 +142,4 @@ $media-for-smaller-flag: "only screen and (max-width: 420px)";
       top: ($flag-small-height + 2px);
     }
   }
-
 } // .flags

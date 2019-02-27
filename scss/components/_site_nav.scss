@@ -7,14 +7,14 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 */
 
 .site-nav {
-	background: $color-beta;
+  background: $color-beta;
   border-bottom: $color-gamma 10px solid;
-	border-top: $color-delta 10px solid;
+  border-top: $color-delta 10px solid;
 
-	@media #{$large-start} {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+  @media #{$large-start} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   @media print {
     display: none;
@@ -27,14 +27,14 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
 }
 
 .site-nav li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .site-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2*$base-line-height;
+  height: 2 * $base-line-height;
   color: #fff;
 
   &:hover,
@@ -56,6 +56,6 @@ Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
   }
 
   .site-nav a {
-    height: 3*$base-line-height;
+    height: 3 * $base-line-height;
   }
 }

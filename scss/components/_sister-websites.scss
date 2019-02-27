@@ -1,13 +1,12 @@
 /* === Sesterske weby v zahlavi === */
 
-#sisterWebsites
-{
-  background-color:#efefef;
-  font-family:Verdana, sans-serif;
-  font-size:9px;
-  line-height:16px;
-  height:22px;
-  margin:0;
+#sisterWebsites {
+  background-color: #efefef;
+  font-family: Verdana, sans-serif;
+  font-size: 9px;
+  line-height: 16px;
+  height: 22px;
+  margin: 0;
 
   // Na malych displejich a v tisku nezobrazujeme
   @media #{$small-end}, print {
@@ -23,13 +22,14 @@
   }
 }
 
-.container #sisterWebsites a, #sisterWebsites strong {
-  display:block;
+.container #sisterWebsites a,
+#sisterWebsites strong {
+  display: block;
   width: 20%;
-  float:left;
-  text-align:center;
-  padding:3px 0;
-  color:#ccc;
+  float: left;
+  text-align: center;
+  padding: 3px 0;
+  color: #ccc;
 
   @media #{$extra-large-start} {
     width: 10%;
@@ -41,16 +41,14 @@
 }
 
 .container #sisterWebsites a:hover,
-.container #sisterWebsites a:focus
-{
-  text-decoration:none;
-  background-color:#e8e8e8;
-  color:#bbb;
+.container #sisterWebsites a:focus {
+  text-decoration: none;
+  background-color: #e8e8e8;
+  color: #bbb;
 }
 
-#sisterWebsites strong
-{
-  background:#fff;
-  color:#bbb;
-  font-weight:normal;
+#sisterWebsites strong {
+  background: #fff;
+  color: #bbb;
+  font-weight: normal;
 }

@@ -11,98 +11,105 @@ Formulare ze stareho old_layout.less
 // TODO uplne znova
 
 table.form {
-  width:100%;
+  width: 100%;
 }
 
-table.form th, table.form td {
-  padding:.45em .2em .45em 0;
-  vertical-align:top;
+table.form th,
+table.form td {
+  padding: 0.45em 0.2em 0.45em 0;
+  vertical-align: top;
 }
 
 table.form th {
-  text-align:left;
-  width:31%;
-  font-weight:normal;
+  text-align: left;
+  width: 31%;
+  font-weight: normal;
 }
 
 table.form td {
-  text-align:left;
-  width:69%;
+  text-align: left;
+  width: 69%;
 }
 
-table tr.rowOne td, table tr.rowOne th {
-  background:#efefef;
+table tr.rowOne td,
+table tr.rowOne th {
+  background: #efefef;
 }
 
-table tr.rowTwo td, table tr.rowTwo th {
-  background:#f8f8f8;
+table tr.rowTwo td,
+table tr.rowTwo th {
+  background: #f8f8f8;
 }
 
-table tr.rowThree td, table tr.rowThree th {
-  background:#dfdfdf;
+table tr.rowThree td,
+table tr.rowThree th {
+  background: #dfdfdf;
 }
 
 table tr.rowCena td {
-  background:#FDFECF;
-  font-weight:bold;
+  background: #fdfecf;
+  font-weight: bold;
 }
 
-table tr.error td, table tr.error th {
-  background:#FED0D0;
-  color:red;
+table tr.error td,
+table tr.error th {
+  background: #fed0d0;
+  color: red;
 }
 
 table.form small {
-  color:#666;
+  color: #666;
 }
 
-.sendOK, #contentBox p.sendOK {
-  border:2px solid #213630;
-  padding:.5em 8px;
-  margin:2.5em 0;
+.sendOK,
+#contentBox p.sendOK {
+  border: 2px solid #213630;
+  padding: 0.5em 8px;
+  margin: 2.5em 0;
 }
 
-.sendKO, #contentBox p.sendKO {
-  background:#FF0;
-  padding:1.5em 8px;
-  margin:2.5em 0;
+.sendKO,
+#contentBox p.sendKO {
+  background: #ff0;
+  padding: 1.5em 8px;
+  margin: 2.5em 0;
 }
-
 
 // Velikosti formularovych policek
 // -------------------------------
 
-input, textarea {
+input,
+textarea {
   //border: 1px solid;
   padding: 5px;
 }
 
 input.s {
-  width:4em;
+  width: 4em;
 }
 
 input.xs {
-  width:6em;
+  width: 6em;
 }
 
 input.l {
-  width:10em;
+  width: 10em;
 }
 
 input.m {
-  width:8em;
+  width: 8em;
 }
 
 input.xl {
-  width:15em;
+  width: 15em;
 }
 
 input.xxl {
-  width:20em;
+  width: 20em;
 }
 
 input.maxxxl {
-  width:445px;
+  width: 445px;
 }
 
 textarea {
@@ -111,20 +118,20 @@ textarea {
 }
 
 textarea.l {
-  width:95%;
-  height:5em;
+  width: 95%;
+  height: 5em;
 }
 
 textarea.xl {
-  height:5em;
+  height: 5em;
 }
 
 input.inputBigger {
-  font-size:1em;
-  font-weight:bold;
+  font-size: 1em;
+  font-weight: bold;
 }
 
 select.inputBigger {
-  font-size:1em;
-  font-weight:bold;
+  font-size: 1em;
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@
 // -----------------------------
 
 .about-perex {
-  text-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
   @media only screen and (min-width: 360px) and (max-width: $small-end-value) {
     padding-left: 50px;
@@ -56,13 +56,11 @@
   background-position: center center;
 
   @media #{$small-end} {
-    background-image:
-      url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg);
   }
 
   @media #{$large-start} {
-    background-image:
-      url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+    background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
     // Na mobilech bud nefunguje (iOS)
     // nebo se trha (WinPhone).
     background-attachment: fixed;
@@ -71,7 +69,7 @@
 
 .about-history-perex {
   background: #fff;
-  background: rgba(255,255,255,.95);
+  background: rgba(255, 255, 255, 0.95);
   padding: 3em 2em 2em 2em;
   margin-top: 5em;
   margin-bottom: 5em;
@@ -101,11 +99,21 @@
   border-bottom: 2px solid #999;
 }
 
-.about-web-item-eslovensko { border-color: #0EB10E; }
-.about-web-item-velkymeder { border-color: #06F; }
-.about-web-item-tuzemskadovolena { border-color: #F60; }
-.about-web-item-epodhajska { border-color: #c00; }
-.about-web-item-besenova { border-color: #06F; }
+.about-web-item-eslovensko {
+  border-color: #0eb10e;
+}
+.about-web-item-velkymeder {
+  border-color: #06f;
+}
+.about-web-item-tuzemskadovolena {
+  border-color: #f60;
+}
+.about-web-item-epodhajska {
+  border-color: #c00;
+}
+.about-web-item-besenova {
+  border-color: #06f;
+}
 
 .about-web-etc {
   @media #{$large-start} {
@@ -124,5 +132,3 @@
     padding-right: 300px;
   }
 }
-
-
