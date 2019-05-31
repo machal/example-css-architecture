@@ -4,7 +4,6 @@
   ],
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-visionapps-order"
   ],
   "rules": {
     "at-rule-empty-line-before": null,
