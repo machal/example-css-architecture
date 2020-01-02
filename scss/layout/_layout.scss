@@ -80,7 +80,6 @@ Nová (od 12/2015)
   .show_grid .container {
     background-position: -20px 0;
   }
-
 }
 
 /* --- Telo dokumentu - hlavni informace, jez se budou prenaset do Fancyboxu --- */
@@ -95,14 +94,13 @@ Nová (od 12/2015)
   color: #999;
 }
 
-
 /*
 ## Řádka layoutu je `.row`
 */
 
 .row {
-	margin-bottom: $base-line-height;
-	@include clearfix();
+  margin-bottom: $base-line-height;
+  @include clearfix();
 }
 
 /*
@@ -166,30 +164,29 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
 }
 
 @media #{$large-start} {
+  .content.without_top_pad {
+    padding-top: 0;
+    margin-top: -1px;
+  }
 
-	.content.without_top_pad {
-		padding-top: 0;
-		margin-top: -1px;
-	}
+  // Radka layoutu
+  .row {
+    margin-bottom: 36px;
+  }
 
-	// Radka layoutu
-	.row {
-		margin-bottom: 36px;
-	}
+  // Centrovany sloupec
+  .column,
+  .half_column,
+  .double_column {
+    &.centered {
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+  }
 
-	// Centrovany sloupec
-	.column,
-	.half_column,
-	.double_column {
-		&.centered {
-			margin-left: auto;
-			margin-right: auto;
-			float: none;
-		}
-	}
-
-	// Offsety
-	.offset_half {
+  // Offsety
+  .offset_half {
     margin-left: 145px+14px;
   }
 
@@ -197,10 +194,9 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
     margin-left: 304px+14px;
   }
 
-	.double_column.with_text img {
-		max-width: 100%;
-	}
-
+  .double_column.with_text img {
+    max-width: 100%;
+  }
 }
 
 /* ================================================================================
@@ -214,23 +210,22 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
 
 */
 @media #{$small-end} {
+  /* Nezobrazujeme cely Likebox, jen maly buttonek */
+  #facebookLikeBox {
+    display: none;
+  }
+  #facebookButton {
+    display: block;
+    text-align: center;
+  }
 
-    /* Nezobrazujeme cely Likebox, jen maly buttonek */
-    #facebookLikeBox
-      { display: none; }
-    #facebookButton
-      { display: block; text-align: center; }
-
-    /* --- Layout uvnitr stranky --- */
-    .column,
-    .double_column {
-      margin-right: 0;
-      width: auto;
-    }
-
+  /* --- Layout uvnitr stranky --- */
+  .column,
+  .double_column {
+    margin-right: 0;
+    width: auto;
+  }
 } /* @media screen and (max-width: 640px) */
-
-
 
 // Varianta .column - sloupec jako polozka rozcestniku (napr. e-slovensko.cz/atrakce/)
 // ------------------------------------------------------------------------------------
@@ -277,7 +272,6 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   overflow: hidden;
 }
 
-
 .column.as_list_item .text h2 {
   margin-bottom: 0;
 }
@@ -290,7 +284,6 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   padding-top: 8px;
 }
 
-
 .column.as_list_item .text a {
   color: #fff;
   text-decoration: underline;
@@ -300,4 +293,3 @@ v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
   margin-bottom: 4px;
   margin-top: 0;
 }
-

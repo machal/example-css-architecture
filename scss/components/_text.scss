@@ -42,31 +42,31 @@ http://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-fl
 */
 
 .text_larger {
-	font-size: $larger-font-size;
-	line-height: $larger-line-height;
+  font-size: $larger-font-size;
+  line-height: $larger-line-height;
 
-	// .text ma inline-block, protoze se zobrazuje i uvnitr komponent
-	// v tehle variante to ovsem kvuli obtekani musime zrusit
-	&.text {
-		display: block;
-	}
-
-	// Kvuli obtekani .images_column:
-
-	ul {
-		list-style-position: inside; // IE10 nezvlada outside pri obtekani floatu
-	}
-
-	ul li,
-	ol li {
-	  position: relative;
+  // .text ma inline-block, protoze se zobrazuje i uvnitr komponent
+  // v tehle variante to ovsem kvuli obtekani musime zrusit
+  &.text {
+    display: block;
   }
 
-	ul ul li,
-	ol ul li,
-	ol ol li,
-	ul ol li {
-	  left: 18px;
+  // Kvuli obtekani .images_column:
+
+  ul {
+    list-style-position: inside; // IE10 nezvlada outside pri obtekani floatu
+  }
+
+  ul li,
+  ol li {
+    position: relative;
+  }
+
+  ul ul li,
+  ol ul li,
+  ol ol li,
+  ul ol li {
+    left: 18px;
   }
 }
 
@@ -86,4 +86,3 @@ Například text v detailu kapacity.
 </div>
 ```
 */
-

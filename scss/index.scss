@@ -2,31 +2,38 @@
 @import "variables/variables";
 
 // Knihovny a styly pro externi kod
-@import "lib/mixins";
-@import "lib/fancygallery";
+@import "mixins/mixins";
 
 // Zakladna
 @import "base/reset";
 @import "base/body";
 @import "base/typo";
-@import "base/helpers";
 
 // Layout
 @import "layout/container";
 @import "layout/layout";
 
-// Moduly
+// Unikatni moduly - strankove
+@import "components/page/about";
+
+// Komponenty
 @import "components/content_head";
 @import "components/fancybox";
 @import "components/flag";
 @import "components/foot";
-@import "components/inline-list";
-@import "components/list-item";
 @import "components/site_logo";
 @import "components/site_nav";
 
-// Unikatni moduly - strankove
-@import "components/page/about";
+// Nove komponenty
+@import "components-new/inline-list";
+@import "components-new/list-item";
+@import "components-new/price";
+
+// Libraries
+@import "lib/fancygallery";
+
+// Helpers
+@import "helpers/helpers";
 
 // Tmave tema
 @import "themes/dark";

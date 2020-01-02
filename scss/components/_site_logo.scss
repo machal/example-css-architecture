@@ -4,14 +4,14 @@
 
 .site-logo {
   margin: 0;
-	width: auto;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
+  width: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
   color: $color-gamma;
   padding: $base-line-height 0;
 
   @media #{$large-start} {
-    padding: 3*$base-line-height 0;
+    padding: 3 * $base-line-height 0;
   }
 }

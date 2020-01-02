@@ -6,9 +6,9 @@
 // - seznam polozek v bublinach - napr. staty
 
 .inline-list {
+  margin-bottom: 12px;
   margin-left: 23px;
   line-height: 36px;
-  margin-bottom: 12px;
   text-align: center;
 
   &__heading {
@@ -31,10 +31,10 @@
     display: inline-block;
     padding: 4px 8px;
     margin-bottom: 8px;
-    background-color: transparent;
-    border: 1px solid #ccc;
     white-space: nowrap;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: transparent;
 
     &-icon {
       display: inline-block;
@@ -52,16 +52,18 @@
       // .inline-list--large-items .inline-list__item--three-stars { … }
     }
 
-    &--no-margin-bottom { margin-bottom: 0; }
+    &--no-margin-bottom {
+      margin-bottom: 0;
+    }
 
     &.active,
     &:hover,
     &:focus,
     &:active {
-      background-color: #eee;
       text-decoration: underline;
-      cursor: pointer;
       border: 1px solid #ddd;
+      background-color: #eee;
+      cursor: pointer;
     }
   }
 }

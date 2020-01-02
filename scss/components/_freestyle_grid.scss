@@ -10,8 +10,8 @@ Třída `.fgrid`
 
 @import "../../../../../../bower_components/freestyle-grid/less/freestyle-grid.less";
 
-@fgrid-small-grid-start:      480px;
-@fgrid-large-grid-start:      $large-start-value;
+@fgrid-small-grid-start: 480px;
+@fgrid-large-grid-start: $large-start-value;
 
 // TODO kvuli specificnosti
 .fgrid {

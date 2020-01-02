@@ -1,6 +1,837 @@
 @charset "UTF-8";
 /*
 
+Reset
+=====
+
+*/
+body {
+  margin: 0;
+  padding: 0; }
+
+a img,
+img {
+  border: 0; }
+
+form {
+  margin: 0;
+  padding: 0; }
+
+img {
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height: auto; }
+
+/*
+
+Vzhled body
+===========
+
+*/
+body {
+  background: #eee;
+  color: #000; }
+  @media only screen and (min-width: 768px) {
+    body {
+      padding-bottom: 50px; } }
+
+@media only screen and (min-width: 768px) {
+  body.ajax {
+    background: #fff;
+    padding: 0; }
+  body.ajax .container {
+    -webkit-box-shadow: none;
+            box-shadow: none; } }
+
+/*
+
+Typografie a linearni design
+============================
+
+*/
+body,
+input,
+textarea,
+option,
+select {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif; }
+
+a {
+  color: #0eb10e;
+  text-decoration: none; }
+  a:hover, a:focus, a:active {
+    color: #075207;
+    text-decoration: underline; }
+
+p,
+ul,
+ol,
+table,
+blockquote {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px; }
+
+h1,
+.h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 27px 5px;
+  color: #666;
+  font-weight: normal; }
+  @media only screen and (min-width: 768px) {
+    h1,
+    .h1 {
+      font-size: 24px;
+      line-height: 28px; } }
+
+h2,
+.h2 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 9px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #999; }
+  @media only screen and (min-width: 768px) {
+    h2,
+    .h2 {
+      font-size: 18px;
+      line-height: 24px; } }
+
+h3,
+.h3 {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-weight: normal;
+  color: #666; }
+
+h4,
+.h4 {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #666; }
+
+h2 small,
+h3 small {
+  font-size: 16px;
+  line-height: 22px;
+  color: #999; }
+
+big {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold; }
+
+ul,
+ol {
+  margin: 0 0 22px 14px;
+  padding: 0 0 0 0;
+  color: #ccc; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0; }
+
+ul {
+  list-style-type: square; }
+
+ul li,
+ol li {
+  color: #000; }
+
+@media only screen and (min-width: 768px) {
+  h2 small.float_right {
+    margin-top: 5px; } }
+
+/*
+Kontejner layoutu
+=================
+*/
+.container {
+  max-width: 1200px;
+  background: #fff url(../../images/layout/sidebox-bg.gif) repeat-y right top;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); }
+
+/* # Layout
+
+Obsah ma celkem 940px (1000px + 30px paddingy).
+
+## TODO
+
+- refaktor po prechodu na novou strukturu, viz dole
+- % jednotky
+
+## Struktura layoutu
+
+Stará:
+
+```
+#container
+  .head
+  #content
+    #content_head
+    #content_body
+      (.row)
+        .column|.double_column|.triple_column|.half_column
+  #footNew
+  #footBottom
+```
+
+Nová (od 12/2015)
+
+```
+.container
+  .head
+  .content
+    .content__head
+    .content__body
+      (.row)
+        .column|.double_column|.triple_column|.half_column
+  #footNew
+  #footBottom
+```
+
+*/
+.container {
+  background-image: none !important;
+  /* DEPRECATED if newlayout */ }
+  .container.ajax {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0; }
+
+.content {
+  padding: 13px 7px 36px; }
+  @media only screen and (min-width: 1180px) {
+    .content {
+      padding: 22px 23px 36px; } }
+
+.show_grid .container {
+  background: #fff url(grid.png) repeat-y 0 0; }
+
+@media only screen and (max-width: 767px) {
+  /*
+  Layout obsahu (#content)
+  - 7px levy margin
+
+  Zakladni obsahovy sloupec (.column):
+  - 304px width
+
+  Obrazky maji pomer 16/9
+  - jeden sloupec: 304x171
+  */
+  .container {
+    width: auto;
+    background-image: none !important;
+    /* DEPRECATED if newlayout */ }
+  .show_grid .container {
+    background-position: -20px 0; } }
+
+/* --- Telo dokumentu - hlavni informace, jez se budou prenaset do Fancyboxu --- */
+.content__body {
+  *zoom: 1;
+  margin-bottom: 18px; }
+  .content__body:before, .content__body:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .content__body:after {
+    clear: both; }
+
+.content__body h1 {
+  margin-left: 0;
+  color: #999; }
+
+/*
+## Řádka layoutu je `.row`
+*/
+.row {
+  margin-bottom: 22px;
+  *zoom: 1; }
+  .row:before, .row:after {
+    display: table;
+    content: "";
+    line-height: 0; }
+  .row:after {
+    clear: both; }
+
+/*
+`.row.row-limited` nemá zprava díru pro poslední column. Využíváme ho pak například
+pro block grid komponentu.
+
+Vyšší specifičnost kvůli kolizím např. s `.out-of-box`.
+*/
+@media only screen and (min-width: 768px) {
+  .row.row-limited {
+    margin-right: 22px; } }
+
+/*
+## Základní layout je 3sloupcový (s 6sloupcovou alternativou)
+
+Mikrosloupec (v obsahu je jich 6, .half_column): 145px a 14px pravy margin
+
+Zakladni obsahovy sloupec (v obsahu jsou 3, tridy .column, .double_column):
+304px width a 14px pravy margin, na mobilech 7px margin ze stran a auto sirka
+
+Obrazky maji pomer 16/9  (?? TODO:  realne v .figure pozame 4:3,
+v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
+*/
+@media only screen and (min-width: 768px) {
+  .column {
+    float: left;
+    width: calc(97% / 3);
+    margin-right: 1.5%;
+    overflow: hidden; } }
+
+@media only screen and (min-width: 768px) {
+  .double_column {
+    float: left;
+    width: calc((97% / 3) * 2);
+    margin-right: 1.5%; } }
+
+@media only screen and (min-width: 768px) {
+  .triple_column {
+    width: 100%; } }
+
+@media only screen and (min-width: 768px) {
+  .half_column {
+    float: left;
+    width: 138px;
+    margin-right: 14px; } }
+
+.column--last {
+  margin-right: 0; }
+
+@media only screen and (min-width: 768px) {
+  .content.without_top_pad {
+    padding-top: 0;
+    margin-top: -1px; }
+  .row {
+    margin-bottom: 36px; }
+  .column.centered,
+  .half_column.centered,
+  .double_column.centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+  .offset_half {
+    margin-left: 159px; }
+  .offset_one {
+    margin-left: 318px; }
+  .double_column.with_text img {
+    max-width: 100%; } }
+
+/* ================================================================================
+   Vrstva pro mobilni zarizeni
+   ...........................
+
+   Obsahuje:
+   - Layout vsech webu
+   - Layout uvnitr stranky
+   - Stary layout uvnitr stranky (docasny)
+
+*/
+@media only screen and (max-width: 767px) {
+  /* Nezobrazujeme cely Likebox, jen maly buttonek */
+  #facebookLikeBox {
+    display: none; }
+  #facebookButton {
+    display: block;
+    text-align: center; }
+  /* --- Layout uvnitr stranky --- */
+  .column,
+  .double_column {
+    margin-right: 0;
+    width: auto; } }
+
+/* @media screen and (max-width: 640px) */
+.columns_as_list_item {
+  padding-top: 9px; }
+
+.column.as_list_item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 14px; }
+
+.column.as_list_item .image {
+  margin-bottom: -4px; }
+  .column.as_list_item .image img {
+    width: 100%;
+    max-width: auto; }
+
+.column.as_list_item .text {
+  position: absolute;
+  margin-top: -38px;
+  top: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.66);
+  color: #fff;
+  padding: 1px 9px 9px 9px;
+  -webkit-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+
+.column.as_list_item:hover .text,
+.column.as_list_item:focus .text,
+.column.as_list_item:active .text {
+  top: 0;
+  margin-top: 0;
+  height: 100%;
+  overflow: hidden; }
+
+.column.as_list_item .text h2 {
+  margin-bottom: 0; }
+
+.column.as_list_item .text h2 a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 8px;
+  padding-top: 8px; }
+
+.column.as_list_item .text a {
+  color: #fff;
+  text-decoration: underline; }
+
+.column.as_list_item .text p {
+  margin-bottom: 4px;
+  margin-top: 0; }
+
+/* Modul About
+   ===========
+
+   Stránka "O nás".
+*/
+.about-perex {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  @media only screen and (min-width: 360px) and (max-width: 767px) {
+    .about-perex {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media only screen and (min-width: 768px) {
+    .about-perex {
+      padding-left: 250px;
+      padding-right: 250px; } }
+
+.about-person {
+  text-align: center; }
+
+.about-person-image img {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 138px;
+  display: block;
+  margin: 0 auto; }
+
+.about-person-short-text {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media only screen and (min-width: 768px) {
+  .about-person-full-text,
+  .about-person-full-contact {
+    margin-top: 11px; } }
+
+.about-history {
+  background-color: #d8dbd8;
+  background-position: center center; }
+  @media only screen and (max-width: 767px) {
+    .about-history {
+      background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg); } }
+  @media only screen and (min-width: 768px) {
+    .about-history {
+      background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
+      background-attachment: fixed; } }
+
+.about-history-perex {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3em 2em 2em 2em;
+  margin-top: 5em;
+  margin-bottom: 5em; }
+  .about-history-perex .h1 {
+    margin-bottom: 10px; }
+  .about-history-perex .h2 {
+    margin-bottom: 20px; }
+  @media only screen and (min-width: 768px) {
+    .about-history-perex {
+      width: 55%;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.about-web-item {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+  border-bottom: 2px solid #999; }
+
+.about-web-item-eslovensko {
+  border-color: #0eb10e; }
+
+.about-web-item-velkymeder {
+  border-color: #06f; }
+
+.about-web-item-tuzemskadovolena {
+  border-color: #f60; }
+
+.about-web-item-epodhajska {
+  border-color: #c00; }
+
+.about-web-item-besenova {
+  border-color: #06f; }
+
+@media only screen and (min-width: 768px) {
+  .about-web-etc {
+    text-align: center;
+    padding-left: 260px;
+    padding-right: 260px; } }
+
+@media only screen and (min-width: 1180px) {
+  .about-legal {
+    padding-left: 300px;
+    padding-right: 300px; } }
+
+/*
+
+Hlavička obsahu stránky
+=======================
+
+*/
+.content__head {
+  text-align: center;
+  padding: 44px;
+  text-align: center; }
+
+.content__head h1 {
+  margin-bottom: 0; }
+
+/*
+   Fancybox
+   ========
+*/
+.fancybox:hover img,
+.fancybox:active img,
+.fancybox:focus img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  opacity: 0.9; }
+
+/*
+Flag - priznaky slev, Last Minute atd.
+=========================================
+*/
+.flag {
+  font-size: 12px;
+  display: inline-block;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  padding: 5px 8px; }
+
+a.flag:hover,
+a.flag:focus,
+a.flag:active {
+  color: white;
+  text-decoration: underline; }
+
+.flag--sm {
+  font-size: 9px;
+  padding: 2px 3px;
+  letter-spacing: 0.02em; }
+
+@media only screen and (max-width: 420px) {
+  .flag {
+    font-size: 9px;
+    padding: 2px 3px;
+    letter-spacing: 0.02em; } }
+
+@media only screen and (min-width: 768px) {
+  .flag--lg {
+    font-size: 20px;
+    padding: 9px 12px; } }
+
+.flag--bestseller {
+  background: rgba(16, 201, 16, 0.85); }
+
+.flag--ratings {
+  background: rgba(16, 201, 16, 0.85); }
+
+.flag--lastminute {
+  background: #ff9900;
+  background: rgba(255, 153, 0, 0.85); }
+
+.flag--hottip {
+  background: #ffcc00;
+  background: rgba(255, 204, 0, 0.85); }
+
+.flag--new {
+  background: #1eed1e;
+  background: rgba(30, 237, 30, 0.85); }
+
+.flag--discount {
+  background: #ff6600;
+  background: rgba(255, 102, 0, 0.85); }
+
+.flags .flag {
+  position: absolute;
+  top: 2px;
+  left: 2px; }
+
+.flags .flag + .flag {
+  top: 36px; }
+  @media only screen and (min-width: 768px) {
+    .flags .flag + .flag.flag--lg {
+      top: 44px; } }
+  .flags .flag + .flag.flag--sm {
+    top: 32px; }
+  @media only screen and (max-width: 420px) {
+    .flags .flag + .flag {
+      top: 32px; } }
+
+/*
+
+Foot - stara paticka
+====================
+
+*/
+#foot {
+  background: #024e40;
+  padding: 0.75em 30px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: -18px; }
+  @media print {
+    #foot {
+      display: none; } }
+
+#foot a {
+  color: #fff; }
+
+/* # Modul Site Logo
+
+*/
+.site-logo {
+  margin: 0;
+  width: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #9bd04e;
+  padding: 22px 0; }
+  @media only screen and (min-width: 768px) {
+    .site-logo {
+      padding: 66px 0; } }
+
+/* # Modul Site Nav
+
+Hlavní navigace webu.
+
+Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
+
+*/
+.site-nav {
+  background: #024e40;
+  border-bottom: #9bd04e 10px solid;
+  border-top: #e0e9e8 10px solid; }
+  @media only screen and (min-width: 768px) {
+    .site-nav {
+      padding-left: 15px;
+      padding-right: 15px; } }
+  @media print {
+    .site-nav {
+      display: none; } }
+
+.site-nav ul {
+  margin: 0;
+  padding: 0; }
+
+.site-nav li {
+  list-style-type: none; }
+
+.site-nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 44px;
+  color: #fff; }
+  .site-nav a:hover, .site-nav a:focus, .site-nav a:active {
+    text-decoration: underline; }
+
+@media only screen and (min-width: 768px) {
+  .site-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .site-nav li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .site-nav a {
+    height: 66px; } }
+
+/*
+  Inline list
+  ===========
+*/
+.inline-list {
+  margin-bottom: 12px;
+  margin-left: 23px;
+  line-height: 36px;
+  text-align: center; }
+  .inline-list__heading {
+    font-style: 36px; }
+    .inline-list__heading--invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0; }
+  .inline-list__item {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent; }
+    .inline-list__item-icon {
+      display: inline-block;
+      padding: 5px;
+      border-radius: 5px;
+      background: #024e40; }
+    .inline-list__item--two-stars, .inline-list__item--three-stars {
+      font-weight: bold; }
+    .inline-list__item--no-margin-bottom {
+      margin-bottom: 0; }
+    .inline-list__item.active, .inline-list__item:hover, .inline-list__item:focus, .inline-list__item:active {
+      text-decoration: underline;
+      border: 1px solid #ddd;
+      background-color: #eee;
+      cursor: pointer; }
+
+/* @define list-item; weak
+
+# Komponenta Velka polozka seznamu
+
+Napr. seznamy ubytovatelu, pobytu, last-minute atd.
+
+*/
+.list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 11px;
+  margin-bottom: 22px;
+  color: #555;
+  border: 1px solid transparent; }
+  @media only screen and (min-width: 768px) {
+    .list-item {
+      display: block;
+      width: calc(33.3333333333% - (2 * 14px) / 3); } }
+
+.list-item__image {
+  width: 33.3333333333%;
+  margin-right: 14px; }
+  .list-item__image a, .list-item__image-img {
+    display: block; }
+  @media only screen and (min-width: 768px) {
+    .list-item__image {
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 11px; } }
+
+.list-item__content {
+  position: relative;
+  width: calc(66.6666666667% - 14px); }
+  @media only screen and (min-width: 768px) {
+    .list-item__content {
+      width: auto; } }
+  .list-item__content p {
+    margin-bottom: 0; }
+  .list-item__content-heading {
+    margin-bottom: 11px;
+    font-size: 20px; }
+
+.list-item--bordered {
+  border: 1px solid #ddd; }
+
+.list-item--active, .list-item:hover, .list-item:focus, .list-item:active {
+  color: #333;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  cursor: pointer; }
+  .list-item--active h2 a, .list-item:hover h2 a, .list-item:focus h2 a, .list-item:active h2 a {
+    text-decoration: underline;
+    color: #075207; }
+  .js .list-item--active, .js .list-item:hover, .js .list-item:focus, .js .list-item:active {
+    background-color: #dedede; }
+
+/*
+
+Ceny - velke "cenovky"
+======================
+
+- potrebuje jako rodice utilitu .p-r
+
+*/
+.price {
+  display: inline-block;
+  width: auto;
+  color: #444; }
+  .price strong {
+    font-weight: normal;
+    color: #888; }
+
+.price--big {
+  padding: 5px 8px;
+  margin: 0 0 22px 0;
+  background-color: #ddd; }
+
+@media only screen and (min-width: 768px) {
+  .list-item .price {
+    position: absolute;
+    top: -45px;
+    right: 2px; } }
+
+/*
+
   Stylopis pro Fancygallery (prototyp)
   Knihovna pro zobrazovani galerii obrazku.
   Verze z 20. 10. 2011
@@ -477,156 +1308,6 @@ Rodicum nastavime position: static a synovi pak position: absolute.
 
 /*
 
-Reset
-=====
-
-*/
-body {
-  margin: 0;
-  padding: 0; }
-
-a img, img {
-  border: 0; }
-
-form {
-  margin: 0;
-  padding: 0; }
-
-img {
-  -ms-interpolation-mode: bicubic;
-  max-width: 100%;
-  height: auto; }
-
-/*
-
-Vzhled body
-===========
-
-*/
-body {
-  background: #eee;
-  color: #000; }
-  @media only screen and (min-width: 768px) {
-    body {
-      padding-bottom: 50px; } }
-
-@media only screen and (min-width: 768px) {
-  body.ajax {
-    background: #fff;
-    padding: 0; }
-  body.ajax .container {
-    -webkit-box-shadow: none;
-            box-shadow: none; } }
-
-/*
-
-Typografie a linearni design
-============================
-
-*/
-body, input, textarea, option, select {
-  font-size: 16px;
-  line-height: 22px;
-  font-family: Arial, Helvetica, sans-serif; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif; }
-
-a {
-  color: #0EB10E;
-  text-decoration: none; }
-  a:hover, a:focus, a:active {
-    color: #075207;
-    text-decoration: underline; }
-
-p, ul, ol, table, blockquote {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 22px; }
-
-h1,
-.h1 {
-  font-size: 24px;
-  line-height: 28px;
-  margin: 0 0 27px 5px;
-  color: #666;
-  font-weight: normal; }
-  @media only screen and (min-width: 768px) {
-    h1,
-    .h1 {
-      font-size: 24px;
-      line-height: 28px; } }
-
-h2,
-.h2 {
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0 0 9px 0;
-  padding: 0;
-  font-weight: normal;
-  color: #999; }
-  @media only screen and (min-width: 768px) {
-    h2,
-    .h2 {
-      font-size: 18px;
-      line-height: 24px; } }
-
-h3,
-.h3 {
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  margin: 0 0 4px 0;
-  padding: 0;
-  font-weight: normal;
-  color: #666; }
-
-h4,
-.h4 {
-  display: block;
-  font-size: 16px;
-  line-height: 22px;
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: #666; }
-
-h2 small,
-h3 small {
-  font-size: 16px;
-  line-height: 22px;
-  color: #999; }
-
-big {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: bold; }
-
-ul,
-ol {
-  margin: 0 0 22px 14px;
-  padding: 0 0 0 0;
-  color: #ccc; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0; }
-
-ul {
-  list-style-type: square; }
-
-ul li,
-ol li {
-  color: #000; }
-
-@media only screen and (min-width: 768px) {
-  h2 small.float_right {
-    margin-top: 5px; } }
-
-/*
-
 Helpery
 =======
 
@@ -640,7 +1321,7 @@ Helpery
   .clearfix:after {
     clear: both; }
 
-.container .margin_bottom {
+.margin_bottom {
   margin-bottom: 18px; }
 
 .container .margin_bottom_half {
@@ -673,7 +1354,8 @@ Helpery
 .dumb_only {
   display: none !important; }
 
-.center, .text-center {
+.center,
+.text-center {
   text-align: center; }
 
 .right {
@@ -737,7 +1419,8 @@ Helpery
   float: right;
   width: 48%; }
 
-.clearBothZero, .clear_zero {
+.clearBothZero,
+.clear_zero {
   display: block;
   clear: both;
   font-size: 1px;
@@ -794,14 +1477,15 @@ p.submit {
   vertical-align: middle; }
 
 .fontSmall {
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: normal; }
 
 small.fontSmall {
-  font-size: .6em;
+  font-size: 0.6em;
   font-weight: normal; }
 
-table.fontSmall td, table.fontSmall th {
+table.fontSmall td,
+table.fontSmall th {
   font-size: 1.4em;
   font-weight: normal; }
 
@@ -847,9 +1531,9 @@ table.fontSmall td, table.fontSmall th {
 
 .unveil {
   opacity: 0;
-  -webkit-transition: opacity .5s ease-in;
-  -o-transition: opacity .5s ease-in;
-  transition: opacity .5s ease-in; }
+  -webkit-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in; }
 
 .more_info {
   color: #666; }
@@ -885,7 +1569,9 @@ table.fontSmall td, table.fontSmall th {
   padding: 5px 7px;
   display: block; }
 
-.more_photos a:hover, .more_photos a:focus, .more_photos a:active {
+.more_photos a:hover,
+.more_photos a:focus,
+.more_photos a:active {
   background-color: #eee;
   cursor: pointer; }
 
@@ -895,687 +1581,25 @@ input.input--border {
 textarea.textarea--border {
   border: 1px solid #000; }
 
-/*
-Kontejner layoutu
-=================
-*/
-.container {
-  max-width: 1200px;
-  background: #fff url(../../images/layout/sidebox-bg.gif) repeat-y right top;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); }
+.bb-0 {
+  border-bottom: 0; }
 
-/* # Layout
+.p-r {
+  position: relative; }
 
-Obsah ma celkem 940px (1000px + 30px paddingy).
-
-## TODO
-
-- refaktor po prechodu na novou strukturu, viz dole
-- % jednotky
-
-## Struktura layoutu
-
-Stará:
-
-```
-#container
-  .head
-  #content
-    #content_head
-    #content_body
-      (.row)
-        .column|.double_column|.triple_column|.half_column
-  #footNew
-  #footBottom
-```
-
-Nová (od 12/2015)
-
-```
-.container
-  .head
-  .content
-    .content__head
-    .content__body
-      (.row)
-        .column|.double_column|.triple_column|.half_column
-  #footNew
-  #footBottom
-```
-
-*/
-.container {
-  background-image: none !important;
-  /* DEPRECATED if newlayout */ }
-  .container.ajax {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    margin: 0; }
-
-.content {
-  padding: 13px 7px 36px; }
-  @media only screen and (min-width: 1180px) {
-    .content {
-      padding: 22px 23px 36px; } }
-
-.show_grid .container {
-  background: #fff url(grid.png) repeat-y 0 0; }
-
-@media only screen and (max-width: 767px) {
-  /*
-  Layout obsahu (#content)
-  - 7px levy margin
-
-  Zakladni obsahovy sloupec (.column):
-  - 304px width
-
-  Obrazky maji pomer 16/9
-  - jeden sloupec: 304x171
-  */
-  .container {
-    width: auto;
-    background-image: none !important;
-    /* DEPRECATED if newlayout */ }
-  .show_grid .container {
-    background-position: -20px 0; } }
-
-/* --- Telo dokumentu - hlavni informace, jez se budou prenaset do Fancyboxu --- */
-.content__body {
-  *zoom: 1;
-  margin-bottom: 18px; }
-  .content__body:before, .content__body:after {
-    display: table;
-    content: "";
-    line-height: 0; }
-  .content__body:after {
-    clear: both; }
-
-.content__body h1 {
-  margin-left: 0;
-  color: #999; }
-
-/*
-## Řádka layoutu je `.row`
-*/
-.row {
-  margin-bottom: 22px;
-  *zoom: 1; }
-  .row:before, .row:after {
-    display: table;
-    content: "";
-    line-height: 0; }
-  .row:after {
-    clear: both; }
-
-/*
-`.row.row-limited` nemá zprava díru pro poslední column. Využíváme ho pak například
-pro block grid komponentu.
-
-Vyšší specifičnost kvůli kolizím např. s `.out-of-box`.
-*/
-@media only screen and (min-width: 768px) {
-  .row.row-limited {
-    margin-right: 22px; } }
-
-/*
-## Základní layout je 3sloupcový (s 6sloupcovou alternativou)
-
-Mikrosloupec (v obsahu je jich 6, .half_column): 145px a 14px pravy margin
-
-Zakladni obsahovy sloupec (v obsahu jsou 3, tridy .column, .double_column):
-304px width a 14px pravy margin, na mobilech 7px margin ze stran a auto sirka
-
-Obrazky maji pomer 16/9  (?? TODO:  realne v .figure pozame 4:3,
-v .list_item neco podobneho) =jeden sloupec: 304x171 (?? TODO)
-*/
-@media only screen and (min-width: 768px) {
-  .column {
-    float: left;
-    width: calc(97% / 3);
-    margin-right: 1.5%;
-    overflow: hidden; } }
-
-@media only screen and (min-width: 768px) {
-  .double_column {
-    float: left;
-    width: calc((97% / 3) * 2);
-    margin-right: 1.5%; } }
-
-@media only screen and (min-width: 768px) {
-  .triple_column {
-    width: 100%; } }
-
-@media only screen and (min-width: 768px) {
-  .half_column {
-    float: left;
-    width: 138px;
-    margin-right: 14px; } }
-
-.column--last {
-  margin-right: 0; }
-
-@media only screen and (min-width: 768px) {
-  .content.without_top_pad {
-    padding-top: 0;
-    margin-top: -1px; }
-  .row {
-    margin-bottom: 36px; }
-  .column.centered,
-  .half_column.centered,
-  .double_column.centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none; }
-  .offset_half {
-    margin-left: 159px; }
-  .offset_one {
-    margin-left: 318px; }
-  .double_column.with_text img {
-    max-width: 100%; } }
-
-/* ================================================================================
-   Vrstva pro mobilni zarizeni
-   ...........................
-
-   Obsahuje:
-   - Layout vsech webu
-   - Layout uvnitr stranky
-   - Stary layout uvnitr stranky (docasny)
-
-*/
-@media only screen and (max-width: 767px) {
-  /* Nezobrazujeme cely Likebox, jen maly buttonek */
-  #facebookLikeBox {
-    display: none; }
-  #facebookButton {
-    display: block;
-    text-align: center; }
-  /* --- Layout uvnitr stranky --- */
-  .column,
-  .double_column {
-    margin-right: 0;
-    width: auto; } }
-
-/* @media screen and (max-width: 640px) */
-.columns_as_list_item {
-  padding-top: 9px; }
-
-.column.as_list_item {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 14px; }
-
-.column.as_list_item .image {
-  margin-bottom: -4px; }
-  .column.as_list_item .image img {
-    width: 100%;
-    max-width: auto; }
-
-.column.as_list_item .text {
-  position: absolute;
-  margin-top: -38px;
-  top: 100%;
-  background: black;
-  background: rgba(0, 0, 0, 0.66);
-  color: #fff;
-  padding: 1px 9px 9px 9px;
-  -webkit-transition: all 0.15s ease-out;
-  -o-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out; }
-
-.column.as_list_item:hover .text,
-.column.as_list_item:focus .text,
-.column.as_list_item:active .text {
-  top: 0;
-  margin-top: 0;
-  height: 100%;
-  overflow: hidden; }
-
-.column.as_list_item .text h2 {
-  margin-bottom: 0; }
-
-.column.as_list_item .text h2 a {
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-  padding-bottom: 8px;
-  padding-top: 8px; }
-
-.column.as_list_item .text a {
-  color: #fff;
-  text-decoration: underline; }
-
-.column.as_list_item .text p {
-  margin-bottom: 4px;
-  margin-top: 0; }
-
-/*
-
-Hlavička obsahu stránky
-=======================
-
-*/
-.content__head {
-  text-align: center;
-  padding: 44px;
-  text-align: center; }
-
-.content__head h1 {
-  margin-bottom: 0; }
-
-/*
-   Fancybox
-   ========
-*/
-.fancybox:hover img,
-.fancybox:active img,
-.fancybox:focus img {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-  opacity: .9; }
-
-/*
-Flag - priznaky slev, Last Minute atd.
-=========================================
-*/
-.flag {
-  font-size: 12px;
-  display: inline-block;
-  font-weight: normal;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  padding: 5px 8px; }
-
-a.flag:hover,
-a.flag:focus,
-a.flag:active {
-  color: white;
-  text-decoration: underline; }
-
-.flag--sm {
-  font-size: 9px;
-  padding: 2px 3px;
-  letter-spacing: .02em; }
-
-@media only screen and (max-width: 420px) {
-  .flag {
-    font-size: 9px;
-    padding: 2px 3px;
-    letter-spacing: .02em; } }
-
-@media only screen and (min-width: 768px) {
-  .flag--lg {
-    font-size: 20px;
-    padding: 9px 12px; } }
-
-.flag--bestseller {
-  background: rgba(16, 201, 16, 0.85); }
-
-.flag--ratings {
-  background: rgba(16, 201, 16, 0.85); }
-
-.flag--lastminute {
-  background: #FF9900;
-  background: rgba(255, 153, 0, 0.85); }
-
-.flag--hottip {
-  background: #FFCC00;
-  background: rgba(255, 204, 0, 0.85); }
-
-.flag--new {
-  background: #1eed1e;
-  background: rgba(30, 237, 30, 0.85); }
-
-.flag--discount {
-  background: #FF6600;
-  background: rgba(255, 102, 0, 0.85); }
-
-.flags .flag {
-  position: absolute;
-  top: 2px;
-  left: 2px; }
-
-.flags .flag + .flag {
-  top: 36px; }
-  @media only screen and (min-width: 768px) {
-    .flags .flag + .flag.flag--lg {
-      top: 44px; } }
-  .flags .flag + .flag.flag--sm {
-    top: 32px; }
-  @media only screen and (max-width: 420px) {
-    .flags .flag + .flag {
-      top: 32px; } }
-
-/*
-
-Foot - stara paticka
-====================
-
-*/
-#foot {
-  background: #024E40;
-  padding: .75em 30px;
-  color: #fff;
-  margin: 0;
-  margin-bottom: -18px; }
-  @media print {
-    #foot {
-      display: none; } }
-
-#foot a {
-  color: #fff; }
-
-/*
-  Inline list
-  ===========
-*/
-.inline-list {
-  margin-left: 23px;
-  line-height: 36px;
-  margin-bottom: 12px;
-  text-align: center; }
-  .inline-list__heading {
-    font-style: 36px; }
-    .inline-list__heading--invisible {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0; }
-  .inline-list__item {
-    display: inline-block;
-    padding: 4px 8px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    white-space: nowrap;
-    border-radius: 5px; }
-    .inline-list__item-icon {
-      display: inline-block;
-      padding: 5px;
-      border-radius: 5px;
-      background: #024E40; }
-    .inline-list__item--two-stars, .inline-list__item--three-stars {
-      font-weight: bold; }
-    .inline-list__item--no-margin-bottom {
-      margin-bottom: 0; }
-    .inline-list__item.active, .inline-list__item:hover, .inline-list__item:focus, .inline-list__item:active {
-      background-color: #eee;
-      text-decoration: underline;
-      cursor: pointer;
-      border: 1px solid #ddd; }
-
-/* # Komponenta Velka polozka seznamu
-
-Napr. seznamy ubytovatelu, pobytu, last-minute atd.
-
-*/
-.list-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.list-item {
-  border: 1px solid transparent;
-  color: #555;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 9px;
-  margin-bottom: 18px;
+.d-f {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media only screen and (min-width: 768px) {
-    .list-item {
-      display: block;
-      width: calc(33.3% - 28px/3); } }
 
-.list-item .image {
-  width: 33.3%;
-  margin-right: 14px;
-  position: relative; }
-  .list-item .image a, .list-item .image img {
-    display: block; }
-  @media only screen and (min-width: 768px) {
-    .list-item .image {
-      width: auto;
-      margin-bottom: 12px;
-      margin-right: 0; } }
+.fw-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
-.list-item .content {
-  position: relative;
-  width: calc(66.6% - 14px);
-  padding: 0; }
-  @media only screen and (min-width: 768px) {
-    .list-item .content {
-      width: auto; } }
-  .list-item .content p {
-    margin-bottom: 0; }
-  .list-item .content h2 {
-    font-size: 22px;
-    line-height: 30.8px;
-    margin-bottom: 8px; }
-
-.list-item .price {
-  display: inline-block;
-  width: auto;
-  color: #444; }
-  .list-item .price strong {
-    font-weight: normal;
-    color: #888; }
-
-.list-item .price.price--big {
-  background-color: #ddd;
-  padding: 4px 6px;
-  margin: 0 6px 18px 0; }
-
-@media only screen and (min-width: 768px) {
-  .list-item .content .price {
-    position: absolute;
-    top: -44px;
-    right: -3px; } }
-
-.list-item.without_border {
-  border-bottom: 0; }
-
-.list-item.bordered {
-  border: 1px solid #ddd; }
-
-.list-item.active,
-.list-item:hover,
-.list-item:focus,
-.list-item:active {
-  background-color: #eee;
-  cursor: pointer;
-  color: #333;
-  border: 1px solid #ddd; }
-  .list-item.active h2 a,
-  .list-item:hover h2 a,
-  .list-item:focus h2 a,
-  .list-item:active h2 a {
-    color: #075207;
-    text-decoration: underline; }
-  .js .list-item.active, .js
-  .list-item:hover, .js
-  .list-item:focus, .js
-  .list-item:active {
-    background-color: #dedede; }
-
-/* # Modul Site Logo
-
-*/
-.site-logo {
-  margin: 0;
-  width: auto;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #9BD04E;
-  padding: 22px 0; }
-  @media only screen and (min-width: 768px) {
-    .site-logo {
-      padding: 66px 0; } }
-
-/* # Modul Site Nav
-
-Hlavní navigace webu.
-
-Na velkých displejích vedle sebe, na malých většina schovaná do ikonek.
-
-*/
-.site-nav {
-  background: #024E40;
-  border-bottom: #9BD04E 10px solid;
-  border-top: #E0E9E8 10px solid; }
-  @media only screen and (min-width: 768px) {
-    .site-nav {
-      padding-left: 15px;
-      padding-right: 15px; } }
-  @media print {
-    .site-nav {
-      display: none; } }
-
-.site-nav ul {
-  margin: 0;
-  padding: 0; }
-
-.site-nav li {
-  list-style-type: none; }
-
-.site-nav a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 44px;
-  color: #fff; }
-  .site-nav a:hover, .site-nav a:focus, .site-nav a:active {
-    text-decoration: underline; }
-
-@media only screen and (min-width: 768px) {
-  .site-nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .site-nav li {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
-  .site-nav a {
-    height: 66px; } }
-
-/* Modul About
-   ===========
-
-   Stránka "O nás".
-*/
-.about-perex {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
-  @media only screen and (min-width: 360px) and (max-width: 767px) {
-    .about-perex {
-      padding-left: 50px;
-      padding-right: 50px; } }
-  @media only screen and (min-width: 768px) {
-    .about-perex {
-      padding-left: 250px;
-      padding-right: 250px; } }
-
-.about-person {
-  text-align: center; }
-
-.about-person-image img {
-  border-radius: 50%;
-  overflow: hidden;
-  max-width: 138px;
-  display: block;
-  margin: 0 auto; }
-
-.about-person-short-text {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto; }
-
-@media only screen and (min-width: 768px) {
-  .about-person-full-text,
-  .about-person-full-contact {
-    margin-top: 11px; } }
-
-.about-history {
-  background-color: #d8dbd8;
-  background-position: center center; }
-  @media only screen and (max-width: 767px) {
-    .about-history {
-      background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-small.jpg); } }
-  @media only screen and (min-width: 768px) {
-    .about-history {
-      background-image: url(http://dovolena.ck-rekrea.cz/images/about/rekrea-katalogy-medium.jpg);
-      background-attachment: fixed; } }
-
-.about-history-perex {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3em 2em 2em 2em;
-  margin-top: 5em;
-  margin-bottom: 5em; }
-  .about-history-perex .h1 {
-    margin-bottom: 10px; }
-  .about-history-perex .h2 {
-    margin-bottom: 20px; }
-  @media only screen and (min-width: 768px) {
-    .about-history-perex {
-      width: 55%;
-      margin-left: auto;
-      margin-right: auto; } }
-
-.about-web-item {
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 0;
-  border-bottom: 2px solid #999; }
-
-.about-web-item-eslovensko {
-  border-color: #0EB10E; }
-
-.about-web-item-velkymeder {
-  border-color: #06F; }
-
-.about-web-item-tuzemskadovolena {
-  border-color: #F60; }
-
-.about-web-item-epodhajska {
-  border-color: #c00; }
-
-.about-web-item-besenova {
-  border-color: #06F; }
-
-@media only screen and (min-width: 768px) {
-  .about-web-etc {
-    text-align: center;
-    padding-left: 260px;
-    padding-right: 260px; } }
-
-@media only screen and (min-width: 1180px) {
-  .about-legal {
-    padding-left: 300px;
-    padding-right: 300px; } }
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 /* # Tmave barevne schema
 
@@ -1587,7 +1611,9 @@ dark.html
 
 .theme-dark {
   color: white !important; }
-  .theme-dark h1, .theme-dark h2, .theme-dark h3 {
+  .theme-dark h1,
+  .theme-dark h2,
+  .theme-dark h3 {
     color: white !important; }
 
 .theme-dark .list-item.active,
